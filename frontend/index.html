@@ -3,34 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emotion Recognition</title>
+    <title>CareVision · Emotion Monitor</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♡</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Audio-Visual Emotion Recognition</h1>
-        
-        <div class="main-panel">
-            <div class="left-panel">
-                <h2>Live Streaming</h2>
-                <video id="preview" autoplay muted></video>
+    <div class="app">
+
+        <!-- ── Header ── -->
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-icon">♡</span>
+                <span class="brand-name">CareVision</span>
+                <span class="brand-sep"></span>
+                <span class="brand-sub">Elderly Care Emotion Assistant</span>
+            </div>
+            <div class="header-right">
+                <div class="sys-status">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span class="status-label" id="statusText">Initializing</span>
+                </div>
+                <div class="clock" id="clock">--:--:--</div>
+            </div>
+        </header>
+
+        <!-- ── Main ── -->
+        <main class="app-main">
+
+            <!-- Left: Camera + Controls -->
+            <aside class="camera-side">
+                <div class="camera-card">
+                    <div class="camera-topbar">
+                        <span class="live-badge" id="liveBadge">● LIVE</span>
+                    </div>
+                    <video id="preview" autoplay muted playsinline></video>
+                </div>
+
                 <div class="controls">
-                    <button id="startBtn" class="btn btn-primary">Start Streaming</button>
-                    <button id="stopBtn" class="btn btn-secondary" disabled>Stop Streaming</button>
-                    <button id="uploadBtn" class="btn btn-success">One-shot Predict</button>
+                    <button class="btn btn-start" id="startBtn" disabled>
+                        <span class="btn-icon">▶</span>Start Monitoring
+                    </button>
+                    <button class="btn btn-stop" id="stopBtn" disabled>
+                        <span class="btn-icon">■</span>Stop
+                    </button>
+                    <button class="btn btn-scan" id="uploadBtn" disabled>
+                        <span class="btn-icon">⊙</span>Quick Scan
+                    </button>
                 </div>
-                <p class="mode-note">Streaming mode sends frame and audio chunks over WebSocket and runs sliding-window inference on the backend.</p>
-                <p class="timer" id="timer"></p>
-                <p class="status" id="status">Ready</p>
-            </div>
-            
-            <div class="right-panel">
-                <h2>Results</h2>
-                <div id="results" class="results-container">
-                    <p class="placeholder">No results yet. Start streaming or run a one-shot prediction.</p>
+
+                <div class="session-panel">
+                    <div class="session-timer" id="timer"></div>
+                    <div class="session-status" id="status">Initializing system...</div>
                 </div>
-            </div>
-        </div>
+
+                <p class="disclaimer">For reference only · Not a substitute for professional medical assessment</p>
+            </aside>
+
+            <!-- Right: Emotion Display -->
+            <section class="emotion-side">
+
+                <!-- Hero: Current Emotion -->
+                <div class="emotion-hero" id="emotionCard">
+                    <!-- Waiting state -->
+                    <div class="hero-waiting" id="heroWaiting">
+                        <div class="waiting-icon">◎</div>
+                        <div class="waiting-text">Awaiting Detection</div>
+                        <div class="waiting-sub">Click Start Monitoring to begin</div>
+                    </div>
+
+                    <!-- Result state -->
+                    <div class="hero-result hidden" id="heroResult">
+                        <div class="hero-icon" id="emotionIcon">😐</div>
+                        <div class="hero-label" id="emotionName">NEUTRAL</div>
+                        <div class="hero-conf">
+                            <div class="conf-ring">
+                                <svg viewBox="0 0 36 36" class="conf-svg">
+                                    <path class="conf-track"
+                                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="conf-fill" id="confArc"
+                                          stroke-dasharray="0, 100"
+                                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <div class="conf-pct" id="emotionConf">--</div>
+                            </div>
+                            <div class="conf-label">Confidence</div>
+                        </div>
+                        <div class="alert-banner hidden" id="alertBanner">
+                            <span class="alert-icon">⚠</span>
+                            <span>Please attend to the resident's emotional state</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History strip -->
+                <div class="history-strip">
+                    <span class="history-label">Recent</span>
+                    <div class="history-dots" id="historyDots">
+                        <span class="history-empty">No history yet</span>
+                    </div>
+                </div>
+
+                <!-- Breakdown -->
+                <div class="breakdown-card">
+                    <div class="breakdown-title">Emotion Distribution</div>
+                    <div class="breakdown-list" id="emotionBreakdown">
+                        <p class="breakdown-placeholder">No data yet</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
     </div>
 
     <script src="app.js"></script>

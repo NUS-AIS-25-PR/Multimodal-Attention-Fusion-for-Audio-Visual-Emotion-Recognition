@@ -53,7 +53,7 @@ class StreamingEmotionSession:
     last_prediction_ts: float = 0.0
 
     def add_frame(self, frame: np.ndarray, timestamp: Optional[float] = None) -> None:
-        now = float(timestamp if timestamp is not None else time.monotonic())
+        now = float(timestamp if timestamp is not None else time.time())
         self.frames.append((now, frame))
         self._prune_frames(now)
 
@@ -88,7 +88,7 @@ class StreamingEmotionSession:
         return enough_audio and enough_frames and cadence_ok
 
     def build_window(self, now: Optional[float] = None) -> Tuple[List[np.ndarray], np.ndarray]:
-        now = float(now if now is not None else time.monotonic())
+        now = float(now if now is not None else time.time())
         frame_cutoff = now - float(self.window_seconds)
         window_frames = [frame for ts, frame in self.frames if ts >= frame_cutoff]
         if not window_frames:
@@ -102,7 +102,7 @@ class StreamingEmotionSession:
 
     def infer(self, now: Optional[float] = None) -> Dict[str, Any]:
         now = float(now if now is not None else time.monotonic())
-        frames, waveform = self.build_window(now)
+        frames, waveform = self.build_window()  # uses time.time() internally, not monotonic
         result = self.predictor.predict_stream(
             frames,
             waveform,

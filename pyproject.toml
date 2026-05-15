@@ -17,8 +17,14 @@ dependencies = [
     "librosa>=0.9.0",
     "wandb>=0.13.0",
     "matplotlib>=3.5.0",
-    "mediapipe>=0.10.32",
+    "mediapipe>=0.10.0",
     "opencv-python-headless>=4.13.0.92",
+    "redis>=5.0.0",
+    "fastapi>=0.104.0",
+    "python-multipart>=0.0.6",
+    "uvicorn>=0.24.0",
+    "scipy>=1.11.0",
+    "websockets>=12.0",
 ]
 
 [project.optional-dependencies]
