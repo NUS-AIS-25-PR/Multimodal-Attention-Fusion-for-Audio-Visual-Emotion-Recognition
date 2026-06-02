@@ -1,0 +1,83 @@
+_wandb:
+    value:
+        cli_version: 0.24.1
+        e:
+            jkhkgn4ec6hcou8jci9z9dq8zsz1g1t4:
+                args:
+                    - --data_root
+                    - data
+                    - --fusion
+                    - video
+                    - --use_cosine_annealing
+                    - --wandb
+                    - --use_face_crop
+                codePath: src/train.py
+                codePathLocal: src/train.py
+                cpu_count: 24
+                cpu_count_logical: 24
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "1081101176832"
+                        used: "59194277888"
+                email: wionerlol@gmail.com
+                executable: /home/louis/projects/MultimodalEmotionRecognition/.venv/bin/python3
+                git:
+                    commit: d60c7ef782183f53b696349c9dc8c6bdee73f508
+                    remote: https://github.com/Wionerlol/MultimodalEmotionRecognition.git
+                gpu: NVIDIA GeForce RTX 5080 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      memoryTotal: "17094934528"
+                      name: NVIDIA GeForce RTX 5080 Laptop GPU
+                      uuid: GPU-40be5801-0aff-1b94-3ecc-fdefefc4b764
+                host: MoonCell
+                memory:
+                    total: "16466980864"
+                os: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+                program: /home/louis/projects/MultimodalEmotionRecognition/src/train.py
+                python: CPython 3.10.19
+                root: /home/louis/projects/MultimodalEmotionRecognition
+                startedAt: "2026-02-10T12:33:12.095766Z"
+                writerId: jkhkgn4ec6hcou8jci9z9dq8zsz1g1t4
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.19
+            "5": 0.24.1
+            "6": 5.1.0
+            "12": 0.24.1
+            "13": linux-x86_64
+batch_size:
+    value: 16
+cosine_annealing:
+    value: true
+epochs:
+    value: 20
+fusion:
+    value: video
+lr:
+    value: 0.001
+num_classes:
+    value: 8
+split_mode:
+    value: stratified

@@ -1,301 +1,256 @@
-# 改进的多模态情绪识别训练指南
+# Training Guide
 
-根据最新的研究最佳实践，本指南提供了一套完整的训练方案来最大化音频-视频融合的效果。
+This guide documents the exact training configurations used for the paper experiments, along with environment setup, data preparation, and evaluation instructions.
 
-## 🚀 核心改进
+## Environment Setup
 
-### 1. 增强的 Audio 分支
-- **ResNet18 on Spectrogram**: 将 mel-spectrogram 当作 1 通道图像，用 ResNet18 处理
-- **SpecAugment**: 自动时间和频率掩码增强，防止过拟合
-- **默认启用**: `--use_resnet_audio` (推荐)
-
-### 2. 改进的 Gated Fusion
-- **Modality Dropout**: 训练时随机丢弃音频/视频 (20% 概率)，让模型学会互补
-- **Better Gate Initialization**: Gate 初始倾向于视频，避免被噪声拖崩
-- **更稳的融合头**: 添加 ReLU + Dropout，确保学习稳定
-
-### 3. SpecAugment 增强
-```
-频率掩码: 随机掩蔽 0-20 个 mel bins
-时间掩码: 随机掩蔽 0-40 个时间帧
+```bash
+# Python 3.10+ required
+uv sync          # recommended
+# or
+pip install -r requirements.txt
 ```
 
-## 📋 快速开始（推荐配方）
+Key dependencies: `torch`, `torchaudio`, `torchvision`, `transformers` (WavLM), `opencv-python`, `mediapipe`, `wandb`.
 
-### 第一步: 训练 Audio-only 基线
+## Data Preparation
+
+Download [RAVDESS](https://zenodo.org/record/1188976) and extract under `data/`:
+
+```
+data/
+  Actor_01/
+    02-01-01-01-01-01-01.mp4    # face-only video (modality 02)
+    ...
+  Actor_02/
+  ...
+  Actor_24/
+  Noise/
+    noise.wav                   # optional bar background noise for augmentation
+```
+
+The data pipeline automatically pairs video files (modality 02) with matching audio files (modality 03) by matching on `(vocal_channel, emotion, intensity, statement, repetition, actor)`.
+
+## Paper Experiments (Exact Commands)
+
+All runs use stratified splitting and W&B logging. Remove `--wandb` if not using W&B.
+
+### Step 1 — Audio-only baseline (WavLM)
+
 ```bash
 uv run python src/train.py \
   --data_root data \
-  --num_classes 4 \
+  --num_classes 8 \
   --fusion audio \
+  --use_wavlm \
   --split_mode stratified \
-  --use_resnet_audio \
-  --use_cosine_annealing \
-  --wandb \
+  --train_ratio 0.70 \
+  --val_ratio 0.15 \
+  --epochs 20 \
+  --batch_size 16 \
+  --lr 1e-3 \
   --weight_decay 1e-4 \
-  --early_stopping_patience 10
+  --use_cosine_annealing \
+  --early_stopping_patience 10 \
+  --use_face_crop \
+  --wandb
 ```
 
-### 第二步: 训练 Video-only 基线
+Saves checkpoint to `outputs/best_audio.pt`.
+
+### Step 2 — Video-only baseline (ResNet18)
+
 ```bash
 uv run python src/train.py \
   --data_root data \
-  --num_classes 4 \
+  --num_classes 8 \
   --fusion video \
   --split_mode stratified \
-  --use_cosine_annealing \
-  --wandb \
+  --train_ratio 0.70 \
+  --val_ratio 0.15 \
+  --epochs 20 \
+  --batch_size 16 \
+  --lr 1e-3 \
   --weight_decay 1e-4 \
-  --early_stopping_patience 10
+  --use_cosine_annealing \
+  --early_stopping_patience 10 \
+  --use_face_crop \
+  --wandb
 ```
 
-### 第三步: 训练改进的 Gated Fusion
-```bash
-uv run python src/train.py \
-  --data_root data \
-  --num_classes 4 \
-  --fusion gated \
-  --split_mode stratified \
-  --use_resnet_audio \
-  --use_cosine_annealing \
-  --wandb \
-  --weight_decay 1e-4 \
-  --early_stopping_patience 10
-```
+Saves checkpoint to `outputs/best_video.pt`.
 
-### 第四步: 扩展到 8 类情绪
+### Step 3 — Gated fusion (best result, 93.33% accuracy)
+
+Uses warm-start from pre-trained unimodal checkpoints and two-stage fine-tuning.
+
 ```bash
 uv run python src/train.py \
   --data_root data \
   --num_classes 8 \
   --fusion gated \
+  --use_wavlm \
+  --audio_ckpt outputs/best_audio.pt \
+  --video_ckpt outputs/best_video.pt \
+  --two_stage_training \
+  --stage1_epochs 5 \
+  --lr 3e-4 \
+  --audio_backbone_lr 1e-5 \
+  --video_backbone_lr 1e-5 \
+  --fusion_unfreeze_wavlm_layers 2 \
+  --fusion_unfreeze_video_blocks 1 \
   --split_mode stratified \
-  --use_resnet_audio \
-  --use_cosine_annealing \
-  --wandb \
+  --train_ratio 0.70 \
+  --val_ratio 0.15 \
+  --epochs 30 \
+  --batch_size 8 \
   --weight_decay 1e-4 \
-  --early_stopping_patience 10
+  --use_cosine_annealing \
+  --early_stopping_patience 8 \
+  --use_face_crop \
+  --wandb
 ```
 
-### 第五步: 尝试 Cross-Attention Fusion (高级)
+### Step 4 — Cross-attention fusion (92.00% accuracy)
+
+Uses `xattn_head=gated`, `d_model=96`, label smoothing, and longer warm-start.
+
 ```bash
 uv run python src/train.py \
   --data_root data \
-  --num_classes 4 \
+  --num_classes 8 \
   --fusion xattn \
+  --xattn_head gated \
+  --xattn_d_model 96 \
+  --xattn_heads 4 \
+  --xattn_attn_dropout 0.1 \
+  --xattn_stochastic_depth 0.1 \
+  --label_smoothing 0.05 \
+  --use_wavlm \
+  --audio_ckpt outputs/best_audio.pt \
+  --video_ckpt outputs/best_video.pt \
+  --two_stage_training \
+  --stage1_epochs 6 \
+  --lr 2e-4 \
+  --audio_backbone_lr 8e-6 \
+  --video_backbone_lr 8e-6 \
+  --fusion_unfreeze_wavlm_layers 2 \
+  --fusion_unfreeze_video_blocks 1 \
   --split_mode stratified \
-  --use_resnet_audio \
+  --train_ratio 0.75 \
+  --val_ratio 0.15 \
+  --epochs 35 \
+  --batch_size 8 \
+  --weight_decay 2e-4 \
   --use_cosine_annealing \
-  --wandb \
-  --weight_decay 1e-4 \
-  --early_stopping_patience 10
+  --early_stopping_patience 10 \
+  --use_face_crop \
+  --wandb
 ```
 
-## 🎯 预期结果
+## Two-Stage Training Strategy
 
-根据 RAVDESS 数据集的标准结果：
+Both multimodal models use a two-stage fine-tuning strategy:
 
-| 融合方法 | Audio-only | Video-only | Fusion | 提升 |
-|---------|-----------|-----------|--------|------|
-| Late | ~65% | ~75% | ~76% | +1% |
-| Concat | ~65% | ~75% | ~77% | +2% |
-| **Gated (改进)** | **~68%** | **~75%** | **~78%** | **+3-10%** |
-| xAttn | ~68% | ~75% | ~79% | +4-11% |
+- **Stage 1** (fusion head warm-up): Both encoders are frozen. Only the fusion head is trained. This prevents early gradient interference between the unimodal backbone weights.
+- **Stage 2** (selective unfreeze): The last 2 WavLM transformer layers and the last ResNet18 block are unfrozen with a much lower learning rate (`8e-6` or `1e-5`), while the fusion head continues at the higher rate.
 
-> **关键**: Audio-only 必须 >65% Macro-F1，否则融合很难超过 video-only
+## Audio Preprocessing
 
-## 🔧 参数说明
+- Waveform loaded at 16 kHz, padded or trimmed to 3 seconds → shape `[1, 48000]`
+- Curriculum noise augmentation during training: 50% clean, 40% medium noise (20/15/10 dB SNR), 10% heavy noise (5 dB SNR)
+- Real bar noise from `data/Noise/noise.wav`; falls back to Gaussian noise if unavailable
 
-### Audio 相关
-```bash
---use_resnet_audio          # 使用 ResNet18 (vs 轻量 CNN)
-                            # 推荐启用，参数数量不会显著增加
-```
+## Video Preprocessing
 
-### 融合方法
-```bash
---fusion {audio,video,late,concat,gated,xattn}
-  audio:    只用音频
-  video:    只用视频  
-  late:     后期融合（概率平均）
-  concat:   直接拼接 + MLP
-  gated:    门控融合（推荐）
-  xattn:    交叉注意力（高级）
-```
+- 8 frames uniformly sampled per clip, resized to 112×112, normalized with ImageNet statistics
+- Face detection via MediaPipe on the first frame; bounding box reused for remaining frames
+- Visual augmentation during training: Gaussian blur (kernel 3/5/7), brightness scaling [0.2, 0.6], light additive Gaussian noise
 
-### 融合前语义对齐
-```bash
---fusion_align_mode {none,clip}
-                            # 仅对 concat / gated 生效
-                            # clip: 先做 CLIP 风格共享语义空间对齐，再融合
---fusion_align_dim 256      # 对齐空间维度
---fusion_align_temperature 0.07
-                            # 对比学习初始温度
---fusion_align_weight 0.1   # 对齐损失权重
-```
-
-### xAttn Attention 改进
-```bash
---xattn_use_emotion_prior
-                            # 在 xattn 中启用 emotion-prior-conditioned attention bias
---xattn_emotion_prior_dim 8
-                            # 全局 emotion prior 的维度，可设为 8 / 32 / 64
---xattn_emotion_prior_hidden_dim 64
-                            # emotion prior 模块内部隐藏层维度
---xattn_emotion_prior_dropout 0.1
-                            # emotion prior 模块 dropout
-```
-
-### Temporal Modeling
-```bash
---temporal_pooling {mean,attn,transformer}
-                            # 单模态与 xattn 后聚合方式
---temporal_num_heads 4
---temporal_num_layers 1
---temporal_dropout 0.1
-```
-
-### 训练策略
-```bash
---use_cosine_annealing      # 余弦退火调度器（推荐）
---split_mode {actor,stratified}
-                            # stratified: 情绪分布均衡（推荐）
---weight_decay 1e-4         # L2 正则化
---early_stopping_patience 10 # 早停耐心值
-```
-
-## 📊 实验设置建议
-
-### 第一周快速验证
-```bash
-# 快速检查设置是否正确 (4 类，少数据)
---num_classes 4
---epochs 10
---batch_size 16
-```
-
-### 第二周主要实验
-```bash
-# 标准设置 (4 类，足够训练)
---num_classes 4
---epochs 20
---batch_size 16
---early_stopping_patience 10
-```
-
-建议补充消融：
+## Evaluation
 
 ```bash
-# 验证 temporal pooling
---temporal_pooling mean
-# 或
---temporal_pooling attn
-# 或
---temporal_pooling transformer
+# Evaluate a saved checkpoint
+uv run python src/eval.py \
+  --checkpoint outputs/best_gated.pt \
+  --data_root data \
+  --num_classes 8 \
+  --split_mode stratified
 ```
+
+## Reproduce Table 1 (parameters, GFLOPs, inference time)
 
 ```bash
-# 验证 concat/gated 前的 CLIP-style alignment
---fusion gated
---fusion_align_mode clip
---fusion_align_weight 0.1
+uv run python src/benchmark_table6.py
 ```
+
+This script loads the four model architectures, applies the same freeze policy as training, and measures parameters, GFLOPs (via `torchinfo`), and wall-clock inference time over 100 forward passes.
+
+## Key Hyperparameters Summary
+
+| Hyperparameter | Audio-only | Video-only | Gated fusion | Cross-attention |
+|---|---|---|---|---|
+| Optimizer | Adam | Adam | Adam | Adam |
+| Learning rate | 1e-3 | 1e-3 | 3e-4 (head), 1e-5 (backbone) | 2e-4 (head), 8e-6 (backbone) |
+| Weight decay | 1e-4 | 1e-4 | 1e-4 | 2e-4 |
+| Batch size | 16 | 16 | 8 | 8 |
+| Max epochs | 20 | 20 | 30 | 35 |
+| Early stopping patience | 10 | 10 | 8 | 10 |
+| Label smoothing | — | — | — | 0.05 |
+| d_model (cross-attention) | — | — | — | 96 |
+| Attention heads | — | — | — | 4 |
+| Attention dropout | — | — | — | 0.1 |
+| Stochastic depth | — | — | — | 0.1 |
+| Scheduler | Cosine annealing | Cosine annealing | Cosine annealing | Cosine annealing |
+| Train/Val/Test split | 70/15/15 | 70/15/15 | 70/15/15 | 75/15/10 |
+
+## Inference Deployment
+
+### Direct Python
 
 ```bash
-# 验证 xattn 中的 emotion prior bias
---fusion xattn
---xattn_use_emotion_prior
---xattn_emotion_prior_dim 8
+EMO_CHECKPOINT=outputs/best_gated.pt python src/inference_server.py
+# POST http://localhost:8000/predict  (multipart/form-data: file=<video.mp4>)
 ```
 
-### 第三周最终报告
+### Redis-queue batch worker (for higher throughput)
+
 ```bash
-# 完整设置 (8 类，最终结果)
---num_classes 8
---epochs 30
---batch_size 16
---early_stopping_patience 15
+redis-server &
+
+EMO_REDIS_URL=redis://localhost:6379/0 \
+EMO_CHECKPOINT=outputs/best_gated.pt \
+EMO_BATCH_SIZE=8 \
+EMO_BATCH_TIMEOUT_MS=20 \
+python src/inference_worker.py &
+
+EMO_REDIS_URL=redis://localhost:6379/0 \
+python src/inference_server.py
 ```
 
-## 🚨 常见问题
+### Docker
 
-### Q: Gated Fusion 还是比 Video-only 差？
-**A**: 检查以下几点：
-1. **Audio 够强吗?** Audio-only Macro-F1 应该 >65%
-2. **Modality Dropout 有效?** 应该能看到 train/val F1 波动
-3. **Gate 初始化?** 应该初期倾向 video (~0.3 gate 值)
-4. **学习率**? 尝试降低到 5e-4 或 3e-4
-
-### Q: 为什么要用 4 类而不是 8 类？
-**A**: 
-- 音频对"细粒度"区分困难 (fearful vs disgust 容易混淆)
-- 4 类 (positive/negative/neutral/surprise) 对音频更友好
-- 融合的提升在 4 类上更明显（便于评估）
-- 8 类作为扩展在论文中展示
-
-### Q: SpecAugment 会不会伤害单模态 audio？
-**A**: 不会，在 RAVDESS 上:
-- Audio-only: +1~2% F1 提升
-- 防止过拟合，改善泛化
-
-### Q: 训练时间多长？
-**A** (RTX 4090):
-- Audio-only: ~2 min/epoch
-- Video-only: ~5 min/epoch  
-- Gated Fusion: ~8 min/epoch
-- xAttn: ~15 min/epoch
-
-## 📈 监控指标 (WandB)
-
-关键指标:
-1. **train/loss, val/loss**: 收敛性
-2. **train/cls_loss, val/cls_loss**: 分类目标是否稳定下降
-3. **train/contrastive_loss, val/contrastive_loss**: 开启 CLIP 时重点观察
-4. **train/f1, val/f1**: 主要指标（Macro-F1）
-5. **train/acc, val/acc**: 准确率（辅助）
-6. **lr**: 学习率衰减曲线
-
-### 理想的训练曲线
-```
-Epoch 1-5:   val/f1 快速上升 (50% -> 70%)
-Epoch 6-15:  val/f1 缓慢上升 (70% -> 75%)
-Epoch 16-20: val/f1 平稳或略降 (early stop)
+```bash
+docker-compose up
+# Web UI available at http://localhost:80
 ```
 
-## 🎓 深入理解
+### ONNX export (optional, for faster CPU inference)
 
-### 为什么 Gated Fusion 能超过 Video-only?
+```bash
+# Export to ONNX
+python src/export_optimized_model.py \
+  --checkpoint outputs/best_gated.pt \
+  --output outputs/best_gated.onnx
 
-1. **Modality Dropout 的魔法**
-   - 训练时：20% P(audio=0)，20% P(video=0)
-   - 模型学会："这个模态缺失时也能工作"
-   - 结果：模型学会真正的互补，而不是某个模态主宰
+# Export with INT8 quantization
+python src/export_optimized_model.py \
+  --checkpoint outputs/best_gated.pt \
+  --output outputs/best_gated_int8.onnx \
+  --quantize_int8
 
-2. **Gate 初始化的重要性**
-   - 如果 gate 初期完全随机：audio 噪声容易污染 video
-   - 初期倾向 video：给音频时间"赎罪"自己
-   - 结果：稳定学习，避免负迁移
-
-3. **ResNet18 Audio 的优势**
-   - Spectrogram 本质是图像
-   - ResNet 的 skip connection 对频谱很友好
-   - 参数效率：ResNet18(128) ≈ 2.4M，比 CNN 更强
-
-## 📝 论文准备检查表
-
-- [ ] Audio-only Macro-F1 > 65%
-- [ ] Video-only Macro-F1 > 73%
-- [ ] Gated Fusion Macro-F1 > Video-only
-- [ ] 对比 4 类和 8 类结果
-- [ ] 展示 Modality Dropout 的效果 (with/without)
-- [ ] 训练曲线图 (WandB 导出)
-- [ ] 混淆矩阵 (per 融合方法)
-- [ ] 错误案例分析 (audio 对、video 错 等)
-
----
-
-**最后的建议**: 如果在一周内还是 Gated < Video-only，可能是数据质量问题。此时建议：
-1. 检查 audio 提取逻辑
-2. 尝试 RMS 能量归一化
-3. 考虑 VAD (Voice Activity Detection) 删除静音
-4. 最后才考虑修改模型结构
+# Run with ONNX backend
+EMO_INFERENCE_BACKEND=onnx \
+EMO_ONNX_MODEL_PATH=outputs/best_gated_int8.onnx \
+python src/inference_worker.py
+```

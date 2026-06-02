@@ -1,0 +1,129 @@
+_wandb:
+    value:
+        cli_version: 0.24.1
+        e:
+            czyx8ukhxu1gndwdncf9uo07k0i73ta2:
+                args:
+                    - --data_root
+                    - data
+                    - --num_classes
+                    - "8"
+                    - --fusion
+                    - xattn
+                    - --xattn_head
+                    - gated
+                    - --xattn_d_model
+                    - "96"
+                    - --xattn_heads
+                    - "4"
+                    - --xattn_attn_dropout
+                    - "0.1"
+                    - --xattn_stochastic_depth
+                    - "0.1"
+                    - --label_smoothing
+                    - "0.05"
+                    - --use_wavlm
+                    - --audio_ckpt
+                    - outputs/best_audio.pt
+                    - --video_ckpt
+                    - outputs/best_video.pt
+                    - --two_stage_training
+                    - --stage1_epochs
+                    - "6"
+                    - --fusion_unfreeze_wavlm_layers
+                    - "2"
+                    - --fusion_unfreeze_video_blocks
+                    - "1"
+                    - --lr
+                    - "2e-4"
+                    - --audio_backbone_lr
+                    - "8e-6"
+                    - --video_backbone_lr
+                    - "8e-6"
+                    - --split_mode
+                    - stratified
+                    - --train_ratio
+                    - "0.75"
+                    - --val_ratio
+                    - "0.15"
+                    - --epochs
+                    - "35"
+                    - --batch_size
+                    - "8"
+                    - --weight_decay
+                    - "2e-4"
+                    - --use_face_crop
+                    - --use_cosine_annealing
+                    - --early_stopping_patience
+                    - "10"
+                    - --wandb
+                codePath: src/train.py
+                codePathLocal: src/train.py
+                cpu_count: 24
+                cpu_count_logical: 24
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "1081101176832"
+                        used: "59605970944"
+                email: wionerlol@gmail.com
+                executable: /home/louis/projects/MultimodalEmotionRecognition/.venv/bin/python3
+                git:
+                    commit: 0b89b4db7335956555d677c861f55f348cc134ce
+                    remote: https://github.com/Wionerlol/MultimodalEmotionRecognition.git
+                gpu: NVIDIA GeForce RTX 5080 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      memoryTotal: "17094934528"
+                      name: NVIDIA GeForce RTX 5080 Laptop GPU
+                      uuid: GPU-40be5801-0aff-1b94-3ecc-fdefefc4b764
+                host: MoonCell
+                memory:
+                    total: "16466980864"
+                os: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+                program: /home/louis/projects/MultimodalEmotionRecognition/src/train.py
+                python: CPython 3.10.19
+                root: /home/louis/projects/MultimodalEmotionRecognition
+                startedAt: "2026-02-10T19:19:09.214946Z"
+                writerId: czyx8ukhxu1gndwdncf9uo07k0i73ta2
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.19
+            "5": 0.24.1
+            "6": 5.1.0
+            "12": 0.24.1
+            "13": linux-x86_64
+batch_size:
+    value: 8
+cosine_annealing:
+    value: true
+epochs:
+    value: 35
+fusion:
+    value: xattn
+lr:
+    value: 0.0002
+num_classes:
+    value: 8
+split_mode:
+    value: stratified

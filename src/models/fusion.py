@@ -125,7 +125,13 @@ class GatedFusion(nn.Module):
 
 
 class ClipStyleAlignment(nn.Module):
-    """Project audio/video embeddings into a shared space with CLIP-style contrastive loss."""
+    """CLIP-style contrastive alignment for audio and video embeddings.
+
+    NOTE: Experimental module — not used in paper experiments. This was explored
+    as an optional pre-fusion alignment step (enabled via fusion_align_mode="clip").
+    In practice the contrastive objective conflicted with the classification loss
+    on this dataset scale and did not improve results, so it was abandoned.
+    """
 
     def __init__(self, audio_dim: int, video_dim: int, align_dim: int, init_temperature: float = 0.07) -> None:
         super().__init__()
@@ -151,7 +157,14 @@ class ClipStyleAlignment(nn.Module):
 
 
 class EmotionPriorBiasAdapter(nn.Module):
-    """Build a global emotion prior and turn it into token-wise attention bias."""
+    """Emotion-prior-conditioned token-wise attention bias for cross-attention fusion.
+
+    NOTE: Experimental module — not used in paper experiments. This adapter builds
+    a global emotion prior from pooled audio/video representations and injects it
+    as a learnable bias into cross-attention (enabled via xattn_use_emotion_prior=True).
+    Experiments showed no consistent improvement over standard cross-attention on
+    the RAVDESS dataset.
+    """
 
     def __init__(self, token_dim: int, prior_dim: int, hidden_dim: int, dropout: float = 0.1) -> None:
         super().__init__()
@@ -372,13 +385,14 @@ class FusionModel(nn.Module):
             v = self.v_in_proj(v_feat)  # [B, T, d_model]
 
             if hasattr(self.audio_model, "encode_sequence"):
-                # Warm-start friendly path: use sequence states from audio encoder.
-                # WavLM returns [B, Ta, hidden], then project to attention dim.
+                # Primary path (used in paper): WavLM returns [B, Ta, hidden_size],
+                # then project to cross-attention dimension d_model.
                 a_seq = self.audio_model.encode_sequence(audio)
                 a_seq = self.audio_seq_proj(a_seq)
             else:
-                # Mel fallback for encoders without sequence interface.
-                # audio: [B, 1, n_mels, Ta] -> [B, n_mels, Ta]
+                # Legacy mel fallback: for mel-spectrogram encoders (AudioNet) that
+                # do not expose encode_sequence(). Maps [B,1,n_mels,Ta] -> [B,Ta,d_model]
+                # via a 1D convolution. NOT used in paper experiments.
                 a_in = audio.squeeze(1)
                 a_time = self.audio_time_conv(a_in)  # [B, a_dim, Ta]
                 a_seq = a_time.permute(0, 2, 1).contiguous()  # [B, Ta, a_dim]

@@ -1,0 +1,1 @@
+/home/louis/projects/MultimodalEmotionRecognition/src/train.py --data_root data --fusion audio --use_wavlm --wavlm_stage 2 --epochs 20 --use_cosine_annealing --wandb --use_face_crop

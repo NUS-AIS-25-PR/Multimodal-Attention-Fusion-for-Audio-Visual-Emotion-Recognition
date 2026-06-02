@@ -222,3 +222,14 @@ Desktop.ini
 !data/.gitkeep
 !checkpoints/.gitkeep
 !outputs/.gitkeep
+
+# Windows Zone.Identifier metadata files
+*Zone.Identifier
+*.Identifier
+
+# Internal development notes (not for public repo)
+assets/teacher_response.md
+EXPERIMENT_LOG.md
+OOP_REFACTOR_GUIDE.md
+SYSTEM_SUMMARY.md
+TECHNICAL_SUMMARY.md

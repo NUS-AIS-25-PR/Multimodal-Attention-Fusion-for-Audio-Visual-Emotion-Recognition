@@ -1,0 +1,1 @@
+/home/louis/projects/MultimodalEmotionRecognition/src/train.py --data_root data --fusion video --use_cosine_annealing --wandb --use_face_crop

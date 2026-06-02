@@ -1,0 +1,77 @@
+{
+  "os":  "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-02-10T17:06:55.453828Z",
+  "args":  [
+    "--data_root",
+    "data",
+    "--num_classes",
+    "8",
+    "--fusion",
+    "gated",
+    "--use_wavlm",
+    "--audio_ckpt",
+    "outputs/best_audio.pt",
+    "--video_ckpt",
+    "outputs/best_video.pt",
+    "--two_stage_training",
+    "--stage1_epochs",
+    "5",
+    "--lr",
+    "3e-4",
+    "--audio_backbone_lr",
+    "1e-5",
+    "--video_backbone_lr",
+    "1e-5",
+    "--fusion_unfreeze_wavlm_layers",
+    "2",
+    "--fusion_unfreeze_video_blocks",
+    "1",
+    "--epochs",
+    "30",
+    "--batch_size",
+    "8",
+    "--weight_decay",
+    "1e-4",
+    "--use_cosine_annealing",
+    "--early_stopping_patience",
+    "8",
+    "--num_workers",
+    "-1",
+    "--wandb"
+  ],
+  "program":  "/home/louis/projects/MultimodalEmotionRecognition/src/train.py",
+  "codePath":  "src/train.py",
+  "codePathLocal":  "src/train.py",
+  "git":  {
+    "remote":  "https://github.com/Wionerlol/MultimodalEmotionRecognition.git",
+    "commit":  "d60c7ef782183f53b696349c9dc8c6bdee73f508"
+  },
+  "email":  "wionerlol@gmail.com",
+  "root":  "/home/louis/projects/MultimodalEmotionRecognition",
+  "host":  "MoonCell",
+  "executable":  "/home/louis/projects/MultimodalEmotionRecognition/.venv/bin/python3",
+  "cpu_count":  24,
+  "cpu_count_logical":  24,
+  "gpu":  "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "1081101176832",
+      "used":  "59584819200"
+    }
+  },
+  "memory":  {
+    "total":  "16466980864"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "memoryTotal":  "17094934528",
+      "architecture":  "Blackwell",
+      "uuid":  "GPU-40be5801-0aff-1b94-3ecc-fdefefc4b764"
+    }
+  ],
+  "cudaVersion":  "13.1",
+  "writerId":  "dfi3aowipl1587p88t28jbnot83p5k6p"
+}

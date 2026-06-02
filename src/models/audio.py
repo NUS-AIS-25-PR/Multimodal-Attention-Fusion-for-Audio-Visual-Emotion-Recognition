@@ -1,3 +1,14 @@
+"""
+Mel-spectrogram audio encoder (legacy branch).
+
+NOTE: This module was an early experimental audio pipeline based on mel-spectrogram
+features. It was explored during development but was NOT used in the final paper
+experiments. The paper uses WavLMAudioEncoder (wavlm_audio.py) as the audio encoder.
+
+This file is retained as a reference implementation. The mel-spectrogram path is
+still reachable in FusionModel via the audio_time_conv fallback when the audio
+encoder does not expose an encode_sequence() interface.
+"""
 from __future__ import annotations
 
 import torch
@@ -8,7 +19,11 @@ from .temporal import TemporalPooler
 
 
 class SpecAugment(nn.Module):
-    """SpecAugment: Augmenting the time and frequency dimensions of spectrograms."""
+    """SpecAugment: frequency and time masking augmentation for mel-spectrograms.
+
+    NOTE: Only active when AudioNet (mel branch) is used. Not applied in
+    WavLM-based experiments reported in the paper.
+    """
     def __init__(self, freq_mask_param: int = 20, time_mask_param: int = 40, num_masks: int = 2, p: float = 0.5):
         super().__init__()
         self.freq_mask_param = freq_mask_param
@@ -53,7 +68,10 @@ class SpecAugment(nn.Module):
 
 
 class AudioResNet18(nn.Module):
-    """ResNet18 adapted for mel-spectrogram input (single channel)."""
+    """ResNet18 adapted for mel-spectrogram input (single channel).
+
+    NOTE: Legacy mel branch — not used in paper experiments.
+    """
     def __init__(self, embedding_dim: int = 128, temporal_bins: int = 16) -> None:
         super().__init__()
         self.embedding_dim = embedding_dim
@@ -120,7 +138,10 @@ class AudioResNet18(nn.Module):
 
 
 class AudioCNN(nn.Module):
-    """Original lightweight CNN for mel-spectrogram."""
+    """Lightweight CNN for mel-spectrogram input.
+
+    NOTE: Legacy mel branch — not used in paper experiments.
+    """
     def __init__(self, embedding_dim: int = 128, temporal_bins: int = 16) -> None:
         super().__init__()
         self.temporal_bins = temporal_bins
@@ -155,6 +176,11 @@ class AudioCNN(nn.Module):
 
 
 class AudioNet(nn.Module):
+    """Mel-spectrogram audio encoder wrapping AudioResNet18 or AudioCNN.
+
+    NOTE: Legacy mel branch — not used in paper experiments. The paper uses
+    WavLMAudioEncoder from wavlm_audio.py as the audio encoder.
+    """
     def __init__(
         self,
         num_classes: int,
