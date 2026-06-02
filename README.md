@@ -167,18 +167,3 @@ The codebase contains several modules that were explored during development but 
 | `ClipStyleAlignment` | `src/models/fusion.py` | CLIP-style contrastive pre-fusion alignment. Conflicted with classification loss; abandoned. |
 | `EmotionPriorBiasAdapter` | `src/models/fusion.py` | Emotion-prior-conditioned cross-attention bias. Showed no consistent improvement on RAVDESS. |
 | Actor-based split | `src/data/ravdess.py` | Speaker-independent evaluation split. Implemented but results not reported in paper. |
-
-## Citation
-
-```bibtex
-@inproceedings{liu2026multimodal,
-  title     = {Multimodal Attention Fusion for Audio-Visual Emotion Recognition},
-  booktitle = {IEEE Signal Processing in Medicine and Biology Symposium (SPMB)},
-  year      = {2026},
-  month     = {December},
-}
-```
-
-## Author
-
-Zheyi Liu — National University of Singapore, Master of Artificial Intelligence Systems
