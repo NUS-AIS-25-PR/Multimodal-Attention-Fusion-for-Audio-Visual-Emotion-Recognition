@@ -5,6 +5,7 @@ import argparse
 import platform
 import sys
 import math
+import json
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -24,8 +25,9 @@ from data.ravdess import DATASET_FACTORY, PAIR_SERVICE, SPLIT_SERVICE
 from models.audio import AudioNet
 from models.video import VideoNet
 from models.fusion import FusionModel
+from models.chumachenko_ia import ChumachenkoIntermediateAttentionFusion
 from models.wavlm_audio import WavLMAudioEncoder
-from utils.metrics import accuracy, macro_f1
+from utils.metrics import accuracy, classification_metrics
 from utils.seed import set_seed
 
 
@@ -89,9 +91,10 @@ def build_dataloaders(
     use_wavlm: bool = False,
     train_augment: bool = True,
     use_face_crop: bool = True,
+    pairs_csv: Path = Path("pairs.csv"),
 ) -> Tuple[DataLoader, DataLoader, DataLoader, Dict[str, int]]:
     pairs = PAIR_SERVICE.build_pairs(data_root)
-    PAIR_SERVICE.save_pairs_csv(pairs, Path("pairs.csv"))
+    PAIR_SERVICE.save_pairs_csv(pairs, pairs_csv)
 
     if len(pairs) == 0:
         raise RuntimeError("No audio-video pairs found. Check data_root and filenames.")
@@ -235,12 +238,14 @@ def train_one_epoch(
 
     all_preds = torch.cat(all_preds)
     all_targets = torch.cat(all_targets)
+    scores = classification_metrics(all_preds, all_targets, num_classes=outputs.shape[-1])
     return {
         "loss": total_loss / len(loader.dataset),
         "cls_loss": total_cls_loss / len(loader.dataset),
         "contrastive_loss": total_contrastive_loss / len(loader.dataset),
         "acc": accuracy(all_preds, all_targets),
-        "f1": macro_f1(all_preds, all_targets),
+        "f1": scores["macro_f1"],
+        **scores,
     }
 
 
@@ -292,12 +297,14 @@ def evaluate(
 
     all_preds = torch.cat(all_preds)
     all_targets = torch.cat(all_targets)
+    scores = classification_metrics(all_preds, all_targets, num_classes=outputs.shape[-1])
     return {
         "loss": total_loss / len(loader.dataset),
         "cls_loss": total_cls_loss / len(loader.dataset),
         "contrastive_loss": total_contrastive_loss / len(loader.dataset),
         "acc": accuracy(all_preds, all_targets),
-        "f1": macro_f1(all_preds, all_targets),
+        "f1": scores["macro_f1"],
+        **scores,
     }
 
 
@@ -349,6 +356,8 @@ def build_model(
     xattn_emotion_prior_dim: int = 8,
     xattn_emotion_prior_hidden_dim: int = 64,
     xattn_emotion_prior_dropout: float = 0.1,
+    smoke: bool = False,
+    checkpoint_init: bool = False,
 ) -> nn.Module:
     if fusion == "audio":
         if use_wavlm:
@@ -358,6 +367,8 @@ def build_model(
                 temporal_num_heads=temporal_num_heads,
                 temporal_num_layers=temporal_num_layers,
                 temporal_dropout=temporal_dropout,
+                smoke=smoke,
+                checkpoint_init=checkpoint_init,
             )
         else:
             return AudioNet(
@@ -377,12 +388,8 @@ def build_model(
             temporal_num_heads=temporal_num_heads,
             temporal_num_layers=temporal_num_layers,
             temporal_dropout=temporal_dropout,
-            xattn_use_emotion_prior=xattn_use_emotion_prior,
-            xattn_emotion_prior_dim=xattn_emotion_prior_dim,
-            xattn_emotion_prior_hidden_dim=xattn_emotion_prior_hidden_dim,
-            xattn_emotion_prior_dropout=xattn_emotion_prior_dropout,
         )
-    if fusion in {"late", "concat", "gated"}:
+    if fusion in {"late", "concat", "gated", "chumachenko_ia"}:
         if use_wavlm:
             audio = WavLMAudioEncoder(
                 num_classes=num_classes,
@@ -390,6 +397,8 @@ def build_model(
                 temporal_num_heads=temporal_num_heads,
                 temporal_num_layers=temporal_num_layers,
                 temporal_dropout=temporal_dropout,
+                smoke=smoke,
+                checkpoint_init=checkpoint_init,
             )
         else:
             audio = AudioNet(
@@ -409,6 +418,10 @@ def build_model(
             temporal_num_layers=temporal_num_layers,
             temporal_dropout=temporal_dropout,
         )
+        if fusion == "chumachenko_ia":
+            if not use_wavlm:
+                raise ValueError("chumachenko_ia requires WavLM sequence features")
+            return ChumachenkoIntermediateAttentionFusion(audio, video, num_classes)
         return FusionModel(
             audio,
             video,
@@ -426,6 +439,8 @@ def build_model(
                 temporal_num_heads=temporal_num_heads,
                 temporal_num_layers=temporal_num_layers,
                 temporal_dropout=temporal_dropout,
+                smoke=smoke,
+                checkpoint_init=checkpoint_init,
             )
         else:
             audio = AudioNet(
@@ -478,7 +493,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--fusion",
         type=str,
         default="audio",
-        choices=["audio", "video", "late", "concat", "gated", "xattn", "xattn_concat", "xattn_gated"],
+        choices=["audio", "video", "late", "concat", "gated", "xattn", "xattn_concat", "xattn_gated", "chumachenko_ia"],
     )
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch_size", type=int, default=16)
@@ -696,6 +711,7 @@ class EmotionTrainer:
 
     def _checkpoint_config(self) -> Dict[str, object]:
         return {
+            **vars(self.args),
             "fusion": self.args.fusion,
             "use_wavlm": bool(self.args.use_wavlm),
             "xattn_head": getattr(self.args, "xattn_head", "concat"),
@@ -918,13 +934,20 @@ class EmotionTrainer:
         if not hasattr(model, "audio_model") or not hasattr(model, "video_model"):
             return
 
+        if getattr(args, "revision", None):
+            from revision.protocol import validate_warm_start
+            for modality in ("audio", "video"):
+                source = getattr(args, f"{modality}_ckpt")
+                if source:
+                    validate_warm_start(Path(source), args.revision, modality)
+
         if args.audio_ckpt:
             audio_ckpt = Path(args.audio_ckpt).expanduser()
             if not audio_ckpt.exists():
                 raise FileNotFoundError(f"Audio checkpoint not found: {audio_ckpt}")
             audio_obj = torch.load(audio_ckpt, map_location="cpu")
             audio_state = self._extract_state_dict(audio_obj)
-            missing, unexpected = model.audio_model.load_state_dict(audio_state, strict=False)
+            missing, unexpected = model.audio_model.load_state_dict(audio_state, strict=bool(getattr(args, "revision", None)))
             print(
                 f"[INFO] Loaded audio branch checkpoint: {audio_ckpt} "
                 f"(missing={len(missing)}, unexpected={len(unexpected)})"
@@ -938,7 +961,7 @@ class EmotionTrainer:
                 raise FileNotFoundError(f"Video checkpoint not found: {video_ckpt}")
             video_obj = torch.load(video_ckpt, map_location="cpu")
             video_state = self._extract_state_dict(video_obj)
-            missing, unexpected = model.video_model.load_state_dict(video_state, strict=False)
+            missing, unexpected = model.video_model.load_state_dict(video_state, strict=bool(getattr(args, "revision", None)))
             print(
                 f"[INFO] Loaded video branch checkpoint: {video_ckpt} "
                 f"(missing={len(missing)}, unexpected={len(unexpected)})"
@@ -946,8 +969,20 @@ class EmotionTrainer:
             if unexpected:
                 print(f"[WARNING] Video unexpected keys (first 8): {unexpected[:8]}")
 
-    def run(self) -> None:
+    def run(self) -> Dict[str, float]:
         args = self.args
+        if args.epochs < 1:
+            raise ValueError("epochs must be positive")
+        if getattr(args, "revision", None):
+            from revision.protocol import fixed_folds
+            split = args.revision["split"]
+            if split != fixed_folds()[split["fold"] - 1] or args.split_mode != "actor":
+                raise ValueError("Invalid revision fold")
+            for partition in ("train", "val", "test"):
+                if parse_actor_list(getattr(args, f"{partition}_actors")) != split[f"{partition}_actors"]:
+                    raise ValueError("Revision actor arguments disagree with fold")
+            if not args.use_wavlm or args.num_classes != 8:
+                raise ValueError("Revision requires WavLM and eight classes")
         set_seed(args.seed)
         self._init_tracking()
 
@@ -964,6 +999,9 @@ class EmotionTrainer:
         val_actors = parse_actor_list(args.val_actors)
         test_actors = parse_actor_list(args.test_actors)
 
+        run_dir = Path(getattr(args, "output_dir", "outputs"))
+        run_dir.mkdir(parents=True, exist_ok=True)
+        (run_dir / "config.json").write_text(json.dumps(self._checkpoint_config(), indent=2))
         train_loader, val_loader, test_loader, sizes = build_dataloaders(
             data_root=data_root,
             num_classes=args.num_classes,
@@ -978,8 +1016,9 @@ class EmotionTrainer:
             train_ratio=args.train_ratio,
             val_ratio=args.val_ratio,
             use_wavlm=args.use_wavlm,
-            train_augment=True,
+            train_augment=not getattr(args, "smoke", False),
             use_face_crop=args.use_face_crop,
+            pairs_csv=run_dir / "pairs.csv",
         )
 
         print(f"\n{'=' * 60}")
@@ -1000,6 +1039,7 @@ class EmotionTrainer:
             args.num_classes,
             args.fusion,
             pretrained_video=not args.no_pretrained_video,
+            smoke=getattr(args, "smoke", False),
             xattn_head=getattr(args, "xattn_head", "concat"),
             xattn_d_model=getattr(args, "xattn_d_model", 128),
             xattn_heads=getattr(args, "xattn_heads", 4),
@@ -1064,7 +1104,7 @@ class EmotionTrainer:
         print(f"[INFO] Trainable parameters after stage setup: {configured_trainable:,}")
 
         best_f1 = -1.0
-        best_path = Path("outputs") / f"best_{args.fusion}.pt"
+        best_path = run_dir / ("best.pt" if getattr(args, "revision", None) else f"best_{args.fusion}.pt")
         best_path.parent.mkdir(parents=True, exist_ok=True)
         early_stopping_counter = 0
 
@@ -1139,7 +1179,7 @@ class EmotionTrainer:
                 best_f1 = val_metrics["f1"]
                 early_stopping_counter = 0
                 torch.save(
-                    {"model": model.state_dict(), "val_f1": best_f1, "config": self._checkpoint_config()},
+                    {"model": model.state_dict(), "val_f1": best_f1, "epoch": epoch, "config": self._checkpoint_config()},
                     best_path,
                 )
             else:
@@ -1149,6 +1189,10 @@ class EmotionTrainer:
                     print(f"Best val F1: {best_f1:.4f}")
                     break
 
+        best = torch.load(best_path, map_location=device, weights_only=True)
+        model.load_state_dict(best["model"])
+        print(f"[INFO] Reloaded best validation checkpoint: {best_path} (epoch {best['epoch']})")
+        test_metrics = {}
         if sizes["test"] > 0:
             test_metrics = evaluate(
                 model,
@@ -1164,7 +1208,12 @@ class EmotionTrainer:
                 f"acc {test_metrics['acc']:.4f} f1 {test_metrics['f1']:.4f}"
             )
 
-            if args.wandb:
+            record = {"test": test_metrics, "best_epoch": best["epoch"],
+                      "val_macro_f1": best["val_f1"], "checkpoint": str(best_path.resolve()),
+                      "config": self._checkpoint_config()}
+            (run_dir / "metrics.json").write_text(json.dumps(record, indent=2))
+
+            if args.wandb and not getattr(args, "revision", None):
                 test_preds = []
                 test_targets = []
                 with torch.no_grad():
@@ -1199,6 +1248,7 @@ class EmotionTrainer:
         print(f"Best val macro-F1: {best_f1:.4f} | checkpoint: {best_path}")
         if args.wandb:
             wandb.finish()
+        return test_metrics
 
 
 def main() -> None:

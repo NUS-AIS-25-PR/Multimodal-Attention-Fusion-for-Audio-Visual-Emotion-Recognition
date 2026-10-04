@@ -25,21 +25,28 @@ class WavLMAudioEncoder(nn.Module):
         temporal_num_heads: int = 4,
         temporal_num_layers: int = 1,
         temporal_dropout: float = 0.1,
+        smoke: bool = False,
+        checkpoint_init: bool = False,
     ):
         super().__init__()
         self.num_classes = num_classes
         self.embedding_dim = embedding_dim
         self.model_name = model_name
         
-        # Load WavLM pretrained model (with offline fallback for WSL/air-gapped envs)
-        local_files_only = os.environ.get("HF_LOCAL_ONLY", "0") == "1"
-        try:
-            self.wavlm = WavLMModel.from_pretrained(model_name, local_files_only=local_files_only)
-        except Exception as exc:
-            print(f"[WARNING] Failed to load pretrained {model_name}: {exc}")
-            print("[WARNING] Falling back to WavLM base config init; checkpoint weights will be loaded afterward.")
+        # Production must fail rather than silently train a random encoder.
+        if smoke:
+            self.wavlm = WavLMModel(WavLMConfig(
+                hidden_size=32, num_hidden_layers=1, num_attention_heads=2,
+                intermediate_size=64, conv_dim=(16,) * 7,
+                num_conv_pos_embedding_groups=4, mask_time_prob=0.0,
+            ))
+        elif checkpoint_init:
+            # Complete checkpoint state is strictly restored by the evaluator.
             self.wavlm = WavLMModel(WavLMConfig())
-        
+        else:
+            self.wavlm = WavLMModel.from_pretrained(
+                model_name, local_files_only=os.environ.get("HF_LOCAL_ONLY", "0") == "1")
+
         # Get actual hidden size from model config
         actual_hidden_size = self.wavlm.config.hidden_size
         self.sequence_dim = actual_hidden_size

@@ -11,11 +11,8 @@ from torch import nn
 from torch.utils.data import DataLoader
 
 from data.ravdess import DATASET_FACTORY, PAIR_SERVICE, SPLIT_SERVICE
-from models.audio import AudioNet
-from models.video import VideoNet
-from models.fusion import FusionModel
-from models.wavlm_audio import WavLMAudioEncoder
-from utils.metrics import accuracy, macro_f1
+from utils.metrics import classification_metrics
+from train import build_model
 
 
 def _is_wsl() -> bool:
@@ -39,7 +36,7 @@ def _auto_num_workers(data_root: Path, requested: int) -> int:
 
 
 @torch.no_grad()
-def evaluate(model: nn.Module, loader: DataLoader, device: torch.device, fusion_mode: str) -> None:
+def evaluate(model: nn.Module, loader: DataLoader, device: torch.device, fusion_mode: str) -> dict:
     model.eval()
     all_preds = []
     all_targets = []
@@ -47,170 +44,31 @@ def evaluate(model: nn.Module, loader: DataLoader, device: torch.device, fusion_
         video = video.to(device)
         audio = audio.to(device)
         labels = labels.to(device)
-        outputs = model(video, audio) if fusion_mode in {"late", "concat", "gated", "xattn", "xattn_concat", "xattn_gated"} else model(
-            audio if fusion_mode == "audio" else video
-        )
-        if fusion_mode == "late":
-            preds = outputs.argmax(dim=1)
-        else:
-            preds = outputs.argmax(dim=1)
+        outputs = model(audio if fusion_mode == "audio" else video) if fusion_mode in {"audio", "video"} else model(video, audio)
+        preds = outputs.argmax(dim=1)
         all_preds.append(preds)
         all_targets.append(labels)
 
     all_preds = torch.cat(all_preds)
     all_targets = torch.cat(all_targets)
-    print(f"Accuracy: {accuracy(all_preds, all_targets):.4f}")
-    print(f"Macro-F1: {macro_f1(all_preds, all_targets):.4f}")
-
-
-def build_model(
-    num_classes: int,
-    fusion: str,
-    xattn_head: str = "concat",
-    xattn_d_model: int = 128,
-    xattn_heads: int = 4,
-    xattn_attn_dropout: float = 0.1,
-    xattn_stochastic_depth: float = 0.1,
-    temporal_pooling: str = "mean",
-    temporal_num_heads: int = 4,
-    temporal_num_layers: int = 1,
-    temporal_dropout: float = 0.1,
-    audio_n_mels: int = 64,
-    use_resnet_audio: bool = True,
-    use_wavlm: bool = False,
-    fusion_align_mode: str = "none",
-    fusion_align_dim: int = 256,
-    fusion_align_temperature: float = 0.07,
-    xattn_use_emotion_prior: bool = False,
-    xattn_emotion_prior_dim: int = 8,
-    xattn_emotion_prior_hidden_dim: int = 64,
-    xattn_emotion_prior_dropout: float = 0.1,
-) -> nn.Module:
-    if fusion == "audio":
-        if use_wavlm:
-            return WavLMAudioEncoder(
-                num_classes=num_classes,
-                temporal_pooling=temporal_pooling,
-                temporal_num_heads=temporal_num_heads,
-                temporal_num_layers=temporal_num_layers,
-                temporal_dropout=temporal_dropout,
-            )
-        return AudioNet(
-            num_classes=num_classes,
-            use_resnet=use_resnet_audio,
-            temporal_pooling=temporal_pooling,
-            temporal_num_heads=temporal_num_heads,
-            temporal_num_layers=temporal_num_layers,
-            temporal_dropout=temporal_dropout,
-            xattn_use_emotion_prior=xattn_use_emotion_prior,
-            xattn_emotion_prior_dim=xattn_emotion_prior_dim,
-            xattn_emotion_prior_hidden_dim=xattn_emotion_prior_hidden_dim,
-            xattn_emotion_prior_dropout=xattn_emotion_prior_dropout,
-        )
-    if fusion == "video":
-        return VideoNet(
-            num_classes=num_classes,
-            temporal_pooling=temporal_pooling,
-            temporal_num_heads=temporal_num_heads,
-            temporal_num_layers=temporal_num_layers,
-            temporal_dropout=temporal_dropout,
-        )
-    if fusion in {"late", "concat", "gated"}:
-        if use_wavlm:
-            audio = WavLMAudioEncoder(
-                num_classes=num_classes,
-                temporal_pooling=temporal_pooling,
-                temporal_num_heads=temporal_num_heads,
-                temporal_num_layers=temporal_num_layers,
-                temporal_dropout=temporal_dropout,
-            )
-        else:
-            audio = AudioNet(
-                num_classes=num_classes,
-                use_resnet=use_resnet_audio,
-                temporal_pooling=temporal_pooling,
-                temporal_num_heads=temporal_num_heads,
-                temporal_num_layers=temporal_num_layers,
-                temporal_dropout=temporal_dropout,
-            )
-        video = VideoNet(
-            num_classes=num_classes,
-            temporal_pooling=temporal_pooling,
-            temporal_num_heads=temporal_num_heads,
-            temporal_num_layers=temporal_num_layers,
-            temporal_dropout=temporal_dropout,
-        )
-        return FusionModel(
-            audio,
-            video,
-            num_classes=num_classes,
-            mode=fusion,
-            fusion_align_mode=fusion_align_mode,
-            fusion_align_dim=fusion_align_dim,
-            fusion_align_temperature=fusion_align_temperature,
-        )
-    if fusion in {"xattn", "xattn_concat", "xattn_gated"}:
-        if use_wavlm:
-            audio = WavLMAudioEncoder(
-                num_classes=num_classes,
-                temporal_pooling=temporal_pooling,
-                temporal_num_heads=temporal_num_heads,
-                temporal_num_layers=temporal_num_layers,
-                temporal_dropout=temporal_dropout,
-            )
-        else:
-            audio = AudioNet(
-                num_classes=num_classes,
-                use_resnet=use_resnet_audio,
-                temporal_pooling=temporal_pooling,
-                temporal_num_heads=temporal_num_heads,
-                temporal_num_layers=temporal_num_layers,
-                temporal_dropout=temporal_dropout,
-            )
-        video = VideoNet(
-            num_classes=num_classes,
-            temporal_pooling=temporal_pooling,
-            temporal_num_heads=temporal_num_heads,
-            temporal_num_layers=temporal_num_layers,
-            temporal_dropout=temporal_dropout,
-        )
-        head = xattn_head
-        if fusion == "xattn_concat":
-            head = "concat"
-        if fusion == "xattn_gated":
-            head = "gated"
-        return FusionModel(
-            audio,
-            video,
-            num_classes=num_classes,
-            mode="xattn",
-            xattn_head=head,
-            d_model=xattn_d_model,
-            num_heads=xattn_heads,
-            audio_n_mels=audio_n_mels if not use_wavlm else 768,
-            xattn_attn_dropout=xattn_attn_dropout,
-            xattn_stochastic_depth=xattn_stochastic_depth,
-            temporal_pooling=temporal_pooling,
-            temporal_num_heads=temporal_num_heads,
-            temporal_num_layers=temporal_num_layers,
-            temporal_dropout=temporal_dropout,
-        )
-    raise ValueError(f"Unknown fusion mode: {fusion}")
+    metrics = classification_metrics(all_preds, all_targets, outputs.shape[-1])
+    print(metrics)
+    return metrics
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_root", type=str, required=True)
-    parser.add_argument("--num_classes", type=int, default=8, choices=[4, 8])
+    parser.add_argument("--num_classes", type=int, default=None, choices=[4, 8])
     parser.add_argument(
         "--fusion",
         type=str,
-        default="audio",
-        choices=["audio", "video", "late", "concat", "gated", "xattn", "xattn_concat", "xattn_gated"],
+        default=None,
+        choices=["audio", "video", "late", "concat", "gated", "xattn", "xattn_concat", "xattn_gated", "chumachenko_ia"],
     )
-    parser.add_argument("--frames", type=int, default=8)
+    parser.add_argument("--frames", type=int, default=None)
     parser.add_argument("--checkpoint", type=str, required=True)
-    parser.add_argument("--test_actors", type=str, default="22,23,24")
+    parser.add_argument("--test_actors", type=str, default=None)
     parser.add_argument("--num_workers", type=int, default=-1, help="DataLoader workers (-1 for auto)")
     return parser
 
@@ -221,18 +79,42 @@ class EmotionEvaluator:
     def __init__(self, args: argparse.Namespace):
         self.args = args
 
-    def run(self) -> None:
+    def run(self) -> dict:
         args = self.args
-        test_actors = [int(x) for x in args.test_actors.split(",")]
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        ckpt = torch.load(args.checkpoint, map_location="cpu", weights_only=True)
+        config = ckpt.get("config", {})
+        revision = config.get("revision")
+        if revision:
+            from revision.protocol import fixed_folds
+            from revision.audit import audit_dataset, require_complete
+            split = revision["split"]
+            if split != fixed_folds()[split["fold"] - 1]:
+                raise ValueError("Checkpoint has an invalid revision split")
+            report = audit_dataset(Path(args.data_root))
+            if report["fingerprint"] != revision["dataset_fingerprint"]:
+                raise ValueError("Evaluation dataset differs from checkpoint audit")
+            if not revision["smoke"]:
+                require_complete(report)
+            expected = split["test_actors"]
+            if args.test_actors is not None and [int(x) for x in args.test_actors.split(",")] != expected:
+                raise ValueError("Test actors disagree with checkpoint fold")
+            test_actors = expected
+        else:
+            test_actors = [int(x) for x in (args.test_actors or "22,23,24").split(",")]
+        for key, default in (("fusion", "audio"), ("num_classes", 8), ("frames", 8)):
+            supplied = getattr(args, key)
+            if supplied is not None and key in config and supplied != config[key]:
+                raise ValueError(f"{key} disagrees with checkpoint configuration")
+            setattr(args, key, config.get(key, supplied if supplied is not None else default))
         pairs = PAIR_SERVICE.build_pairs(Path(args.data_root))
         _, _, test_pairs = SPLIT_SERVICE.by_actor(pairs, [], [], test_actors)
+        if not test_pairs:
+            raise ValueError("Empty test partition")
         test_ds = DATASET_FACTORY.create(
-            test_pairs,
-            num_classes=args.num_classes,
-            num_frames=args.frames,
-            augment=False,
-            use_face_crop=True,
-            use_wavlm=False,
+            test_pairs, num_classes=args.num_classes, num_frames=args.frames,
+            augment=False, use_face_crop=config.get("use_face_crop", True),
+            use_wavlm=config.get("use_wavlm", False),
         )
         num_workers = _auto_num_workers(Path(args.data_root), args.num_workers)
         loader_kwargs = {
@@ -245,11 +127,12 @@ class EmotionEvaluator:
         test_loader = DataLoader(test_ds, batch_size=16, shuffle=False, **loader_kwargs)
 
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        ckpt = torch.load(args.checkpoint, map_location=device)
-        config = ckpt.get("config", {}) if isinstance(ckpt, dict) else {}
         model = build_model(
             args.num_classes,
             args.fusion,
+            pretrained_video=False,
+            checkpoint_init=True,
+            smoke=config.get("smoke", False),
             xattn_head=config.get("xattn_head", "concat"),
             xattn_d_model=config.get("xattn_d_model", 128),
             xattn_heads=config.get("xattn_heads", 4),
@@ -272,7 +155,8 @@ class EmotionEvaluator:
         )
         model.load_state_dict(ckpt["model"])
         model.to(device)
-        evaluate(model, test_loader, device, args.fusion)
+        model.num_classes = args.num_classes
+        return evaluate(model, test_loader, device, args.fusion)
 
 
 def main() -> None:
