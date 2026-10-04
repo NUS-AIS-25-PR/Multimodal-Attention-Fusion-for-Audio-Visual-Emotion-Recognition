@@ -207,3 +207,43 @@ They do not address reviewer concerns and create unnecessary regression risk.
 **Rejected alternatives**
 
 - opportunistic cleanup/refactor while touching the repository.
+
+
+---
+
+## D12 — Preserve canonical per-model production definitions
+
+**Decision**
+
+Use the explicit user-approved profiles in `SPEC.md` section 17 and
+`REVISION_PROFILES.json`. Audio fine-tunes WavLM at stage 2; Gated/XAttn retain
+canonical two-stage optimization and XAttn's gated 96-dimensional head. Adapted
+IA and concat share Gated optimization. IA remains one-head/query-summed without
+normalization or original softhard modality dropout. Production loader workers
+use the existing auto policy by default.
+
+**Reason and superseded behavior**
+
+The first infrastructure PR used generic single-stage defaults. That was adequate
+for an infrastructure smoke but would silently change the paper's production
+training definitions. This explicit decision supersedes those defaults; the
+revision must change the evaluation protocol while preserving model definitions.
+
+---
+
+## D13 — Resume only completed runs with exact provenance
+
+**Decision**
+
+Skip complete matching runs, including explicitly selected models, and train
+only absent runs. Fail before training if any existing run is incomplete,
+corrupt, or mismatches full config, profile/catalog, fold, source or dataset.
+Persist profile IDs and full resolved configs in every artifact, and recheck
+across folds during aggregation. Do not recover partial epochs or mix prior
+single-stage artifacts with the new profiles.
+
+**Reason and superseded behavior**
+
+The first infrastructure version rejected all existing selected runs and only
+reused completed unimodal dependencies. Long CV runs require safe completed-fold
+resume without redoing training or changing scientific provenance.

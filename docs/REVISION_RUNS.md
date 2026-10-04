@@ -29,7 +29,8 @@ PYTHONPATH=src .venv/bin/python -m revision.run \
   --output-root outputs/revision_smoke_pr
 ```
 
-Use a fresh output root for each rerun. This creates decodable synthetic media
+Use a fresh output root when source/config changes. An identical rerun skips
+complete matching runs. This creates decodable synthetic media
 for all 24 actors, one sample each. Fold 1 uses train actors 09–24, validation
 05–08, and test 01–04. The production fold definition is unchanged; the smoke
 exception applies only to data completeness and pretrained encoder size/weights.
@@ -59,7 +60,7 @@ One selected model and fold:
 ```bash
 PYTHONPATH=src .venv/bin/python -m revision.run \
   --data-root /absolute/path/to/RAVDESS --fold 1 --model chumachenko_ia \
-  --output-root outputs/speaker_independent --epochs 20 --batch-size 4
+  --output-root outputs/speaker_independent
 ```
 
 Full six-fold suite, in audio/video/concat/IA/gated/xattn order for each fold:
@@ -67,7 +68,7 @@ Full six-fold suite, in audio/video/concat/IA/gated/xattn order for each fold:
 ```bash
 PYTHONPATH=src .venv/bin/python -m revision.run \
   --data-root /absolute/path/to/RAVDESS --model all \
-  --output-root outputs/speaker_independent --epochs 20 --batch-size 4
+  --output-root outputs/speaker_independent
 ```
 
 All methods use the fixed 16/4/4 disjoint actor partitions in `SPEC.md`.
@@ -77,12 +78,36 @@ provenance are forbidden. There are no arbitrary checkpoint CLI inputs.
 Pretrained `microsoft/wavlm-base` and ImageNet ResNet18 are required for production.
 Unavailable pretrained WavLM weights cause an error rather than random training.
 
-The runner's current optimization policy is the existing trainer's single-stage
-Adam defaults: LR 1e-3, weight decay 1e-4, WavLM backbone frozen, mean temporal
-pooling, no alignment/emotion-prior additions, early stopping patience 10. Fusion
-methods warm-start from same-fold unimodal checkpoints. This is a shared initial
-protocol, not a completed hyperparameter selection exercise. Review the policy
-before launching production; this PR does not run or optimize the final matrix.
+Production uses canonical per-model profiles from `src/revision/profiles.py`.
+Generic `--epochs`, `--batch-size` and `--lr` overrides are not accepted by this
+runner. Full default resolved configs and IDs are in
+[`REVISION_PROFILES.json`](REVISION_PROFILES.json). Shared runtime defaults are
+seed 42, 8 frames, face crop enabled and `num_workers=-1` (existing auto policy).
+
+| Model / profile ID (`spmb2026-<model>-v1`) | Epochs | Batch | LR | Weight decay | Patience |
+|---|---:|---:|---:|---:|---:|
+| audio | 20 | 16 | 1e-3 | 1e-4 | 10 |
+| video | 20 | 16 | 1e-3 | 1e-4 | 10 |
+| gated | 30 | 8 | 3e-4 | 1e-4 | 8 |
+| concat | 30 | 8 | 3e-4 | 1e-4 | 8 |
+| chumachenko_ia | 30 | 8 | 3e-4 | 1e-4 | 8 |
+| xattn | 35 | 8 | 2e-4 | 2e-4 | 10 |
+
+All profiles enable cosine annealing. Audio uses `wavlm_stage=2` and
+`backbone_lr=3e-5`. Gated/concat/IA use two-stage training with 5 stage-1 epochs,
+audio/video backbone LR 1e-5, two unfrozen WavLM layers and one unfrozen video
+block. XAttn keeps the paper's gated head, d_model 96, four heads, attention/drop
+path probabilities 0.1, label smoothing 0.05, two-stage training with 6 stage-1
+epochs, audio/video backbone LR 8e-6, two WavLM layers and one video block.
+Mean pooling and the existing Gated/XAttn architectures remain unchanged.
+IA remains one-head, query-summed and unnormalized; no softhard pipeline is added.
+Production remains pending review; these commands must not be launched yet.
+
+Smoke has distinct `spmb2026-<model>-smoke-v1` IDs. It preserves production
+architecture/optimizer settings, including audio stage 2 and the XAttn gated
+head/d_model/label smoothing, but uses two epochs, batch size 4, two frames,
+workers 0, no face crop, tiny random WavLM and non-pretrained ResNet18. Fusion
+stage 1 lasts one epoch so epoch 2 exercises the actual stage transition.
 
 ## Artifacts and reproducibility
 
@@ -94,10 +119,22 @@ preprocessing settings, library versions, Git commit and source fingerprint.
 The manifest fingerprint includes filenames, size and mtime; preserve these when
 re-evaluating copied datasets. Full file-content hashing is not provided.
 
-Existing selected model runs are refused before training. Completed audio/video
-prerequisites may be reused for a new fusion model only when fold, dataset,
-source, settings and mode match exactly. There is no partial-training resume;
-use a fresh output root after failures or code/config changes.
+Rerunning the same command safely resumes completed runs: all existing fold/model
+directories are checked before any new training. A run is skipped only if
+`best.pt`, `metrics.json`, `config.json` and the fold's `split.json` exist, are
+readable, and exactly match the expected provenance and entire trainer config.
+Profile ID, resolved profile/catalog, source fingerprint, Git commit, package
+versions, dataset manifest, split, settings and warm-start paths must agree.
+Best epoch/validation score/checkpoint path and valid test metrics must agree too.
+The catalog contains all per-model profiles in every fold's shared provenance;
+aggregation rechecks complete artifacts and canonical profiles across folds.
+
+Missing artifacts, corrupt checkpoints and any mismatch fail loudly before new
+training. Completed selected models and their dependencies are skipped without
+re-evaluation or overwriting; only absent runs are trained. Incomplete epoch runs
+cannot resume. A source/config/data change requires a fresh output root.
+Older artifacts from the initial generic single-stage harness are intentionally
+incompatible with this canonical-profile revision.
 
 Test scoring uses the checkpoint chosen by validation macro-F1 and runs once.
 Precision/recall/F1 use all eight fixed labels and zero for undefined terms.
@@ -137,8 +174,10 @@ The revision tests cover exact folds/coverage, leakage rejection, complete and
 corrupted synthetic audits, fold paths and checkpoint provenance, actual best
 checkpoint reload after a worse later epoch, evaluator preprocessing, eight-class
 metrics, aggregate sample std/partial coverage/mixing, pretrained failure,
-production preflight refusal, and the full orchestration schedule using a mock
-trainer (no production training).
+production preflight refusal, canonical production profiles/IDs, and complete
+matching resume versus incomplete/mismatched/corrupt artifact refusal. Full
+production orchestration and cross-fold profile consistency are tested with
+controlled audit/trainer mocks; no production training is performed.
 
 The pre-existing backend test
 `TestStreamingEmotionSession.test_session_builds_sliding_window_and_updates_cadence`

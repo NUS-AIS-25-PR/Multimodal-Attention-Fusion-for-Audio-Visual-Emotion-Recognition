@@ -329,7 +329,7 @@ It should support:
 - clear fold/model progress logs;
 - fold-aware paths;
 - aggregate metrics generation;
-- resume/skip behavior if practical, without silently mixing configs.
+- safe resume/skip of complete matching runs; fail on incomplete or mismatched artifacts.
 
 Avoid a complex workflow engine. A small Python runner or shell/Python combination is sufficient.
 
@@ -406,7 +406,8 @@ Do not implement unless directly needed:
   not be used as the main revision result.
 - `split.json` records the exact actor split under `split`, plus protocol, source
   fingerprint, Git commit, library versions, dataset manifest fingerprint, mode,
-  and common settings. Model configs save all trainer arguments; checkpoint
+  common settings and the full resolved per-model profile catalog. Model configs
+  save their profile ID, resolved profile and all trainer arguments; checkpoint
   records also contain selected epoch and validation F1.
 - The data audit checks the exact designed speech pair keys, file counts, and
   filename validity. Its manifest fingerprint covers relative paths, file sizes,
@@ -414,11 +415,13 @@ Do not implement unless directly needed:
 - Fusion selection automatically trains missing audio/video prerequisites, then
   loads only their current-fold checkpoints with matching provenance and strict
   state-dict compatibility. Existing completed prerequisites can be reused only
-  under the identical experiment identity. Selected run directories are never
-  overwritten; incomplete/changed runs require a fresh output root.
+  under the identical experiment identity. Every complete matching selected run
+  is skipped on resume. All existing run directories are checked before training;
+  incomplete/changed runs fail loudly and require a fresh output root.
 - Smoke mode uses 24 synthetic decodable pairs (one per actor), a tiny randomly
   initialized WavLM test fixture, and ResNet18 without pretrained weights. It
-  runs one epoch with two frames and no augmentation/face crop. A root mode
+  runs two epochs with two frames and no augmentation/face crop. Fusion stage 1
+  lasts one epoch, exercising stage 2 in epoch 2; workers remain 0. A root mode
   sentinel and provenance checks prevent mixing it with production evidence.
 - Production WavLM initialization fails if pretrained weights are unavailable;
   silent random-weight fallback is forbidden. This also makes missing pretrained
@@ -436,3 +439,41 @@ See `REVISION_RUNS.md` for commands and validation evidence.
 Standalone evaluation initializes encoder structure without downloading pretrained
 weights, then strictly loads the complete saved model state. This supports offline
 checkpoint evaluation while production training still requires pretrained weights.
+
+
+## 17. Canonical production profiles and strict resume
+
+The user-approved profiles supersede the first infrastructure commit's generic
+single-stage configuration. `revision.profiles` resolves the explicit audio,
+video, gated, xattn, adapted IA and concat profiles. Exact default resolved
+configs/IDs are recorded in `REVISION_PROFILES.json`; optimization/architecture
+parameters are fixed by profile rather than generic runner CLI overrides.
+Production defaults to loader workers -1 (the existing auto policy).
+
+- Audio: 20 epochs, batch 16, LR 1e-3, decay 1e-4, WavLM stage 2,
+  backbone LR 3e-5, cosine scheduling, patience 10.
+- Video: 20 epochs, batch 16, LR 1e-3, decay 1e-4, cosine, patience 10.
+- Gated, concat and IA: 30 epochs, batch 8, LR 3e-4, decay 1e-4, two-stage,
+  stage 1 for 5 epochs, audio/video backbone LR 1e-5, 2 unfrozen WavLM layers,
+  1 unfrozen video block, cosine, patience 8.
+- XAttn: 35 epochs, batch 8, LR 2e-4, decay 2e-4, gated head, d_model 96,
+  4 heads, attention dropout/drop path 0.1, smoothing 0.05, two-stage,
+  stage 1 for 6 epochs, audio/video backbone LR 8e-6, 2 WavLM layers,
+  1 video block, cosine, patience 10.
+
+The evaluation split changes; the paper's Gated/XAttn architecture and training
+definitions are preserved. IA's one-head query-summed weighting is unchanged:
+no normalization and no original softhard modality-dropout pipeline.
+
+Each model's full resolved config and versioned profile ID appear in config JSON,
+checkpoint and metric provenance. Every fold also stores the entire profile
+catalog so the same model profile can be checked across folds while different
+models retain their intended distinct settings. Resume/warm starts/aggregation
+use the same full expected-config and completed-artifact checks.
+
+Complete matching runs are skipped; absent runs are trained. Existing incomplete,
+corrupt or mismatched runs anywhere in the output root fail before new training.
+Completion requires readable best checkpoint, metrics, config and fold split,
+matching full config/provenance, consistent best epoch/validation score/path, and
+finite bounded test metrics. Partial epoch recovery is not implemented. Initial
+single-stage harness artifacts cannot be reused under these new profiles.

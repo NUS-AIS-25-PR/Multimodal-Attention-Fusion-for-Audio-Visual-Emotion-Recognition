@@ -7,7 +7,8 @@ from pathlib import Path
 from statistics import mean, stdev
 import math
 
-from revision.protocol import fixed_folds, MODELS, PROTOCOL, run_path
+from revision.protocol import (fixed_folds, MODELS, PROTOCOL, run_path,
+                               expected_run_config, validate_completed_run)
 
 METRICS = ("accuracy", "precision", "recall", "macro_f1")
 
@@ -26,6 +27,7 @@ def aggregate(root: Path) -> dict:
             revision = config["revision"]
             if revision["protocol"] != PROTOCOL or revision["split"] != split or config["fusion"] != model:
                 raise ValueError(f"Invalid fold provenance: {path}")
+            validate_completed_run(path.parent, expected_run_config(revision, model))
             identity = {k: v for k, v in revision.items() if k != "split"}
             if family is not None and family != identity:
                 raise ValueError("Cannot aggregate mixed data/config/smoke experiments")

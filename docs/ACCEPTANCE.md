@@ -72,6 +72,20 @@ The first handoff implementation is considered complete only when all items belo
   failure also occurs on the untouched base commit; see `REVISION_RUNS.md`.
 - [x] PR description lists commands and evidence.
 
+## H2. Production profiles and safe completed-run resume
+
+- [x] Explicit canonical profiles preserve audio stage 2, Gated two-stage and
+  XAttn gated head/d_model 96/smoothing 0.05/two-stage definitions.
+- [x] IA/concat use Gated optimization; IA weights remain query-summed and
+  unnormalized, without original softhard dropout.
+- [x] Profile IDs and full resolved configs are persisted and validated across
+  folds, checkpoints, metrics, warm starts and aggregation.
+- [x] Complete matching runs are skipped without retraining/re-evaluation.
+- [x] Incomplete, corrupt and mismatched existing runs fail before new training.
+- [x] Production loader workers default to -1; smoke uses 0.
+- [x] Automated tests cover canonical profiles and completed-fold resume.
+- [x] No real RAVDESS training is started during this follow-up.
+
 ## I. Scientific acceptance condition for the later production run
 
 The final experiment phase will be considered scientifically successful if:

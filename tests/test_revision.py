@@ -20,10 +20,33 @@ from models.chumachenko_ia import ChumachenkoIntermediateAttentionFusion
 from revision.audit import audit_dataset, expected_keys, require_complete
 from revision.aggregate import aggregate, METRICS
 from revision.protocol import fixed_folds, validate_split, validate_warm_start, run_path, PROTOCOL
-from revision.run import run
+from revision.run import run, build_arg_parser as revision_parser
+from revision.profiles import production_profile, resolve_profiles
+from revision.protocol import expected_run_config, validate_completed_run
 from train import EmotionTrainer, build_arg_parser
 from eval import EmotionEvaluator, build_arg_parser as eval_parser
 from utils.metrics import classification_metrics
+
+
+def fixture_revision(root, fold=1, smoke=True):
+    settings = {"seed":42,"frames":2 if smoke else 8,"use_face_crop":not smoke,
+                "num_workers":0 if smoke else -1}
+    return {"output_root":str(root),"data_root":str(root / "data"),"protocol":PROTOCOL,
+            "split":fixed_folds()[fold-1],"smoke":smoke,"settings":settings,
+            "profiles":resolve_profiles(smoke,settings),"source_fingerprint":"test-source",
+            "dataset_fingerprint":"test-data"}
+
+
+def write_completed_run(path, config, score=0.2):
+    path.mkdir(parents=True,exist_ok=True)
+    (path.parent/"split.json").write_text(json.dumps(config["revision"]))
+    (path/"config.json").write_text(json.dumps(config))
+    best = {"model":{"weight":torch.ones(1)},"config":config,"epoch":1,"val_f1":0.3}
+    torch.save(best,path/"best.pt")
+    record = {"config":config,"test":{k:score for k in METRICS},"best_epoch":1,
+              "val_macro_f1":0.3,"checkpoint":str((path/"best.pt").resolve())}
+    (path/"metrics.json").write_text(json.dumps(record))
+    return record
 
 
 class AudioFixture(torch.nn.Module):
@@ -94,20 +117,20 @@ class RevisionTests(unittest.TestCase):
     def test_paths_and_checkpoint_provenance(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            split = fixed_folds()[0]
-            revision = {"output_root": str(root), "split":split, "protocol": PROTOCOL, "smoke":False}
-            audio = run_path(root, 1, "audio") / "best.pt"
-            self.assertNotEqual(audio, run_path(root, 2, "audio") / "best.pt")
-            audio.parent.mkdir(parents=True)
-            checkpoint = {"config": {"revision":revision, "fusion":"audio", "use_wavlm":True}}
-            torch.save(checkpoint, audio)
-            validate_warm_start(audio, revision, "audio")
-            for bad_path in (root / "best_audio.pt", run_path(root,2,"audio") / "best.pt"):
-                with self.assertRaises(ValueError): validate_warm_start(bad_path, revision, "audio")
-            for changed in (None, {**revision,"split":fixed_folds()[1]}, {**revision,"smoke":True}):
+            revision = fixture_revision(root)
+            audio = run_path(root,1,"audio") / "best.pt"
+            self.assertNotEqual(audio,run_path(root,2,"audio") / "best.pt")
+            config = expected_run_config(revision,"audio")
+            write_completed_run(audio.parent,config)
+            validate_warm_start(audio,revision,"audio")
+            for bad_path in (root/"best_audio.pt",run_path(root,2,"audio")/"best.pt"):
+                with self.assertRaises(ValueError): validate_warm_start(bad_path,revision,"audio")
+            for changed in (None,{**revision,"split":fixed_folds()[1]},{**revision,"smoke":False}):
+                checkpoint = torch.load(audio,weights_only=True)
                 checkpoint["config"]["revision"] = changed
-                torch.save(checkpoint, audio)
-                with self.assertRaises(ValueError): validate_warm_start(audio, revision, "audio")
+                torch.save(checkpoint,audio)
+                with self.assertRaises(ValueError): validate_warm_start(audio,revision,"audio")
+                write_completed_run(audio.parent,config)
 
     def test_ia_shape_backward_and_query_sum_semantics(self):
         torch.manual_seed(1)
@@ -196,9 +219,9 @@ class RevisionTests(unittest.TestCase):
             for split in fixed_folds():
                 path = run_path(root,split["fold"],"audio") / "metrics.json"
                 path.parent.mkdir(parents=True)
-                record = {"config":{"fusion":"audio","revision":{"protocol":PROTOCOL,"split":split,"smoke":False}},
-                          "test":{k:split["fold"]/10 for k in METRICS}}
-                path.write_text(json.dumps(record)); paths.append(path)
+                config = expected_run_config(fixture_revision(root,split["fold"],False),"audio")
+                write_completed_run(path.parent,config,score=split["fold"]/10)
+                paths.append(path)
             result = aggregate(root)["methods"]["audio"]
             self.assertTrue(result["complete_six_folds"])
             self.assertAlmostEqual(result["summary"]["accuracy"]["mean"],0.35)
@@ -212,23 +235,27 @@ class RevisionTests(unittest.TestCase):
             self.assertFalse(result["complete_six_folds"])
             self.assertIsNone(result["summary"]["accuracy"]["std"])
 
-    def test_runner_all_folds_models_paths_and_overwrite_guard(self):
+    def test_resume_completed_fold_then_remaining_folds_and_skip_all(self):
         from types import SimpleNamespace
         with tempfile.TemporaryDirectory() as tmp:
-            args = SimpleNamespace(epochs=1, batch_size=4, frames=2, output_root=Path(tmp)/"out",
-                smoke=True, data_root=None, fold=None, model="all", seed=42, lr=0.001,
+            args = SimpleNamespace(frames=2, output_root=Path(tmp)/"out",
+                smoke=True, data_root=None, fold=1, model="all", seed=42,
                 no_face_crop=True, num_workers=0)
             configs = []
             def fake_train(train_args):
                 configs.append(train_args)
                 path = Path(train_args.output_dir)
-                record = {"config":vars(train_args), "test":{k:0.2 for k in METRICS}}
-                (path/"metrics.json").write_text(json.dumps(record))
-                torch.save({"config":vars(train_args),"model":{}},path/"best.pt")
+                record = write_completed_run(path,vars(train_args))
                 return mock.Mock(run=lambda: record["test"])
             with mock.patch("revision.run.EmotionTrainer", side_effect=fake_train), \
                  mock.patch("sys.stdout",new_callable=io.StringIO):
+                first = run(args)
+                self.assertEqual(len(configs),6)
+                self.assertFalse(first["methods"]["audio"]["complete_six_folds"])
+                original_metrics = (run_path(args.output_root,1,"audio")/"metrics.json").read_bytes()
+                args.fold = None
                 result = run(args)
+                self.assertEqual(original_metrics,(run_path(args.output_root,1,"audio")/"metrics.json").read_bytes())
                 self.assertEqual(len(configs),36)
                 self.assertEqual(len(result["methods"]),6)
                 self.assertTrue(all(m["complete_six_folds"] for m in result["methods"].values()))
@@ -240,12 +267,133 @@ class RevisionTests(unittest.TestCase):
                         for modality in ("audio","video"):
                             self.assertEqual(Path(getattr(config,f"{modality}_ckpt")),
                                 run_path(args.output_root,fold,modality)/"best.pt")
-                with self.assertRaises(FileExistsError): run(args)
-                args.epochs = 2  # Smoke always overrides epochs to 1.
-                args.lr = 0.002
+                run(args)
+                self.assertEqual(len(configs),36)  # Every completed run is skipped.
+                args.seed = 43
                 with self.assertRaises(ValueError): run(args)
                 args.smoke = False
                 with self.assertRaises(ValueError): run(args)
+
+    def test_canonical_production_profiles_and_ids(self):
+        audio = production_profile("audio")
+        self.assertEqual(audio["id"],"spmb2026-audio-v1")
+        a = audio["config"]
+        self.assertEqual((a["epochs"],a["batch_size"],a["lr"],a["weight_decay"]),(20,16,1e-3,1e-4))
+        self.assertEqual((a["wavlm_stage"],a["backbone_lr"]),(2,3e-5))
+        for name in ("audio","video","gated","concat","chumachenko_ia","xattn"):
+            c = production_profile(name)["config"]
+            self.assertEqual(c["num_workers"],-1)
+            self.assertTrue(c["use_cosine_annealing"])
+            self.assertTrue(c["use_wavlm"])
+            self.assertFalse(c["smoke"])
+        video = production_profile("video")["config"]
+        self.assertEqual((video["epochs"],video["batch_size"],video["lr"],video["weight_decay"],
+                          video["early_stopping_patience"]),(20,16,1e-3,1e-4,10))
+        for name in ("gated","concat","chumachenko_ia"):
+            c = production_profile(name)["config"]
+            self.assertEqual((c["epochs"],c["batch_size"],c["lr"],c["weight_decay"]),(30,8,3e-4,1e-4))
+            self.assertTrue(c["two_stage_training"])
+            self.assertEqual(c["stage1_epochs"],5)
+            self.assertEqual((c["audio_backbone_lr"],c["video_backbone_lr"]),(1e-5,1e-5))
+            self.assertEqual((c["fusion_unfreeze_wavlm_layers"],c["fusion_unfreeze_video_blocks"]),(2,1))
+            self.assertEqual(c["early_stopping_patience"],8)
+        x = production_profile("xattn")["config"]
+        self.assertEqual((x["epochs"],x["batch_size"],x["lr"],x["weight_decay"]),(35,8,2e-4,2e-4))
+        self.assertEqual((x["xattn_head"],x["xattn_d_model"],x["xattn_heads"]),("gated",96,4))
+        self.assertEqual((x["label_smoothing"],x["stage1_epochs"]),(0.05,6))
+        self.assertTrue(x["two_stage_training"])
+        self.assertEqual((x["audio_backbone_lr"],x["video_backbone_lr"]),(8e-6,8e-6))
+        self.assertEqual((x["xattn_attn_dropout"],x["xattn_stochastic_depth"]),(0.1,0.1))
+        self.assertEqual((x["fusion_unfreeze_wavlm_layers"],x["fusion_unfreeze_video_blocks"]),(2,1))
+        self.assertEqual(x["early_stopping_patience"],10)
+        self.assertEqual(revision_parser().parse_args([]).num_workers,-1)
+        # Copies must not allow IA/concat changes to mutate the canonical gated profile.
+        production_profile("chumachenko_ia")["config"]["lr"] = 99
+        self.assertEqual(production_profile("gated")["config"]["lr"],3e-4)
+
+    def test_production_runner_applies_full_profiles_across_all_folds_without_training(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args = revision_parser().parse_args(["--data-root",str(Path(tmp)/"data"),
+                                                 "--output-root",str(Path(tmp)/"out")])
+            configs = []
+            def fake_train(train_args):
+                configs.append(train_args)
+                record = write_completed_run(Path(train_args.output_dir),vars(train_args))
+                return mock.Mock(run=lambda:record["test"])
+            # Controlled audit and trainer mocks: no real media or model training is performed.
+            with mock.patch("revision.run.audit_dataset",return_value={"complete":True,"fingerprint":"mock-data"}), \
+                 mock.patch("revision.run.EmotionTrainer",side_effect=fake_train), \
+                 mock.patch("sys.stdout",new_callable=io.StringIO):
+                result = run(args)
+                self.assertEqual(len(configs),36)
+                for config in configs:
+                    expected = production_profile(config.fusion)
+                    self.assertEqual(config.profile_id,expected["id"])
+                    self.assertEqual(config.resolved_profile,expected["config"])
+                    for key,value in expected["config"].items():
+                        self.assertEqual(getattr(config,key),value)
+                self.assertTrue(all(m["complete_six_folds"] for m in result["methods"].values()))
+                run(args)
+                self.assertEqual(len(configs),36)
+
+    def test_resume_rejects_incomplete_or_mismatched_artifacts_before_training(self):
+        corruptions = ("best.pt","metrics.json","config.json","split.json","metric-config",
+                       "checkpoint-config","profile-id","resolved-profile","source","dataset",
+                       "checkpoint-path","epoch","test-score","unreadable-checkpoint","empty-state",
+                       "coordinated-config","other-incomplete-fold")
+        for corruption in corruptions:
+            with self.subTest(corruption=corruption), tempfile.TemporaryDirectory() as tmp:
+                args = revision_parser().parse_args(["--smoke","--fold","1","--model","audio",
+                                                     "--output-root",str(Path(tmp)/"out")])
+                def fake_train(train_args):
+                    record = write_completed_run(Path(train_args.output_dir),vars(train_args))
+                    return mock.Mock(run=lambda:record["test"])
+                with mock.patch("revision.run.EmotionTrainer",side_effect=fake_train), \
+                     mock.patch("sys.stdout",new_callable=io.StringIO):
+                    run(args)
+                path = run_path(args.output_root,1,"audio")
+                if corruption == "other-incomplete-fold":
+                    folder = args.output_root/"fold_02"
+                    folder.mkdir()
+                    (folder/"audio").mkdir()
+                elif corruption == "empty-state":
+                    obj = torch.load(path/"best.pt",weights_only=True)
+                    obj["model"] = {}
+                    torch.save(obj,path/"best.pt")
+                elif corruption == "coordinated-config":
+                    obj = json.loads((path/"config.json").read_text())
+                    obj["lr"] = 99
+                    (path/"config.json").write_text(json.dumps(obj))
+                    record = json.loads((path/"metrics.json").read_text())
+                    record["config"] = obj
+                    (path/"metrics.json").write_text(json.dumps(record))
+                    ckpt = torch.load(path/"best.pt",weights_only=True)
+                    ckpt["config"] = obj
+                    torch.save(ckpt,path/"best.pt")
+                elif corruption in ("best.pt","metrics.json","config.json"):
+                    (path/corruption).unlink()
+                elif corruption == "split.json":
+                    (path.parent/corruption).unlink()
+                elif corruption == "unreadable-checkpoint":
+                    (path/"best.pt").write_text("invalid checkpoint")
+                elif corruption == "checkpoint-config":
+                    obj = torch.load(path/"best.pt",weights_only=True)
+                    obj["config"]["wavlm_stage"] = 1
+                    torch.save(obj,path/"best.pt")
+                else:
+                    obj = json.loads((path/"metrics.json").read_text())
+                    if corruption == "metric-config": obj["config"]["lr"] = 99
+                    if corruption == "profile-id": obj["config"]["profile_id"] = "wrong"
+                    if corruption == "resolved-profile": obj["config"]["resolved_profile"]["wavlm_stage"] = 1
+                    if corruption == "source": obj["config"]["revision"]["source_fingerprint"] = "wrong"
+                    if corruption == "dataset": obj["config"]["revision"]["dataset_fingerprint"] = "wrong"
+                    if corruption == "checkpoint-path": obj["checkpoint"] = "old/best_audio.pt"
+                    if corruption == "epoch": obj["best_epoch"] = 9
+                    if corruption == "test-score": obj["test"]["accuracy"] = float("nan")
+                    (path/"metrics.json").write_text(json.dumps(obj))
+                with mock.patch("revision.run.EmotionTrainer") as trainer:
+                    with self.assertRaises(ValueError): run(args)
+                    trainer.assert_not_called()
 
     def test_pretrained_wavlm_failure_does_not_silently_randomize(self):
         from models.wavlm_audio import WavLMAudioEncoder
