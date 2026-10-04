@@ -1,5 +1,10 @@
 # Multimodal Attention Fusion for Audio-Visual Emotion Recognition
 
+> IEEE SPMB 2026 revision: use the [actor-independent experiment guide](docs/REVISION_RUNS.md).
+> Results and stratified commands below describe the historical random-split experiments.
+> Their checkpoints must never initialize revision folds.
+
+
 Implementation of the paper *"Multimodal Attention Fusion for Audio-Visual Emotion Recognition"* (IEEE SPMB 2026).
 
 This repository provides the full training pipeline, evaluation scripts, inference server, and pre-trained model benchmarks for audio-visual emotion recognition on the RAVDESS dataset.
