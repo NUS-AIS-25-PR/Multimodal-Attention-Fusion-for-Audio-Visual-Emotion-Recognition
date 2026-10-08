@@ -16,6 +16,8 @@ from revision.protocol import (fixed_folds, MODELS, PROTOCOL, run_path,
                                expected_run_config, validate_completed_run)
 from revision.profiles import resolve_profiles
 from revision.smoke import create_smoke_media
+from revision.artifacts import ARTIFACT_SCHEMA
+from revision.tracking import TrackingOptions
 from train import EmotionTrainer
 
 
@@ -29,7 +31,8 @@ def run(args: argparse.Namespace) -> dict:
     expected_mode = {"smoke": args.smoke, "protocol": PROTOCOL}
     if mode.exists() and json.loads(mode.read_text()) != expected_mode:
         raise ValueError("Output root belongs to a different smoke/production mode")
-    mode.write_text(json.dumps(expected_mode))
+    if not mode.exists():
+        mode.write_text(json.dumps(expected_mode))
     if args.smoke:
         torch.set_num_threads(1)
         data_root = root / "synthetic_media"
@@ -41,7 +44,11 @@ def run(args: argparse.Namespace) -> dict:
         data_root = args.data_root.expanduser().resolve()
     audit = audit_dataset(data_root)
     audit_path = root / f"audit-{audit['fingerprint']}.json"
-    audit_path.write_text(json.dumps(audit, indent=2))
+    if audit_path.exists():
+        if json.loads(audit_path.read_text()) != audit:
+            raise ValueError(f"Existing audit differs from dataset: {audit_path}")
+    else:
+        audit_path.write_text(json.dumps(audit, indent=2))
     if not args.smoke:
         require_complete(audit)
     elif audit["duplicates"] or audit["invalid_files"] or any(audit["missing_counterparts"].values()):
@@ -62,6 +69,7 @@ def run(args: argparse.Namespace) -> dict:
         source_hash.update(str(source.relative_to(source_root)).encode())
         source_hash.update(source.read_bytes())
     revision_common = {"source_fingerprint": source_hash.hexdigest(),
+                       "artifact_schema": ARTIFACT_SCHEMA,
                        "protocol": PROTOCOL, "smoke": args.smoke,
                        "output_root": str(root), "dataset_fingerprint": audit["fingerprint"],
                        "data_root": str(data_root), "settings": settings, "profiles": profiles,
@@ -98,7 +106,9 @@ def run(args: argparse.Namespace) -> dict:
             planned.append((split, model, path, revision, config))
     for split, model, path, revision, config in planned:
         path.mkdir(parents=True, exist_ok=False)
-        (path.parent / "split.json").write_text(json.dumps(revision, indent=2))
+        split_path = path.parent / "split.json"
+        if not split_path.exists():
+            split_path.write_text(json.dumps(revision, indent=2))
         train_args = argparse.Namespace(**config)
         print(f"[REVISION] fold={split['fold']} model={model} smoke={args.smoke}", flush=True)
         print(f"[REVISION] profile={train_args.profile_id} "
@@ -106,7 +116,10 @@ def run(args: argparse.Namespace) -> dict:
         print(f"[REVISION] disjoint split={split}", flush=True)
         print(f"[REVISION] audio_ckpt={train_args.audio_ckpt or 'none'} "
               f"video_ckpt={train_args.video_ckpt or 'none'}", flush=True)
-        EmotionTrainer(train_args).run()
+        tracking = TrackingOptions(mode=getattr(args, "wandb_mode", "disabled"),
+            project=getattr(args, "wandb_project", "ieee-spmb-2026"),
+            group=getattr(args, "wandb_group", None), entity=getattr(args, "wandb_entity", None))
+        EmotionTrainer(train_args, tracking=tracking).run()
     return aggregate(root)
 
 
@@ -121,6 +134,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--num-workers", type=int, default=-1)
     parser.add_argument("--no-face-crop", action="store_true")
+    parser.add_argument("--wandb-mode", choices=("disabled", "online", "offline"), default="disabled")
+    parser.add_argument("--wandb-project", default="ieee-spmb-2026")
+    parser.add_argument("--wandb-group", help="Shared experiment group across models/folds")
+    parser.add_argument("--wandb-entity", help="Optional W&B user or team")
     return parser
 
 

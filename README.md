@@ -1,6 +1,8 @@
 # Multimodal Attention Fusion for Audio-Visual Emotion Recognition
 
 > IEEE SPMB 2026 revision: use the [actor-independent experiment guide](docs/REVISION_RUNS.md).
+> The guide also covers durable local tracking, optional online/offline W&B,
+> and publication figures from held-out local artifacts.
 > Results and stratified commands below describe the historical random-split experiments.
 > Their checkpoints must never initialize revision folds.
 
