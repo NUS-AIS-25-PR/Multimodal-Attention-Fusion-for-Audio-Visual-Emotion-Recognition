@@ -72,8 +72,12 @@ def validate_completed_run(path: Path, expected_config: dict) -> dict:
     """Accept only complete, readable artifacts with identical config/provenance."""
     required = [path / name for name in ("best.pt", "metrics.json", "config.json")]
     required.append(path.parent / "split.json")
-    if any(not p.is_file() for p in required):
-        raise ValueError(f"Incomplete existing run: {path}; required checkpoint/config/metrics/split missing")
+    from revision.artifacts import ARTIFACT_SCHEMA, validate_local_artifacts
+    if expected_config["revision"].get("artifact_schema") == ARTIFACT_SCHEMA:
+        required.extend(path / name for name in ("history.csv", "test_predictions.csv", "confusion_matrix.json", "tracking.json"))
+    missing = [p.name for p in required if not p.is_file()]
+    if missing:
+        raise ValueError(f"Incomplete existing run: {path}; missing {', '.join(missing)}")
     try:
         config = json.loads((path / "config.json").read_text())
         metrics = json.loads((path / "metrics.json").read_text())
@@ -98,6 +102,11 @@ def validate_completed_run(path: Path, expected_config: dict) -> dict:
         value = metrics.get("test", {}).get(name)
         if not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 <= value <= 1:
             raise ValueError(f"Invalid existing test metrics: {path}")
+    if expected_config["revision"].get("artifact_schema") == ARTIFACT_SCHEMA:
+        try:
+            validate_local_artifacts(path, config, metrics)
+        except (OSError, ValueError, KeyError, TypeError, IndexError) as exc:
+            raise ValueError(f"Invalid/incomplete local tracking artifacts: {path}") from exc
     return metrics
 
 

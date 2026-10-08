@@ -17,9 +17,106 @@ actor, global counts, duplicate keys with source paths, missing counterparts,
 invalid filenames, and missing expected keys. Production requires all 1440
 unique designed pairs (24 actors × 60 samples), including the exact neutral
 intensity/statement/repetition composition. Incomplete data raises an error;
-there is no incomplete-production override in this PR. The local `data/` folder
-currently has no RAVDESS pairs, so real-data completeness remains unverified.
+there is no incomplete-production override. The local dataset was organized
+under `data/Actor_01`–`data/Actor_24` and audited on October 8, 2026: 24 actors ×
+60 pairs = 1440, complete=True. Rerun preflight for each experiment. Git does
+not include media, so a fresh checkout must supply its own dataset.
 The audit is structural; it does not decode all files or certify media quality.
+
+## Local tracking and optional W&B
+
+Every model/fold always saves `history.csv`, `test_predictions.csv`,
+`confusion_matrix.json` and `tracking.json`. History uses eight-class macro
+metrics, training stage and optimizer-group LRs actually used in the epoch.
+Test predictions come from the single best-checkpoint test pass. Resume
+validates all local evidence, and completed skips leave bytes/mtimes unchanged
+without opening SDK runs, appending history or evaluating tests again.
+
+W&B is disabled by default. Authenticate interactively for online operation:
+
+```bash
+.venv/bin/wandb login
+```
+
+Credentials belong in the client's local credential store, never this repo.
+Do not put keys in source, shell arguments, PRs or logs. After review only:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m revision.run \
+  --data-root data --fold 1 --model gated \
+  --output-root outputs/speaker_independent_tracking \
+  --wandb-mode online --wandb-project ieee-spmb-2026 \
+  --wandb-group spmb2026-canonical-v1
+```
+
+Use `--wandb-entity TEAM` if needed. Default group combines commit/dataset/root;
+names identify model/fold. Transport settings do not change training profiles
+and may change on a completed resume. SDK calls preserve RNG state. If W&B is
+unavailable, only the exception type is reported and local logging continues.
+Online initialization times out after 30 seconds. Local success does not prove
+remote upload success; inspect `tracking.json` and W&B separately.
+
+Offline smoke requires no login or remote service:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m revision.run \
+  --smoke --fold 1 --model chumachenko_ia \
+  --output-root outputs/revision_tracking_smoke --wandb-mode offline
+```
+
+Optional later upload of an offline bundle (requires login):
+
+```bash
+.venv/bin/wandb sync outputs/revision_tracking_smoke/fold_01/audio/wandb/offline-run-*
+```
+
+The harness sends scalars/config only. It does not upload raw audio/video,
+source code or prediction files. Disable tracking with `--wandb-mode disabled`.
+
+## Publication figures from local artifacts
+
+No W&B, network connection or another evaluation pass is needed:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m revision.figures \
+  --input-root outputs/speaker_independent_tracking \
+  --output-dir outputs/paper_figures
+```
+
+Repeat `--model gated --model xattn` to select methods. Outputs include learning
+curves, eight-class row-normalized confusion matrices, mean ± sample-SD model
+comparisons and pooled held-out matrices. Each exports PDF/SVG/300 DPI PNG;
+a manifest records input hashes, coverage, statistics and pooled raw counts.
+Pool counts before normalization; repeated held-out actors/keys are rejected.
+Training/validation predictions never enter pooled matrices.
+
+Missing/incomplete/mixed artifacts fail rather than invent values. Absent folds
+are labeled INCOMPLETE with actual n/6 coverage. One fold has no SD error bar.
+Partial results cannot replace the main six-fold table. Rows with no observations
+display an em dash. Input artifacts are read without modification.
+
+Synthetic previews require an explicit flag and are marked NOT FOR PAPER:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m revision.figures \
+  --input-root outputs/revision_tracking_smoke \
+  --output-dir outputs/revision_tracking_smoke_figures --allow-smoke
+```
+
+Use a fresh production output root after review. Pre-tracking/interrupted
+artifacts lack the new source/schema and cannot be silently augmented by
+invented history or another test pass. Preserve older artifacts.
+
+Tracking/figure unit checks:
+
+```bash
+PYTHONPATH=src:tests OMP_NUM_THREADS=1 .venv/bin/python -m unittest \
+  test_revision test_tracking_figures test_data_services test_attention_integration -q
+```
+
+These 32 relevant checks pass. Full discovery executes 40 checks, with 39 passing
+and the existing backend sliding-window failure documented below. Tests use
+isolated fixtures; actual offline W&B smoke is separate from mocked online tests.
 
 ## Cheap end-to-end smoke
 

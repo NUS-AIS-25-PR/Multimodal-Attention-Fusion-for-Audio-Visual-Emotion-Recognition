@@ -26,6 +26,7 @@ from revision.protocol import expected_run_config, validate_completed_run
 from train import EmotionTrainer, build_arg_parser
 from eval import EmotionEvaluator, build_arg_parser as eval_parser
 from utils.metrics import classification_metrics
+from revision.artifacts import ARTIFACT_SCHEMA, HistoryWriter, save_test_artifacts
 
 
 def fixture_revision(root, fold=1, smoke=True):
@@ -45,6 +46,20 @@ def write_completed_run(path, config, score=0.2):
     torch.save(best,path/"best.pt")
     record = {"config":config,"test":{k:score for k in METRICS},"best_epoch":1,
               "val_macro_f1":0.3,"checkpoint":str((path/"best.pt").resolve())}
+    if config["revision"].get("artifact_schema") == ARTIFACT_SCHEMA:
+        actors = config["revision"]["split"]["test_actors"]
+        keys = [k for k in sorted(expected_keys()) if k[-1] in actors]
+        if config["revision"]["smoke"]:
+            keys = [(1, (actor-1)%8+1, 1, 1, 1, actor) for actor in actors]
+        rows = [{"sample_id":"-".join(f"{x:02d}" for x in k),"actor":k[-1],
+                 "label":k[1]-1,"prediction":k[1]-1} for k in keys]
+        record["test"] = classification_metrics(torch.tensor([r["prediction"] for r in rows]),
+                                               torch.tensor([r["label"] for r in rows]))
+        scores = {"loss":0.5,"accuracy":0.2,"precision":0.2,"recall":0.2,"macro_f1":0.3}
+        HistoryWriter(path/"history.csv").append(1,0,scores,scores,[config["lr"]])
+        save_test_artifacts(path,rows)
+        from revision.tracking import RunTracker, TrackingOptions
+        RunTracker(path,config,TrackingOptions()).finish()
     (path/"metrics.json").write_text(json.dumps(record))
     return record
 
@@ -161,7 +176,8 @@ class RevisionTests(unittest.TestCase):
                 nonlocal count
                 count += 1
                 with torch.no_grad(): model.weight.fill_(count)
-                return {"loss":0.,"cls_loss":0.,"contrastive_loss":0.,"acc":0.,"f1":0.}
+                return {"loss":0.,"cls_loss":0.,"contrastive_loss":0.,"acc":0.,"f1":0.,
+                        "accuracy":0.,"precision":0.,"recall":0.,"macro_f1":0.}
             scores = []
             def evaluation(m,loader,*unused,**kwargs):
                 if loader is loaders[1]:
@@ -169,6 +185,8 @@ class RevisionTests(unittest.TestCase):
                 else:
                     scores.append(m.weight.detach().clone())
                     f1 = 0.2
+                    kwargs["prediction_rows"].append({"sample_id":"01-01-01-01-01-22",
+                                                     "actor":22,"label":0,"prediction":0})
                 return {"loss":0.,"cls_loss":0.,"contrastive_loss":0.,"acc":0.,"f1":f1,
                         "accuracy":0.,"precision":0.,"recall":0.,"macro_f1":f1}
             with mock.patch("train.build_dataloaders",return_value=(*loaders,{"test":1})), \
@@ -242,7 +260,7 @@ class RevisionTests(unittest.TestCase):
                 smoke=True, data_root=None, fold=1, model="all", seed=42,
                 no_face_crop=True, num_workers=0)
             configs = []
-            def fake_train(train_args):
+            def fake_train(train_args, **unused):
                 configs.append(train_args)
                 path = Path(train_args.output_dir)
                 record = write_completed_run(path,vars(train_args))
@@ -316,7 +334,7 @@ class RevisionTests(unittest.TestCase):
             args = revision_parser().parse_args(["--data-root",str(Path(tmp)/"data"),
                                                  "--output-root",str(Path(tmp)/"out")])
             configs = []
-            def fake_train(train_args):
+            def fake_train(train_args, **unused):
                 configs.append(train_args)
                 record = write_completed_run(Path(train_args.output_dir),vars(train_args))
                 return mock.Mock(run=lambda:record["test"])
@@ -345,7 +363,7 @@ class RevisionTests(unittest.TestCase):
             with self.subTest(corruption=corruption), tempfile.TemporaryDirectory() as tmp:
                 args = revision_parser().parse_args(["--smoke","--fold","1","--model","audio",
                                                      "--output-root",str(Path(tmp)/"out")])
-                def fake_train(train_args):
+                def fake_train(train_args, **unused):
                     record = write_completed_run(Path(train_args.output_dir),vars(train_args))
                     return mock.Mock(run=lambda:record["test"])
                 with mock.patch("revision.run.EmotionTrainer",side_effect=fake_train), \

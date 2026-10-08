@@ -477,3 +477,44 @@ Completion requires readable best checkpoint, metrics, config and fold split,
 matching full config/provenance, consistent best epoch/validation score/path, and
 finite bounded test metrics. Partial epoch recovery is not implemented. Initial
 single-stage harness artifacts cannot be reused under these new profiles.
+
+## 18. Durable tracking and paper figures
+
+New runs record `revision.artifact_schema = spmb-local-tracking-v1`, preserving
+actor protocol, profile IDs and canonical hyperparameters. Per model/fold save:
+
+- `history.csv`: consecutive epoch, stage (0 single-stage, 1/2 fusion stages),
+  train/validation loss, accuracy, macro precision, macro recall and Macro-F1,
+  plus a JSON array of optimizer-group LRs used during that epoch, before the
+  scheduler step. Header/rows are flushed and fsynced; never truncate on skip.
+- `test_predictions.csv`: unique speech pair key `sample_id`, actor, ground-truth
+  label and prediction (0..7), captured in the existing single best-checkpoint
+  test pass. No raw media.
+- `confusion_matrix.json`: integer 8×8 counts, ground truth on rows, predictions
+  on columns, fixed English class labels.
+- `tracking.json`: mode, project/group/name/entity, SDK run ID/status and
+  fold/model/profile/split/Git/config metadata.
+
+Completion validation also requires finite consecutive history, agreement with
+the first best validation epoch, unique held-out keys/actors, complete production
+test-key coverage, matching confusion counts and metrics recomputed from saved
+predictions. Pre-tracking/interrupted roots cannot resume under changed source
+or schema; preserve them and select a fresh production root after review.
+
+`revision.run --wandb-mode disabled|offline|online` controls optional transport.
+Project defaults to `ieee-spmb-2026`; default group identifies commit, dataset
+and output root; name is `fold-NN-model`. Optional project/group/entity overrides
+do not change trainer arguments, profiles or scientific identity. Open one SDK
+run only for each model/fold actually trained. Disabled mode imports no SDK.
+SDK calls preserve RNG states; failures leave local logging active and omit
+exception text. Finalize runs even on training failure. Send scalars/config
+only, with source/Git collection disabled; no raw media or API keys.
+
+`revision.figures` validates completion and common experiment provenance before
+rendering curves, row-normalized confusion matrices, mean ± sample-SD comparisons
+and pooled held-out matrices. It never performs inference or edits input files.
+Its manifest records input hashes, coverage, pooled counts and export paths.
+Single-fold SD is null; incomplete coverage is labeled INCOMPLETE. Synthetic
+input requires `--allow-smoke`, with NOT FOR PAPER titles and `smoke_` filenames.
+Exports use consistent serif styling, English labels, vector PDF/SVG and 300 DPI
+PNG. Unsupported confusion rows show an em dash rather than invented values.

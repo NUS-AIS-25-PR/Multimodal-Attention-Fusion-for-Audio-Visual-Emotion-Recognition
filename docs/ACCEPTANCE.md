@@ -98,3 +98,17 @@ The final experiment phase will be considered scientifically successful if:
 - a complete split/config/metrics trail exists for every number intended for the revised paper.
 
 There is **no minimum accuracy threshold** required for acceptance of the engineering work.
+
+## J. Experiment tracking and publication figures
+
+- [x] Durable local history contains macro metrics, stage and LRs for every run.
+- [x] Optional disabled/online/offline W&B is isolated from canonical profiles.
+- [x] Monitoring metadata identifies fold/model/profile/split/Git/config.
+- [x] Disabled/unavailable W&B does not prevent local logging; SDK calls preserve RNG.
+- [x] Single best-checkpoint test pass saves labels/predictions/actors/counts.
+- [x] Missing/corrupt local evidence rejects resume. Completed skips preserve
+  bytes/mtimes without opening W&B, duplicating history or repeating tests.
+- [x] Local curves, confusion, comparison and pooled figures export PDF/SVG/300 DPI PNG.
+- [x] Sample SD, incomplete coverage and synthetic preview labels are explicit.
+- [x] Tests cover logging, SDK-disabled/failure, integrity, exports and missing data.
+- [x] This PR uses synthetic smoke only; real training waits for review.

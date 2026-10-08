@@ -247,3 +247,26 @@ single-stage artifacts with the new profiles.
 The first infrastructure version rejected all existing selected runs and only
 reused completed unimodal dependencies. Long CV runs require safe completed-fold
 resume without redoing training or changing scientific provenance.
+
+---
+
+## D14 — Local artifacts are authoritative; W&B is optional
+
+Every revision model/fold writes durable epoch history and held-out predictions,
+even without W&B. Online/offline monitoring sends scalars and configuration
+only. Transport settings live outside canonical profiles/scientific provenance;
+changing mode on a completed skip creates no new SDK run. SDK calls preserve
+Python/NumPy/PyTorch RNG state; failures fall back to local recording without
+printing credential-bearing exception messages.
+
+New runs require the local tracking artifact schema. Resume/warm starts validate
+history, prediction keys/actors, confusion counts and recomputed metrics. Do not
+retrofit old runs by repeating test evaluation or inventing missing history.
+
+## D15 — Paper figures use validated local held-out evidence
+
+Export local figures as vector PDF/SVG and 300 DPI PNG. Pool unique held-out test
+counts before row normalization; never average normalized matrices or include
+training/validation predictions. Comparisons use sample SD, with no error bar
+for one fold. Label incomplete coverage. Reject synthetic inputs by default;
+explicit smoke previews must say NOT FOR PAPER and use `smoke_` filenames.

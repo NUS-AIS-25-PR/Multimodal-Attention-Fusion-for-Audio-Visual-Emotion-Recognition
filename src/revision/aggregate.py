@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import io
 import json
 from pathlib import Path
 from statistics import mean, stdev
@@ -42,12 +43,19 @@ def aggregate(root: Path) -> dict:
                                  "std": stdev(r[k] for r in rows) if len(rows) > 1 else None}
                             for k in METRICS}}
     result["experiment"] = family
-    (root / "aggregate.json").write_text(json.dumps(result, indent=2))
-    with (root / "aggregate.csv").open("w", newline="") as stream:
+    text = json.dumps(result, indent=2)
+    path = root / "aggregate.json"
+    if not path.exists() or path.read_bytes() != text.encode():
+        path.write_bytes(text.encode())
+    with io.StringIO(newline="") as stream:
         writer = csv.writer(stream)
         writer.writerow(["method", "n_folds", "complete_six_folds"] +
                         [f"{k}_{stat}" for k in METRICS for stat in ("mean", "std")])
         for model, data in result["methods"].items():
             writer.writerow([model, len(data["folds"]), data["complete_six_folds"]] +
                             [data["summary"][k][stat] for k in METRICS for stat in ("mean", "std")])
+        text = stream.getvalue()
+    path = root / "aggregate.csv"
+    if not path.exists() or path.read_bytes() != text.encode():
+        path.write_bytes(text.encode())
     return result

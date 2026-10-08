@@ -16,7 +16,6 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-import wandb
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 import numpy as np
@@ -257,6 +256,7 @@ def evaluate(
     loss_fn: nn.Module,
     fusion_mode: str,
     fusion_align_weight: float = 0.0,
+    prediction_rows: Optional[List[dict]] = None,
 ) -> Dict[str, float]:
     model.eval()
     all_preds = []
@@ -264,7 +264,7 @@ def evaluate(
     total_loss = 0.0
     total_cls_loss = 0.0
     total_contrastive_loss = 0.0
-    for video, audio, labels, _ in tqdm(loader, desc="eval", leave=False):
+    for video, audio, labels, meta in tqdm(loader, desc="eval", leave=False):
         video = video.to(device)
         audio = audio.to(device)
         labels = labels.to(device)
@@ -294,6 +294,13 @@ def evaluate(
         total_contrastive_loss += contrastive_loss_value.item() * labels.size(0)
         all_preds.append(preds)
         all_targets.append(labels)
+
+        if prediction_rows is not None:
+            for i, (label, prediction) in enumerate(zip(labels.detach().cpu().tolist(), preds.detach().cpu().tolist())):
+                fields = [1, *(int(meta[key][i]) for key in
+                              ("emotion", "intensity", "statement", "repetition", "actor"))]
+                prediction_rows.append({"sample_id": "-".join(f"{x:02d}" for x in fields),
+                                        "actor": fields[-1], "label": label, "prediction": prediction})
 
     all_preds = torch.cat(all_preds)
     all_targets = torch.cat(all_targets)
@@ -690,24 +697,18 @@ def build_arg_parser() -> argparse.ArgumentParser:
 class EmotionTrainer:
     """Object-oriented trainer orchestration preserving existing training behavior."""
 
-    def __init__(self, args: argparse.Namespace):
+    def __init__(self, args: argparse.Namespace, tracking=None):
         self.args = args
+        self.tracking_options = tracking
+        self.tracker = None
 
-    def _init_tracking(self) -> None:
-        if self.args.wandb:
-            wandb.init(
-                project="multimodal-emotion-recognition",
-                name=f"{self.args.fusion}_epochs{self.args.epochs}_bs{self.args.batch_size}_{self.args.split_mode}",
-                config={
-                    "fusion": self.args.fusion,
-                    "epochs": self.args.epochs,
-                    "batch_size": self.args.batch_size,
-                    "lr": self.args.lr,
-                    "num_classes": self.args.num_classes,
-                    "split_mode": self.args.split_mode,
-                    "cosine_annealing": self.args.use_cosine_annealing,
-                },
-            )
+    def _init_tracking(self, run_dir: Path) -> None:
+        from revision.tracking import RunTracker, TrackingOptions
+        options = self.tracking_options
+        if options is None:
+            mode = os.environ.get("WANDB_MODE", "online") if self.args.wandb else "disabled"
+            options = TrackingOptions(mode=mode, project="multimodal-emotion-recognition")
+        self.tracker = RunTracker(run_dir, self._checkpoint_config(), options)
 
     def _checkpoint_config(self) -> Dict[str, object]:
         return {
@@ -970,6 +971,14 @@ class EmotionTrainer:
                 print(f"[WARNING] Video unexpected keys (first 8): {unexpected[:8]}")
 
     def run(self) -> Dict[str, float]:
+        try:
+            return self._run()
+        finally:
+            if self.tracker is not None:
+                self.tracker.finish()
+
+    def _run(self) -> Dict[str, float]:
+        from revision.artifacts import HistoryWriter, save_test_artifacts
         args = self.args
         if args.epochs < 1:
             raise ValueError("epochs must be positive")
@@ -984,7 +993,6 @@ class EmotionTrainer:
             if not args.use_wavlm or args.num_classes != 8:
                 raise ValueError("Revision requires WavLM and eight classes")
         set_seed(args.seed)
-        self._init_tracking()
 
         data_root = Path(args.data_root)
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -1001,7 +1009,9 @@ class EmotionTrainer:
 
         run_dir = Path(getattr(args, "output_dir", "outputs"))
         run_dir.mkdir(parents=True, exist_ok=True)
+        history = HistoryWriter(run_dir / "history.csv")
         (run_dir / "config.json").write_text(json.dumps(self._checkpoint_config(), indent=2))
+        self._init_tracking(run_dir)
         train_loader, val_loader, test_loader, sizes = build_dataloaders(
             data_root=data_root,
             num_classes=args.num_classes,
@@ -1121,6 +1131,7 @@ class EmotionTrainer:
                 scheduler = self._build_scheduler(optimizer, epochs_in_stage=args.epochs - stage1_epochs)
                 print(f"[INFO] Switched to stage-2 at epoch {epoch}.")
 
+            epoch_learning_rates = [float(group["lr"]) for group in optimizer.param_groups]
             train_metrics = train_one_epoch(
                 model,
                 train_loader,
@@ -1156,24 +1167,8 @@ class EmotionTrainer:
                 f"lr {current_lr_text}"
             )
 
-            if args.wandb:
-                wandb.log(
-                    {
-                        "epoch": epoch,
-                        "train/loss": train_metrics["loss"],
-                        "train/cls_loss": train_metrics["cls_loss"],
-                        "train/contrastive_loss": train_metrics["contrastive_loss"],
-                        "train/acc": train_metrics["acc"],
-                        "train/f1": train_metrics["f1"],
-                        "val/loss": val_metrics["loss"],
-                        "val/cls_loss": val_metrics["cls_loss"],
-                        "val/contrastive_loss": val_metrics["contrastive_loss"],
-                        "val/acc": val_metrics["acc"],
-                        "val/f1": val_metrics["f1"],
-                        "lr": optimizer.param_groups[0]["lr"],
-                        "stage": current_stage if two_stage_enabled else 0,
-                    }
-                )
+            row = history.append(epoch, current_stage, train_metrics, val_metrics, epoch_learning_rates)
+            self.tracker.log_epoch(row)
 
             if val_metrics["f1"] > best_f1:
                 best_f1 = val_metrics["f1"]
@@ -1194,6 +1189,7 @@ class EmotionTrainer:
         print(f"[INFO] Reloaded best validation checkpoint: {best_path} (epoch {best['epoch']})")
         test_metrics = {}
         if sizes["test"] > 0:
+            prediction_rows = []
             test_metrics = evaluate(
                 model,
                 test_loader,
@@ -1201,6 +1197,7 @@ class EmotionTrainer:
                 loss_fn,
                 args.fusion,
                 fusion_align_weight=getattr(args, "fusion_align_weight", 0.0),
+                prediction_rows=prediction_rows,
             )
             print(
                 f"Test | loss {test_metrics['loss']:.4f} "
@@ -1208,46 +1205,16 @@ class EmotionTrainer:
                 f"acc {test_metrics['acc']:.4f} f1 {test_metrics['f1']:.4f}"
             )
 
+            save_test_artifacts(run_dir, prediction_rows)
             record = {"test": test_metrics, "best_epoch": best["epoch"],
                       "val_macro_f1": best["val_f1"], "checkpoint": str(best_path.resolve()),
                       "config": self._checkpoint_config()}
             (run_dir / "metrics.json").write_text(json.dumps(record, indent=2))
 
-            if args.wandb and not getattr(args, "revision", None):
-                test_preds = []
-                test_targets = []
-                with torch.no_grad():
-                    for video, audio, labels, _ in test_loader:
-                        video = video.to(device)
-                        audio = audio.to(device)
-                        if args.fusion == "audio":
-                            outputs = model(audio)
-                        elif args.fusion == "video":
-                            outputs = model(video)
-                        else:
-                            outputs = model(video, audio)
-                        preds = outputs.argmax(dim=1)
-                        test_preds.append(preds)
-                        test_targets.append(labels)
-
-                test_preds = torch.cat(test_preds)
-                test_targets = torch.cat(test_targets)
-                cm_fig = plot_confusion_matrix(test_preds, test_targets, args.num_classes)
-                wandb.log({"test/confusion_matrix": wandb.Image(cm_fig)})
-                plt.close(cm_fig)
-                wandb.log(
-                    {
-                        "test/loss": test_metrics["loss"],
-                        "test/cls_loss": test_metrics["cls_loss"],
-                        "test/contrastive_loss": test_metrics["contrastive_loss"],
-                        "test/acc": test_metrics["acc"],
-                        "test/f1": test_metrics["f1"],
-                    }
-                )
+            self.tracker.log({"test/" + key: value for key, value in test_metrics.items()}
+                             | {"test/best_epoch": best["epoch"], "best/val_macro_f1": best["val_f1"]})
 
         print(f"Best val macro-F1: {best_f1:.4f} | checkpoint: {best_path}")
-        if args.wandb:
-            wandb.finish()
         return test_metrics
 
 
