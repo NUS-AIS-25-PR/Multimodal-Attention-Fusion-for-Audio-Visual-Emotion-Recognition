@@ -10,6 +10,7 @@ from statistics import mean, stdev
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 import numpy as np
 
 from revision.artifacts import (ARTIFACT_SCHEMA, CLASS_NAMES, confusion_counts,
@@ -112,7 +113,8 @@ def _curves(run: dict, title: str):
     for ax, metric in zip(axes.flat, ("loss", *METRICS)):
         for partition, color, style in (("train", "#0072B2", "-"), ("val", "#D55E00", "--")):
             ax.plot(epochs, [r[f"{partition}_{metric}"] for r in rows],
-                    label="Train" if partition == "train" else "Validation", color=color, linestyle=style)
+                    label="Train" if partition == "train" else "Validation", color=color, linestyle=style,
+                    marker="o", markersize=2.5)
         ax.set_ylabel("Cross-entropy loss" if metric == "loss" else METRICS[metric])
         if metric != "loss":
             ax.set_ylim(0, 1)
@@ -120,12 +122,13 @@ def _curves(run: dict, title: str):
     ax = axes.flat[-1]
     for group in range(max(len(r["learning_rates"]) for r in rows)):
         ax.plot(epochs, [r["learning_rates"][group] if group < len(r["learning_rates"]) else np.nan for r in rows],
-                label=f"Optimizer group {group}")
+                label=f"Optimizer group {group}", marker="o", markersize=2.5)
     ax.set_ylabel("Learning rate used in epoch")
     ax.set_yscale("log")
     ax.legend()
     for ax in axes.flat:
         ax.set_xlabel("Epoch")
+        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
         ax.grid(alpha=0.2)
         ax.axvline(run["metrics"]["best_epoch"], color="#009E73", linestyle=":", linewidth=1)
         for previous, current in zip(rows, rows[1:]):
