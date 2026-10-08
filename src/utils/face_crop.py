@@ -127,7 +127,7 @@ class MediaPipeFaceDetector:
                 
                 if results.detections:
                     detection = results.detections[0]
-                    bbox = detection.location_data.bounding_box
+                    bbox = detection.location_data.relative_bounding_box
                     x1 = max(0, int(bbox.xmin * w))
                     y1 = max(0, int(bbox.ymin * h))
                     x2 = min(w, int((bbox.xmin + bbox.width) * w))
