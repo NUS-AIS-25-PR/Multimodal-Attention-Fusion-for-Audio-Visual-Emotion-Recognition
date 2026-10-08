@@ -23,6 +23,68 @@ under `data/Actor_01`–`data/Actor_24` and audited on October 8, 2026: 24 actor
 not include media, so a fresh checkout must supply its own dataset.
 The audit is structural; it does not decode all files or certify media quality.
 
+## Face-crop readiness before real training
+
+Check the detector in a fresh process before launching production:
+
+```bash
+PYTHONPATH=src .venv/bin/python -c \
+  'from utils.face_crop import get_face_detector; d = get_face_detector(); assert d is not None; print(d.api_type)'
+```
+
+MediaPipe 0.10.32 does not expose the legacy solutions API used by this loader.
+The verified Ubuntu/Python 3.10 environment uses MediaPipe 0.10.21, whose bundled
+full-range detector (`model_selection=1`, confidence 0.5) needs no separate model
+download. Restore compatible local dependencies without changing PyTorch:
+
+```bash
+uv pip install --python .venv/bin/python \
+  'mediapipe==0.10.21' 'numpy==1.26.4' 'protobuf==4.25.9' \
+  'jax==0.4.38' 'jaxlib==0.4.38' \
+  'opencv-python==4.11.0.86' 'opencv-contrib-python==4.11.0.86' \
+  'opencv-python-headless==4.11.0.86'
+uv pip check --python .venv/bin/python
+```
+
+The existing project-wide dependency ranges/lock are unchanged by the focused
+crop fix; `uv sync` may restore incompatible newer packages. Reapply the command
+and rerun readiness checks after syncing. Keep the actual production environment
+fixed across folds and record its package snapshot with experiment artifacts.
+
+Legacy MediaPipe reports `relative_bounding_box`. Reading its unused pixel
+`bounding_box` yields zeros and an empty crop, silently triggering the existing
+loader's full-frame fallback. The focused fix selects the relative field before
+the existing conversion to pixels, matching the
+[upstream legacy detector's output](https://github.com/google-ai-edge/mediapipe/blob/v0.10.21/mediapipe/python/solutions/face_detection.py).
+Eight uniformly sampled frames, 30% padding,
+first successful bbox reuse, 112×112 resize, ImageNet normalization and training
+augmentations are unchanged. This restores the documented paper configuration;
+it does **not** establish that historical checkpoints actually used face crops.
+Interrupted full-frame runs must remain separate and must not be reused.
+
+The real-media preflight sampled 48 paired clips spanning all 24 actors and eight
+emotions: 48 successful detections, all 368 decoded sampled frames cropped, zero
+full-frame fallbacks and zero detection/crop errors. Sixteen output frames repeat
+the last cropped frame because some MP4 metadata overstates the decodable frame
+count; this is the existing padding behavior. Each loader result has eight frames
+and each WAV yields a finite 16 kHz, 3-second waveform. This is a representative
+decode check, not exhaustive decoding of every clip. Visualizations and detailed
+local reports are in `outputs/spmb_preflight_20261008/` and are not paper results.
+All 48 sampled videos are 1280×720, while README lists nominal 1920×1080 media;
+the configured network input remains 112×112. Check historical source-media
+resolution separately before asserting identical paper preprocessing.
+
+Preflight dependency checks and three crop regression tests pass. Headless WSL
+may emit EGL/DRI3/llvmpipe and TensorFlow Lite feedback warnings; successful CPU
+detection must still be verified. Fold 1 remains stopped pending review of this
+source fix. Reserve the fresh root `outputs/speaker_independent_tracked_v1`.
+
+```bash
+PYTHONPATH=src:tests OMP_NUM_THREADS=1 .venv/bin/python -m unittest \
+  test_face_crop test_revision test_tracking_figures \
+  test_data_services test_attention_integration -q
+```
+
 ## Local tracking and optional W&B
 
 Every model/fold always saves `history.csv`, `test_predictions.csv`,
