@@ -1,0 +1,1 @@
+epoch,stage,train_loss,train_accuracy,train_precision,train_recall,train_macro_f1,val_loss,val_accuracy,val_precision,val_recall,val_macro_f1,learning_rates

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "complete": true,
+  "pairs": 1440,
+  "git_commit": "0ae967afc654d3234620862437d63f2f33ab57e7",
+  "source_fingerprint": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+  "dataset_fingerprint": "244a926588cdf42d8882bad9ba667cf06f62d9532aa18033f2337b81c5513d3a",
+  "mediapipe_bbox": [
+    439,
+    162,
+    864,
+    586
+  ],
+  "default_wavlm_load_checks": 2,
+  "completed_validated": [
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/chumachenko_ia",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/gated",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/video",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/xattn",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/video"
+  ],
+  "archived_incomplete": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated",
+  "prior_control": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_execution_20261008T192320Z",
+  "environment_packages_match_fold1": 111
+}

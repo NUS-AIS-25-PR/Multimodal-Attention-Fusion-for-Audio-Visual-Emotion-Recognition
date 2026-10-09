@@ -1,0 +1,679 @@
+{
+  "std_policy": "sample (ddof=1); null for a single fold",
+  "methods": {
+    "audio": {
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.7708333134651184,
+          "precision": 0.7744850137997823,
+          "recall": 0.77734375,
+          "macro_f1": 0.7650878312756904
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.7583333253860474,
+          "precision": 0.7838204852740802,
+          "recall": 0.73828125,
+          "macro_f1": 0.7412105676040335
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.574999988079071,
+          "precision": 0.6526598037085325,
+          "recall": 0.5625,
+          "macro_f1": 0.569545607900871
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.5333333611488342,
+          "precision": 0.6320301366250967,
+          "recall": 0.546875,
+          "macro_f1": 0.503727648622877
+        },
+        {
+          "fold": 5,
+          "accuracy": 0.6499999761581421,
+          "precision": 0.6583870276425887,
+          "recall": 0.640625,
+          "macro_f1": 0.6354369503282546
+        },
+        {
+          "fold": 6,
+          "accuracy": 0.6666666865348816,
+          "precision": 0.6977464100939711,
+          "recall": 0.6875,
+          "macro_f1": 0.6595020177566469
+        }
+      ],
+      "complete_six_folds": true,
+      "summary": {
+        "accuracy": {
+          "mean": 0.6590277751286825,
+          "std": 0.09524881053171723
+        },
+        "precision": {
+          "mean": 0.6998548128573419,
+          "std": 0.06507146717955363
+        },
+        "recall": {
+          "mean": 0.6588541666666666,
+          "std": 0.09308575445411434
+        },
+        "macro_f1": {
+          "mean": 0.6457517705813955,
+          "std": 0.09962647496911192
+        }
+      }
+    },
+    "video": {
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.5583333373069763,
+          "precision": 0.5196994603056895,
+          "recall": 0.5234375,
+          "macro_f1": 0.5092491119723059
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.6416666507720947,
+          "precision": 0.6599009331469009,
+          "recall": 0.62109375,
+          "macro_f1": 0.6276236864738721
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.6499999761581421,
+          "precision": 0.6721014949915206,
+          "recall": 0.64453125,
+          "macro_f1": 0.6418329612163258
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.5249999761581421,
+          "precision": 0.5026654093736541,
+          "recall": 0.5234375,
+          "macro_f1": 0.48106863201972094
+        },
+        {
+          "fold": 5,
+          "accuracy": 0.4625000059604645,
+          "precision": 0.4533808512712919,
+          "recall": 0.453125,
+          "macro_f1": 0.4191914488883759
+        },
+        {
+          "fold": 6,
+          "accuracy": 0.5249999761581421,
+          "precision": 0.5813243111064789,
+          "recall": 0.51953125,
+          "macro_f1": 0.5145026428200163
+        }
+      ],
+      "complete_six_folds": true,
+      "summary": {
+        "accuracy": {
+          "mean": 0.560416653752327,
+          "std": 0.07311282499644571
+        },
+        "precision": {
+          "mean": 0.5648454100325893,
+          "std": 0.08847579503389119
+        },
+        "recall": {
+          "mean": 0.5475260416666666,
+          "std": 0.07166309909664399
+        },
+        "macro_f1": {
+          "mean": 0.5322447472317695,
+          "std": 0.08642955887858583
+        }
+      }
+    },
+    "chumachenko_ia": {
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.5416666865348816,
+          "precision": 0.562017251587472,
+          "recall": 0.5078125,
+          "macro_f1": 0.4876031619452672
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.6208333373069763,
+          "precision": 0.6604585326953748,
+          "recall": 0.6015625,
+          "macro_f1": 0.6007040337357354
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.6000000238418579,
+          "precision": 0.6742144349902972,
+          "recall": 0.578125,
+          "macro_f1": 0.5763296032278512
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.5583333373069763,
+          "precision": 0.5883455267558528,
+          "recall": 0.5625,
+          "macro_f1": 0.5342714103089918
+        },
+        {
+          "fold": 5,
+          "accuracy": 0.5333333611488342,
+          "precision": 0.5872079276668936,
+          "recall": 0.53125,
+          "macro_f1": 0.5260551976151118
+        },
+        {
+          "fold": 6,
+          "accuracy": 0.5208333134651184,
+          "precision": 0.5632822833909547,
+          "recall": 0.5390625,
+          "macro_f1": 0.5117531417169066
+        }
+      ],
+      "complete_six_folds": true,
+      "summary": {
+        "accuracy": {
+          "mean": 0.5625000099341074,
+          "std": 0.03961621800755981
+        },
+        "precision": {
+          "mean": 0.6059209928478075,
+          "std": 0.04907751287485861
+        },
+        "recall": {
+          "mean": 0.5533854166666666,
+          "std": 0.0340240130428741
+        },
+        "macro_f1": {
+          "mean": 0.539452758091644,
+          "std": 0.04188940399348123
+        }
+      }
+    },
+    "gated": {
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.6625000238418579,
+          "precision": 0.7624684770276227,
+          "recall": 0.625,
+          "macro_f1": 0.6139226172191363
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.8125,
+          "precision": 0.8168590789810548,
+          "recall": 0.78515625,
+          "macro_f1": 0.7862992358491426
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.7708333134651184,
+          "precision": 0.8024233200582527,
+          "recall": 0.765625,
+          "macro_f1": 0.7710737480024876
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.6708333492279053,
+          "precision": 0.6951890197568389,
+          "recall": 0.6875,
+          "macro_f1": 0.6601200805965506
+        },
+        {
+          "fold": 5,
+          "accuracy": 0.6708333492279053,
+          "precision": 0.7521946298750899,
+          "recall": 0.66015625,
+          "macro_f1": 0.6655834883404256
+        },
+        {
+          "fold": 6,
+          "accuracy": 0.6291666626930237,
+          "precision": 0.7103651414066536,
+          "recall": 0.64453125,
+          "macro_f1": 0.6232971922899108
+        }
+      ],
+      "complete_six_folds": true,
+      "summary": {
+        "accuracy": {
+          "mean": 0.7027777830759684,
+          "std": 0.07176671755622195
+        },
+        "precision": {
+          "mean": 0.7565832778509187,
+          "std": 0.04836062145001507
+        },
+        "recall": {
+          "mean": 0.6946614583333334,
+          "std": 0.06607992738635098
+        },
+        "macro_f1": {
+          "mean": 0.6867160603829423,
+          "std": 0.07417249926518957
+        }
+      }
+    },
+    "xattn": {
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.7124999761581421,
+          "precision": 0.799179947516641,
+          "recall": 0.67578125,
+          "macro_f1": 0.6696260573971436
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.7291666865348816,
+          "precision": 0.7186529185488822,
+          "recall": 0.70703125,
+          "macro_f1": 0.7049391489391547
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.7541666626930237,
+          "precision": 0.7851445477063504,
+          "recall": 0.75,
+          "macro_f1": 0.7498665194078411
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.7124999761581421,
+          "precision": 0.756047436313626,
+          "recall": 0.7265625,
+          "macro_f1": 0.7069346280917176
+        },
+        {
+          "fold": 5,
+          "accuracy": 0.6291666626930237,
+          "precision": 0.6579628271028536,
+          "recall": 0.625,
+          "macro_f1": 0.6215709199862903
+        },
+        {
+          "fold": 6,
+          "accuracy": 0.5874999761581421,
+          "precision": 0.634580305447241,
+          "recall": 0.59765625,
+          "macro_f1": 0.5807106984098493
+        }
+      ],
+      "complete_six_folds": true,
+      "summary": {
+        "accuracy": {
+          "mean": 0.6874999900658926,
+          "std": 0.06454972859273361
+        },
+        "precision": {
+          "mean": 0.7252613304392657,
+          "std": 0.06751822558159254
+        },
+        "recall": {
+          "mean": 0.6803385416666666,
+          "std": 0.059365576280664675
+        },
+        "macro_f1": {
+          "mean": 0.6722746620386661,
+          "std": 0.06204937111905245
+        }
+      }
+    }
+  },
+  "experiment": {
+    "source_fingerprint": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+    "artifact_schema": "spmb-local-tracking-v1",
+    "protocol": "ravdess-fixed-six-fold-v1",
+    "smoke": false,
+    "output_root": "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1",
+    "dataset_fingerprint": "244a926588cdf42d8882bad9ba667cf06f62d9532aa18033f2337b81c5513d3a",
+    "data_root": "/home/louis/projects/MultimodalEmotionRecognition/data",
+    "settings": {
+      "seed": 42,
+      "frames": 8,
+      "use_face_crop": true,
+      "num_workers": -1
+    },
+    "profiles": {
+      "audio": {
+        "id": "spmb2026-audio-v1",
+        "config": {
+          "num_classes": 8,
+          "fusion": "audio",
+          "epochs": 20,
+          "batch_size": 16,
+          "frames": 8,
+          "lr": 0.001,
+          "seed": 42,
+          "split_mode": "actor",
+          "train_ratio": 0.7,
+          "val_ratio": 0.15,
+          "no_pretrained_video": false,
+          "use_cosine_annealing": true,
+          "cosine_stage2_only": false,
+          "wandb": false,
+          "xattn_head": "concat",
+          "xattn_d_model": 128,
+          "xattn_heads": 4,
+          "xattn_attn_dropout": 0.1,
+          "xattn_stochastic_depth": 0.1,
+          "xattn_use_emotion_prior": false,
+          "xattn_emotion_prior_dim": 8,
+          "xattn_emotion_prior_hidden_dim": 64,
+          "xattn_emotion_prior_dropout": 0.1,
+          "temporal_pooling": "mean",
+          "temporal_num_heads": 4,
+          "temporal_num_layers": 1,
+          "temporal_dropout": 0.1,
+          "label_smoothing": 0.0,
+          "audio_n_mels": 64,
+          "fusion_align_mode": "none",
+          "fusion_align_dim": 256,
+          "fusion_align_temperature": 0.07,
+          "fusion_align_weight": 0.1,
+          "weight_decay": 0.0001,
+          "early_stopping_patience": 10,
+          "use_resnet_audio": false,
+          "two_stage_training": false,
+          "use_wavlm": true,
+          "wavlm_stage": 2,
+          "backbone_lr": 3e-05,
+          "stage1_epochs": 5,
+          "audio_backbone_lr": 1e-05,
+          "video_backbone_lr": 1e-05,
+          "fusion_unfreeze_wavlm_layers": 2,
+          "fusion_unfreeze_video_blocks": 1,
+          "fusion_unfreeze_audio": true,
+          "use_face_crop": true,
+          "num_workers": -1,
+          "smoke": false
+        }
+      },
+      "video": {
+        "id": "spmb2026-video-v1",
+        "config": {
+          "num_classes": 8,
+          "fusion": "video",
+          "epochs": 20,
+          "batch_size": 16,
+          "frames": 8,
+          "lr": 0.001,
+          "seed": 42,
+          "split_mode": "actor",
+          "train_ratio": 0.7,
+          "val_ratio": 0.15,
+          "no_pretrained_video": false,
+          "use_cosine_annealing": true,
+          "cosine_stage2_only": false,
+          "wandb": false,
+          "xattn_head": "concat",
+          "xattn_d_model": 128,
+          "xattn_heads": 4,
+          "xattn_attn_dropout": 0.1,
+          "xattn_stochastic_depth": 0.1,
+          "xattn_use_emotion_prior": false,
+          "xattn_emotion_prior_dim": 8,
+          "xattn_emotion_prior_hidden_dim": 64,
+          "xattn_emotion_prior_dropout": 0.1,
+          "temporal_pooling": "mean",
+          "temporal_num_heads": 4,
+          "temporal_num_layers": 1,
+          "temporal_dropout": 0.1,
+          "label_smoothing": 0.0,
+          "audio_n_mels": 64,
+          "fusion_align_mode": "none",
+          "fusion_align_dim": 256,
+          "fusion_align_temperature": 0.07,
+          "fusion_align_weight": 0.1,
+          "weight_decay": 0.0001,
+          "early_stopping_patience": 10,
+          "use_resnet_audio": false,
+          "two_stage_training": false,
+          "use_wavlm": true,
+          "wavlm_stage": 1,
+          "backbone_lr": 3e-05,
+          "stage1_epochs": 5,
+          "audio_backbone_lr": 1e-05,
+          "video_backbone_lr": 1e-05,
+          "fusion_unfreeze_wavlm_layers": 2,
+          "fusion_unfreeze_video_blocks": 1,
+          "fusion_unfreeze_audio": true,
+          "use_face_crop": true,
+          "num_workers": -1,
+          "smoke": false
+        }
+      },
+      "gated": {
+        "id": "spmb2026-gated-v1",
+        "config": {
+          "num_classes": 8,
+          "fusion": "gated",
+          "epochs": 30,
+          "batch_size": 8,
+          "frames": 8,
+          "lr": 0.0003,
+          "seed": 42,
+          "split_mode": "actor",
+          "train_ratio": 0.7,
+          "val_ratio": 0.15,
+          "no_pretrained_video": false,
+          "use_cosine_annealing": true,
+          "cosine_stage2_only": false,
+          "wandb": false,
+          "xattn_head": "concat",
+          "xattn_d_model": 128,
+          "xattn_heads": 4,
+          "xattn_attn_dropout": 0.1,
+          "xattn_stochastic_depth": 0.1,
+          "xattn_use_emotion_prior": false,
+          "xattn_emotion_prior_dim": 8,
+          "xattn_emotion_prior_hidden_dim": 64,
+          "xattn_emotion_prior_dropout": 0.1,
+          "temporal_pooling": "mean",
+          "temporal_num_heads": 4,
+          "temporal_num_layers": 1,
+          "temporal_dropout": 0.1,
+          "label_smoothing": 0.0,
+          "audio_n_mels": 64,
+          "fusion_align_mode": "none",
+          "fusion_align_dim": 256,
+          "fusion_align_temperature": 0.07,
+          "fusion_align_weight": 0.1,
+          "weight_decay": 0.0001,
+          "early_stopping_patience": 8,
+          "use_resnet_audio": false,
+          "two_stage_training": true,
+          "use_wavlm": true,
+          "wavlm_stage": 1,
+          "backbone_lr": 3e-05,
+          "stage1_epochs": 5,
+          "audio_backbone_lr": 1e-05,
+          "video_backbone_lr": 1e-05,
+          "fusion_unfreeze_wavlm_layers": 2,
+          "fusion_unfreeze_video_blocks": 1,
+          "fusion_unfreeze_audio": true,
+          "use_face_crop": true,
+          "num_workers": -1,
+          "smoke": false
+        }
+      },
+      "concat": {
+        "id": "spmb2026-concat-v1",
+        "config": {
+          "num_classes": 8,
+          "fusion": "concat",
+          "epochs": 30,
+          "batch_size": 8,
+          "frames": 8,
+          "lr": 0.0003,
+          "seed": 42,
+          "split_mode": "actor",
+          "train_ratio": 0.7,
+          "val_ratio": 0.15,
+          "no_pretrained_video": false,
+          "use_cosine_annealing": true,
+          "cosine_stage2_only": false,
+          "wandb": false,
+          "xattn_head": "concat",
+          "xattn_d_model": 128,
+          "xattn_heads": 4,
+          "xattn_attn_dropout": 0.1,
+          "xattn_stochastic_depth": 0.1,
+          "xattn_use_emotion_prior": false,
+          "xattn_emotion_prior_dim": 8,
+          "xattn_emotion_prior_hidden_dim": 64,
+          "xattn_emotion_prior_dropout": 0.1,
+          "temporal_pooling": "mean",
+          "temporal_num_heads": 4,
+          "temporal_num_layers": 1,
+          "temporal_dropout": 0.1,
+          "label_smoothing": 0.0,
+          "audio_n_mels": 64,
+          "fusion_align_mode": "none",
+          "fusion_align_dim": 256,
+          "fusion_align_temperature": 0.07,
+          "fusion_align_weight": 0.1,
+          "weight_decay": 0.0001,
+          "early_stopping_patience": 8,
+          "use_resnet_audio": false,
+          "two_stage_training": true,
+          "use_wavlm": true,
+          "wavlm_stage": 1,
+          "backbone_lr": 3e-05,
+          "stage1_epochs": 5,
+          "audio_backbone_lr": 1e-05,
+          "video_backbone_lr": 1e-05,
+          "fusion_unfreeze_wavlm_layers": 2,
+          "fusion_unfreeze_video_blocks": 1,
+          "fusion_unfreeze_audio": true,
+          "use_face_crop": true,
+          "num_workers": -1,
+          "smoke": false
+        }
+      },
+      "chumachenko_ia": {
+        "id": "spmb2026-chumachenko_ia-v1",
+        "config": {
+          "num_classes": 8,
+          "fusion": "chumachenko_ia",
+          "epochs": 30,
+          "batch_size": 8,
+          "frames": 8,
+          "lr": 0.0003,
+          "seed": 42,
+          "split_mode": "actor",
+          "train_ratio": 0.7,
+          "val_ratio": 0.15,
+          "no_pretrained_video": false,
+          "use_cosine_annealing": true,
+          "cosine_stage2_only": false,
+          "wandb": false,
+          "xattn_head": "concat",
+          "xattn_d_model": 128,
+          "xattn_heads": 4,
+          "xattn_attn_dropout": 0.1,
+          "xattn_stochastic_depth": 0.1,
+          "xattn_use_emotion_prior": false,
+          "xattn_emotion_prior_dim": 8,
+          "xattn_emotion_prior_hidden_dim": 64,
+          "xattn_emotion_prior_dropout": 0.1,
+          "temporal_pooling": "mean",
+          "temporal_num_heads": 4,
+          "temporal_num_layers": 1,
+          "temporal_dropout": 0.1,
+          "label_smoothing": 0.0,
+          "audio_n_mels": 64,
+          "fusion_align_mode": "none",
+          "fusion_align_dim": 256,
+          "fusion_align_temperature": 0.07,
+          "fusion_align_weight": 0.1,
+          "weight_decay": 0.0001,
+          "early_stopping_patience": 8,
+          "use_resnet_audio": false,
+          "two_stage_training": true,
+          "use_wavlm": true,
+          "wavlm_stage": 1,
+          "backbone_lr": 3e-05,
+          "stage1_epochs": 5,
+          "audio_backbone_lr": 1e-05,
+          "video_backbone_lr": 1e-05,
+          "fusion_unfreeze_wavlm_layers": 2,
+          "fusion_unfreeze_video_blocks": 1,
+          "fusion_unfreeze_audio": true,
+          "use_face_crop": true,
+          "num_workers": -1,
+          "smoke": false
+        }
+      },
+      "xattn": {
+        "id": "spmb2026-xattn-v1",
+        "config": {
+          "num_classes": 8,
+          "fusion": "xattn",
+          "epochs": 35,
+          "batch_size": 8,
+          "frames": 8,
+          "lr": 0.0002,
+          "seed": 42,
+          "split_mode": "actor",
+          "train_ratio": 0.7,
+          "val_ratio": 0.15,
+          "no_pretrained_video": false,
+          "use_cosine_annealing": true,
+          "cosine_stage2_only": false,
+          "wandb": false,
+          "xattn_head": "gated",
+          "xattn_d_model": 96,
+          "xattn_heads": 4,
+          "xattn_attn_dropout": 0.1,
+          "xattn_stochastic_depth": 0.1,
+          "xattn_use_emotion_prior": false,
+          "xattn_emotion_prior_dim": 8,
+          "xattn_emotion_prior_hidden_dim": 64,
+          "xattn_emotion_prior_dropout": 0.1,
+          "temporal_pooling": "mean",
+          "temporal_num_heads": 4,
+          "temporal_num_layers": 1,
+          "temporal_dropout": 0.1,
+          "label_smoothing": 0.05,
+          "audio_n_mels": 64,
+          "fusion_align_mode": "none",
+          "fusion_align_dim": 256,
+          "fusion_align_temperature": 0.07,
+          "fusion_align_weight": 0.1,
+          "weight_decay": 0.0002,
+          "early_stopping_patience": 10,
+          "use_resnet_audio": false,
+          "two_stage_training": true,
+          "use_wavlm": true,
+          "wavlm_stage": 1,
+          "backbone_lr": 3e-05,
+          "stage1_epochs": 6,
+          "audio_backbone_lr": 8e-06,
+          "video_backbone_lr": 8e-06,
+          "fusion_unfreeze_wavlm_layers": 2,
+          "fusion_unfreeze_video_blocks": 1,
+          "fusion_unfreeze_audio": true,
+          "use_face_crop": true,
+          "num_workers": -1,
+          "smoke": false
+        }
+      }
+    },
+    "git_commit": "0ae967afc654d3234620862437d63f2f33ab57e7",
+    "versions": {
+      "torch": "2.10.0+cu130",
+      "torchvision": "0.25.0+cu130",
+      "transformers": "5.1.0",
+      "numpy": "1.26.4",
+      "scikit-learn": "1.7.2"
+    }
+  }
+}

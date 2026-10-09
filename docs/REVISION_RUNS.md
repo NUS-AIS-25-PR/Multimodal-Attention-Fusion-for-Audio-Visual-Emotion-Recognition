@@ -1,8 +1,11 @@
 # IEEE SPMB 2026 revision experiments
 
 Use the existing modern environment; no legacy PyTorch installation is needed.
-The first PR supplies infrastructure and a cheap synthetic validation path.
-Production training must wait for PR review.
+The infrastructure, tracking and face-crop PRs were reviewed and merged before
+production training. The five-method, six-fold production suite is complete.
+See the [results archive](../results/ieee_spmb_2026/tracked_v1/README.md) for all
+30 per-fold results, mean ± sample SD, 198 paper-figure exports, exact provenance,
+interruption records, checkpoint hashes and portable verification commands.
 
 ## Local completeness preflight
 
@@ -76,8 +79,10 @@ resolution separately before asserting identical paper preprocessing.
 
 Preflight dependency checks and three crop regression tests pass. Headless WSL
 may emit EGL/DRI3/llvmpipe and TensorFlow Lite feedback warnings; successful CPU
-detection must still be verified. Fold 1 remains stopped pending review of this
-source fix. Reserve the fresh root `outputs/speaker_independent_tracked_v1`.
+detection must still be verified. The source fix was merged before the fresh
+production suite under `outputs/speaker_independent_tracked_v1`. All 30 final
+runs used that reviewed source and the Fold 1 package snapshot. Interrupted
+attempts were archived separately and excluded from final metrics.
 
 ```bash
 PYTHONPATH=src:tests OMP_NUM_THREADS=1 .venv/bin/python -m unittest \
