@@ -1,0 +1,59 @@
+{
+  "first_three_history_rows": [
+    {
+      "epoch": "1",
+      "stage": "0",
+      "train_loss": "1.986183915535609",
+      "train_accuracy": "0.24062499403953552",
+      "train_precision": "0.2449948741784475",
+      "train_recall": "0.2275390625",
+      "train_macro_f1": "0.22100470890394167",
+      "val_loss": "1.683808398246765",
+      "val_accuracy": "0.4208333194255829",
+      "val_precision": "0.31176826917199185",
+      "val_recall": "0.39453125",
+      "val_macro_f1": "0.3158694391091915",
+      "learning_rates": "[2.9833792598034362e-05, 0.000994459753267812]"
+    },
+    {
+      "epoch": "2",
+      "stage": "0",
+      "train_loss": "1.5892454584439595",
+      "train_accuracy": "0.4020833373069763",
+      "train_precision": "0.3494368461713071",
+      "train_recall": "0.3779296875",
+      "train_macro_f1": "0.34625097550222994",
+      "val_loss": "1.1583545625209808",
+      "val_accuracy": "0.5541666746139526",
+      "val_precision": "0.4901715711231035",
+      "val_recall": "0.51953125",
+      "val_macro_f1": "0.48069848969671064",
+      "learning_rates": "[2.9339262969984572e-05, 0.0009779754323328191]"
+    },
+    {
+      "epoch": "3",
+      "stage": "0",
+      "train_loss": "1.3816791435082754",
+      "train_accuracy": "0.47604167461395264",
+      "train_precision": "0.46452339300744006",
+      "train_recall": "0.4638671875",
+      "train_macro_f1": "0.4606758913614442",
+      "val_loss": "1.2007995078961053",
+      "val_accuracy": "0.5458333492279053",
+      "val_precision": "0.5886332172143651",
+      "val_recall": "0.53125",
+      "val_macro_f1": "0.5020571383975749",
+      "learning_rates": "[2.8528588076542963e-05, 0.0009509529358847655]"
+    }
+  ],
+  "history_rows_observed": 3,
+  "diagnostic_counts": {
+    "nan": 0,
+    "oom": 0,
+    "traceback": 0,
+    "actual_mediapipe_error": 0
+  },
+  "sampled_gpu_peak_mib": 4844.0,
+  "gate_passed": true,
+  "scope": "No reported actual MediaPipe error; training loader can silently fallback. Separate real-video preflight passed. Sampled GPU usage is whole-device usage."
+}

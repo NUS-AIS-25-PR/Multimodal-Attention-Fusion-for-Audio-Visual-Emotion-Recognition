@@ -1,0 +1,326 @@
+{
+  "status": "complete",
+  "command": "figures",
+  "fold": null,
+  "model": null,
+  "models": {
+    "fold_02/audio": {
+      "start_utc": "2026-10-08T19:29:00.768528+00:00",
+      "start_monotonic": 104011.852683157,
+      "epochs": 20,
+      "epoch_boundary": 105238.108344992,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.6707 (cls 0.6707, ctr 0.0000) acc 0.7625 f1 0.7630 | val loss 1.1841 (cls 1.1841, ctr 0.0000) acc 0.6583 f1 0.6675 | lr [3.00e-06, 1.00e-04]",
+      "last_epoch_seconds": 61.37145627300197,
+      "end_utc": "2026-10-08T19:50:46.937005+00:00",
+      "runtime_seconds": 1240.6273902889952
+    },
+    "fold_02/video": {
+      "start_utc": "2026-10-08T19:50:47.058047+00:00",
+      "start_monotonic": 105252.601113752,
+      "epochs": 20,
+      "epoch_boundary": 106468.997198963,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.0183 (cls 0.0183, ctr 0.0000) acc 0.9990 f1 0.9990 | val loss 2.1540 (cls 2.1540, ctr 0.0000) acc 0.5042 f1 0.5354 | lr 1.00e-04",
+      "last_epoch_seconds": 60.57247222299338,
+      "end_utc": "2026-10-08T20:12:05.080812+00:00",
+      "runtime_seconds": 1229.7518610719999
+    },
+    "fold_02/gated": {
+      "start_utc": "2026-10-09T04:48:49.528942+00:00",
+      "start_monotonic": 135873.434402899,
+      "epochs": 30,
+      "epoch_boundary": 137708.245488589,
+      "last_epoch_line": "Epoch 30 | stage 2 | train loss 0.1935 (cls 0.1935, ctr 0.0000) acc 0.9281 f1 0.9311 | val loss 1.5005 (cls 1.5005, ctr 0.0000) acc 0.7167 f1 0.7278 | lr [3.00e-05, 1.00e-06, 1.00e-06]",
+      "last_epoch_seconds": 60.738028614985524,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T05:21:24.677359+00:00",
+      "runtime_seconds": 1850.1756148640125
+    },
+    "fold_03/audio": {
+      "start_utc": "2026-10-09T05:21:24.837376+00:00",
+      "start_monotonic": 137723.770033154,
+      "epochs": 20,
+      "epoch_boundary": 138945.109813523,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.6048 (cls 0.6048, ctr 0.0000) acc 0.7948 f1 0.7932 | val loss 1.3787 (cls 1.3787, ctr 0.0000) acc 0.5792 f1 0.5584 | lr [3.00e-06, 1.00e-04]",
+      "last_epoch_seconds": 60.632299942022655,
+      "end_utc": "2026-10-09T05:43:13.162449+00:00",
+      "runtime_seconds": 1235.4407498450018
+    },
+    "fold_03/video": {
+      "start_utc": "2026-10-09T05:43:13.274138+00:00",
+      "start_monotonic": 138959.322474035,
+      "epochs": 20,
+      "epoch_boundary": 140136.459058232,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.0162 (cls 0.0162, ctr 0.0000) acc 0.9969 f1 0.9971 | val loss 1.9991 (cls 1.9991, ctr 0.0000) acc 0.5667 f1 0.5432 | lr 1.00e-04",
+      "last_epoch_seconds": 57.85767308299546,
+      "end_utc": "2026-10-09T06:03:59.612430+00:00",
+      "runtime_seconds": 1190.4770868940104
+    },
+    "fold_03/gated": {
+      "start_utc": "2026-10-09T06:03:59.728612+00:00",
+      "start_monotonic": 140149.915741147,
+      "epochs": 30,
+      "epoch_boundary": 142030.573059288,
+      "last_epoch_line": "Epoch 30 | stage 2 | train loss 0.2016 (cls 0.2016, ctr 0.0000) acc 0.9198 f1 0.9213 | val loss 1.7680 (cls 1.7680, ctr 0.0000) acc 0.7083 f1 0.7044 | lr [3.00e-05, 1.00e-06, 1.00e-06]",
+      "last_epoch_seconds": 63.420182803994976,
+      "end_utc": "2026-10-09T06:37:08.765546+00:00",
+      "runtime_seconds": 1894.5475556569872
+    },
+    "fold_04/audio": {
+      "start_utc": "2026-10-09T06:37:08.885405+00:00",
+      "start_monotonic": 142044.583153202,
+      "epochs": 20,
+      "epoch_boundary": 143318.313836724,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.5854 (cls 0.5854, ctr 0.0000) acc 0.7937 f1 0.7900 | val loss 1.3280 (cls 1.3280, ctr 0.0000) acc 0.6667 f1 0.6641 | lr [3.00e-06, 1.00e-04]",
+      "last_epoch_seconds": 60.6437457720167,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T06:59:49.236935+00:00",
+      "runtime_seconds": 1287.3982960279973
+    },
+    "fold_04/video": {
+      "start_utc": "2026-10-09T06:59:49.356431+00:00",
+      "start_monotonic": 143332.10094405,
+      "epochs": 20,
+      "epoch_boundary": 144505.416518698,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.0200 (cls 0.0200, ctr 0.0000) acc 0.9948 f1 0.9937 | val loss 2.0730 (cls 2.0730, ctr 0.0000) acc 0.5000 f1 0.4389 | lr 1.00e-04",
+      "last_epoch_seconds": 57.98371838600724,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T07:20:48.246790+00:00",
+      "runtime_seconds": 1186.5188758659933
+    },
+    "fold_04/gated": {
+      "start_utc": "2026-10-09T07:20:48.363085+00:00",
+      "start_monotonic": 144518.73611323,
+      "epochs": 27,
+      "epoch_boundary": 146172.4177611,
+      "last_epoch_line": "Epoch 27 | stage 2 | train loss 0.3025 (cls 0.3025, ctr 0.0000) acc 0.8802 f1 0.8849 | val loss 1.3704 (cls 1.3704, ctr 0.0000) acc 0.6833 f1 0.6736 | lr [3.42e-05, 1.14e-06, 1.14e-06]",
+      "last_epoch_seconds": 61.64207439299207,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T07:50:16.999544+00:00",
+      "runtime_seconds": 1666.5426247139985
+    },
+    "fold_05/audio": {
+      "start_utc": "2026-10-09T07:50:17.137889+00:00",
+      "start_monotonic": 146185.417080536,
+      "epochs": 20,
+      "epoch_boundary": 147421.543732944,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.6006 (cls 0.6006, ctr 0.0000) acc 0.7823 f1 0.7787 | val loss 0.9239 (cls 0.9239, ctr 0.0000) acc 0.7125 f1 0.7124 | lr [3.00e-06, 1.00e-04]",
+      "last_epoch_seconds": 63.27775722701335,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T08:12:27.827324+00:00",
+      "runtime_seconds": 1251.2839961880236
+    },
+    "fold_05/video": {
+      "start_utc": "2026-10-09T08:12:27.962475+00:00",
+      "start_monotonic": 147436.83622473,
+      "epochs": 20,
+      "epoch_boundary": 148640.285808454,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.0170 (cls 0.0170, ctr 0.0000) acc 0.9969 f1 0.9966 | val loss 2.7583 (cls 2.7583, ctr 0.0000) acc 0.4292 f1 0.4428 | lr 1.00e-04",
+      "last_epoch_seconds": 59.10994061501697,
+      "end_utc": "2026-10-09T08:34:05.479159+00:00",
+      "runtime_seconds": 1217.7985493399901
+    },
+    "fold_05/gated": {
+      "start_utc": "2026-10-09T08:34:05.629960+00:00",
+      "start_monotonic": 148654.785573776,
+      "epochs": 30,
+      "epoch_boundary": 150504.389580919,
+      "last_epoch_line": "Epoch 30 | stage 2 | train loss 0.2212 (cls 0.2212, ctr 0.0000) acc 0.9104 f1 0.9136 | val loss 2.2662 (cls 2.2662, ctr 0.0000) acc 0.6292 f1 0.6257 | lr [3.00e-05, 1.00e-06, 1.00e-06]",
+      "last_epoch_seconds": 60.509988189995056,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T09:07:04.952740+00:00",
+      "runtime_seconds": 1863.6893529689987
+    },
+    "fold_06/audio": {
+      "start_utc": "2026-10-09T09:07:05.072487+00:00",
+      "start_monotonic": 150518.594672076,
+      "epochs": 20,
+      "epoch_boundary": 151731.13314229,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.6543 (cls 0.6543, ctr 0.0000) acc 0.7635 f1 0.7597 | val loss 0.6420 (cls 0.6420, ctr 0.0000) acc 0.7417 f1 0.7285 | lr [3.00e-06, 1.00e-04]",
+      "last_epoch_seconds": 61.67693464300828,
+      "end_utc": "2026-10-09T09:28:46.225838+00:00",
+      "runtime_seconds": 1225.0297170620179
+    },
+    "fold_06/video": {
+      "start_utc": "2026-10-09T09:52:29.406722+00:00",
+      "start_monotonic": 452.391466219,
+      "epochs": 20,
+      "epoch_boundary": 1586.17894991,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.0173 (cls 0.0173, ctr 0.0000) acc 0.9969 f1 0.9971 | val loss 1.6139 (cls 1.6139, ctr 0.0000) acc 0.6417 f1 0.5958 | lr 1.00e-04",
+      "last_epoch_seconds": 57.456265553000094,
+      "end_utc": "2026-10-09T10:13:17.721929+00:00",
+      "runtime_seconds": 1146.223488569
+    },
+    "fold_06/gated": {
+      "start_utc": "2026-10-09T10:13:17.832792+00:00",
+      "start_monotonic": 1598.725816425,
+      "epochs": 19,
+      "epoch_boundary": 2707.103762191,
+      "last_epoch_line": "Epoch 19 | stage 2 | train loss 0.2898 (cls 0.2898, ctr 0.0000) acc 0.8927 f1 0.8906 | val loss 1.8114 (cls 1.8114, ctr 0.0000) acc 0.7417 f1 0.7017 | lr [1.23e-04, 4.11e-06, 4.11e-06]",
+      "last_epoch_seconds": 57.08368161299995,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T10:33:41.142738+00:00",
+      "runtime_seconds": 1119.896220038
+    },
+    "fold_02/chumachenko_ia": {
+      "start_utc": "2026-10-09T10:33:58.319181+00:00",
+      "start_monotonic": 2735.798473157,
+      "epochs": 20,
+      "epoch_boundary": 3868.414725062,
+      "last_epoch_line": "Epoch 20 | stage 2 | train loss 0.1095 (cls 0.1095, ctr 0.0000) acc 0.9885 f1 0.9878 | val loss 8.0732 (cls 8.0732, ctr 0.0000) acc 0.5667 f1 0.5787 | lr [1.08e-04, 3.58e-06, 3.58e-06]",
+      "last_epoch_seconds": 56.00318914299987,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T10:54:46.602320+00:00",
+      "runtime_seconds": 1144.8742828220002
+    },
+    "fold_03/chumachenko_ia": {
+      "start_utc": "2026-10-09T10:54:46.726787+00:00",
+      "start_monotonic": 3880.797220439,
+      "epochs": 18,
+      "epoch_boundary": 4899.004454884,
+      "last_epoch_line": "Epoch 18 | stage 2 | train loss 0.2214 (cls 0.2214, ctr 0.0000) acc 0.9531 f1 0.9526 | val loss 6.0949 (cls 6.0949, ctr 0.0000) acc 0.6208 f1 0.5843 | lr [1.40e-04, 4.66e-06, 4.66e-06]",
+      "last_epoch_seconds": 56.31576785099969,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T11:13:30.226628+00:00",
+      "runtime_seconds": 1030.2365827909998
+    },
+    "fold_04/chumachenko_ia": {
+      "start_utc": "2026-10-09T11:13:30.366802+00:00",
+      "start_monotonic": 4911.17396506,
+      "epochs": 10,
+      "epoch_boundary": 5480.223642307,
+      "last_epoch_line": "Epoch 10 | stage 2 | train loss 0.5243 (cls 0.5243, ctr 0.0000) acc 0.9104 f1 0.9107 | val loss 5.0991 (cls 5.0991, ctr 0.0000) acc 0.5458 f1 0.5213 | lr [2.63e-04, 8.78e-06, 8.78e-06]",
+      "last_epoch_seconds": 56.27400192499954,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T11:24:01.330704+00:00",
+      "runtime_seconds": 580.970098754
+    },
+    "fold_05/chumachenko_ia": {
+      "start_utc": "2026-10-09T11:24:01.469134+00:00",
+      "start_monotonic": 5492.282489201,
+      "epochs": 23,
+      "epoch_boundary": 6759.777449394,
+      "last_epoch_line": "Epoch 23 | stage 2 | train loss 0.1320 (cls 0.1320, ctr 0.0000) acc 0.9729 f1 0.9702 | val loss 6.5211 (cls 6.5211, ctr 0.0000) acc 0.4875 f1 0.4796 | lr [6.66e-05, 2.22e-06, 2.22e-06]",
+      "last_epoch_seconds": 55.15115725199939,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T11:47:43.745774+00:00",
+      "runtime_seconds": 1280.1397047129994
+    },
+    "fold_06/chumachenko_ia": {
+      "start_utc": "2026-10-09T11:47:43.887064+00:00",
+      "start_monotonic": 6772.563482784,
+      "epochs": 20,
+      "epoch_boundary": 8002.118999486,
+      "last_epoch_line": "Epoch 20 | stage 2 | train loss 0.0864 (cls 0.0864, ctr 0.0000) acc 0.9896 f1 0.9883 | val loss 8.7936 (cls 8.7936, ctr 0.0000) acc 0.6500 f1 0.5987 | lr [1.08e-04, 3.58e-06, 3.58e-06]",
+      "last_epoch_seconds": 61.61199180599942,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T12:10:41.599406+00:00",
+      "runtime_seconds": 1243.2829636769993
+    },
+    "fold_02/xattn": {
+      "start_utc": "2026-10-09T12:11:04.132579+00:00",
+      "start_monotonic": 8034.778353487,
+      "epochs": 21,
+      "epoch_boundary": 9234.45610464,
+      "last_epoch_line": "Epoch 21 | stage 2 | train loss 0.3132 (cls 0.3132, ctr 0.0000) acc 0.9958 f1 0.9956 | val loss 1.3083 (cls 1.3083, ctr 0.0000) acc 0.6500 f1 0.6627 | lr [9.54e-05, 3.82e-06, 3.82e-06]",
+      "last_epoch_seconds": 59.89295055399998,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T12:33:16.635166+00:00",
+      "runtime_seconds": 1211.8715667550005
+    },
+    "fold_03/xattn": {
+      "start_utc": "2026-10-09T12:33:16.799322+00:00",
+      "start_monotonic": 9246.814091221,
+      "epochs": 24,
+      "epoch_boundary": 10603.217076372,
+      "last_epoch_line": "Epoch 24 | stage 2 | train loss 0.3373 (cls 0.3373, ctr 0.0000) acc 0.9896 f1 0.9902 | val loss 1.1972 (cls 1.1972, ctr 0.0000) acc 0.7000 f1 0.6907 | lr [6.78e-05, 2.71e-06, 2.71e-06]",
+      "last_epoch_seconds": 58.09714566100047,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T12:58:03.058006+00:00",
+      "runtime_seconds": 1368.4299555590005
+    },
+    "fold_04/xattn": {
+      "start_utc": "2026-10-09T12:58:03.212781+00:00",
+      "start_monotonic": 10615.39881869,
+      "epochs": 35,
+      "epoch_boundary": 12588.004449972,
+      "last_epoch_line": "Epoch 35 | stage 2 | train loss 0.3425 (cls 0.3425, ctr 0.0000) acc 0.9854 f1 0.9853 | val loss 1.0231 (cls 1.0231, ctr 0.0000) acc 0.7042 f1 0.7005 | lr [2.00e-05, 8.00e-07, 8.00e-07]",
+      "last_epoch_seconds": 56.769067692001045,
+      "end_utc": "2026-10-09T13:34:14.941248+00:00",
+      "runtime_seconds": 1984.4636409539999
+    },
+    "fold_05/xattn": {
+      "start_utc": "2026-10-09T13:34:15.109498+00:00",
+      "start_monotonic": 12600.03070877,
+      "epochs": 35,
+      "epoch_boundary": 14567.928046631,
+      "last_epoch_line": "Epoch 35 | stage 2 | train loss 0.3252 (cls 0.3252, ctr 0.0000) acc 0.9875 f1 0.9868 | val loss 1.3288 (cls 1.3288, ctr 0.0000) acc 0.6250 f1 0.6253 | lr [2.00e-05, 8.00e-07, 8.00e-07]",
+      "last_epoch_seconds": 59.99413457399896,
+      "end_utc": "2026-10-09T14:10:07.693510+00:00",
+      "runtime_seconds": 1981.9066750479997
+    },
+    "fold_06/xattn": {
+      "start_utc": "2026-10-09T14:10:07.839002+00:00",
+      "start_monotonic": 14582.082875579,
+      "epochs": 11,
+      "epoch_boundary": 15259.201533534,
+      "last_epoch_line": "Epoch 11 | stage 2 | train loss 0.3398 (cls 0.3398, ctr 0.0000) acc 0.9896 f1 0.9887 | val loss 1.1328 (cls 1.1328, ctr 0.0000) acc 0.7000 f1 0.6748 | lr [1.82e-04, 7.27e-06, 7.27e-06]",
+      "last_epoch_seconds": 61.42661567200048,
+      "early_stopping": true,
+      "end_utc": "2026-10-09T14:22:40.081843+00:00",
+      "runtime_seconds": 689.9790227109988
+    }
+  },
+  "commands": [
+    {
+      "model": "gated",
+      "exit_code": 1,
+      "runtime_seconds": 2494.0905372019915
+    },
+    {
+      "model": "gated",
+      "exit_code": -15,
+      "runtime_seconds": 16708.259499214997
+    },
+    {
+      "model": "gated",
+      "exit_code": 0,
+      "runtime_seconds": 2278.572653183
+    },
+    {
+      "model": "chumachenko_ia",
+      "exit_code": 0,
+      "runtime_seconds": 5294.3596487760005
+    },
+    {
+      "model": "xattn",
+      "exit_code": 0,
+      "runtime_seconds": 7256.624828999001
+    }
+  ],
+  "skip_count": 42,
+  "historical_failures": [
+    {
+      "control": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_execution_20261008T192320Z",
+      "error": "gated failed; later commands not launched",
+      "model": "gated",
+      "fold": 2,
+      "epochs": 0,
+      "cause": "Hugging Face SSL EOF followed by closed HTTP client during WavLM initialization",
+      "archived_artifacts": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated"
+    },
+    {
+      "control": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z",
+      "error": "Package environment changed",
+      "model": "video",
+      "fold": 6,
+      "epochs": 13,
+      "cause": "Dependency drift detected by guard; six packages restored to exact Fold1 versions. Computer restarted afterward. Partial video run archived and restarted from epoch1.",
+      "archived_artifacts": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_recovery_20261009T095133Z/interrupted_runs/fold_06/video"
+    }
+  ],
+  "start_utc": "2026-10-09T09:52:25.014354+00:00",
+  "start_monotonic": 447.999093354,
+  "end_utc": "2026-10-09T14:24:31.606218+00:00",
+  "figures_exported": 198,
+  "continuation_elapsed_seconds": 14924.538860758
+}

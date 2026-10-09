@@ -1,0 +1,329 @@
+START gated 2026-10-09T09:52:25.081199+00:00
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/gated
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/gated
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/gated
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/gated
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/gated
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/audio
+MODEL fold_06/video 2026-10-09T09:52:29.406722+00:00
+fold_06/video Epoch 01 | stage - | train loss 1.8226 (cls 1.8226, ctr 0.0000) acc 0.3260 f1 0.3207 | val loss 2.2339 (cls 2.2339, ctr 0.0000) acc 0.3042 f1 0.2675 | lr 9.78e-04 wall_seconds 54.14
+fold_06/video Epoch 02 | stage - | train loss 1.2876 (cls 1.2876, ctr 0.0000) acc 0.5125 f1 0.4937 | val loss 2.4140 (cls 2.4140, ctr 0.0000) acc 0.3083 f1 0.2551 | lr 9.51e-04 wall_seconds 52.47
+fold_06/video Epoch 03 | stage - | train loss 1.0374 (cls 1.0374, ctr 0.0000) acc 0.6177 f1 0.6170 | val loss 2.2912 (cls 2.2912, ctr 0.0000) acc 0.3333 f1 0.2724 | lr 9.14e-04 wall_seconds 52.77
+fold_06/video Epoch 04 | stage - | train loss 0.9132 (cls 0.9132, ctr 0.0000) acc 0.6740 f1 0.6712 | val loss 2.2393 (cls 2.2393, ctr 0.0000) acc 0.4125 f1 0.3842 | lr 8.68e-04 wall_seconds 59.83
+fold_06/video Epoch 05 | stage - | train loss 0.6363 (cls 0.6363, ctr 0.0000) acc 0.7667 f1 0.7655 | val loss 3.9608 (cls 3.9608, ctr 0.0000) acc 0.4125 f1 0.3009 | lr 8.15e-04 wall_seconds 57.99
+fold_06/video Epoch 06 | stage - | train loss 0.5674 (cls 0.5674, ctr 0.0000) acc 0.8062 f1 0.8078 | val loss 2.1587 (cls 2.1587, ctr 0.0000) acc 0.4875 f1 0.4666 | lr 7.54e-04 wall_seconds 57.61
+fold_06/video Epoch 07 | stage - | train loss 0.3475 (cls 0.3475, ctr 0.0000) acc 0.8875 f1 0.8884 | val loss 3.2187 (cls 3.2187, ctr 0.0000) acc 0.3792 f1 0.3707 | lr 6.89e-04 wall_seconds 57.68
+fold_06/video Epoch 08 | stage - | train loss 0.3149 (cls 0.3149, ctr 0.0000) acc 0.9010 f1 0.8993 | val loss 1.7884 (cls 1.7884, ctr 0.0000) acc 0.5625 f1 0.5583 | lr 6.20e-04 wall_seconds 57.66
+fold_06/video Epoch 09 | stage - | train loss 0.2140 (cls 0.2140, ctr 0.0000) acc 0.9302 f1 0.9312 | val loss 1.7844 (cls 1.7844, ctr 0.0000) acc 0.5958 f1 0.5533 | lr 5.50e-04 wall_seconds 56.94
+fold_06/video Epoch 10 | stage - | train loss 0.2079 (cls 0.2079, ctr 0.0000) acc 0.9417 f1 0.9414 | val loss 1.7242 (cls 1.7242, ctr 0.0000) acc 0.5833 f1 0.5462 | lr 4.80e-04 wall_seconds 56.58
+fold_06/video Epoch 11 | stage - | train loss 0.1286 (cls 0.1286, ctr 0.0000) acc 0.9615 f1 0.9614 | val loss 2.0480 (cls 2.0480, ctr 0.0000) acc 0.5833 f1 0.5523 | lr 4.11e-04 wall_seconds 55.87
+fold_06/video Epoch 12 | stage - | train loss 0.0779 (cls 0.0779, ctr 0.0000) acc 0.9771 f1 0.9765 | val loss 2.1438 (cls 2.1438, ctr 0.0000) acc 0.5625 f1 0.5292 | lr 3.46e-04 wall_seconds 58.77
+fold_06/video Epoch 13 | stage - | train loss 0.0456 (cls 0.0456, ctr 0.0000) acc 0.9885 f1 0.9878 | val loss 1.4613 (cls 1.4613, ctr 0.0000) acc 0.6375 f1 0.5971 | lr 2.85e-04 wall_seconds 57.78
+fold_06/video Epoch 14 | stage - | train loss 0.0283 (cls 0.0283, ctr 0.0000) acc 0.9927 f1 0.9932 | val loss 1.7975 (cls 1.7975, ctr 0.0000) acc 0.6125 f1 0.5523 | lr 2.32e-04 wall_seconds 57.0
+fold_06/video Epoch 15 | stage - | train loss 0.0185 (cls 0.0185, ctr 0.0000) acc 0.9979 f1 0.9981 | val loss 2.0601 (cls 2.0601, ctr 0.0000) acc 0.6042 f1 0.5319 | lr 1.86e-04 wall_seconds 57.38
+fold_06/video Epoch 16 | stage - | train loss 0.0172 (cls 0.0172, ctr 0.0000) acc 0.9979 f1 0.9980 | val loss 1.8907 (cls 1.8907, ctr 0.0000) acc 0.6208 f1 0.5800 | lr 1.49e-04 wall_seconds 56.63
+fold_06/video Epoch 17 | stage - | train loss 0.0157 (cls 0.0157, ctr 0.0000) acc 0.9979 f1 0.9980 | val loss 1.7048 (cls 1.7048, ctr 0.0000) acc 0.6417 f1 0.5810 | lr 1.22e-04 wall_seconds 55.4
+fold_06/video Epoch 18 | stage - | train loss 0.0173 (cls 0.0173, ctr 0.0000) acc 0.9969 f1 0.9971 | val loss 1.5649 (cls 1.5649, ctr 0.0000) acc 0.6250 f1 0.5848 | lr 1.06e-04 wall_seconds 55.44
+fold_06/video Epoch 19 | stage - | train loss 0.0149 (cls 0.0149, ctr 0.0000) acc 0.9969 f1 0.9971 | val loss 1.6108 (cls 1.6108, ctr 0.0000) acc 0.6500 f1 0.6069 | lr 1.00e-04 wall_seconds 57.04
+fold_06/video Epoch 20 | stage - | train loss 0.0173 (cls 0.0173, ctr 0.0000) acc 0.9969 f1 0.9971 | val loss 1.6139 (cls 1.6139, ctr 0.0000) acc 0.6417 f1 0.5958 | lr 1.00e-04 wall_seconds 57.46
+FINISHED fold_06/video Best val macro-F1: 0.6069 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/best.pt
+MODEL fold_06/gated 2026-10-09T10:13:17.832792+00:00
+fold_06/gated Epoch 01 | stage 1 | train loss 0.7714 (cls 0.7714, ctr 0.0000) acc 0.7750 f1 0.7772 | val loss 1.1943 (cls 1.1943, ctr 0.0000) acc 0.6458 f1 0.6201 | lr 2.07e-04 wall_seconds 60.98
+fold_06/gated Epoch 02 | stage 1 | train loss 0.5029 (cls 0.5029, ctr 0.0000) acc 0.8667 f1 0.8698 | val loss 1.3007 (cls 1.3007, ctr 0.0000) acc 0.6667 f1 0.6305 | lr 1.23e-04 wall_seconds 59.55
+fold_06/gated Epoch 03 | stage 1 | train loss 0.3701 (cls 0.3701, ctr 0.0000) acc 0.9042 f1 0.9044 | val loss 1.4793 (cls 1.4793, ctr 0.0000) acc 0.6500 f1 0.6184 | lr 5.58e-05 wall_seconds 59.8
+fold_06/gated Epoch 04 | stage 1 | train loss 0.3596 (cls 0.3596, ctr 0.0000) acc 0.9073 f1 0.9081 | val loss 1.4375 (cls 1.4375, ctr 0.0000) acc 0.6458 f1 0.6173 | lr 3.00e-05 wall_seconds 59.58
+fold_06/gated Epoch 05 | stage 1 | train loss 0.4238 (cls 0.4238, ctr 0.0000) acc 0.8729 f1 0.8707 | val loss 1.5513 (cls 1.5513, ctr 0.0000) acc 0.6542 f1 0.6118 | lr 3.00e-05 wall_seconds 59.36
+fold_06/gated Epoch 06 | stage 2 | train loss 0.3863 (cls 0.3863, ctr 0.0000) acc 0.8750 f1 0.8772 | val loss 1.7905 (cls 1.7905, ctr 0.0000) acc 0.6500 f1 0.6247 | lr [2.96e-04, 9.86e-06, 9.86e-06] wall_seconds 60.2
+fold_06/gated Epoch 07 | stage 2 | train loss 0.4836 (cls 0.4836, ctr 0.0000) acc 0.8313 f1 0.8333 | val loss 2.1189 (cls 2.1189, ctr 0.0000) acc 0.6375 f1 0.5972 | lr [2.91e-04, 9.68e-06, 9.68e-06] wall_seconds 59.06
+fold_06/gated Epoch 08 | stage 2 | train loss 0.2458 (cls 0.2458, ctr 0.0000) acc 0.9104 f1 0.9112 | val loss 1.7669 (cls 1.7669, ctr 0.0000) acc 0.7042 f1 0.6651 | lr [2.83e-04, 9.44e-06, 9.44e-06] wall_seconds 58.68
+fold_06/gated Epoch 09 | stage 2 | train loss 0.2935 (cls 0.2935, ctr 0.0000) acc 0.9010 f1 0.8982 | val loss 2.1156 (cls 2.1156, ctr 0.0000) acc 0.6542 f1 0.6316 | lr [2.74e-04, 9.14e-06, 9.14e-06] wall_seconds 58.41
+fold_06/gated Epoch 10 | stage 2 | train loss 0.3805 (cls 0.3805, ctr 0.0000) acc 0.8604 f1 0.8654 | val loss 1.7748 (cls 1.7748, ctr 0.0000) acc 0.6917 f1 0.6477 | lr [2.63e-04, 8.78e-06, 8.78e-06] wall_seconds 57.05
+fold_06/gated Epoch 11 | stage 2 | train loss 0.2982 (cls 0.2982, ctr 0.0000) acc 0.8917 f1 0.8897 | val loss 1.5942 (cls 1.5942, ctr 0.0000) acc 0.7292 f1 0.7037 | lr [2.51e-04, 8.37e-06, 8.37e-06] wall_seconds 57.03
+fold_06/gated Epoch 12 | stage 2 | train loss 0.3570 (cls 0.3570, ctr 0.0000) acc 0.8594 f1 0.8589 | val loss 1.6326 (cls 1.6326, ctr 0.0000) acc 0.7167 f1 0.6811 | lr [2.37e-04, 7.91e-06, 7.91e-06] wall_seconds 57.02
+fold_06/gated Epoch 13 | stage 2 | train loss 0.2915 (cls 0.2915, ctr 0.0000) acc 0.8854 f1 0.8869 | val loss 2.0386 (cls 2.0386, ctr 0.0000) acc 0.6833 f1 0.6326 | lr [2.22e-04, 7.42e-06, 7.42e-06] wall_seconds 56.53
+fold_06/gated Epoch 14 | stage 2 | train loss 0.2822 (cls 0.2822, ctr 0.0000) acc 0.9000 f1 0.8999 | val loss 1.8821 (cls 1.8821, ctr 0.0000) acc 0.7167 f1 0.6608 | lr [2.07e-04, 6.89e-06, 6.89e-06] wall_seconds 56.72
+fold_06/gated Epoch 15 | stage 2 | train loss 0.2049 (cls 0.2049, ctr 0.0000) acc 0.9229 f1 0.9256 | val loss 1.7559 (cls 1.7559, ctr 0.0000) acc 0.7167 f1 0.6770 | lr [1.90e-04, 6.34e-06, 6.34e-06] wall_seconds 56.79
+fold_06/gated Epoch 16 | stage 2 | train loss 0.2283 (cls 0.2283, ctr 0.0000) acc 0.9187 f1 0.9183 | val loss 1.8455 (cls 1.8455, ctr 0.0000) acc 0.7000 f1 0.6577 | lr [1.73e-04, 5.78e-06, 5.78e-06] wall_seconds 56.8
+fold_06/gated Epoch 17 | stage 2 | train loss 0.2702 (cls 0.2702, ctr 0.0000) acc 0.8969 f1 0.8998 | val loss 2.0196 (cls 2.0196, ctr 0.0000) acc 0.6875 f1 0.6532 | lr [1.57e-04, 5.22e-06, 5.22e-06] wall_seconds 56.77
+fold_06/gated Epoch 18 | stage 2 | train loss 0.3186 (cls 0.3186, ctr 0.0000) acc 0.8813 f1 0.8836 | val loss 1.8944 (cls 1.8944, ctr 0.0000) acc 0.7042 f1 0.6717 | lr [1.40e-04, 4.66e-06, 4.66e-06] wall_seconds 56.82
+fold_06/gated Epoch 19 | stage 2 | train loss 0.2898 (cls 0.2898, ctr 0.0000) acc 0.8927 f1 0.8906 | val loss 1.8114 (cls 1.8114, ctr 0.0000) acc 0.7417 f1 0.7017 | lr [1.23e-04, 4.11e-06, 4.11e-06] wall_seconds 57.08
+FINISHED fold_06/gated Best val macro-F1: 0.7037 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/gated/best.pt
+EXIT gated 0
+START chumachenko_ia 2026-10-09T10:33:52.236346+00:00
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/chumachenko_ia
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video
+MODEL fold_02/chumachenko_ia 2026-10-09T10:33:58.319181+00:00
+fold_02/chumachenko_ia Epoch 01 | stage 1 | train loss 0.4444 (cls 0.4444, ctr 0.0000) acc 0.9135 f1 0.9135 | val loss 3.6103 (cls 3.6103, ctr 0.0000) acc 0.5250 f1 0.5464 | lr 2.07e-04 wall_seconds 59.7
+fold_02/chumachenko_ia Epoch 02 | stage 1 | train loss 0.1891 (cls 0.1891, ctr 0.0000) acc 0.9490 f1 0.9465 | val loss 5.5521 (cls 5.5521, ctr 0.0000) acc 0.5042 f1 0.5194 | lr 1.23e-04 wall_seconds 56.7
+fold_02/chumachenko_ia Epoch 03 | stage 1 | train loss 0.1504 (cls 0.1504, ctr 0.0000) acc 0.9667 f1 0.9659 | val loss 5.2681 (cls 5.2681, ctr 0.0000) acc 0.5417 f1 0.5526 | lr 5.58e-05 wall_seconds 55.22
+fold_02/chumachenko_ia Epoch 04 | stage 1 | train loss 0.0729 (cls 0.0729, ctr 0.0000) acc 0.9812 f1 0.9819 | val loss 4.3765 (cls 4.3765, ctr 0.0000) acc 0.5458 f1 0.5538 | lr 3.00e-05 wall_seconds 55.84
+fold_02/chumachenko_ia Epoch 05 | stage 1 | train loss 0.0645 (cls 0.0645, ctr 0.0000) acc 0.9865 f1 0.9863 | val loss 4.4621 (cls 4.4621, ctr 0.0000) acc 0.5667 f1 0.5880 | lr 3.00e-05 wall_seconds 55.49
+fold_02/chumachenko_ia Epoch 06 | stage 2 | train loss 0.3598 (cls 0.3598, ctr 0.0000) acc 0.9375 f1 0.9341 | val loss 6.0845 (cls 6.0845, ctr 0.0000) acc 0.5417 f1 0.5477 | lr [2.96e-04, 9.86e-06, 9.86e-06] wall_seconds 56.28
+fold_02/chumachenko_ia Epoch 07 | stage 2 | train loss 0.2398 (cls 0.2398, ctr 0.0000) acc 0.9583 f1 0.9570 | val loss 10.9016 (cls 10.9016, ctr 0.0000) acc 0.4833 f1 0.4924 | lr [2.91e-04, 9.68e-06, 9.68e-06] wall_seconds 55.86
+fold_02/chumachenko_ia Epoch 08 | stage 2 | train loss 0.4507 (cls 0.4507, ctr 0.0000) acc 0.9448 f1 0.9414 | val loss 7.6530 (cls 7.6530, ctr 0.0000) acc 0.5417 f1 0.5673 | lr [2.83e-04, 9.44e-06, 9.44e-06] wall_seconds 55.98
+fold_02/chumachenko_ia Epoch 09 | stage 2 | train loss 0.3810 (cls 0.3810, ctr 0.0000) acc 0.9604 f1 0.9605 | val loss 10.4070 (cls 10.4070, ctr 0.0000) acc 0.5375 f1 0.5328 | lr [2.74e-04, 9.14e-06, 9.14e-06] wall_seconds 56.17
+fold_02/chumachenko_ia Epoch 10 | stage 2 | train loss 0.1113 (cls 0.1113, ctr 0.0000) acc 0.9760 f1 0.9770 | val loss 8.6314 (cls 8.6314, ctr 0.0000) acc 0.5375 f1 0.5455 | lr [2.63e-04, 8.78e-06, 8.78e-06] wall_seconds 57.11
+fold_02/chumachenko_ia Epoch 11 | stage 2 | train loss 0.2986 (cls 0.2986, ctr 0.0000) acc 0.9563 f1 0.9560 | val loss 8.7285 (cls 8.7285, ctr 0.0000) acc 0.5708 f1 0.5879 | lr [2.51e-04, 8.37e-06, 8.37e-06] wall_seconds 57.66
+fold_02/chumachenko_ia Epoch 12 | stage 2 | train loss 0.1104 (cls 0.1104, ctr 0.0000) acc 0.9833 f1 0.9824 | val loss 8.2058 (cls 8.2058, ctr 0.0000) acc 0.5833 f1 0.5887 | lr [2.37e-04, 7.91e-06, 7.91e-06] wall_seconds 56.43
+fold_02/chumachenko_ia Epoch 13 | stage 2 | train loss 0.1549 (cls 0.1549, ctr 0.0000) acc 0.9750 f1 0.9746 | val loss 8.1740 (cls 8.1740, ctr 0.0000) acc 0.5458 f1 0.5463 | lr [2.22e-04, 7.42e-06, 7.42e-06] wall_seconds 56.96
+fold_02/chumachenko_ia Epoch 14 | stage 2 | train loss 0.2715 (cls 0.2715, ctr 0.0000) acc 0.9677 f1 0.9678 | val loss 8.9038 (cls 8.9038, ctr 0.0000) acc 0.5292 f1 0.5437 | lr [2.07e-04, 6.89e-06, 6.89e-06] wall_seconds 56.13
+fold_02/chumachenko_ia Epoch 15 | stage 2 | train loss 0.2330 (cls 0.2330, ctr 0.0000) acc 0.9708 f1 0.9688 | val loss 8.9081 (cls 8.9081, ctr 0.0000) acc 0.5417 f1 0.5358 | lr [1.90e-04, 6.34e-06, 6.34e-06] wall_seconds 56.03
+fold_02/chumachenko_ia Epoch 16 | stage 2 | train loss 0.0728 (cls 0.0728, ctr 0.0000) acc 0.9865 f1 0.9854 | val loss 9.3787 (cls 9.3787, ctr 0.0000) acc 0.5542 f1 0.5680 | lr [1.73e-04, 5.78e-06, 5.78e-06] wall_seconds 56.06
+fold_02/chumachenko_ia Epoch 17 | stage 2 | train loss 0.1339 (cls 0.1339, ctr 0.0000) acc 0.9802 f1 0.9815 | val loss 8.7051 (cls 8.7051, ctr 0.0000) acc 0.5667 f1 0.5799 | lr [1.57e-04, 5.22e-06, 5.22e-06] wall_seconds 56.17
+fold_02/chumachenko_ia Epoch 18 | stage 2 | train loss 0.2344 (cls 0.2344, ctr 0.0000) acc 0.9667 f1 0.9663 | val loss 9.5319 (cls 9.5319, ctr 0.0000) acc 0.5542 f1 0.5706 | lr [1.40e-04, 4.66e-06, 4.66e-06] wall_seconds 56.01
+fold_02/chumachenko_ia Epoch 19 | stage 2 | train loss 0.0751 (cls 0.0751, ctr 0.0000) acc 0.9802 f1 0.9795 | val loss 9.4699 (cls 9.4699, ctr 0.0000) acc 0.5417 f1 0.5650 | lr [1.23e-04, 4.11e-06, 4.11e-06] wall_seconds 56.3
+fold_02/chumachenko_ia Epoch 20 | stage 2 | train loss 0.1095 (cls 0.1095, ctr 0.0000) acc 0.9885 f1 0.9878 | val loss 8.0732 (cls 8.0732, ctr 0.0000) acc 0.5667 f1 0.5787 | lr [1.08e-04, 3.58e-06, 3.58e-06] wall_seconds 56.0
+FINISHED fold_02/chumachenko_ia Best val macro-F1: 0.5887 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/chumachenko_ia/best.pt
+MODEL fold_03/chumachenko_ia 2026-10-09T10:54:46.726787+00:00
+fold_03/chumachenko_ia Epoch 01 | stage 1 | train loss 0.6486 (cls 0.6486, ctr 0.0000) acc 0.8531 f1 0.8518 | val loss 3.0119 (cls 3.0119, ctr 0.0000) acc 0.5875 f1 0.5718 | lr 2.07e-04 wall_seconds 58.1
+fold_03/chumachenko_ia Epoch 02 | stage 1 | train loss 0.3628 (cls 0.3628, ctr 0.0000) acc 0.9187 f1 0.9179 | val loss 3.9759 (cls 3.9759, ctr 0.0000) acc 0.5833 f1 0.5600 | lr 1.23e-04 wall_seconds 57.01
+fold_03/chumachenko_ia Epoch 03 | stage 1 | train loss 0.3453 (cls 0.3453, ctr 0.0000) acc 0.9260 f1 0.9257 | val loss 3.4968 (cls 3.4968, ctr 0.0000) acc 0.6167 f1 0.5969 | lr 5.58e-05 wall_seconds 55.57
+fold_03/chumachenko_ia Epoch 04 | stage 1 | train loss 0.2262 (cls 0.2262, ctr 0.0000) acc 0.9438 f1 0.9453 | val loss 3.3369 (cls 3.3369, ctr 0.0000) acc 0.6375 f1 0.6121 | lr 3.00e-05 wall_seconds 55.53
+fold_03/chumachenko_ia Epoch 05 | stage 1 | train loss 0.1952 (cls 0.1952, ctr 0.0000) acc 0.9552 f1 0.9536 | val loss 3.1718 (cls 3.1718, ctr 0.0000) acc 0.6333 f1 0.6191 | lr 3.00e-05 wall_seconds 55.8
+fold_03/chumachenko_ia Epoch 06 | stage 2 | train loss 0.7351 (cls 0.7351, ctr 0.0000) acc 0.9010 f1 0.8946 | val loss 4.9937 (cls 4.9937, ctr 0.0000) acc 0.6250 f1 0.5877 | lr [2.96e-04, 9.86e-06, 9.86e-06] wall_seconds 56.32
+fold_03/chumachenko_ia Epoch 07 | stage 2 | train loss 0.3038 (cls 0.3038, ctr 0.0000) acc 0.9427 f1 0.9412 | val loss 5.0498 (cls 5.0498, ctr 0.0000) acc 0.6125 f1 0.5832 | lr [2.91e-04, 9.68e-06, 9.68e-06] wall_seconds 56.05
+fold_03/chumachenko_ia Epoch 08 | stage 2 | train loss 0.5860 (cls 0.5860, ctr 0.0000) acc 0.9177 f1 0.9114 | val loss 5.6734 (cls 5.6734, ctr 0.0000) acc 0.6042 f1 0.5589 | lr [2.83e-04, 9.44e-06, 9.44e-06] wall_seconds 56.24
+fold_03/chumachenko_ia Epoch 09 | stage 2 | train loss 0.5273 (cls 0.5273, ctr 0.0000) acc 0.9260 f1 0.9272 | val loss 7.8901 (cls 7.8901, ctr 0.0000) acc 0.5833 f1 0.5255 | lr [2.74e-04, 9.14e-06, 9.14e-06] wall_seconds 56.32
+fold_03/chumachenko_ia Epoch 10 | stage 2 | train loss 0.2192 (cls 0.2192, ctr 0.0000) acc 0.9531 f1 0.9491 | val loss 4.6675 (cls 4.6675, ctr 0.0000) acc 0.6792 f1 0.6526 | lr [2.63e-04, 8.78e-06, 8.78e-06] wall_seconds 56.37
+fold_03/chumachenko_ia Epoch 11 | stage 2 | train loss 0.2185 (cls 0.2185, ctr 0.0000) acc 0.9552 f1 0.9507 | val loss 6.7160 (cls 6.7160, ctr 0.0000) acc 0.5917 f1 0.5551 | lr [2.51e-04, 8.37e-06, 8.37e-06] wall_seconds 56.63
+fold_03/chumachenko_ia Epoch 12 | stage 2 | train loss 0.2344 (cls 0.2344, ctr 0.0000) acc 0.9531 f1 0.9540 | val loss 6.2860 (cls 6.2860, ctr 0.0000) acc 0.6417 f1 0.6083 | lr [2.37e-04, 7.91e-06, 7.91e-06] wall_seconds 56.26
+fold_03/chumachenko_ia Epoch 13 | stage 2 | train loss 0.2704 (cls 0.2704, ctr 0.0000) acc 0.9552 f1 0.9551 | val loss 6.1905 (cls 6.1905, ctr 0.0000) acc 0.6583 f1 0.6188 | lr [2.22e-04, 7.42e-06, 7.42e-06] wall_seconds 56.51
+fold_03/chumachenko_ia Epoch 14 | stage 2 | train loss 0.1661 (cls 0.1661, ctr 0.0000) acc 0.9646 f1 0.9634 | val loss 4.7549 (cls 4.7549, ctr 0.0000) acc 0.6458 f1 0.6145 | lr [2.07e-04, 6.89e-06, 6.89e-06] wall_seconds 56.44
+fold_03/chumachenko_ia Epoch 15 | stage 2 | train loss 0.2074 (cls 0.2074, ctr 0.0000) acc 0.9646 f1 0.9619 | val loss 4.8964 (cls 4.8964, ctr 0.0000) acc 0.6458 f1 0.6139 | lr [1.90e-04, 6.34e-06, 6.34e-06] wall_seconds 56.18
+fold_03/chumachenko_ia Epoch 16 | stage 2 | train loss 0.2082 (cls 0.2082, ctr 0.0000) acc 0.9583 f1 0.9571 | val loss 5.9740 (cls 5.9740, ctr 0.0000) acc 0.6292 f1 0.6129 | lr [1.73e-04, 5.78e-06, 5.78e-06] wall_seconds 56.36
+fold_03/chumachenko_ia Epoch 17 | stage 2 | train loss 0.2361 (cls 0.2361, ctr 0.0000) acc 0.9563 f1 0.9555 | val loss 5.3832 (cls 5.3832, ctr 0.0000) acc 0.6458 f1 0.6263 | lr [1.57e-04, 5.22e-06, 5.22e-06] wall_seconds 56.3
+fold_03/chumachenko_ia Epoch 18 | stage 2 | train loss 0.2214 (cls 0.2214, ctr 0.0000) acc 0.9531 f1 0.9526 | val loss 6.0949 (cls 6.0949, ctr 0.0000) acc 0.6208 f1 0.5843 | lr [1.40e-04, 4.66e-06, 4.66e-06] wall_seconds 56.32
+FINISHED fold_03/chumachenko_ia Best val macro-F1: 0.6526 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/chumachenko_ia/best.pt
+MODEL fold_04/chumachenko_ia 2026-10-09T11:13:30.366802+00:00
+fold_04/chumachenko_ia Epoch 01 | stage 1 | train loss 0.8788 (cls 0.8788, ctr 0.0000) acc 0.8052 f1 0.7995 | val loss 3.8662 (cls 3.8662, ctr 0.0000) acc 0.5167 f1 0.4707 | lr 2.07e-04 wall_seconds 57.78
+fold_04/chumachenko_ia Epoch 02 | stage 1 | train loss 0.6781 (cls 0.6781, ctr 0.0000) acc 0.8792 f1 0.8778 | val loss 4.2374 (cls 4.2374, ctr 0.0000) acc 0.6000 f1 0.5740 | lr 1.23e-04 wall_seconds 58.6
+fold_04/chumachenko_ia Epoch 03 | stage 1 | train loss 0.5082 (cls 0.5082, ctr 0.0000) acc 0.8906 f1 0.8884 | val loss 4.0076 (cls 4.0076, ctr 0.0000) acc 0.5375 f1 0.5080 | lr 5.58e-05 wall_seconds 55.84
+fold_04/chumachenko_ia Epoch 04 | stage 1 | train loss 0.3228 (cls 0.3228, ctr 0.0000) acc 0.9156 f1 0.9148 | val loss 4.0400 (cls 4.0400, ctr 0.0000) acc 0.5208 f1 0.5014 | lr 3.00e-05 wall_seconds 56.62
+fold_04/chumachenko_ia Epoch 05 | stage 1 | train loss 0.2317 (cls 0.2317, ctr 0.0000) acc 0.9385 f1 0.9379 | val loss 3.7347 (cls 3.7347, ctr 0.0000) acc 0.5417 f1 0.5112 | lr 3.00e-05 wall_seconds 55.52
+fold_04/chumachenko_ia Epoch 06 | stage 2 | train loss 0.7966 (cls 0.7966, ctr 0.0000) acc 0.8635 f1 0.8628 | val loss 5.0303 (cls 5.0303, ctr 0.0000) acc 0.5542 f1 0.5102 | lr [2.96e-04, 9.86e-06, 9.86e-06] wall_seconds 56.02
+fold_04/chumachenko_ia Epoch 07 | stage 2 | train loss 0.5846 (cls 0.5846, ctr 0.0000) acc 0.8979 f1 0.8923 | val loss 7.5968 (cls 7.5968, ctr 0.0000) acc 0.5042 f1 0.4520 | lr [2.91e-04, 9.68e-06, 9.68e-06] wall_seconds 55.96
+fold_04/chumachenko_ia Epoch 08 | stage 2 | train loss 0.6968 (cls 0.6968, ctr 0.0000) acc 0.9000 f1 0.8975 | val loss 5.5482 (cls 5.5482, ctr 0.0000) acc 0.5833 f1 0.5641 | lr [2.83e-04, 9.44e-06, 9.44e-06] wall_seconds 56.28
+fold_04/chumachenko_ia Epoch 09 | stage 2 | train loss 0.6272 (cls 0.6272, ctr 0.0000) acc 0.8854 f1 0.8869 | val loss 7.3567 (cls 7.3567, ctr 0.0000) acc 0.5042 f1 0.4509 | lr [2.74e-04, 9.14e-06, 9.14e-06] wall_seconds 56.31
+fold_04/chumachenko_ia Epoch 10 | stage 2 | train loss 0.5243 (cls 0.5243, ctr 0.0000) acc 0.9104 f1 0.9107 | val loss 5.0991 (cls 5.0991, ctr 0.0000) acc 0.5458 f1 0.5213 | lr [2.63e-04, 8.78e-06, 8.78e-06] wall_seconds 56.27
+FINISHED fold_04/chumachenko_ia Best val macro-F1: 0.5740 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/chumachenko_ia/best.pt
+MODEL fold_05/chumachenko_ia 2026-10-09T11:24:01.469134+00:00
+fold_05/chumachenko_ia Epoch 01 | stage 1 | train loss 0.6847 (cls 0.6847, ctr 0.0000) acc 0.8500 f1 0.8439 | val loss 7.2575 (cls 7.2575, ctr 0.0000) acc 0.4458 f1 0.4256 | lr 2.07e-04 wall_seconds 56.42
+fold_05/chumachenko_ia Epoch 02 | stage 1 | train loss 0.4460 (cls 0.4460, ctr 0.0000) acc 0.9115 f1 0.9127 | val loss 7.0883 (cls 7.0883, ctr 0.0000) acc 0.4333 f1 0.4336 | lr 1.23e-04 wall_seconds 54.36
+fold_05/chumachenko_ia Epoch 03 | stage 1 | train loss 0.2943 (cls 0.2943, ctr 0.0000) acc 0.9385 f1 0.9353 | val loss 6.2774 (cls 6.2774, ctr 0.0000) acc 0.4542 f1 0.4484 | lr 5.58e-05 wall_seconds 54.28
+fold_05/chumachenko_ia Epoch 04 | stage 1 | train loss 0.1522 (cls 0.1522, ctr 0.0000) acc 0.9573 f1 0.9557 | val loss 7.6881 (cls 7.6881, ctr 0.0000) acc 0.4333 f1 0.4146 | lr 3.00e-05 wall_seconds 54.13
+fold_05/chumachenko_ia Epoch 05 | stage 1 | train loss 0.1623 (cls 0.1623, ctr 0.0000) acc 0.9656 f1 0.9639 | val loss 6.2372 (cls 6.2372, ctr 0.0000) acc 0.4417 f1 0.4320 | lr 3.00e-05 wall_seconds 54.09
+fold_05/chumachenko_ia Epoch 06 | stage 2 | train loss 0.6121 (cls 0.6121, ctr 0.0000) acc 0.9094 f1 0.9026 | val loss 8.2274 (cls 8.2274, ctr 0.0000) acc 0.4833 f1 0.4734 | lr [2.96e-04, 9.86e-06, 9.86e-06] wall_seconds 54.74
+fold_05/chumachenko_ia Epoch 07 | stage 2 | train loss 0.5471 (cls 0.5471, ctr 0.0000) acc 0.9146 f1 0.9103 | val loss 10.6716 (cls 10.6716, ctr 0.0000) acc 0.4292 f1 0.4027 | lr [2.91e-04, 9.68e-06, 9.68e-06] wall_seconds 55.4
+fold_05/chumachenko_ia Epoch 08 | stage 2 | train loss 0.6139 (cls 0.6139, ctr 0.0000) acc 0.9125 f1 0.9116 | val loss 10.3246 (cls 10.3246, ctr 0.0000) acc 0.4208 f1 0.3546 | lr [2.83e-04, 9.44e-06, 9.44e-06] wall_seconds 54.62
+fold_05/chumachenko_ia Epoch 09 | stage 2 | train loss 0.5599 (cls 0.5599, ctr 0.0000) acc 0.9260 f1 0.9194 | val loss 10.4783 (cls 10.4783, ctr 0.0000) acc 0.4917 f1 0.4876 | lr [2.74e-04, 9.14e-06, 9.14e-06] wall_seconds 54.59
+fold_05/chumachenko_ia Epoch 10 | stage 2 | train loss 0.3567 (cls 0.3567, ctr 0.0000) acc 0.9479 f1 0.9443 | val loss 10.9134 (cls 10.9134, ctr 0.0000) acc 0.4792 f1 0.4642 | lr [2.63e-04, 8.78e-06, 8.78e-06] wall_seconds 55.04
+fold_05/chumachenko_ia Epoch 11 | stage 2 | train loss 0.4111 (cls 0.4111, ctr 0.0000) acc 0.9354 f1 0.9318 | val loss 10.4571 (cls 10.4571, ctr 0.0000) acc 0.4583 f1 0.4678 | lr [2.51e-04, 8.37e-06, 8.37e-06] wall_seconds 54.57
+fold_05/chumachenko_ia Epoch 12 | stage 2 | train loss 0.2565 (cls 0.2565, ctr 0.0000) acc 0.9583 f1 0.9580 | val loss 9.2774 (cls 9.2774, ctr 0.0000) acc 0.4792 f1 0.4997 | lr [2.37e-04, 7.91e-06, 7.91e-06] wall_seconds 54.8
+fold_05/chumachenko_ia Epoch 13 | stage 2 | train loss 0.3259 (cls 0.3259, ctr 0.0000) acc 0.9490 f1 0.9483 | val loss 10.1529 (cls 10.1529, ctr 0.0000) acc 0.4583 f1 0.4475 | lr [2.22e-04, 7.42e-06, 7.42e-06] wall_seconds 55.01
+fold_05/chumachenko_ia Epoch 14 | stage 2 | train loss 0.2357 (cls 0.2357, ctr 0.0000) acc 0.9604 f1 0.9570 | val loss 8.8752 (cls 8.8752, ctr 0.0000) acc 0.5042 f1 0.5103 | lr [2.07e-04, 6.89e-06, 6.89e-06] wall_seconds 54.78
+fold_05/chumachenko_ia Epoch 15 | stage 2 | train loss 0.1508 (cls 0.1508, ctr 0.0000) acc 0.9729 f1 0.9726 | val loss 7.9394 (cls 7.9394, ctr 0.0000) acc 0.5208 f1 0.5283 | lr [1.90e-04, 6.34e-06, 6.34e-06] wall_seconds 54.97
+fold_05/chumachenko_ia Epoch 16 | stage 2 | train loss 0.1671 (cls 0.1671, ctr 0.0000) acc 0.9656 f1 0.9644 | val loss 10.1060 (cls 10.1060, ctr 0.0000) acc 0.4333 f1 0.4390 | lr [1.73e-04, 5.78e-06, 5.78e-06] wall_seconds 55.38
+fold_05/chumachenko_ia Epoch 17 | stage 2 | train loss 0.2249 (cls 0.2249, ctr 0.0000) acc 0.9521 f1 0.9486 | val loss 7.9163 (cls 7.9163, ctr 0.0000) acc 0.4708 f1 0.4802 | lr [1.57e-04, 5.22e-06, 5.22e-06] wall_seconds 54.94
+fold_05/chumachenko_ia Epoch 18 | stage 2 | train loss 0.2342 (cls 0.2342, ctr 0.0000) acc 0.9542 f1 0.9521 | val loss 8.7656 (cls 8.7656, ctr 0.0000) acc 0.4750 f1 0.4677 | lr [1.40e-04, 4.66e-06, 4.66e-06] wall_seconds 54.78
+fold_05/chumachenko_ia Epoch 19 | stage 2 | train loss 0.1419 (cls 0.1419, ctr 0.0000) acc 0.9708 f1 0.9689 | val loss 8.2001 (cls 8.2001, ctr 0.0000) acc 0.4708 f1 0.4731 | lr [1.23e-04, 4.11e-06, 4.11e-06] wall_seconds 55.03
+fold_05/chumachenko_ia Epoch 20 | stage 2 | train loss 0.1534 (cls 0.1534, ctr 0.0000) acc 0.9729 f1 0.9721 | val loss 7.5512 (cls 7.5512, ctr 0.0000) acc 0.4750 f1 0.4819 | lr [1.08e-04, 3.58e-06, 3.58e-06] wall_seconds 55.1
+fold_05/chumachenko_ia Epoch 21 | stage 2 | train loss 0.1485 (cls 0.1485, ctr 0.0000) acc 0.9656 f1 0.9640 | val loss 6.5725 (cls 6.5725, ctr 0.0000) acc 0.4875 f1 0.4826 | lr [9.27e-05, 3.09e-06, 3.09e-06] wall_seconds 55.76
+fold_05/chumachenko_ia Epoch 22 | stage 2 | train loss 0.1597 (cls 0.1597, ctr 0.0000) acc 0.9708 f1 0.9692 | val loss 6.8647 (cls 6.8647, ctr 0.0000) acc 0.4708 f1 0.4806 | lr [7.89e-05, 2.63e-06, 2.63e-06] wall_seconds 55.69
+fold_05/chumachenko_ia Epoch 23 | stage 2 | train loss 0.1320 (cls 0.1320, ctr 0.0000) acc 0.9729 f1 0.9702 | val loss 6.5211 (cls 6.5211, ctr 0.0000) acc 0.4875 f1 0.4796 | lr [6.66e-05, 2.22e-06, 2.22e-06] wall_seconds 55.15
+FINISHED fold_05/chumachenko_ia Best val macro-F1: 0.5283 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/chumachenko_ia/best.pt
+MODEL fold_06/chumachenko_ia 2026-10-09T11:47:43.887064+00:00
+fold_06/chumachenko_ia Epoch 01 | stage 1 | train loss 0.4757 (cls 0.4757, ctr 0.0000) acc 0.9083 f1 0.9087 | val loss 4.5295 (cls 4.5295, ctr 0.0000) acc 0.5750 f1 0.4841 | lr 2.07e-04 wall_seconds 65.65
+fold_06/chumachenko_ia Epoch 02 | stage 1 | train loss 0.1880 (cls 0.1880, ctr 0.0000) acc 0.9646 f1 0.9643 | val loss 5.3425 (cls 5.3425, ctr 0.0000) acc 0.6417 f1 0.5876 | lr 1.23e-04 wall_seconds 60.59
+fold_06/chumachenko_ia Epoch 03 | stage 1 | train loss 0.1157 (cls 0.1157, ctr 0.0000) acc 0.9760 f1 0.9745 | val loss 4.5150 (cls 4.5150, ctr 0.0000) acc 0.6333 f1 0.5912 | lr 5.58e-05 wall_seconds 62.03
+fold_06/chumachenko_ia Epoch 04 | stage 1 | train loss 0.0564 (cls 0.0564, ctr 0.0000) acc 0.9865 f1 0.9868 | val loss 6.5055 (cls 6.5055, ctr 0.0000) acc 0.5792 f1 0.5460 | lr 3.00e-05 wall_seconds 63.03
+fold_06/chumachenko_ia Epoch 05 | stage 1 | train loss 0.0251 (cls 0.0251, ctr 0.0000) acc 0.9917 f1 0.9922 | val loss 4.5747 (cls 4.5747, ctr 0.0000) acc 0.6292 f1 0.5864 | lr 3.00e-05 wall_seconds 60.31
+fold_06/chumachenko_ia Epoch 06 | stage 2 | train loss 0.3279 (cls 0.3279, ctr 0.0000) acc 0.9427 f1 0.9385 | val loss 5.7151 (cls 5.7151, ctr 0.0000) acc 0.6708 f1 0.6287 | lr [2.96e-04, 9.86e-06, 9.86e-06] wall_seconds 60.54
+fold_06/chumachenko_ia Epoch 07 | stage 2 | train loss 0.0711 (cls 0.0711, ctr 0.0000) acc 0.9875 f1 0.9868 | val loss 7.9942 (cls 7.9942, ctr 0.0000) acc 0.5833 f1 0.5568 | lr [2.91e-04, 9.68e-06, 9.68e-06] wall_seconds 61.79
+fold_06/chumachenko_ia Epoch 08 | stage 2 | train loss 0.3618 (cls 0.3618, ctr 0.0000) acc 0.9521 f1 0.9522 | val loss 7.3360 (cls 7.3360, ctr 0.0000) acc 0.6625 f1 0.6277 | lr [2.83e-04, 9.44e-06, 9.44e-06] wall_seconds 60.02
+fold_06/chumachenko_ia Epoch 09 | stage 2 | train loss 0.3166 (cls 0.3166, ctr 0.0000) acc 0.9667 f1 0.9658 | val loss 8.5629 (cls 8.5629, ctr 0.0000) acc 0.6458 f1 0.6027 | lr [2.74e-04, 9.14e-06, 9.14e-06] wall_seconds 60.53
+fold_06/chumachenko_ia Epoch 10 | stage 2 | train loss 0.1041 (cls 0.1041, ctr 0.0000) acc 0.9854 f1 0.9854 | val loss 7.3077 (cls 7.3077, ctr 0.0000) acc 0.6625 f1 0.6317 | lr [2.63e-04, 8.78e-06, 8.78e-06] wall_seconds 60.11
+fold_06/chumachenko_ia Epoch 11 | stage 2 | train loss 0.2147 (cls 0.2147, ctr 0.0000) acc 0.9760 f1 0.9756 | val loss 7.0564 (cls 7.0564, ctr 0.0000) acc 0.6917 f1 0.6423 | lr [2.51e-04, 8.37e-06, 8.37e-06] wall_seconds 61.15
+fold_06/chumachenko_ia Epoch 12 | stage 2 | train loss 0.1217 (cls 0.1217, ctr 0.0000) acc 0.9875 f1 0.9863 | val loss 6.9538 (cls 6.9538, ctr 0.0000) acc 0.6750 f1 0.6615 | lr [2.37e-04, 7.91e-06, 7.91e-06] wall_seconds 60.99
+fold_06/chumachenko_ia Epoch 13 | stage 2 | train loss 0.2275 (cls 0.2275, ctr 0.0000) acc 0.9792 f1 0.9785 | val loss 8.2358 (cls 8.2358, ctr 0.0000) acc 0.6250 f1 0.5888 | lr [2.22e-04, 7.42e-06, 7.42e-06] wall_seconds 60.9
+fold_06/chumachenko_ia Epoch 14 | stage 2 | train loss 0.1148 (cls 0.1148, ctr 0.0000) acc 0.9833 f1 0.9839 | val loss 6.9712 (cls 6.9712, ctr 0.0000) acc 0.6750 f1 0.6498 | lr [2.07e-04, 6.89e-06, 6.89e-06] wall_seconds 60.46
+fold_06/chumachenko_ia Epoch 15 | stage 2 | train loss 0.0774 (cls 0.0774, ctr 0.0000) acc 0.9833 f1 0.9834 | val loss 6.9915 (cls 6.9915, ctr 0.0000) acc 0.6500 f1 0.6259 | lr [1.90e-04, 6.34e-06, 6.34e-06] wall_seconds 60.35
+fold_06/chumachenko_ia Epoch 16 | stage 2 | train loss 0.1044 (cls 0.1044, ctr 0.0000) acc 0.9833 f1 0.9829 | val loss 9.0003 (cls 9.0003, ctr 0.0000) acc 0.6458 f1 0.6032 | lr [1.73e-04, 5.78e-06, 5.78e-06] wall_seconds 61.25
+fold_06/chumachenko_ia Epoch 17 | stage 2 | train loss 0.0625 (cls 0.0625, ctr 0.0000) acc 0.9906 f1 0.9907 | val loss 10.2211 (cls 10.2211, ctr 0.0000) acc 0.5875 f1 0.5366 | lr [1.57e-04, 5.22e-06, 5.22e-06] wall_seconds 61.05
+fold_06/chumachenko_ia Epoch 18 | stage 2 | train loss 0.1020 (cls 0.1020, ctr 0.0000) acc 0.9833 f1 0.9834 | val loss 9.1903 (cls 9.1903, ctr 0.0000) acc 0.6583 f1 0.6142 | lr [1.40e-04, 4.66e-06, 4.66e-06] wall_seconds 61.09
+fold_06/chumachenko_ia Epoch 19 | stage 2 | train loss 0.0634 (cls 0.0634, ctr 0.0000) acc 0.9896 f1 0.9888 | val loss 9.9272 (cls 9.9272, ctr 0.0000) acc 0.6375 f1 0.6152 | lr [1.23e-04, 4.11e-06, 4.11e-06] wall_seconds 61.35
+fold_06/chumachenko_ia Epoch 20 | stage 2 | train loss 0.0864 (cls 0.0864, ctr 0.0000) acc 0.9896 f1 0.9883 | val loss 8.7936 (cls 8.7936, ctr 0.0000) acc 0.6500 f1 0.5987 | lr [1.08e-04, 3.58e-06, 3.58e-06] wall_seconds 61.61
+FINISHED fold_06/chumachenko_ia Best val macro-F1: 0.6615 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/chumachenko_ia/best.pt
+EXIT chumachenko_ia 0
+START xattn 2026-10-09T12:10:55.911519+00:00
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/xattn
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video
+MODEL fold_02/xattn 2026-10-09T12:11:04.132579+00:00
+fold_02/xattn Epoch 01 | stage 1 | train loss 0.7797 (cls 0.7797, ctr 0.0000) acc 0.8958 f1 0.8878 | val loss 1.3178 (cls 1.3178, ctr 0.0000) acc 0.5833 f1 0.6064 | lr 1.55e-04 wall_seconds 70.96
+fold_02/xattn Epoch 02 | stage 1 | train loss 0.4474 (cls 0.4474, ctr 0.0000) acc 0.9760 f1 0.9770 | val loss 1.2951 (cls 1.2951, ctr 0.0000) acc 0.6167 f1 0.6348 | lr 1.10e-04 wall_seconds 60.51
+fold_02/xattn Epoch 03 | stage 1 | train loss 0.4062 (cls 0.4062, ctr 0.0000) acc 0.9760 f1 0.9770 | val loss 1.3183 (cls 1.3183, ctr 0.0000) acc 0.6125 f1 0.6193 | lr 6.50e-05 wall_seconds 56.16
+fold_02/xattn Epoch 04 | stage 1 | train loss 0.4096 (cls 0.4096, ctr 0.0000) acc 0.9750 f1 0.9735 | val loss 1.3356 (cls 1.3356, ctr 0.0000) acc 0.6167 f1 0.6384 | lr 3.21e-05 wall_seconds 55.08
+fold_02/xattn Epoch 05 | stage 1 | train loss 0.3962 (cls 0.3962, ctr 0.0000) acc 0.9812 f1 0.9798 | val loss 1.3021 (cls 1.3021, ctr 0.0000) acc 0.6333 f1 0.6514 | lr 2.00e-05 wall_seconds 55.02
+fold_02/xattn Epoch 06 | stage 1 | train loss 0.3960 (cls 0.3960, ctr 0.0000) acc 0.9854 f1 0.9838 | val loss 1.3629 (cls 1.3629, ctr 0.0000) acc 0.6000 f1 0.6269 | lr 2.00e-05 wall_seconds 54.72
+fold_02/xattn Epoch 07 | stage 2 | train loss 0.4117 (cls 0.4117, ctr 0.0000) acc 0.9646 f1 0.9653 | val loss 1.3220 (cls 1.3220, ctr 0.0000) acc 0.6333 f1 0.6509 | lr [1.98e-04, 7.92e-06, 7.92e-06] wall_seconds 55.17
+fold_02/xattn Epoch 08 | stage 2 | train loss 0.3785 (cls 0.3785, ctr 0.0000) acc 0.9833 f1 0.9813 | val loss 1.4178 (cls 1.4178, ctr 0.0000) acc 0.5958 f1 0.6112 | lr [1.95e-04, 7.81e-06, 7.81e-06] wall_seconds 55.26
+fold_02/xattn Epoch 09 | stage 2 | train loss 0.3779 (cls 0.3779, ctr 0.0000) acc 0.9802 f1 0.9786 | val loss 1.3066 (cls 1.3066, ctr 0.0000) acc 0.6375 f1 0.6370 | lr [1.92e-04, 7.67e-06, 7.67e-06] wall_seconds 55.29
+fold_02/xattn Epoch 10 | stage 2 | train loss 0.3726 (cls 0.3726, ctr 0.0000) acc 0.9792 f1 0.9794 | val loss 1.3925 (cls 1.3925, ctr 0.0000) acc 0.6250 f1 0.6405 | lr [1.87e-04, 7.48e-06, 7.48e-06] wall_seconds 55.28
+fold_02/xattn Epoch 11 | stage 2 | train loss 0.3563 (cls 0.3563, ctr 0.0000) acc 0.9885 f1 0.9892 | val loss 1.2824 (cls 1.2824, ctr 0.0000) acc 0.6667 f1 0.6832 | lr [1.82e-04, 7.27e-06, 7.27e-06] wall_seconds 55.99
+fold_02/xattn Epoch 12 | stage 2 | train loss 0.3551 (cls 0.3551, ctr 0.0000) acc 0.9854 f1 0.9843 | val loss 1.2830 (cls 1.2830, ctr 0.0000) acc 0.6542 f1 0.6690 | lr [1.75e-04, 7.01e-06, 7.01e-06] wall_seconds 56.09
+fold_02/xattn Epoch 13 | stage 2 | train loss 0.3552 (cls 0.3552, ctr 0.0000) acc 0.9844 f1 0.9830 | val loss 1.3573 (cls 1.3573, ctr 0.0000) acc 0.6292 f1 0.6441 | lr [1.68e-04, 6.73e-06, 6.73e-06] wall_seconds 55.19
+fold_02/xattn Epoch 14 | stage 2 | train loss 0.3320 (cls 0.3320, ctr 0.0000) acc 0.9917 f1 0.9912 | val loss 1.3714 (cls 1.3714, ctr 0.0000) acc 0.6375 f1 0.6527 | lr [1.61e-04, 6.42e-06, 6.42e-06] wall_seconds 56.27
+fold_02/xattn Epoch 15 | stage 2 | train loss 0.3299 (cls 0.3299, ctr 0.0000) acc 0.9958 f1 0.9956 | val loss 1.2744 (cls 1.2744, ctr 0.0000) acc 0.6625 f1 0.6763 | lr [1.52e-04, 6.09e-06, 6.09e-06] wall_seconds 55.29
+fold_02/xattn Epoch 16 | stage 2 | train loss 0.3274 (cls 0.3274, ctr 0.0000) acc 0.9917 f1 0.9912 | val loss 1.3836 (cls 1.3836, ctr 0.0000) acc 0.6333 f1 0.6473 | lr [1.43e-04, 5.73e-06, 5.73e-06] wall_seconds 55.46
+fold_02/xattn Epoch 17 | stage 2 | train loss 0.3178 (cls 0.3178, ctr 0.0000) acc 0.9958 f1 0.9956 | val loss 1.2912 (cls 1.2912, ctr 0.0000) acc 0.6583 f1 0.6717 | lr [1.34e-04, 5.36e-06, 5.36e-06] wall_seconds 55.25
+fold_02/xattn Epoch 18 | stage 2 | train loss 0.3191 (cls 0.3191, ctr 0.0000) acc 0.9948 f1 0.9951 | val loss 1.3176 (cls 1.3176, ctr 0.0000) acc 0.6542 f1 0.6683 | lr [1.25e-04, 4.98e-06, 4.98e-06] wall_seconds 55.39
+fold_02/xattn Epoch 19 | stage 2 | train loss 0.3179 (cls 0.3179, ctr 0.0000) acc 0.9969 f1 0.9971 | val loss 1.3328 (cls 1.3328, ctr 0.0000) acc 0.6417 f1 0.6495 | lr [1.15e-04, 4.59e-06, 4.59e-06] wall_seconds 59.34
+fold_02/xattn Epoch 20 | stage 2 | train loss 0.3125 (cls 0.3125, ctr 0.0000) acc 0.9969 f1 0.9966 | val loss 1.3497 (cls 1.3497, ctr 0.0000) acc 0.6500 f1 0.6665 | lr [1.05e-04, 4.21e-06, 4.21e-06] wall_seconds 56.73
+fold_02/xattn Epoch 21 | stage 2 | train loss 0.3132 (cls 0.3132, ctr 0.0000) acc 0.9958 f1 0.9956 | val loss 1.3083 (cls 1.3083, ctr 0.0000) acc 0.6500 f1 0.6627 | lr [9.54e-05, 3.82e-06, 3.82e-06] wall_seconds 59.89
+FINISHED fold_02/xattn Best val macro-F1: 0.6832 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/xattn/best.pt
+MODEL fold_03/xattn 2026-10-09T12:33:16.799322+00:00
+fold_03/xattn Epoch 01 | stage 1 | train loss 0.8306 (cls 0.8306, ctr 0.0000) acc 0.8646 f1 0.8518 | val loss 1.1982 (cls 1.1982, ctr 0.0000) acc 0.6875 f1 0.6772 | lr 1.55e-04 wall_seconds 57.98
+fold_03/xattn Epoch 02 | stage 1 | train loss 0.4876 (cls 0.4876, ctr 0.0000) acc 0.9625 f1 0.9625 | val loss 1.1646 (cls 1.1646, ctr 0.0000) acc 0.7042 f1 0.6899 | lr 1.10e-04 wall_seconds 55.67
+fold_03/xattn Epoch 03 | stage 1 | train loss 0.4413 (cls 0.4413, ctr 0.0000) acc 0.9604 f1 0.9614 | val loss 1.2169 (cls 1.2169, ctr 0.0000) acc 0.7042 f1 0.6817 | lr 6.50e-05 wall_seconds 55.79
+fold_03/xattn Epoch 04 | stage 1 | train loss 0.4408 (cls 0.4408, ctr 0.0000) acc 0.9521 f1 0.9503 | val loss 1.2287 (cls 1.2287, ctr 0.0000) acc 0.7042 f1 0.6871 | lr 3.21e-05 wall_seconds 55.23
+fold_03/xattn Epoch 05 | stage 1 | train loss 0.4245 (cls 0.4245, ctr 0.0000) acc 0.9719 f1 0.9705 | val loss 1.2345 (cls 1.2345, ctr 0.0000) acc 0.6958 f1 0.6726 | lr 2.00e-05 wall_seconds 55.11
+fold_03/xattn Epoch 06 | stage 1 | train loss 0.4275 (cls 0.4275, ctr 0.0000) acc 0.9625 f1 0.9584 | val loss 1.1779 (cls 1.1779, ctr 0.0000) acc 0.7125 f1 0.7002 | lr 2.00e-05 wall_seconds 55.31
+fold_03/xattn Epoch 07 | stage 2 | train loss 0.4428 (cls 0.4428, ctr 0.0000) acc 0.9563 f1 0.9556 | val loss 1.2274 (cls 1.2274, ctr 0.0000) acc 0.6917 f1 0.6756 | lr [1.98e-04, 7.92e-06, 7.92e-06] wall_seconds 56.09
+fold_03/xattn Epoch 08 | stage 2 | train loss 0.4021 (cls 0.4021, ctr 0.0000) acc 0.9688 f1 0.9670 | val loss 1.2055 (cls 1.2055, ctr 0.0000) acc 0.7042 f1 0.6978 | lr [1.95e-04, 7.81e-06, 7.81e-06] wall_seconds 55.97
+fold_03/xattn Epoch 09 | stage 2 | train loss 0.4041 (cls 0.4041, ctr 0.0000) acc 0.9688 f1 0.9654 | val loss 1.3037 (cls 1.3037, ctr 0.0000) acc 0.6917 f1 0.6704 | lr [1.92e-04, 7.67e-06, 7.67e-06] wall_seconds 56.1
+fold_03/xattn Epoch 10 | stage 2 | train loss 0.3888 (cls 0.3888, ctr 0.0000) acc 0.9708 f1 0.9702 | val loss 1.3282 (cls 1.3282, ctr 0.0000) acc 0.6708 f1 0.6725 | lr [1.87e-04, 7.48e-06, 7.48e-06] wall_seconds 56.24
+fold_03/xattn Epoch 11 | stage 2 | train loss 0.3822 (cls 0.3822, ctr 0.0000) acc 0.9729 f1 0.9712 | val loss 1.2197 (cls 1.2197, ctr 0.0000) acc 0.6917 f1 0.6787 | lr [1.82e-04, 7.27e-06, 7.27e-06] wall_seconds 56.36
+fold_03/xattn Epoch 12 | stage 2 | train loss 0.3931 (cls 0.3931, ctr 0.0000) acc 0.9698 f1 0.9703 | val loss 1.2816 (cls 1.2816, ctr 0.0000) acc 0.6833 f1 0.6702 | lr [1.75e-04, 7.01e-06, 7.01e-06] wall_seconds 56.08
+fold_03/xattn Epoch 13 | stage 2 | train loss 0.3849 (cls 0.3849, ctr 0.0000) acc 0.9698 f1 0.9683 | val loss 1.2675 (cls 1.2675, ctr 0.0000) acc 0.6875 f1 0.6697 | lr [1.68e-04, 6.73e-06, 6.73e-06] wall_seconds 56.15
+fold_03/xattn Epoch 14 | stage 2 | train loss 0.3632 (cls 0.3632, ctr 0.0000) acc 0.9750 f1 0.9730 | val loss 1.1330 (cls 1.1330, ctr 0.0000) acc 0.7458 f1 0.7337 | lr [1.61e-04, 6.42e-06, 6.42e-06] wall_seconds 56.64
+fold_03/xattn Epoch 15 | stage 2 | train loss 0.3592 (cls 0.3592, ctr 0.0000) acc 0.9781 f1 0.9746 | val loss 1.1881 (cls 1.1881, ctr 0.0000) acc 0.7167 f1 0.7011 | lr [1.52e-04, 6.09e-06, 6.09e-06] wall_seconds 56.59
+fold_03/xattn Epoch 16 | stage 2 | train loss 0.3567 (cls 0.3567, ctr 0.0000) acc 0.9740 f1 0.9706 | val loss 1.1366 (cls 1.1366, ctr 0.0000) acc 0.7000 f1 0.6957 | lr [1.43e-04, 5.73e-06, 5.73e-06] wall_seconds 56.13
+fold_03/xattn Epoch 17 | stage 2 | train loss 0.3413 (cls 0.3413, ctr 0.0000) acc 0.9927 f1 0.9927 | val loss 1.3368 (cls 1.3368, ctr 0.0000) acc 0.6375 f1 0.6385 | lr [1.34e-04, 5.36e-06, 5.36e-06] wall_seconds 56.1
+fold_03/xattn Epoch 18 | stage 2 | train loss 0.3406 (cls 0.3406, ctr 0.0000) acc 0.9875 f1 0.9868 | val loss 1.3204 (cls 1.3204, ctr 0.0000) acc 0.6625 f1 0.6636 | lr [1.25e-04, 4.98e-06, 4.98e-06] wall_seconds 57.18
+fold_03/xattn Epoch 19 | stage 2 | train loss 0.3479 (cls 0.3479, ctr 0.0000) acc 0.9844 f1 0.9834 | val loss 1.1801 (cls 1.1801, ctr 0.0000) acc 0.7208 f1 0.7129 | lr [1.15e-04, 4.59e-06, 4.59e-06] wall_seconds 56.17
+fold_03/xattn Epoch 20 | stage 2 | train loss 0.3355 (cls 0.3355, ctr 0.0000) acc 0.9917 f1 0.9907 | val loss 1.2648 (cls 1.2648, ctr 0.0000) acc 0.6708 f1 0.6626 | lr [1.05e-04, 4.21e-06, 4.21e-06] wall_seconds 56.38
+fold_03/xattn Epoch 21 | stage 2 | train loss 0.3343 (cls 0.3343, ctr 0.0000) acc 0.9823 f1 0.9819 | val loss 1.2482 (cls 1.2482, ctr 0.0000) acc 0.6917 f1 0.6852 | lr [9.54e-05, 3.82e-06, 3.82e-06] wall_seconds 56.42
+fold_03/xattn Epoch 22 | stage 2 | train loss 0.3420 (cls 0.3420, ctr 0.0000) acc 0.9865 f1 0.9873 | val loss 1.2133 (cls 1.2133, ctr 0.0000) acc 0.7125 f1 0.6949 | lr [8.59e-05, 3.44e-06, 3.44e-06] wall_seconds 57.35
+fold_03/xattn Epoch 23 | stage 2 | train loss 0.3405 (cls 0.3405, ctr 0.0000) acc 0.9833 f1 0.9829 | val loss 1.2582 (cls 1.2582, ctr 0.0000) acc 0.6917 f1 0.6759 | lr [7.67e-05, 3.07e-06, 3.07e-06] wall_seconds 56.67
+fold_03/xattn Epoch 24 | stage 2 | train loss 0.3373 (cls 0.3373, ctr 0.0000) acc 0.9896 f1 0.9902 | val loss 1.1972 (cls 1.1972, ctr 0.0000) acc 0.7000 f1 0.6907 | lr [6.78e-05, 2.71e-06, 2.71e-06] wall_seconds 58.1
+FINISHED fold_03/xattn Best val macro-F1: 0.7337 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/xattn/best.pt
+MODEL fold_04/xattn 2026-10-09T12:58:03.212781+00:00
+fold_04/xattn Epoch 01 | stage 1 | train loss 0.8778 (cls 0.8778, ctr 0.0000) acc 0.8448 f1 0.8321 | val loss 1.4364 (cls 1.4364, ctr 0.0000) acc 0.5625 f1 0.5195 | lr 1.55e-04 wall_seconds 57.11
+fold_04/xattn Epoch 02 | stage 1 | train loss 0.5495 (cls 0.5495, ctr 0.0000) acc 0.9333 f1 0.9323 | val loss 1.2599 (cls 1.2599, ctr 0.0000) acc 0.6208 f1 0.5986 | lr 1.10e-04 wall_seconds 55.68
+fold_04/xattn Epoch 03 | stage 1 | train loss 0.5018 (cls 0.5018, ctr 0.0000) acc 0.9250 f1 0.9240 | val loss 1.2705 (cls 1.2705, ctr 0.0000) acc 0.6333 f1 0.6190 | lr 6.50e-05 wall_seconds 55.57
+fold_04/xattn Epoch 04 | stage 1 | train loss 0.4745 (cls 0.4745, ctr 0.0000) acc 0.9396 f1 0.9384 | val loss 1.2843 (cls 1.2843, ctr 0.0000) acc 0.6125 f1 0.5900 | lr 3.21e-05 wall_seconds 57.4
+fold_04/xattn Epoch 05 | stage 1 | train loss 0.4600 (cls 0.4600, ctr 0.0000) acc 0.9479 f1 0.9460 | val loss 1.2482 (cls 1.2482, ctr 0.0000) acc 0.6208 f1 0.6105 | lr 2.00e-05 wall_seconds 55.38
+fold_04/xattn Epoch 06 | stage 1 | train loss 0.4725 (cls 0.4725, ctr 0.0000) acc 0.9417 f1 0.9402 | val loss 1.1723 (cls 1.1723, ctr 0.0000) acc 0.6500 f1 0.6364 | lr 2.00e-05 wall_seconds 55.44
+fold_04/xattn Epoch 07 | stage 2 | train loss 0.4915 (cls 0.4915, ctr 0.0000) acc 0.9292 f1 0.9322 | val loss 1.1644 (cls 1.1644, ctr 0.0000) acc 0.6583 f1 0.6455 | lr [1.98e-04, 7.92e-06, 7.92e-06] wall_seconds 56.44
+fold_04/xattn Epoch 08 | stage 2 | train loss 0.4479 (cls 0.4479, ctr 0.0000) acc 0.9552 f1 0.9539 | val loss 1.1730 (cls 1.1730, ctr 0.0000) acc 0.6583 f1 0.6467 | lr [1.95e-04, 7.81e-06, 7.81e-06] wall_seconds 56.49
+fold_04/xattn Epoch 09 | stage 2 | train loss 0.4538 (cls 0.4538, ctr 0.0000) acc 0.9396 f1 0.9373 | val loss 1.0668 (cls 1.0668, ctr 0.0000) acc 0.6833 f1 0.6750 | lr [1.92e-04, 7.67e-06, 7.67e-06] wall_seconds 56.67
+fold_04/xattn Epoch 10 | stage 2 | train loss 0.4154 (cls 0.4154, ctr 0.0000) acc 0.9646 f1 0.9643 | val loss 1.1712 (cls 1.1712, ctr 0.0000) acc 0.6417 f1 0.6291 | lr [1.87e-04, 7.48e-06, 7.48e-06] wall_seconds 58.33
+fold_04/xattn Epoch 11 | stage 2 | train loss 0.4163 (cls 0.4163, ctr 0.0000) acc 0.9646 f1 0.9634 | val loss 1.2109 (cls 1.2109, ctr 0.0000) acc 0.6667 f1 0.6595 | lr [1.82e-04, 7.27e-06, 7.27e-06] wall_seconds 56.5
+fold_04/xattn Epoch 12 | stage 2 | train loss 0.4018 (cls 0.4018, ctr 0.0000) acc 0.9677 f1 0.9688 | val loss 1.1669 (cls 1.1669, ctr 0.0000) acc 0.6750 f1 0.6598 | lr [1.75e-04, 7.01e-06, 7.01e-06] wall_seconds 56.5
+fold_04/xattn Epoch 13 | stage 2 | train loss 0.4200 (cls 0.4200, ctr 0.0000) acc 0.9552 f1 0.9537 | val loss 1.1601 (cls 1.1601, ctr 0.0000) acc 0.6792 f1 0.6689 | lr [1.68e-04, 6.73e-06, 6.73e-06] wall_seconds 56.51
+fold_04/xattn Epoch 14 | stage 2 | train loss 0.3821 (cls 0.3821, ctr 0.0000) acc 0.9729 f1 0.9705 | val loss 1.0857 (cls 1.0857, ctr 0.0000) acc 0.6792 f1 0.6711 | lr [1.61e-04, 6.42e-06, 6.42e-06] wall_seconds 56.33
+fold_04/xattn Epoch 15 | stage 2 | train loss 0.3873 (cls 0.3873, ctr 0.0000) acc 0.9677 f1 0.9667 | val loss 1.1487 (cls 1.1487, ctr 0.0000) acc 0.6792 f1 0.6728 | lr [1.52e-04, 6.09e-06, 6.09e-06] wall_seconds 56.44
+fold_04/xattn Epoch 16 | stage 2 | train loss 0.3807 (cls 0.3807, ctr 0.0000) acc 0.9656 f1 0.9634 | val loss 1.0769 (cls 1.0769, ctr 0.0000) acc 0.6833 f1 0.6881 | lr [1.43e-04, 5.73e-06, 5.73e-06] wall_seconds 56.54
+fold_04/xattn Epoch 17 | stage 2 | train loss 0.3624 (cls 0.3624, ctr 0.0000) acc 0.9781 f1 0.9776 | val loss 1.1290 (cls 1.1290, ctr 0.0000) acc 0.6333 f1 0.6257 | lr [1.34e-04, 5.36e-06, 5.36e-06] wall_seconds 56.75
+fold_04/xattn Epoch 18 | stage 2 | train loss 0.3695 (cls 0.3695, ctr 0.0000) acc 0.9771 f1 0.9766 | val loss 1.0889 (cls 1.0889, ctr 0.0000) acc 0.6625 f1 0.6495 | lr [1.25e-04, 4.98e-06, 4.98e-06] wall_seconds 56.31
+fold_04/xattn Epoch 19 | stage 2 | train loss 0.3628 (cls 0.3628, ctr 0.0000) acc 0.9781 f1 0.9780 | val loss 1.1265 (cls 1.1265, ctr 0.0000) acc 0.6917 f1 0.6881 | lr [1.15e-04, 4.59e-06, 4.59e-06] wall_seconds 55.75
+fold_04/xattn Epoch 20 | stage 2 | train loss 0.3559 (cls 0.3559, ctr 0.0000) acc 0.9854 f1 0.9844 | val loss 1.1173 (cls 1.1173, ctr 0.0000) acc 0.6667 f1 0.6546 | lr [1.05e-04, 4.21e-06, 4.21e-06] wall_seconds 55.74
+fold_04/xattn Epoch 21 | stage 2 | train loss 0.3629 (cls 0.3629, ctr 0.0000) acc 0.9771 f1 0.9765 | val loss 1.1441 (cls 1.1441, ctr 0.0000) acc 0.6667 f1 0.6589 | lr [9.54e-05, 3.82e-06, 3.82e-06] wall_seconds 55.21
+fold_04/xattn Epoch 22 | stage 2 | train loss 0.3524 (cls 0.3524, ctr 0.0000) acc 0.9802 f1 0.9800 | val loss 1.1163 (cls 1.1163, ctr 0.0000) acc 0.6792 f1 0.6733 | lr [8.59e-05, 3.44e-06, 3.44e-06] wall_seconds 55.37
+fold_04/xattn Epoch 23 | stage 2 | train loss 0.3547 (cls 0.3547, ctr 0.0000) acc 0.9812 f1 0.9820 | val loss 1.0705 (cls 1.0705, ctr 0.0000) acc 0.6958 f1 0.6901 | lr [7.67e-05, 3.07e-06, 3.07e-06] wall_seconds 55.55
+fold_04/xattn Epoch 24 | stage 2 | train loss 0.3644 (cls 0.3644, ctr 0.0000) acc 0.9750 f1 0.9756 | val loss 1.0326 (cls 1.0326, ctr 0.0000) acc 0.6958 f1 0.6914 | lr [6.78e-05, 2.71e-06, 2.71e-06] wall_seconds 55.79
+fold_04/xattn Epoch 25 | stage 2 | train loss 0.3473 (cls 0.3473, ctr 0.0000) acc 0.9802 f1 0.9799 | val loss 1.0348 (cls 1.0348, ctr 0.0000) acc 0.7167 f1 0.7105 | lr [5.95e-05, 2.38e-06, 2.38e-06] wall_seconds 56.72
+fold_04/xattn Epoch 26 | stage 2 | train loss 0.3468 (cls 0.3468, ctr 0.0000) acc 0.9844 f1 0.9833 | val loss 1.0384 (cls 1.0384, ctr 0.0000) acc 0.7042 f1 0.7010 | lr [5.17e-05, 2.07e-06, 2.07e-06] wall_seconds 55.91
+fold_04/xattn Epoch 27 | stage 2 | train loss 0.3561 (cls 0.3561, ctr 0.0000) acc 0.9792 f1 0.9800 | val loss 1.0572 (cls 1.0572, ctr 0.0000) acc 0.6958 f1 0.6877 | lr [4.47e-05, 1.79e-06, 1.79e-06] wall_seconds 55.54
+fold_04/xattn Epoch 28 | stage 2 | train loss 0.3439 (cls 0.3439, ctr 0.0000) acc 0.9875 f1 0.9868 | val loss 1.0464 (cls 1.0464, ctr 0.0000) acc 0.6917 f1 0.6865 | lr [3.84e-05, 1.53e-06, 1.53e-06] wall_seconds 55.51
+fold_04/xattn Epoch 29 | stage 2 | train loss 0.3500 (cls 0.3500, ctr 0.0000) acc 0.9812 f1 0.9809 | val loss 1.0279 (cls 1.0279, ctr 0.0000) acc 0.7208 f1 0.7152 | lr [3.29e-05, 1.32e-06, 1.32e-06] wall_seconds 55.57
+fold_04/xattn Epoch 30 | stage 2 | train loss 0.3339 (cls 0.3339, ctr 0.0000) acc 0.9885 f1 0.9883 | val loss 1.0419 (cls 1.0419, ctr 0.0000) acc 0.6917 f1 0.6853 | lr [2.83e-05, 1.13e-06, 1.13e-06] wall_seconds 55.71
+fold_04/xattn Epoch 31 | stage 2 | train loss 0.3348 (cls 0.3348, ctr 0.0000) acc 0.9875 f1 0.9863 | val loss 1.0406 (cls 1.0406, ctr 0.0000) acc 0.7208 f1 0.7152 | lr [2.47e-05, 9.88e-07, 9.88e-07] wall_seconds 55.23
+fold_04/xattn Epoch 32 | stage 2 | train loss 0.3394 (cls 0.3394, ctr 0.0000) acc 0.9865 f1 0.9853 | val loss 1.0708 (cls 1.0708, ctr 0.0000) acc 0.7000 f1 0.6936 | lr [2.21e-05, 8.84e-07, 8.84e-07] wall_seconds 55.81
+fold_04/xattn Epoch 33 | stage 2 | train loss 0.3310 (cls 0.3310, ctr 0.0000) acc 0.9865 f1 0.9868 | val loss 1.0658 (cls 1.0658, ctr 0.0000) acc 0.7000 f1 0.6959 | lr [2.05e-05, 8.21e-07, 8.21e-07] wall_seconds 55.32
+fold_04/xattn Epoch 34 | stage 2 | train loss 0.3319 (cls 0.3319, ctr 0.0000) acc 0.9917 f1 0.9907 | val loss 1.0549 (cls 1.0549, ctr 0.0000) acc 0.6958 f1 0.6884 | lr [2.00e-05, 8.00e-07, 8.00e-07] wall_seconds 59.94
+fold_04/xattn Epoch 35 | stage 2 | train loss 0.3425 (cls 0.3425, ctr 0.0000) acc 0.9854 f1 0.9853 | val loss 1.0231 (cls 1.0231, ctr 0.0000) acc 0.7042 f1 0.7005 | lr [2.00e-05, 8.00e-07, 8.00e-07] wall_seconds 56.77
+FINISHED fold_04/xattn Best val macro-F1: 0.7152 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/xattn/best.pt
+MODEL fold_05/xattn 2026-10-09T13:34:15.109498+00:00
+fold_05/xattn Epoch 01 | stage 1 | train loss 0.8243 (cls 0.8243, ctr 0.0000) acc 0.8708 f1 0.8575 | val loss 1.3743 (cls 1.3743, ctr 0.0000) acc 0.5750 f1 0.5728 | lr 1.55e-04 wall_seconds 56.15
+fold_05/xattn Epoch 02 | stage 1 | train loss 0.4958 (cls 0.4958, ctr 0.0000) acc 0.9531 f1 0.9514 | val loss 1.3355 (cls 1.3355, ctr 0.0000) acc 0.5875 f1 0.5907 | lr 1.10e-04 wall_seconds 55.01
+fold_05/xattn Epoch 03 | stage 1 | train loss 0.4516 (cls 0.4516, ctr 0.0000) acc 0.9573 f1 0.9547 | val loss 1.4038 (cls 1.4038, ctr 0.0000) acc 0.5708 f1 0.5781 | lr 6.50e-05 wall_seconds 54.69
+fold_05/xattn Epoch 04 | stage 1 | train loss 0.4370 (cls 0.4370, ctr 0.0000) acc 0.9646 f1 0.9613 | val loss 1.4523 (cls 1.4523, ctr 0.0000) acc 0.5750 f1 0.5776 | lr 3.21e-05 wall_seconds 54.32
+fold_05/xattn Epoch 05 | stage 1 | train loss 0.4278 (cls 0.4278, ctr 0.0000) acc 0.9708 f1 0.9689 | val loss 1.4705 (cls 1.4705, ctr 0.0000) acc 0.5667 f1 0.5660 | lr 2.00e-05 wall_seconds 54.53
+fold_05/xattn Epoch 06 | stage 1 | train loss 0.4432 (cls 0.4432, ctr 0.0000) acc 0.9615 f1 0.9588 | val loss 1.4357 (cls 1.4357, ctr 0.0000) acc 0.5833 f1 0.5886 | lr 2.00e-05 wall_seconds 54.64
+fold_05/xattn Epoch 07 | stage 2 | train loss 0.4525 (cls 0.4525, ctr 0.0000) acc 0.9510 f1 0.9468 | val loss 1.4206 (cls 1.4206, ctr 0.0000) acc 0.5875 f1 0.5824 | lr [1.98e-04, 7.92e-06, 7.92e-06] wall_seconds 56.33
+fold_05/xattn Epoch 08 | stage 2 | train loss 0.4154 (cls 0.4154, ctr 0.0000) acc 0.9656 f1 0.9648 | val loss 1.4972 (cls 1.4972, ctr 0.0000) acc 0.5917 f1 0.5891 | lr [1.95e-04, 7.81e-06, 7.81e-06] wall_seconds 55.17
+fold_05/xattn Epoch 09 | stage 2 | train loss 0.4145 (cls 0.4145, ctr 0.0000) acc 0.9635 f1 0.9608 | val loss 1.4428 (cls 1.4428, ctr 0.0000) acc 0.5750 f1 0.5829 | lr [1.92e-04, 7.67e-06, 7.67e-06] wall_seconds 55.28
+fold_05/xattn Epoch 10 | stage 2 | train loss 0.4019 (cls 0.4019, ctr 0.0000) acc 0.9656 f1 0.9643 | val loss 1.4518 (cls 1.4518, ctr 0.0000) acc 0.6250 f1 0.6293 | lr [1.87e-04, 7.48e-06, 7.48e-06] wall_seconds 55.47
+fold_05/xattn Epoch 11 | stage 2 | train loss 0.3906 (cls 0.3906, ctr 0.0000) acc 0.9698 f1 0.9656 | val loss 1.4037 (cls 1.4037, ctr 0.0000) acc 0.6083 f1 0.6080 | lr [1.82e-04, 7.27e-06, 7.27e-06] wall_seconds 56.05
+fold_05/xattn Epoch 12 | stage 2 | train loss 0.3692 (cls 0.3692, ctr 0.0000) acc 0.9812 f1 0.9794 | val loss 1.3875 (cls 1.3875, ctr 0.0000) acc 0.6500 f1 0.6447 | lr [1.75e-04, 7.01e-06, 7.01e-06] wall_seconds 55.55
+fold_05/xattn Epoch 13 | stage 2 | train loss 0.3730 (cls 0.3730, ctr 0.0000) acc 0.9760 f1 0.9766 | val loss 1.4268 (cls 1.4268, ctr 0.0000) acc 0.6208 f1 0.6306 | lr [1.68e-04, 6.73e-06, 6.73e-06] wall_seconds 56.95
+fold_05/xattn Epoch 14 | stage 2 | train loss 0.3483 (cls 0.3483, ctr 0.0000) acc 0.9854 f1 0.9854 | val loss 1.3873 (cls 1.3873, ctr 0.0000) acc 0.6458 f1 0.6442 | lr [1.61e-04, 6.42e-06, 6.42e-06] wall_seconds 56.35
+fold_05/xattn Epoch 15 | stage 2 | train loss 0.3416 (cls 0.3416, ctr 0.0000) acc 0.9896 f1 0.9888 | val loss 1.4344 (cls 1.4344, ctr 0.0000) acc 0.6208 f1 0.6280 | lr [1.52e-04, 6.09e-06, 6.09e-06] wall_seconds 56.86
+fold_05/xattn Epoch 16 | stage 2 | train loss 0.3513 (cls 0.3513, ctr 0.0000) acc 0.9781 f1 0.9755 | val loss 1.3295 (cls 1.3295, ctr 0.0000) acc 0.6500 f1 0.6551 | lr [1.43e-04, 5.73e-06, 5.73e-06] wall_seconds 58.68
+fold_05/xattn Epoch 17 | stage 2 | train loss 0.3324 (cls 0.3324, ctr 0.0000) acc 0.9917 f1 0.9917 | val loss 1.4923 (cls 1.4923, ctr 0.0000) acc 0.5875 f1 0.5834 | lr [1.34e-04, 5.36e-06, 5.36e-06] wall_seconds 55.98
+fold_05/xattn Epoch 18 | stage 2 | train loss 0.3431 (cls 0.3431, ctr 0.0000) acc 0.9844 f1 0.9839 | val loss 1.3886 (cls 1.3886, ctr 0.0000) acc 0.6333 f1 0.6281 | lr [1.25e-04, 4.98e-06, 4.98e-06] wall_seconds 57.31
+fold_05/xattn Epoch 19 | stage 2 | train loss 0.3399 (cls 0.3399, ctr 0.0000) acc 0.9875 f1 0.9868 | val loss 1.2713 (cls 1.2713, ctr 0.0000) acc 0.6625 f1 0.6637 | lr [1.15e-04, 4.59e-06, 4.59e-06] wall_seconds 55.72
+fold_05/xattn Epoch 20 | stage 2 | train loss 0.3380 (cls 0.3380, ctr 0.0000) acc 0.9896 f1 0.9883 | val loss 1.3776 (cls 1.3776, ctr 0.0000) acc 0.6333 f1 0.6405 | lr [1.05e-04, 4.21e-06, 4.21e-06] wall_seconds 56.03
+fold_05/xattn Epoch 21 | stage 2 | train loss 0.3287 (cls 0.3287, ctr 0.0000) acc 0.9917 f1 0.9912 | val loss 1.3753 (cls 1.3753, ctr 0.0000) acc 0.6250 f1 0.6335 | lr [9.54e-05, 3.82e-06, 3.82e-06] wall_seconds 55.73
+fold_05/xattn Epoch 22 | stage 2 | train loss 0.3305 (cls 0.3305, ctr 0.0000) acc 0.9927 f1 0.9922 | val loss 1.3731 (cls 1.3731, ctr 0.0000) acc 0.6292 f1 0.6374 | lr [8.59e-05, 3.44e-06, 3.44e-06] wall_seconds 55.83
+fold_05/xattn Epoch 23 | stage 2 | train loss 0.3340 (cls 0.3340, ctr 0.0000) acc 0.9906 f1 0.9897 | val loss 1.3819 (cls 1.3819, ctr 0.0000) acc 0.6667 f1 0.6619 | lr [7.67e-05, 3.07e-06, 3.07e-06] wall_seconds 55.89
+fold_05/xattn Epoch 24 | stage 2 | train loss 0.3323 (cls 0.3323, ctr 0.0000) acc 0.9865 f1 0.9859 | val loss 1.3583 (cls 1.3583, ctr 0.0000) acc 0.6333 f1 0.6364 | lr [6.78e-05, 2.71e-06, 2.71e-06] wall_seconds 55.73
+fold_05/xattn Epoch 25 | stage 2 | train loss 0.3310 (cls 0.3310, ctr 0.0000) acc 0.9906 f1 0.9902 | val loss 1.3356 (cls 1.3356, ctr 0.0000) acc 0.6500 f1 0.6492 | lr [5.95e-05, 2.38e-06, 2.38e-06] wall_seconds 55.72
+fold_05/xattn Epoch 26 | stage 2 | train loss 0.3338 (cls 0.3338, ctr 0.0000) acc 0.9833 f1 0.9829 | val loss 1.3255 (cls 1.3255, ctr 0.0000) acc 0.6333 f1 0.6366 | lr [5.17e-05, 2.07e-06, 2.07e-06] wall_seconds 55.8
+fold_05/xattn Epoch 27 | stage 2 | train loss 0.3338 (cls 0.3338, ctr 0.0000) acc 0.9854 f1 0.9858 | val loss 1.2506 (cls 1.2506, ctr 0.0000) acc 0.6542 f1 0.6595 | lr [4.47e-05, 1.79e-06, 1.79e-06] wall_seconds 55.71
+fold_05/xattn Epoch 28 | stage 2 | train loss 0.3293 (cls 0.3293, ctr 0.0000) acc 0.9885 f1 0.9878 | val loss 1.2992 (cls 1.2992, ctr 0.0000) acc 0.6250 f1 0.6272 | lr [3.84e-05, 1.53e-06, 1.53e-06] wall_seconds 55.73
+fold_05/xattn Epoch 29 | stage 2 | train loss 0.3313 (cls 0.3313, ctr 0.0000) acc 0.9833 f1 0.9819 | val loss 1.2357 (cls 1.2357, ctr 0.0000) acc 0.6792 f1 0.6787 | lr [3.29e-05, 1.32e-06, 1.32e-06] wall_seconds 55.73
+fold_05/xattn Epoch 30 | stage 2 | train loss 0.3205 (cls 0.3205, ctr 0.0000) acc 0.9937 f1 0.9932 | val loss 1.2453 (cls 1.2453, ctr 0.0000) acc 0.6542 f1 0.6598 | lr [2.83e-05, 1.13e-06, 1.13e-06] wall_seconds 56.15
+fold_05/xattn Epoch 31 | stage 2 | train loss 0.3221 (cls 0.3221, ctr 0.0000) acc 0.9927 f1 0.9917 | val loss 1.2271 (cls 1.2271, ctr 0.0000) acc 0.6833 f1 0.6827 | lr [2.47e-05, 9.88e-07, 9.88e-07] wall_seconds 55.54
+fold_05/xattn Epoch 32 | stage 2 | train loss 0.3217 (cls 0.3217, ctr 0.0000) acc 0.9927 f1 0.9912 | val loss 1.2897 (cls 1.2897, ctr 0.0000) acc 0.6458 f1 0.6492 | lr [2.21e-05, 8.84e-07, 8.84e-07] wall_seconds 58.39
+fold_05/xattn Epoch 33 | stage 2 | train loss 0.3165 (cls 0.3165, ctr 0.0000) acc 0.9937 f1 0.9937 | val loss 1.2133 (cls 1.2133, ctr 0.0000) acc 0.6625 f1 0.6670 | lr [2.05e-05, 8.21e-07, 8.21e-07] wall_seconds 55.9
+fold_05/xattn Epoch 34 | stage 2 | train loss 0.3149 (cls 0.3149, ctr 0.0000) acc 0.9927 f1 0.9922 | val loss 1.2870 (cls 1.2870, ctr 0.0000) acc 0.6625 f1 0.6611 | lr [2.00e-05, 8.00e-07, 8.00e-07] wall_seconds 57.63
+fold_05/xattn Epoch 35 | stage 2 | train loss 0.3252 (cls 0.3252, ctr 0.0000) acc 0.9875 f1 0.9868 | val loss 1.3288 (cls 1.3288, ctr 0.0000) acc 0.6250 f1 0.6253 | lr [2.00e-05, 8.00e-07, 8.00e-07] wall_seconds 59.99
+FINISHED fold_05/xattn Best val macro-F1: 0.6827 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/xattn/best.pt
+MODEL fold_06/xattn 2026-10-09T14:10:07.839002+00:00
+fold_06/xattn Epoch 01 | stage 1 | train loss 0.7036 (cls 0.7036, ctr 0.0000) acc 0.9052 f1 0.8973 | val loss 1.0372 (cls 1.0372, ctr 0.0000) acc 0.7042 f1 0.6756 | lr 1.55e-04 wall_seconds 61.06
+fold_06/xattn Epoch 02 | stage 1 | train loss 0.4182 (cls 0.4182, ctr 0.0000) acc 0.9760 f1 0.9756 | val loss 1.1080 (cls 1.1080, ctr 0.0000) acc 0.6833 f1 0.6506 | lr 1.10e-04 wall_seconds 60.52
+fold_06/xattn Epoch 03 | stage 1 | train loss 0.3797 (cls 0.3797, ctr 0.0000) acc 0.9885 f1 0.9877 | val loss 1.2352 (cls 1.2352, ctr 0.0000) acc 0.6458 f1 0.5984 | lr 6.50e-05 wall_seconds 60.09
+fold_06/xattn Epoch 04 | stage 1 | train loss 0.3783 (cls 0.3783, ctr 0.0000) acc 0.9823 f1 0.9819 | val loss 1.0966 (cls 1.0966, ctr 0.0000) acc 0.7042 f1 0.6736 | lr 3.21e-05 wall_seconds 60.02
+fold_06/xattn Epoch 05 | stage 1 | train loss 0.3780 (cls 0.3780, ctr 0.0000) acc 0.9781 f1 0.9786 | val loss 1.1771 (cls 1.1771, ctr 0.0000) acc 0.6625 f1 0.6287 | lr 2.00e-05 wall_seconds 59.99
+fold_06/xattn Epoch 06 | stage 1 | train loss 0.3667 (cls 0.3667, ctr 0.0000) acc 0.9865 f1 0.9863 | val loss 1.0925 (cls 1.0925, ctr 0.0000) acc 0.6958 f1 0.6515 | lr 2.00e-05 wall_seconds 61.41
+fold_06/xattn Epoch 07 | stage 2 | train loss 0.3966 (cls 0.3966, ctr 0.0000) acc 0.9740 f1 0.9726 | val loss 1.2703 (cls 1.2703, ctr 0.0000) acc 0.6625 f1 0.6145 | lr [1.98e-04, 7.92e-06, 7.92e-06] wall_seconds 61.21
+fold_06/xattn Epoch 08 | stage 2 | train loss 0.3647 (cls 0.3647, ctr 0.0000) acc 0.9802 f1 0.9785 | val loss 1.1436 (cls 1.1436, ctr 0.0000) acc 0.6833 f1 0.6280 | lr [1.95e-04, 7.81e-06, 7.81e-06] wall_seconds 61.8
+fold_06/xattn Epoch 09 | stage 2 | train loss 0.3515 (cls 0.3515, ctr 0.0000) acc 0.9885 f1 0.9883 | val loss 1.1582 (cls 1.1582, ctr 0.0000) acc 0.7083 f1 0.6743 | lr [1.92e-04, 7.67e-06, 7.67e-06] wall_seconds 62.62
+fold_06/xattn Epoch 10 | stage 2 | train loss 0.3472 (cls 0.3472, ctr 0.0000) acc 0.9885 f1 0.9882 | val loss 1.1509 (cls 1.1509, ctr 0.0000) acc 0.7042 f1 0.6607 | lr [1.87e-04, 7.48e-06, 7.48e-06] wall_seconds 61.83
+fold_06/xattn Epoch 11 | stage 2 | train loss 0.3398 (cls 0.3398, ctr 0.0000) acc 0.9896 f1 0.9887 | val loss 1.1328 (cls 1.1328, ctr 0.0000) acc 0.7000 f1 0.6748 | lr [1.82e-04, 7.27e-06, 7.27e-06] wall_seconds 61.43
+FINISHED fold_06/xattn Best val macro-F1: 0.6756 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/xattn/best.pt
+EXIT xattn 0
+COMPLETE 2026-10-09T14:24:31.606289+00:00

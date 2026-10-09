@@ -1,0 +1,23 @@
+{
+  "git_commit": "0ae967afc654d3234620862437d63f2f33ab57e7",
+  "pairs": 1440,
+  "complete": true,
+  "mediapipe": "0.10.21",
+  "api": "legacy",
+  "bbox": [
+    439,
+    162,
+    864,
+    586
+  ],
+  "video_shape": [
+    8,
+    3,
+    112,
+    112
+  ],
+  "audio_shape": [
+    1,
+    48000
+  ]
+}

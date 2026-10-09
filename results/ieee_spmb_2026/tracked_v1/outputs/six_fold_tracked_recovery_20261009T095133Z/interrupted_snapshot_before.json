@@ -1,0 +1,62 @@
+{
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/best.pt": {
+    "sha256": "56b01d5e8fb93ca9b8f1292606d030d8d29bbdcf6afee618a2e0d4d22d389e03",
+    "size": 44801803,
+    "mtime_ns": 1791538963006386736
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/config.json": {
+    "sha256": "78e686a8424e7ce74c3a270db3638afc1398af21c18d595dfc93c57f72e3eeb7",
+    "size": 15144,
+    "mtime_ns": 1791538126342579756
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/history.csv": {
+    "sha256": "30078646b51bb13df5ef0e1962abc95f9c8ce3a821e2d1606d4514aa5fe39347",
+    "size": 2781,
+    "mtime_ns": 1791538962934294048
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "size": 273128,
+    "mtime_ns": 1791538126540579716
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/tracking.json": {
+    "sha256": "b8a2beebe7f15c319efa555cda36791970909a25e1976bbc1aea21b869bb194b",
+    "size": 16827,
+    "mtime_ns": 1791538126507579723
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/debug-internal.log": {
+    "sha256": "7fd57a2c68c7b8270eafa769e3d651c7e56ed7659d43a03c4f294ef325ce14e0",
+    "size": 1093,
+    "mtime_ns": 1791538126463579732
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/debug.log": {
+    "sha256": "5366e8f0d81b384c530109cb6b967748664d15ac614ac06b404bad717663c98b",
+    "size": 13592,
+    "mtime_ns": 1791538126503913056
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/offline-run-20261009_172846-29c271210c274f698ab4f86d63226f41/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "size": 2102,
+    "mtime_ns": 1791538126503913056
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/offline-run-20261009_172846-29c271210c274f698ab4f86d63226f41/logs/debug-core.log": {
+    "sha256": "9c66a0d30868822f50ee9851998a9dc977e6e4e2f3235f42d85a37aca8b0324a",
+    "size": 9396,
+    "mtime_ns": 1791538995695507183
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/offline-run-20261009_172846-29c271210c274f698ab4f86d63226f41/logs/debug-internal.log": {
+    "sha256": "7fd57a2c68c7b8270eafa769e3d651c7e56ed7659d43a03c4f294ef325ce14e0",
+    "size": 1093,
+    "mtime_ns": 1791538126463579732
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/offline-run-20261009_172846-29c271210c274f698ab4f86d63226f41/logs/debug.log": {
+    "sha256": "5366e8f0d81b384c530109cb6b967748664d15ac614ac06b404bad717663c98b",
+    "size": 13592,
+    "mtime_ns": 1791538126503913056
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/video/wandb/offline-run-20261009_172846-29c271210c274f698ab4f86d63226f41/run-29c271210c274f698ab4f86d63226f41.wandb": {
+    "sha256": "448e3386eebb1324ee78359f07f7324341b81c83e15c5ba013860d684c13c914",
+    "size": 163840,
+    "mtime_ns": 1791538949665599348
+  }
+}

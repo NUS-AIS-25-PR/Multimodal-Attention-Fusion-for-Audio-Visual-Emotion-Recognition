@@ -1,0 +1,46 @@
+{
+  "status": "failed",
+  "command": "gated",
+  "fold": 2,
+  "model": "gated",
+  "models": {
+    "fold_02/audio": {
+      "start_utc": "2026-10-08T19:29:00.768528+00:00",
+      "start_monotonic": 104011.852683157,
+      "epochs": 20,
+      "epoch_boundary": 105238.108344992,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.6707 (cls 0.6707, ctr 0.0000) acc 0.7625 f1 0.7630 | val loss 1.1841 (cls 1.1841, ctr 0.0000) acc 0.6583 f1 0.6675 | lr [3.00e-06, 1.00e-04]",
+      "last_epoch_seconds": 61.37145627300197,
+      "end_utc": "2026-10-08T19:50:46.937005+00:00",
+      "runtime_seconds": 1240.6273902889952
+    },
+    "fold_02/video": {
+      "start_utc": "2026-10-08T19:50:47.058047+00:00",
+      "start_monotonic": 105252.601113752,
+      "epochs": 20,
+      "epoch_boundary": 106468.997198963,
+      "last_epoch_line": "Epoch 20 | stage - | train loss 0.0183 (cls 0.0183, ctr 0.0000) acc 0.9990 f1 0.9990 | val loss 2.1540 (cls 2.1540, ctr 0.0000) acc 0.5042 f1 0.5354 | lr 1.00e-04",
+      "last_epoch_seconds": 60.57247222299338,
+      "end_utc": "2026-10-08T20:12:05.080812+00:00",
+      "runtime_seconds": 1229.7518610719999
+    },
+    "fold_02/gated": {
+      "start_utc": "2026-10-08T20:12:05.191471+00:00",
+      "start_monotonic": 106482.463615022,
+      "epochs": 0
+    }
+  },
+  "commands": [
+    {
+      "model": "gated",
+      "exit_code": 1,
+      "runtime_seconds": 2494.0905372019915
+    }
+  ],
+  "skip_count": 3,
+  "start_utc": "2026-10-08T19:28:54.050185+00:00",
+  "start_monotonic": 104005.134334131,
+  "error_type": "AssertionError",
+  "error": "gated failed; later commands not launched",
+  "continuation_elapsed_seconds": 2494.1626232739945
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "spmb-result-archive-validation-v1",
+  "archive_with_local_checkpoints": {
+    "status": "PASS",
+    "copied_artifacts": 630,
+    "completed_runs": 30,
+    "held_out_samples_per_method": 1440,
+    "figure_exports": 198,
+    "local_checkpoint_hashes_checked": 31,
+    "note": "Archive-only verification recomputes metrics; checkpoint binaries require the optional local check."
+  },
+  "fresh_checkout_without_checkpoints": {
+    "status": "PASS",
+    "copied_artifacts": 630,
+    "completed_runs": 30,
+    "held_out_samples_per_method": 1440,
+    "figure_exports": 198,
+    "local_checkpoint_hashes_checked": 0,
+    "note": "Archive-only verification recomputes metrics; checkpoint binaries require the optional local check."
+  },
+  "archive_contract_tests": {
+    "command": "python3 -m unittest discover -s results/ieee_spmb_2026/tracked_v1 -p test_archive_integrity.py -v",
+    "passed": 3,
+    "failed": 0,
+    "cases": [
+      "complete archive works without local checkpoint binaries",
+      "altered history fails size/SHA validation",
+      "altered predictions fail confusion consistency even after refreshing the inventory hash"
+    ]
+  },
+  "focused_existing_regression_tests": {
+    "command": "PYTHONPATH=src:tests OMP_NUM_THREADS=1 /home/louis/projects/MultimodalEmotionRecognition/.venv/bin/python -m unittest test_face_crop test_revision test_tracking_figures test_data_services test_attention_integration -q",
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "runtime_seconds": 8.611
+  },
+  "original_production_validation": {
+    "completed_runs_checked_by_revision_protocol_validate_completed_run": 30,
+    "original_source_sha256": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+    "all_111_package_versions_match_fold1": true,
+    "no_inference_or_training_for_archive_pr": true
+  },
+  "review_notes": [
+    "The broader legacy backend test failure is documented in docs/REVISION_RUNS.md; this results-only PR does not change backend code.",
+    "Default portable verification cannot deserialize absent checkpoint weights; original local full-checkpoint checks and optional retained-file hash checks were executed.",
+    "No remote W&B upload performed; offline artifacts and local metrics only."
+  ],
+  "git_archive_identity": {
+    "original_artifact_blobs_checked": 630,
+    "all_staged_sha256_match_original_files": true,
+    "no_checkpoints_raw_media_credentials_or_unrelated_changes_staged": true
+  },
+  "format_validation": {
+    "command": "git diff --cached --check",
+    "passed": true,
+    "note": "Immutable captured outputs use scoped -text/-whitespace attributes; authored code/docs retain ordinary checks."
+  }
+}

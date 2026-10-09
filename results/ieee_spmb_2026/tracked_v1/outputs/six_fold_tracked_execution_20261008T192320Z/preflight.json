@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "git_commit": "0ae967afc654d3234620862437d63f2f33ab57e7",
+  "source_fingerprint": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+  "dataset_fingerprint": "244a926588cdf42d8882bad9ba667cf06f62d9532aa18033f2337b81c5513d3a",
+  "pairs": 1440,
+  "complete": true,
+  "mediapipe_bbox": [
+    439,
+    162,
+    864,
+    586
+  ]
+}

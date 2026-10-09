@@ -1,0 +1,53 @@
+Git, source, all111 package versions match Fold1
+Audit: 1440 complete: True
+Completed runs fully validated: 18
+Interrupted checkpoint keys: ['model', 'val_f1', 'epoch', 'config'] best epoch 13
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791539506.691499    2334 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1791539506.727264    2478 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1791539506.745773    2423 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Real MediaPipe bbox (439, 162, 864, 586)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Default production WavLM load passed
+{
+  "passed": true,
+  "complete": true,
+  "pairs": 1440,
+  "git_commit": "0ae967afc654d3234620862437d63f2f33ab57e7",
+  "source_fingerprint": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+  "dataset_fingerprint": "244a926588cdf42d8882bad9ba667cf06f62d9532aa18033f2337b81c5513d3a",
+  "mediapipe_bbox": [
+    439,
+    162,
+    864,
+    586
+  ],
+  "default_wavlm_load_checks": 1,
+  "completed_validated": [
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/chumachenko_ia",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/gated",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/video",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/xattn",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/gated",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/video",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/gated",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_03/video",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/gated",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_04/video",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/audio",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/gated",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_05/video",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_06/audio"
+  ],
+  "archived_incomplete": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_recovery_20261009T095133Z/interrupted_runs/fold_06/video",
+  "prior_control": "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z",
+  "environment_packages_match_fold1": 111,
+  "restart_note": "Fold6 video restarts from epoch1; original13epochs preserved, no partial checkpoint warm-start."
+}
