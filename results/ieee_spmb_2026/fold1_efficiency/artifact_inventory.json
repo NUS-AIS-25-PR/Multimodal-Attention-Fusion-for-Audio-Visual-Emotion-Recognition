@@ -1,0 +1,145 @@
+{
+  "schema": "spmb-efficiency-archive-v1",
+  "files": [
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/audio_torchinfo.txt",
+      "archive_path": "final/audio_torchinfo.txt",
+      "sha256": "3179c49a37fdd8e88df54b9176543613eccd7299e9d153e404d81f7a4c208aa9",
+      "bytes": 2638
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/benchmark.log",
+      "archive_path": "final/benchmark.log",
+      "sha256": "672911569d4830463e73b16ab471022bfc428d879d30cf2183b1062d12eff38f",
+      "bytes": 1560
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/chumachenko_ia_torchinfo.txt",
+      "archive_path": "final/chumachenko_ia_torchinfo.txt",
+      "sha256": "3a96eaa82143f2fab8ba2fc1c09ff323481e8437bba70b340a2dd0dd289032dc",
+      "bytes": 3280
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/fold1_five_model_efficiency.csv",
+      "archive_path": "final/fold1_five_model_efficiency.csv",
+      "sha256": "95936bfbde742b51a3c0ec6e3115631a185dba194b44331a42f17777b88ad0c5",
+      "bytes": 1982
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/fold1_five_model_efficiency.json",
+      "archive_path": "final/fold1_five_model_efficiency.json",
+      "sha256": "8583210b540a0da0bfff849d5b20f2eed753fb3ea2a5a365e0025410f92a9427",
+      "bytes": 485855
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/gated_torchinfo.txt",
+      "archive_path": "final/gated_torchinfo.txt",
+      "sha256": "9c8225d8d05bbadc7c9de3121daaf450069e8273fbe5e8e345b2e808fa4caf97",
+      "bytes": 3756
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/integrity_after.json",
+      "archive_path": "final/integrity_after.json",
+      "sha256": "c4b0fa7d4bb9f13e386d860f7b620c68bb376473588d1cc51e776b59e9acfb78",
+      "bytes": 99122
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/integrity_before.json",
+      "archive_path": "final/integrity_before.json",
+      "sha256": "c4b0fa7d4bb9f13e386d860f7b620c68bb376473588d1cc51e776b59e9acfb78",
+      "bytes": 99122
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/unit_tests.log",
+      "archive_path": "final/unit_tests.log",
+      "sha256": "d0a2bd120f97623d70728f8a34f73b7cda145e79df63380778e1a1d9a1ab471d",
+      "bytes": 138
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/video_torchinfo.txt",
+      "archive_path": "final/video_torchinfo.txt",
+      "sha256": "f3f17a8fb8086e2d97bc61063b3ec8bb55077fa6e4c36a43d14292bb53a89226",
+      "bytes": 2539
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency/xattn_torchinfo.txt",
+      "archive_path": "final/xattn_torchinfo.txt",
+      "sha256": "40b180a4bf07ddf8639f13252516f8e5132c834954671e57c1c15153c235b078",
+      "bytes": 4328
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/audio_torchinfo.txt",
+      "archive_path": "diagnostic/audio_torchinfo.txt",
+      "sha256": "3179c49a37fdd8e88df54b9176543613eccd7299e9d153e404d81f7a4c208aa9",
+      "bytes": 2638
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/benchmark.log",
+      "archive_path": "diagnostic/benchmark.log",
+      "sha256": "d026951c7ac2dfdd754c37e1345bd4a00dbb626a6b64959e0148808d2bd918dc",
+      "bytes": 1498
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/benchmark_initial.py",
+      "archive_path": "diagnostic/benchmark_initial.py",
+      "sha256": "6e4eacf48c98e110b52c0a61d93c4364236b9c7598d88c5fcdc3306331459417",
+      "bytes": 18504
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/chumachenko_ia_torchinfo.txt",
+      "archive_path": "diagnostic/chumachenko_ia_torchinfo.txt",
+      "sha256": "3a96eaa82143f2fab8ba2fc1c09ff323481e8437bba70b340a2dd0dd289032dc",
+      "bytes": 3280
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/fold1_five_model_efficiency.csv",
+      "archive_path": "diagnostic/fold1_five_model_efficiency.csv",
+      "sha256": "e5962c680060ef985edf0dcc9b7c16eab2b0b07a3ffb702e00b037c86242a95f",
+      "bytes": 1979
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/fold1_five_model_efficiency.json",
+      "archive_path": "diagnostic/fold1_five_model_efficiency.json",
+      "sha256": "946f2a2344aafaafb1e76d1e06789cd31ef5dfa720815b5dc639288f2fa838ea",
+      "bytes": 484678
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/gated_torchinfo.txt",
+      "archive_path": "diagnostic/gated_torchinfo.txt",
+      "sha256": "9c8225d8d05bbadc7c9de3121daaf450069e8273fbe5e8e345b2e808fa4caf97",
+      "bytes": 3756
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/integrity_after.json",
+      "archive_path": "diagnostic/integrity_after.json",
+      "sha256": "c4b0fa7d4bb9f13e386d860f7b620c68bb376473588d1cc51e776b59e9acfb78",
+      "bytes": 99122
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/integrity_before.json",
+      "archive_path": "diagnostic/integrity_before.json",
+      "sha256": "c4b0fa7d4bb9f13e386d860f7b620c68bb376473588d1cc51e776b59e9acfb78",
+      "bytes": 99122
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/timing_clock_probe.json",
+      "archive_path": "diagnostic/timing_clock_probe.json",
+      "sha256": "52ba54199dd2bf34596155f325373df272d7c25ed6b1b03d6164df4bb81e19e7",
+      "bytes": 979
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/video_torchinfo.txt",
+      "archive_path": "diagnostic/video_torchinfo.txt",
+      "sha256": "f3f17a8fb8086e2d97bc61063b3ec8bb55077fa6e4c36a43d14292bb53a89226",
+      "bytes": 2539
+    },
+    {
+      "source": "/home/louis/projects/MultimodalEmotionRecognition/outputs/revision_efficiency_clock_diagnostic/xattn_torchinfo.txt",
+      "archive_path": "diagnostic/xattn_torchinfo.txt",
+      "sha256": "40b180a4bf07ddf8639f13252516f8e5132c834954671e57c1c15153c235b078",
+      "bytes": 4328
+    }
+  ],
+  "training_git_sha": "0ae967afc654d3234620862437d63f2f33ab57e7",
+  "benchmark_script_sha256": "4e6ba1160b8a8524a4fd82bcb8945dabee4ead7deb8d124f467eb153c45d4e5e"
+}

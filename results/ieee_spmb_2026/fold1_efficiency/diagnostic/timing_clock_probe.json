@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-10T08:45:04.687191+00:00",
+  "probe": "100 FP32 1024x1024 matmuls, 20 warmups, 3 repeats; no checkpoint or dataset",
+  "results": [
+    {
+      "perf_counter_ms": 11.757675000012568,
+      "monotonic_ms": 11.757186000068032,
+      "unix_ms": 11.756658554077148,
+      "monotonic_raw_ms": 12.823670000102538,
+      "cuda_loop_ms": 12.734880447387695,
+      "cuda_forward_sum_ms": 12.496863968670368
+    },
+    {
+      "perf_counter_ms": 12.071196999954736,
+      "monotonic_ms": 12.073009000005186,
+      "unix_ms": 12.073040008544922,
+      "monotonic_raw_ms": 13.170619999982591,
+      "cuda_loop_ms": 13.077856063842773,
+      "cuda_forward_sum_ms": 12.733151994645596
+    },
+    {
+      "perf_counter_ms": 12.569224000003487,
+      "monotonic_ms": 12.570020999987719,
+      "unix_ms": 12.57014274597168,
+      "monotonic_raw_ms": 13.7114090000523,
+      "cuda_loop_ms": 13.576576232910156,
+      "cuda_forward_sum_ms": 13.337152138352394
+    }
+  ]
+}
