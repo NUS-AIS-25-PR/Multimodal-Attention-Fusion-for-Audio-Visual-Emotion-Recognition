@@ -1,0 +1,6 @@
+Exported 198 PDF/SVG/300 DPI PNG files to /home/louis/projects/MultimodalEmotionRecognition/outputs/paper_figures_six_fold_tracked_v1
+audio: 6/6 folds; held-out folds [1, 2, 3, 4, 5, 6]
+video: 6/6 folds; held-out folds [1, 2, 3, 4, 5, 6]
+gated: 6/6 folds; held-out folds [1, 2, 3, 4, 5, 6]
+chumachenko_ia: 6/6 folds; held-out folds [1, 2, 3, 4, 5, 6]
+xattn: 6/6 folds; held-out folds [1, 2, 3, 4, 5, 6]

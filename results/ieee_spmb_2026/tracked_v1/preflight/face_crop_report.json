@@ -1,0 +1,1844 @@
+{
+  "git_commit": "314cccc36b84a60381d9d3d1f8e1222a1f20ed38",
+  "data_root": "/home/louis/projects/MultimodalEmotionRecognition/data",
+  "complete": true,
+  "total_pairs": 1440,
+  "dataset_fingerprint": "244a926588cdf42d8882bad9ba667cf06f62d9532aa18033f2337b81c5513d3a",
+  "mediapipe_version": "0.10.21",
+  "api": "legacy",
+  "model_selection": 1,
+  "min_detection_confidence": 0.5,
+  "configuration": {
+    "use_face_crop": true,
+    "pad_ratio": 0.3,
+    "frames": 8,
+    "size": 112,
+    "normalization": "ImageNet",
+    "sampling": "uniform",
+    "bbox_reused_after_first_success": true,
+    "audio_hz": 16000,
+    "audio_seconds": 3
+  },
+  "coverage": {
+    "clips": 48,
+    "actors": 24,
+    "emotions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "sampled_frames": 384,
+    "exhaustive": false
+  },
+  "summary": {
+    "detection_attempts": 48,
+    "successful_detections": 48,
+    "failed_detection_attempts": 0,
+    "detector_errors": 0,
+    "decoded_sampled_frames": 368,
+    "successful_crops": 368,
+    "crop_errors": 0,
+    "full_frame_fallback_frames": 0,
+    "repeated_last_cropped_frames": 16
+  },
+  "visualizations": [
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_01.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_02.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_05.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_06.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_09.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_10.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_23.png",
+    "/home/louis/projects/MultimodalEmotionRecognition/outputs/spmb_preflight_20261008/face_crop_actor_24.png"
+  ],
+  "samples": [
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_01/02-01-01-01-01-01-01.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_01/03-01-01-01-01-01-01.wav",
+      "actor": 1,
+      "emotion": 1,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        468,
+        183,
+        836,
+        551
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 99,
+      "decoded_video_frames": 98,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_01/02-01-05-02-02-02-01.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_01/03-01-05-02-02-02-01.wav",
+      "actor": 1,
+      "emotion": 5,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        344,
+        191,
+        754,
+        600
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 133,
+      "decoded_video_frames": 132,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_02/02-01-02-01-01-01-02.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_02/03-01-02-01-01-01-02.wav",
+      "actor": 2,
+      "emotion": 2,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        464,
+        238,
+        821,
+        595
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 115,
+      "decoded_video_frames": 115,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_02/02-01-06-02-02-02-02.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_02/03-01-06-02-02-02-02.wav",
+      "actor": 2,
+      "emotion": 6,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        456,
+        240,
+        834,
+        618
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 108,
+      "decoded_video_frames": 108,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_03/02-01-03-01-01-01-03.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_03/03-01-03-01-01-01-03.wav",
+      "actor": 3,
+      "emotion": 3,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        467,
+        212,
+        862,
+        606
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 113,
+      "decoded_video_frames": 113,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_03/02-01-07-02-02-02-03.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_03/03-01-07-02-02-02-03.wav",
+      "actor": 3,
+      "emotion": 7,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        469,
+        229,
+        864,
+        624
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 118,
+      "decoded_video_frames": 118,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_04/02-01-04-01-01-01-04.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_04/03-01-04-01-01-01-04.wav",
+      "actor": 4,
+      "emotion": 4,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        425,
+        208,
+        787,
+        570
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 101,
+      "decoded_video_frames": 101,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_04/02-01-08-02-02-02-04.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_04/03-01-08-02-02-02-04.wav",
+      "actor": 4,
+      "emotion": 8,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        450,
+        188,
+        818,
+        556
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 106,
+      "decoded_video_frames": 106,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_05/02-01-05-01-01-01-05.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_05/03-01-05-01-01-01-05.wav",
+      "actor": 5,
+      "emotion": 5,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        424,
+        191,
+        864,
+        630
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 116,
+      "decoded_video_frames": 116,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_05/02-01-01-01-02-02-05.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_05/03-01-01-01-02-02-05.wav",
+      "actor": 5,
+      "emotion": 1,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        432,
+        171,
+        876,
+        616
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 108,
+      "decoded_video_frames": 108,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_06/02-01-06-01-01-01-06.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_06/03-01-06-01-01-01-06.wav",
+      "actor": 6,
+      "emotion": 6,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        455,
+        237,
+        831,
+        613
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 109,
+      "decoded_video_frames": 108,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_06/02-01-02-02-02-02-06.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_06/03-01-02-02-02-02-06.wav",
+      "actor": 6,
+      "emotion": 2,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        478,
+        202,
+        818,
+        542
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 143,
+      "decoded_video_frames": 142,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_07/02-01-07-01-01-01-07.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_07/03-01-07-01-01-01-07.wav",
+      "actor": 7,
+      "emotion": 7,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        438,
+        179,
+        864,
+        606
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 106,
+      "decoded_video_frames": 106,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_07/02-01-03-02-02-02-07.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_07/03-01-03-02-02-02-07.wav",
+      "actor": 7,
+      "emotion": 3,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        397,
+        162,
+        857,
+        622
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 115,
+      "decoded_video_frames": 115,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_08/02-01-08-01-01-01-08.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_08/03-01-08-01-01-01-08.wav",
+      "actor": 8,
+      "emotion": 8,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        467,
+        198,
+        812,
+        543
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 111,
+      "decoded_video_frames": 111,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_08/02-01-04-02-02-02-08.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_08/03-01-04-02-02-02-08.wav",
+      "actor": 8,
+      "emotion": 4,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        453,
+        245,
+        817,
+        609
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 111,
+      "decoded_video_frames": 111,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_09/02-01-01-01-01-01-09.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_09/03-01-01-01-01-01-09.wav",
+      "actor": 9,
+      "emotion": 1,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        439,
+        162,
+        864,
+        586
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 98,
+      "decoded_video_frames": 97,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_09/02-01-05-02-02-02-09.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_09/03-01-05-02-02-02-09.wav",
+      "actor": 9,
+      "emotion": 5,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        428,
+        211,
+        867,
+        650
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 119,
+      "decoded_video_frames": 118,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_10/02-01-02-01-01-01-10.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_10/03-01-02-01-01-01-10.wav",
+      "actor": 10,
+      "emotion": 2,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        424,
+        209,
+        785,
+        571
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 107,
+      "decoded_video_frames": 107,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_10/02-01-06-02-02-02-10.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_10/03-01-06-02-02-02-10.wav",
+      "actor": 10,
+      "emotion": 6,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        414,
+        238,
+        792,
+        615
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 116,
+      "decoded_video_frames": 116,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_11/02-01-03-01-01-01-11.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_11/03-01-03-01-01-01-11.wav",
+      "actor": 11,
+      "emotion": 3,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        460,
+        172,
+        847,
+        559
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 93,
+      "decoded_video_frames": 93,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_11/02-01-07-02-02-02-11.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_11/03-01-07-02-02-02-11.wav",
+      "actor": 11,
+      "emotion": 7,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        455,
+        181,
+        841,
+        566
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 112,
+      "decoded_video_frames": 112,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_12/02-01-04-01-01-01-12.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_12/03-01-04-01-01-01-12.wav",
+      "actor": 12,
+      "emotion": 4,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        455,
+        222,
+        825,
+        592
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 110,
+      "decoded_video_frames": 109,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_12/02-01-08-02-02-02-12.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_12/03-01-08-02-02-02-12.wav",
+      "actor": 12,
+      "emotion": 8,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        452,
+        215,
+        827,
+        590
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 110,
+      "decoded_video_frames": 109,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_13/02-01-05-01-01-01-13.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_13/03-01-05-01-01-01-13.wav",
+      "actor": 13,
+      "emotion": 5,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        439,
+        212,
+        848,
+        621
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 103,
+      "decoded_video_frames": 103,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_13/02-01-01-01-02-02-13.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_13/03-01-01-01-02-02-13.wav",
+      "actor": 13,
+      "emotion": 1,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        453,
+        174,
+        841,
+        561
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 94,
+      "decoded_video_frames": 94,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_14/02-01-06-01-01-01-14.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_14/03-01-06-01-01-01-14.wav",
+      "actor": 14,
+      "emotion": 6,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        440,
+        198,
+        822,
+        580
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 101,
+      "decoded_video_frames": 100,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_14/02-01-02-02-02-02-14.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_14/03-01-02-02-02-02-14.wav",
+      "actor": 14,
+      "emotion": 2,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        470,
+        187,
+        847,
+        564
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 113,
+      "decoded_video_frames": 112,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_15/02-01-07-01-01-01-15.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_15/03-01-07-01-01-01-15.wav",
+      "actor": 15,
+      "emotion": 7,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        452,
+        263,
+        842,
+        653
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 112,
+      "decoded_video_frames": 111,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_15/02-01-03-02-02-02-15.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_15/03-01-03-02-02-02-15.wav",
+      "actor": 15,
+      "emotion": 3,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        402,
+        190,
+        788,
+        576
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 101,
+      "decoded_video_frames": 100,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_16/02-01-08-01-01-01-16.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_16/03-01-08-01-01-01-16.wav",
+      "actor": 16,
+      "emotion": 8,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        447,
+        238,
+        784,
+        574
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 106,
+      "decoded_video_frames": 106,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_16/02-01-04-02-02-02-16.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_16/03-01-04-02-02-02-16.wav",
+      "actor": 16,
+      "emotion": 4,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        495,
+        237,
+        843,
+        584
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 112,
+      "decoded_video_frames": 112,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_17/02-01-01-01-01-01-17.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_17/03-01-01-01-01-01-17.wav",
+      "actor": 17,
+      "emotion": 1,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        413,
+        215,
+        834,
+        636
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 115,
+      "decoded_video_frames": 114,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_17/02-01-05-02-02-02-17.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_17/03-01-05-02-02-02-17.wav",
+      "actor": 17,
+      "emotion": 5,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        423,
+        226,
+        877,
+        681
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 114,
+      "decoded_video_frames": 113,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_18/02-01-02-01-01-01-18.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_18/03-01-02-01-01-01-18.wav",
+      "actor": 18,
+      "emotion": 2,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        454,
+        232,
+        843,
+        622
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 104,
+      "decoded_video_frames": 104,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_18/02-01-06-02-02-02-18.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_18/03-01-06-02-02-02-18.wav",
+      "actor": 18,
+      "emotion": 6,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        427,
+        223,
+        834,
+        630
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 114,
+      "decoded_video_frames": 114,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_19/02-01-03-01-01-01-19.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_19/03-01-03-01-01-01-19.wav",
+      "actor": 19,
+      "emotion": 3,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        470,
+        199,
+        876,
+        605
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 109,
+      "decoded_video_frames": 108,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_19/02-01-07-02-02-02-19.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_19/03-01-07-02-02-02-19.wav",
+      "actor": 19,
+      "emotion": 7,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 7,
+      "successful_crops": 7,
+      "crop_errors": 0,
+      "bbox": [
+        433,
+        214,
+        837,
+        618
+      ],
+      "decoded_sampled_frames": 7,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 1,
+      "declared_video_frames": 148,
+      "decoded_video_frames": 147,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_20/02-01-04-01-01-01-20.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_20/03-01-04-01-01-01-20.wav",
+      "actor": 20,
+      "emotion": 4,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        439,
+        256,
+        766,
+        583
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 108,
+      "decoded_video_frames": 108,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_20/02-01-08-02-02-02-20.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_20/03-01-08-02-02-02-20.wav",
+      "actor": 20,
+      "emotion": 8,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        477,
+        227,
+        809,
+        559
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 103,
+      "decoded_video_frames": 103,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_21/02-01-05-01-01-01-21.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_21/03-01-05-01-01-01-21.wav",
+      "actor": 21,
+      "emotion": 5,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        445,
+        238,
+        818,
+        611
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 124,
+      "decoded_video_frames": 124,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_21/02-01-01-01-02-02-21.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_21/03-01-01-01-02-02-21.wav",
+      "actor": 21,
+      "emotion": 1,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        469,
+        240,
+        821,
+        592
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 110,
+      "decoded_video_frames": 110,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_22/02-01-06-01-01-01-22.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_22/03-01-06-01-01-01-22.wav",
+      "actor": 22,
+      "emotion": 6,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        463,
+        225,
+        850,
+        612
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 107,
+      "decoded_video_frames": 107,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_22/02-01-02-02-02-02-22.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_22/03-01-02-02-02-02-22.wav",
+      "actor": 22,
+      "emotion": 2,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        458,
+        236,
+        840,
+        618
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 113,
+      "decoded_video_frames": 113,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_23/02-01-07-01-01-01-23.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_23/03-01-07-01-01-01-23.wav",
+      "actor": 23,
+      "emotion": 7,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        407,
+        207,
+        806,
+        605
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 107,
+      "decoded_video_frames": 107,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_23/02-01-03-02-02-02-23.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_23/03-01-03-02-02-02-23.wav",
+      "actor": 23,
+      "emotion": 3,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        440,
+        184,
+        833,
+        578
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 97,
+      "decoded_video_frames": 97,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_24/02-01-08-01-01-01-24.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_24/03-01-08-01-01-01-24.wav",
+      "actor": 24,
+      "emotion": 8,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        440,
+        224,
+        823,
+        607
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 99,
+      "decoded_video_frames": 99,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    },
+    {
+      "video": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_24/02-01-04-02-02-02-24.mp4",
+      "audio": "/home/louis/projects/MultimodalEmotionRecognition/data/Actor_24/03-01-04-02-02-02-24.wav",
+      "actor": 24,
+      "emotion": 4,
+      "loader_shape": [
+        8,
+        3,
+        112,
+        112
+      ],
+      "audio_shape": [
+        1,
+        48000
+      ],
+      "detection_attempts": 1,
+      "successful_detections": 1,
+      "failed_detection_attempts": 0,
+      "detector_errors": 0,
+      "crop_calls": 8,
+      "successful_crops": 8,
+      "crop_errors": 0,
+      "bbox": [
+        428,
+        228,
+        813,
+        613
+      ],
+      "decoded_sampled_frames": 8,
+      "full_frame_fallback_frames": 0,
+      "repeated_last_cropped_frames": 0,
+      "declared_video_frames": 140,
+      "decoded_video_frames": 140,
+      "video_width": 1280,
+      "video_height": 720,
+      "video_fps": 29.97002997002997
+    }
+  ],
+  "raw_video_sizes": [
+    {
+      "width": 1280,
+      "height": 720,
+      "clips": 48
+    }
+  ]
+}

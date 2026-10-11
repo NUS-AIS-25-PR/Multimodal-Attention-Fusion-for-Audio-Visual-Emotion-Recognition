@@ -1,0 +1,51 @@
+START gated 2026-10-08T19:28:54.121743+00:00
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/audio
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/video
+[REVISION] SKIP complete matching run: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_01/gated
+MODEL fold_02/audio 2026-10-08T19:29:00.768528+00:00
+fold_02/audio Epoch 01 | stage - | train loss 1.9797 (cls 1.9797, ctr 0.0000) acc 0.2500 f1 0.2288 | val loss 1.7625 (cls 1.7625, ctr 0.0000) acc 0.3583 f1 0.2945 | lr [2.93e-05, 9.78e-04] wall_seconds 60.0
+fold_02/audio Epoch 02 | stage - | train loss 1.5626 (cls 1.5626, ctr 0.0000) acc 0.3979 f1 0.3527 | val loss 1.4597 (cls 1.4597, ctr 0.0000) acc 0.4292 f1 0.3877 | lr [2.85e-05, 9.51e-04] wall_seconds 56.89
+fold_02/audio Epoch 03 | stage - | train loss 1.3695 (cls 1.3695, ctr 0.0000) acc 0.4823 f1 0.4684 | val loss 1.3621 (cls 1.3621, ctr 0.0000) acc 0.5042 f1 0.4875 | lr [2.74e-05, 9.14e-04] wall_seconds 57.37
+fold_02/audio Epoch 04 | stage - | train loss 1.2595 (cls 1.2595, ctr 0.0000) acc 0.5344 f1 0.5175 | val loss 1.7276 (cls 1.7276, ctr 0.0000) acc 0.4375 f1 0.4128 | lr [2.60e-05, 8.68e-04] wall_seconds 62.17
+fold_02/audio Epoch 05 | stage - | train loss 1.0951 (cls 1.0951, ctr 0.0000) acc 0.6052 f1 0.5934 | val loss 1.1812 (cls 1.1812, ctr 0.0000) acc 0.5417 f1 0.5183 | lr [2.44e-05, 8.15e-04] wall_seconds 62.11
+fold_02/audio Epoch 06 | stage - | train loss 1.0636 (cls 1.0636, ctr 0.0000) acc 0.6073 f1 0.6002 | val loss 1.2311 (cls 1.2311, ctr 0.0000) acc 0.5917 f1 0.6000 | lr [2.26e-05, 7.54e-04] wall_seconds 62.87
+fold_02/audio Epoch 07 | stage - | train loss 0.9699 (cls 0.9699, ctr 0.0000) acc 0.6333 f1 0.6223 | val loss 1.3355 (cls 1.3355, ctr 0.0000) acc 0.5750 f1 0.5769 | lr [2.07e-05, 6.89e-04] wall_seconds 61.83
+fold_02/audio Epoch 08 | stage - | train loss 0.8990 (cls 0.8990, ctr 0.0000) acc 0.6625 f1 0.6516 | val loss 1.2823 (cls 1.2823, ctr 0.0000) acc 0.5792 f1 0.5654 | lr [1.86e-05, 6.20e-04] wall_seconds 60.9
+fold_02/audio Epoch 09 | stage - | train loss 0.8521 (cls 0.8521, ctr 0.0000) acc 0.6854 f1 0.6803 | val loss 1.2134 (cls 1.2134, ctr 0.0000) acc 0.5958 f1 0.6141 | lr [1.65e-05, 5.50e-04] wall_seconds 61.29
+fold_02/audio Epoch 10 | stage - | train loss 0.8148 (cls 0.8148, ctr 0.0000) acc 0.7031 f1 0.6972 | val loss 1.1485 (cls 1.1485, ctr 0.0000) acc 0.6167 f1 0.6292 | lr [1.44e-05, 4.80e-04] wall_seconds 61.78
+fold_02/audio Epoch 11 | stage - | train loss 0.8033 (cls 0.8033, ctr 0.0000) acc 0.7156 f1 0.7165 | val loss 1.4017 (cls 1.4017, ctr 0.0000) acc 0.5542 f1 0.5404 | lr [1.23e-05, 4.11e-04] wall_seconds 61.37
+fold_02/audio Epoch 12 | stage - | train loss 0.7084 (cls 0.7084, ctr 0.0000) acc 0.7458 f1 0.7399 | val loss 1.3914 (cls 1.3914, ctr 0.0000) acc 0.5917 f1 0.5885 | lr [1.04e-05, 3.46e-04] wall_seconds 61.16
+fold_02/audio Epoch 13 | stage - | train loss 0.7570 (cls 0.7570, ctr 0.0000) acc 0.7302 f1 0.7279 | val loss 1.2389 (cls 1.2389, ctr 0.0000) acc 0.5917 f1 0.5749 | lr [8.56e-06, 2.85e-04] wall_seconds 61.61
+fold_02/audio Epoch 14 | stage - | train loss 0.6697 (cls 0.6697, ctr 0.0000) acc 0.7406 f1 0.7418 | val loss 1.2017 (cls 1.2017, ctr 0.0000) acc 0.6375 f1 0.6584 | lr [6.95e-06, 2.32e-04] wall_seconds 61.23
+fold_02/audio Epoch 15 | stage - | train loss 0.6763 (cls 0.6763, ctr 0.0000) acc 0.7563 f1 0.7544 | val loss 1.2050 (cls 1.2050, ctr 0.0000) acc 0.5917 f1 0.5856 | lr [5.58e-06, 1.86e-04] wall_seconds 61.64
+fold_02/audio Epoch 16 | stage - | train loss 0.6381 (cls 0.6381, ctr 0.0000) acc 0.7750 f1 0.7717 | val loss 1.2776 (cls 1.2776, ctr 0.0000) acc 0.6000 f1 0.6084 | lr [4.47e-06, 1.49e-04] wall_seconds 61.37
+fold_02/audio Epoch 17 | stage - | train loss 0.6471 (cls 0.6471, ctr 0.0000) acc 0.7740 f1 0.7733 | val loss 1.1363 (cls 1.1363, ctr 0.0000) acc 0.6500 f1 0.6621 | lr [3.66e-06, 1.22e-04] wall_seconds 61.46
+fold_02/audio Epoch 18 | stage - | train loss 0.6501 (cls 0.6501, ctr 0.0000) acc 0.7542 f1 0.7542 | val loss 1.1735 (cls 1.1735, ctr 0.0000) acc 0.6625 f1 0.6802 | lr [3.17e-06, 1.06e-04] wall_seconds 61.44
+fold_02/audio Epoch 19 | stage - | train loss 0.6818 (cls 0.6818, ctr 0.0000) acc 0.7490 f1 0.7485 | val loss 1.1967 (cls 1.1967, ctr 0.0000) acc 0.6583 f1 0.6692 | lr [3.00e-06, 1.00e-04] wall_seconds 61.81
+fold_02/audio Epoch 20 | stage - | train loss 0.6707 (cls 0.6707, ctr 0.0000) acc 0.7625 f1 0.7630 | val loss 1.1841 (cls 1.1841, ctr 0.0000) acc 0.6583 f1 0.6675 | lr [3.00e-06, 1.00e-04] wall_seconds 61.37
+FINISHED fold_02/audio Best val macro-F1: 0.6802 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/audio/best.pt
+MODEL fold_02/video 2026-10-08T19:50:47.058047+00:00
+fold_02/video Epoch 01 | stage - | train loss 2.1056 (cls 2.1056, ctr 0.0000) acc 0.2125 f1 0.1977 | val loss 2.0641 (cls 2.0641, ctr 0.0000) acc 0.2208 f1 0.1692 | lr 9.78e-04 wall_seconds 62.46
+fold_02/video Epoch 02 | stage - | train loss 1.4369 (cls 1.4369, ctr 0.0000) acc 0.4385 f1 0.4184 | val loss 2.3151 (cls 2.3151, ctr 0.0000) acc 0.3250 f1 0.2257 | lr 9.51e-04 wall_seconds 60.21
+fold_02/video Epoch 03 | stage - | train loss 1.1283 (cls 1.1283, ctr 0.0000) acc 0.5896 f1 0.5817 | val loss 1.7233 (cls 1.7233, ctr 0.0000) acc 0.4375 f1 0.4150 | lr 9.14e-04 wall_seconds 60.95
+fold_02/video Epoch 04 | stage - | train loss 0.8735 (cls 0.8735, ctr 0.0000) acc 0.6948 f1 0.6912 | val loss 2.0980 (cls 2.0980, ctr 0.0000) acc 0.4333 f1 0.3597 | lr 8.68e-04 wall_seconds 60.09
+fold_02/video Epoch 05 | stage - | train loss 0.7442 (cls 0.7442, ctr 0.0000) acc 0.7312 f1 0.7241 | val loss 3.8130 (cls 3.8130, ctr 0.0000) acc 0.2708 f1 0.2279 | lr 8.15e-04 wall_seconds 60.29
+fold_02/video Epoch 06 | stage - | train loss 0.6395 (cls 0.6395, ctr 0.0000) acc 0.7656 f1 0.7626 | val loss 2.1014 (cls 2.1014, ctr 0.0000) acc 0.3958 f1 0.3890 | lr 7.54e-04 wall_seconds 60.77
+fold_02/video Epoch 07 | stage - | train loss 0.4647 (cls 0.4647, ctr 0.0000) acc 0.8458 f1 0.8417 | val loss 2.1456 (cls 2.1456, ctr 0.0000) acc 0.4958 f1 0.4376 | lr 6.89e-04 wall_seconds 60.93
+fold_02/video Epoch 08 | stage - | train loss 0.4391 (cls 0.4391, ctr 0.0000) acc 0.8385 f1 0.8357 | val loss 2.1728 (cls 2.1728, ctr 0.0000) acc 0.3750 f1 0.3811 | lr 6.20e-04 wall_seconds 61.04
+fold_02/video Epoch 09 | stage - | train loss 0.3063 (cls 0.3063, ctr 0.0000) acc 0.8979 f1 0.8940 | val loss 2.0889 (cls 2.0889, ctr 0.0000) acc 0.5292 f1 0.5202 | lr 5.50e-04 wall_seconds 60.97
+fold_02/video Epoch 10 | stage - | train loss 0.2907 (cls 0.2907, ctr 0.0000) acc 0.9010 f1 0.9022 | val loss 1.7942 (cls 1.7942, ctr 0.0000) acc 0.4833 f1 0.4674 | lr 4.80e-04 wall_seconds 61.02
+fold_02/video Epoch 11 | stage - | train loss 0.2093 (cls 0.2093, ctr 0.0000) acc 0.9385 f1 0.9395 | val loss 1.9355 (cls 1.9355, ctr 0.0000) acc 0.5083 f1 0.4876 | lr 4.11e-04 wall_seconds 60.94
+fold_02/video Epoch 12 | stage - | train loss 0.1195 (cls 0.1195, ctr 0.0000) acc 0.9531 f1 0.9496 | val loss 1.6734 (cls 1.6734, ctr 0.0000) acc 0.5250 f1 0.5350 | lr 3.46e-04 wall_seconds 60.69
+fold_02/video Epoch 13 | stage - | train loss 0.0625 (cls 0.0625, ctr 0.0000) acc 0.9865 f1 0.9864 | val loss 1.6597 (cls 1.6597, ctr 0.0000) acc 0.5542 f1 0.5481 | lr 2.85e-04 wall_seconds 60.32
+fold_02/video Epoch 14 | stage - | train loss 0.0744 (cls 0.0744, ctr 0.0000) acc 0.9760 f1 0.9756 | val loss 1.8393 (cls 1.8393, ctr 0.0000) acc 0.5333 f1 0.5122 | lr 2.32e-04 wall_seconds 61.15
+fold_02/video Epoch 15 | stage - | train loss 0.0569 (cls 0.0569, ctr 0.0000) acc 0.9865 f1 0.9863 | val loss 1.8773 (cls 1.8773, ctr 0.0000) acc 0.5417 f1 0.5374 | lr 1.86e-04 wall_seconds 60.38
+fold_02/video Epoch 16 | stage - | train loss 0.0350 (cls 0.0350, ctr 0.0000) acc 0.9937 f1 0.9922 | val loss 1.6900 (cls 1.6900, ctr 0.0000) acc 0.5542 f1 0.5719 | lr 1.49e-04 wall_seconds 60.83
+fold_02/video Epoch 17 | stage - | train loss 0.0379 (cls 0.0379, ctr 0.0000) acc 0.9906 f1 0.9912 | val loss 2.0044 (cls 2.0044, ctr 0.0000) acc 0.5042 f1 0.5236 | lr 1.22e-04 wall_seconds 60.85
+fold_02/video Epoch 18 | stage - | train loss 0.0210 (cls 0.0210, ctr 0.0000) acc 0.9990 f1 0.9990 | val loss 1.6856 (cls 1.6856, ctr 0.0000) acc 0.5625 f1 0.5784 | lr 1.06e-04 wall_seconds 60.59
+fold_02/video Epoch 19 | stage - | train loss 0.0200 (cls 0.0200, ctr 0.0000) acc 0.9979 f1 0.9980 | val loss 2.1570 (cls 2.1570, ctr 0.0000) acc 0.4958 f1 0.5132 | lr 1.00e-04 wall_seconds 60.62
+fold_02/video Epoch 20 | stage - | train loss 0.0183 (cls 0.0183, ctr 0.0000) acc 0.9990 f1 0.9990 | val loss 2.1540 (cls 2.1540, ctr 0.0000) acc 0.5042 f1 0.5354 | lr 1.00e-04 wall_seconds 60.57
+FINISHED fold_02/video Best val macro-F1: 0.5784 | checkpoint: /home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1/fold_02/video/best.pt
+MODEL fold_02/gated 2026-10-08T20:12:05.191471+00:00
+EXIT gated 1
+FAILED gated failed; later commands not launched

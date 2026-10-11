@@ -1,0 +1,195 @@
+{
+  "git_commit": "0ae967afc654d3234620862437d63f2f33ab57e7",
+  "source_fingerprint": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+  "output_root": "/home/louis/projects/MultimodalEmotionRecognition/outputs/speaker_independent_tracked_v1",
+  "state": {
+    "status": "complete",
+    "command": "figures",
+    "model": null,
+    "audio_gate": "passed",
+    "models": {
+      "audio": {
+        "start_utc": "2026-10-08T10:55:33.250975+00:00",
+        "start_monotonic": 74295.020807672,
+        "epochs": 20,
+        "last_epoch_boundary": 75652.851872449,
+        "last_epoch_seconds": 63.83528187200136,
+        "last_epoch_line": "Epoch 20 | stage - | train loss 0.7006 (cls 0.7006, ctr 0.0000) acc 0.7417 f1 0.7395 | val loss 0.6385 (cls 0.6385, ctr 0.0000) acc 0.7625 f1 0.7467 | lr [3.00e-06, 1.00e-04]",
+        "end_utc": "2026-10-08T11:19:28.177261+00:00",
+        "runtime_seconds": 1372.9100113290042,
+        "best_epoch": 14,
+        "val_macro_f1": 0.7632430040274916,
+        "test": {
+          "loss": 0.6999188582102458,
+          "cls_loss": 0.6999188582102458,
+          "contrastive_loss": 0.0,
+          "acc": 0.7708333134651184,
+          "f1": 0.7650878312756904,
+          "accuracy": 0.7708333134651184,
+          "precision": 0.7744850137997823,
+          "recall": 0.77734375,
+          "macro_f1": 0.7650878312756904
+        }
+      },
+      "video": {
+        "start_utc": "2026-10-08T11:19:28.303259+00:00",
+        "start_monotonic": 75668.056813552,
+        "epochs": 20,
+        "last_epoch_boundary": 76921.150930591,
+        "last_epoch_seconds": 61.100735482003074,
+        "last_epoch_line": "Epoch 20 | stage - | train loss 0.0195 (cls 0.0195, ctr 0.0000) acc 0.9958 f1 0.9961 | val loss 2.6312 (cls 2.6312, ctr 0.0000) acc 0.5500 f1 0.5306 | lr 1.00e-04",
+        "end_utc": "2026-10-08T11:41:17.161704+00:00",
+        "runtime_seconds": 1265.766598043003,
+        "best_epoch": 11,
+        "val_macro_f1": 0.6387597096815177,
+        "test": {
+          "loss": 1.4987994531790416,
+          "cls_loss": 1.4987994531790416,
+          "contrastive_loss": 0.0,
+          "acc": 0.5583333373069763,
+          "f1": 0.5092491119723059,
+          "accuracy": 0.5583333373069763,
+          "precision": 0.5196994603056895,
+          "recall": 0.5234375,
+          "macro_f1": 0.5092491119723059
+        }
+      },
+      "gated": {
+        "start_utc": "2026-10-08T11:41:17.266267+00:00",
+        "start_monotonic": 76933.927974579,
+        "epochs": 26,
+        "last_epoch_boundary": 78570.77355858,
+        "last_epoch_seconds": 63.89660712599289,
+        "last_epoch_line": "Epoch 26 | stage 2 | train loss 0.2971 (cls 0.2971, ctr 0.0000) acc 0.8875 f1 0.8894 | val loss 1.6264 (cls 1.6264, ctr 0.0000) acc 0.7375 f1 0.7055 | lr [3.95e-05, 1.32e-06, 1.32e-06]",
+        "early_stopping": true,
+        "end_utc": "2026-10-08T12:09:51.424099+00:00",
+        "runtime_seconds": 1650.6310296559968,
+        "best_epoch": 18,
+        "val_macro_f1": 0.7458160011317139,
+        "test": {
+          "loss": 1.4647654253058136,
+          "cls_loss": 1.4647654253058136,
+          "contrastive_loss": 0.0,
+          "acc": 0.6625000238418579,
+          "f1": 0.6139226172191363,
+          "accuracy": 0.6625000238418579,
+          "precision": 0.7624684770276227,
+          "recall": 0.625,
+          "macro_f1": 0.6139226172191363
+        }
+      },
+      "chumachenko_ia": {
+        "start_utc": "2026-10-08T12:09:58.544767+00:00",
+        "start_monotonic": 78591.679672623,
+        "epochs": 30,
+        "last_epoch_boundary": 80506.70128559,
+        "last_epoch_seconds": 64.5480510359921,
+        "last_epoch_line": "Epoch 30 | stage 2 | train loss 0.0785 (cls 0.0785, ctr 0.0000) acc 0.9802 f1 0.9790 | val loss 4.8841 (cls 4.8841, ctr 0.0000) acc 0.6042 f1 0.5976 | lr [3.00e-05, 1.00e-06, 1.00e-06]",
+        "early_stopping": true,
+        "end_utc": "2026-10-08T12:43:04.855258+00:00",
+        "runtime_seconds": 1928.8122789860063,
+        "best_epoch": 22,
+        "val_macro_f1": 0.6324551495377456,
+        "test": {
+          "loss": 4.925078552819681,
+          "cls_loss": 4.925078552819681,
+          "contrastive_loss": 0.0,
+          "acc": 0.5416666865348816,
+          "f1": 0.4876031619452672,
+          "accuracy": 0.5416666865348816,
+          "precision": 0.562017251587472,
+          "recall": 0.5078125,
+          "macro_f1": 0.4876031619452672
+        }
+      },
+      "xattn": {
+        "start_utc": "2026-10-08T12:43:13.031477+00:00",
+        "start_monotonic": 80527.579468417,
+        "epochs": 35,
+        "last_epoch_boundary": 82779.374941415,
+        "last_epoch_seconds": 64.55267236799409,
+        "last_epoch_line": "Epoch 35 | stage 2 | train loss 0.3455 (cls 0.3455, ctr 0.0000) acc 0.9896 f1 0.9887 | val loss 0.9926 (cls 0.9926, ctr 0.0000) acc 0.7625 f1 0.7531 | lr [2.00e-05, 8.00e-07, 8.00e-07]",
+        "end_utc": "2026-10-08T13:22:03.270355+00:00",
+        "runtime_seconds": 2266.188694823999,
+        "best_epoch": 32,
+        "val_macro_f1": 0.7761537345461057,
+        "test": {
+          "loss": 1.0141097883383432,
+          "cls_loss": 1.0141097883383432,
+          "contrastive_loss": 0.0,
+          "acc": 0.7124999761581421,
+          "f1": 0.6696260573971436,
+          "accuracy": 0.7124999761581421,
+          "precision": 0.799179947516641,
+          "recall": 0.67578125,
+          "macro_f1": 0.6696260573971436
+        }
+      }
+    },
+    "commands": [
+      {
+        "model": "gated",
+        "exit_code": 0,
+        "runtime_seconds": 4296.057822995994
+      },
+      {
+        "model": "chumachenko_ia",
+        "exit_code": 0,
+        "runtime_seconds": 1936.2472963570035
+      },
+      {
+        "model": "xattn",
+        "exit_code": 0,
+        "runtime_seconds": 2273.3201917749975
+      }
+    ],
+    "audio_first_three_epochs": [
+      {
+        "epoch": "1",
+        "stage": "0",
+        "train_loss": "1.986183915535609",
+        "train_accuracy": "0.24062499403953552",
+        "train_precision": "0.2449948741784475",
+        "train_recall": "0.2275390625",
+        "train_macro_f1": "0.22100470890394167",
+        "val_loss": "1.683808398246765",
+        "val_accuracy": "0.4208333194255829",
+        "val_precision": "0.31176826917199185",
+        "val_recall": "0.39453125",
+        "val_macro_f1": "0.3158694391091915",
+        "learning_rates": "[2.9833792598034362e-05, 0.000994459753267812]"
+      },
+      {
+        "epoch": "2",
+        "stage": "0",
+        "train_loss": "1.5892454584439595",
+        "train_accuracy": "0.4020833373069763",
+        "train_precision": "0.3494368461713071",
+        "train_recall": "0.3779296875",
+        "train_macro_f1": "0.34625097550222994",
+        "val_loss": "1.1583545625209808",
+        "val_accuracy": "0.5541666746139526",
+        "val_precision": "0.4901715711231035",
+        "val_recall": "0.51953125",
+        "val_macro_f1": "0.48069848969671064",
+        "learning_rates": "[2.9339262969984572e-05, 0.0009779754323328191]"
+      },
+      {
+        "epoch": "3",
+        "stage": "0",
+        "train_loss": "1.3816791435082754",
+        "train_accuracy": "0.47604167461395264",
+        "train_precision": "0.46452339300744006",
+        "train_recall": "0.4638671875",
+        "train_macro_f1": "0.4606758913614442",
+        "val_loss": "1.2007995078961053",
+        "val_accuracy": "0.5458333492279053",
+        "val_precision": "0.5886332172143651",
+        "val_recall": "0.53125",
+        "val_macro_f1": "0.5020571383975749",
+        "learning_rates": "[2.8528588076542963e-05, 0.0009509529358847655]"
+      }
+    ]
+  },
+  "timing_note": "Epoch wall intervals observed from setup/epoch stdout timestamps; include train+val and between-epoch artifact overhead. GPU usage sampled every 10 seconds, whole-device usage."
+}

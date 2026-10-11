@@ -1,0 +1,57 @@
+{
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/config.json": {
+    "sha256": "89626c4ea5a5f13d10580cfc783f76600e0611c17b716500923bc68abc0806d8",
+    "size": 15360,
+    "mtime_ns": 1791490325199097251
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/history.csv": {
+    "sha256": "278350b3efdbb74e4740d566ca1f4b027ec8b4e91ac3d1cd14ac3b6c6da3db90",
+    "size": 158,
+    "mtime_ns": 1791490325191159040
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "size": 273128,
+    "mtime_ns": 1791490325401521636
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/tracking.json": {
+    "sha256": "9f204e5e74689ca43b48bdbda0f5bf7e834c03c43f62e26509e922b99d25e740",
+    "size": 17045,
+    "mtime_ns": 1791490340544826992
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/debug-internal.log": {
+    "sha256": "a185e4216dc929ed0b4d5ffcbf2e2e8cde89b27c84127ff2a4a87fa1bcd351f2",
+    "size": 1716,
+    "mtime_ns": 1791490340544826992
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/debug.log": {
+    "sha256": "f5b819ec3cf51510dc0efb5c4ee344a2b8e6af5348cf7c3423c96e6ea7ed087c",
+    "size": 14233,
+    "mtime_ns": 1791490340541032159
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/offline-run-20261009_041205-261ffff8351b4ef8a470c837dba3fd81/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "size": 2102,
+    "mtime_ns": 1791490325361830580
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/offline-run-20261009_041205-261ffff8351b4ef8a470c837dba3fd81/logs/debug-core.log": {
+    "sha256": "ebd811397f1c97d9dfa44d5f44d8443b616d81fc11d36bd346fbb03e358785cc",
+    "size": 3735,
+    "mtime_ns": 1791490340571390826
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/offline-run-20261009_041205-261ffff8351b4ef8a470c837dba3fd81/logs/debug-internal.log": {
+    "sha256": "a185e4216dc929ed0b4d5ffcbf2e2e8cde89b27c84127ff2a4a87fa1bcd351f2",
+    "size": 1716,
+    "mtime_ns": 1791490340544826992
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/offline-run-20261009_041205-261ffff8351b4ef8a470c837dba3fd81/logs/debug.log": {
+    "sha256": "f5b819ec3cf51510dc0efb5c4ee344a2b8e6af5348cf7c3423c96e6ea7ed087c",
+    "size": 14233,
+    "mtime_ns": 1791490340541032159
+  },
+  "/home/louis/projects/MultimodalEmotionRecognition/outputs/six_fold_tracked_resume_20261009T044819Z/interrupted_runs/fold_02/gated/wandb/offline-run-20261009_041205-261ffff8351b4ef8a470c837dba3fd81/run-261ffff8351b4ef8a470c837dba3fd81.wandb": {
+    "sha256": "f0fc12c91443679bdafd4da43ed55f13d93b6a0e2f6d4f35700a0686cd3294a5",
+    "size": 18354,
+    "mtime_ns": 1791490340544826992
+  }
+}

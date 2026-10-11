@@ -1,0 +1,7 @@
+# Preserve captured experiment evidence byte-for-byte, including CSV CRLF and
+# terminal progress bars. Hash/semantic validation governs these generated files;
+# whitespace lint applies to authored documentation and verification code.
+results/ieee_spmb_2026/tracked_v1/outputs/** -text -whitespace linguist-generated
+results/ieee_spmb_2026/tracked_v1/preflight/** -text -whitespace linguist-generated
+results/ieee_spmb_2026/tracked_v1/outputs/**/*.log -diff
+results/ieee_spmb_2026/tracked_v1/outputs/**/*.wandb -diff

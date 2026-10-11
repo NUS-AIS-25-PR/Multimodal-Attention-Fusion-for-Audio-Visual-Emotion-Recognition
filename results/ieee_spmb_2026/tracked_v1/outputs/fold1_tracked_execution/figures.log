@@ -1,0 +1,7 @@
+Exported 48 PDF/SVG/300 DPI PNG files to /home/louis/projects/MultimodalEmotionRecognition/outputs/paper_figures_fold1_tracked_v1
+audio: INCOMPLETE: 1/6 folds; held-out folds [1]
+video: INCOMPLETE: 1/6 folds; held-out folds [1]
+chumachenko_ia: INCOMPLETE: 1/6 folds; held-out folds [1]
+gated: INCOMPLETE: 1/6 folds; held-out folds [1]
+xattn: INCOMPLETE: 1/6 folds; held-out folds [1]
+No completed folds (0/6), excluded without invented values: concat
