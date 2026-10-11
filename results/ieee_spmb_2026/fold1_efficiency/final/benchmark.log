@@ -1,0 +1,29 @@
+Checking immutable production artifacts (including all 30 weights)...
+{"device": "NVIDIA GeForce RTX 5080 Laptop GPU", "torch_version": "2.10.0+cu130", "cuda_version": "13.0", "precision": "FP32"}
+Benchmarking audio
+  repeat 1: GPU 10.397 ms, raw wall 10.401 ms/sample
+  repeat 2: GPU 10.449 ms, raw wall 10.451 ms/sample
+  repeat 3: GPU 10.676 ms, raw wall 10.680 ms/sample
+  params 94,978,680; mult-adds 7417048936; latency 10.507 ms
+Benchmarking video
+  repeat 1: GPU 3.591 ms, raw wall 3.595 ms/sample
+  repeat 2: GPU 3.741 ms, raw wall 3.745 ms/sample
+  repeat 3: GPU 3.656 ms, raw wall 3.661 ms/sample
+  params 11,180,616; mult-adds 3878861832; latency 3.663 ms
+Benchmarking gated
+  repeat 1: GPU 13.993 ms, raw wall 14.002 ms/sample
+  repeat 2: GPU 14.149 ms, raw wall 14.158 ms/sample
+  repeat 3: GPU 14.002 ms, raw wall 14.012 ms/sample
+  params 106,621,129; mult-adds 11295771753; latency 14.048 ms
+Benchmarking xattn
+  repeat 1: GPU 14.071 ms, raw wall 14.079 ms/sample
+  repeat 2: GPU 14.201 ms, raw wall 14.207 ms/sample
+  repeat 3: GPU 14.183 ms, raw wall 14.189 ms/sample
+  params 106,607,241; mult-adds 11295462089; latency 14.152 ms
+Benchmarking chumachenko_ia
+  repeat 1: GPU 14.129 ms, raw wall 14.139 ms/sample
+  repeat 2: GPU 14.229 ms, raw wall 14.238 ms/sample
+  repeat 3: GPU 14.113 ms, raw wall 14.120 ms/sample
+  params 106,390,984; mult-adds 11295541608; latency 14.157 ms
+Rechecking all production hashes/mtimes and package/source provenance...
+PASS: five actual best checkpoints benchmarked; all production bytes/mtimes unchanged.

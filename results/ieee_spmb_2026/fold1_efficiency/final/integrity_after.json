@@ -1,0 +1,2347 @@
+{
+  "aggregate.csv": {
+    "sha256": "2956e00c14a14bfcd4165a28d8637021eb5992885b54a2000cfc64e2025b9f88",
+    "bytes": 998,
+    "mtime_ns": 1791555767800342698
+  },
+  "aggregate.json": {
+    "sha256": "e49a5d3fe4b9d88e39410ae67707de9c8889b98e8bb67d758f333264b0c7e788",
+    "bytes": 20319,
+    "mtime_ns": 1791555767800342698
+  },
+  "audit-244a926588cdf42d8882bad9ba667cf06f62d9532aa18033f2337b81c5513d3a.json": {
+    "sha256": "5afcb7714ee83c27424c69913c6000488189a484d7bcd6ccbecc8dd419c416a5",
+    "bytes": 6226,
+    "mtime_ns": 1791456933229184831
+  },
+  "fold_01/audio/best.pt": {
+    "sha256": "3bc13eef3a584bc872510a7b0442df5fb7a17cc27846ce707e44cb4a8fd65764",
+    "bytes": 380005889,
+    "mtime_ns": 1791457928781454443
+  },
+  "fold_01/audio/config.json": {
+    "sha256": "918bd6b3f4e71992b554c75ea01ab6ddf4cf926744117b0580c21a2160a6b25b",
+    "bytes": 15144,
+    "mtime_ns": 1791456933256000207
+  },
+  "fold_01/audio/confusion_matrix.json": {
+    "sha256": "d2f12edafa6d0de5b37f6d842e602f0fd637ba424bd5b084627d194d16346d6c",
+    "bytes": 961,
+    "mtime_ns": 1791458368165375627
+  },
+  "fold_01/audio/history.csv": {
+    "sha256": "76dcd2225d03e2599547233b2cbf5d8ae48d967512e45c63dec9a7b96e4ad71e",
+    "bytes": 4634,
+    "mtime_ns": 1791458351714661739
+  },
+  "fold_01/audio/metrics.json": {
+    "sha256": "d29a29e06c08db61015b635feae7ca5b67381694a2275897586300e441f537c5",
+    "bytes": 16639,
+    "mtime_ns": 1791458368173030603
+  },
+  "fold_01/audio/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791456934493338263
+  },
+  "fold_01/audio/test_predictions.csv": {
+    "sha256": "72a77ddb0744dbe81674fc2f0765894b5e3a91871854bc34a2b099374043bbd1",
+    "bytes": 6034,
+    "mtime_ns": 1791458368161548141
+  },
+  "fold_01/audio/tracking.json": {
+    "sha256": "825805bd41197f5f29d92c65610c3f7d64036d052f7c6049cbad38e2c481edb6",
+    "bytes": 16829,
+    "mtime_ns": 1791458368295510208
+  },
+  "fold_01/audio/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261008_185533-56c9f0f827da458095e992881d785563/logs/debug-internal.log",
+    "mtime_ns": 1791456933922553835
+  },
+  "fold_01/audio/wandb/debug.log": {
+    "symlink": "offline-run-20261008_185533-56c9f0f827da458095e992881d785563/logs/debug.log",
+    "mtime_ns": 1791456933922553835
+  },
+  "fold_01/audio/wandb/latest-run": {
+    "symlink": "offline-run-20261008_185533-56c9f0f827da458095e992881d785563",
+    "mtime_ns": 1791456933922553835
+  },
+  "fold_01/audio/wandb/offline-run-20261008_185533-56c9f0f827da458095e992881d785563/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791456934451199815
+  },
+  "fold_01/audio/wandb/offline-run-20261008_185533-56c9f0f827da458095e992881d785563/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261008_185534.log",
+    "mtime_ns": 1791456934179215288
+  },
+  "fold_01/audio/wandb/offline-run-20261008_185533-56c9f0f827da458095e992881d785563/logs/debug-internal.log": {
+    "sha256": "865a02338185ee27b0169c6c458ec36c654280d27e020c27c39fc481372558b6",
+    "bytes": 1714,
+    "mtime_ns": 1791458368299337696
+  },
+  "fold_01/audio/wandb/offline-run-20261008_185533-56c9f0f827da458095e992881d785563/logs/debug.log": {
+    "sha256": "baabae97840ec9f21010fcce12d3f0bf4e7b08954601eaf00280d5ed32683e80",
+    "bytes": 14354,
+    "mtime_ns": 1791458368276372770
+  },
+  "fold_01/audio/wandb/offline-run-20261008_185533-56c9f0f827da458095e992881d785563/run-56c9f0f827da458095e992881d785563.wandb": {
+    "sha256": "f8a23342dd33d8facd68e355b58b7770e4f18b9401cd8a778be5bd3bee5a8434",
+    "bytes": 438500,
+    "mtime_ns": 1791458368295510208
+  },
+  "fold_01/chumachenko_ia/best.pt": {
+    "sha256": "eed31f702ecd4c59e5b5b26951d578e557e5ae1a8f9ab99cdd87bb8a54695497",
+    "bytes": 425739117,
+    "mtime_ns": 1791462840186903323
+  },
+  "fold_01/chumachenko_ia/config.json": {
+    "sha256": "37af0b5910956ec310bc7e5143731ae8acec8913e0edc41bcd0e052615e353a0",
+    "bytes": 15396,
+    "mtime_ns": 1791461398557516431
+  },
+  "fold_01/chumachenko_ia/confusion_matrix.json": {
+    "sha256": "6a8d8d3333e349473eb777c7c4d9779897e82b182bc315de7e454291eb2fb273",
+    "bytes": 962,
+    "mtime_ns": 1791463384842966777
+  },
+  "fold_01/chumachenko_ia/history.csv": {
+    "sha256": "fa6789a68a4f449c6c28d5c0c33c1a5ba147f8998ab70fca8710e39ee6d56801",
+    "bytes": 7376,
+    "mtime_ns": 1791463371063147616
+  },
+  "fold_01/chumachenko_ia/metrics.json": {
+    "sha256": "cfaaab1bd03c845477509ac8fd7302876aed336e476c8bf6bcf5efbb950425af",
+    "bytes": 16896,
+    "mtime_ns": 1791463384850798247
+  },
+  "fold_01/chumachenko_ia/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791461400410513390
+  },
+  "fold_01/chumachenko_ia/test_predictions.csv": {
+    "sha256": "412d730a1e2607b499a5b5a5e2edc87494677f198ef171840c6cb6b70f224183",
+    "bytes": 6034,
+    "mtime_ns": 1791463384835135306
+  },
+  "fold_01/chumachenko_ia/tracking.json": {
+    "sha256": "634d219a956d6211aaa339c96726e2c95e64233d17a17ee8ec8be694998a548d",
+    "bytes": 17108,
+    "mtime_ns": 1791463384983933252
+  },
+  "fold_01/chumachenko_ia/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/logs/debug-internal.log",
+    "mtime_ns": 1791461399261516393
+  },
+  "fold_01/chumachenko_ia/wandb/debug.log": {
+    "symlink": "offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/logs/debug.log",
+    "mtime_ns": 1791461399261516393
+  },
+  "fold_01/chumachenko_ia/wandb/latest-run": {
+    "symlink": "offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423",
+    "mtime_ns": 1791461399261516393
+  },
+  "fold_01/chumachenko_ia/wandb/offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791461400370180058
+  },
+  "fold_01/chumachenko_ia/wandb/offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261008_200959.log",
+    "mtime_ns": 1791461399509516381
+  },
+  "fold_01/chumachenko_ia/wandb/offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/logs/debug-internal.log": {
+    "sha256": "fd2c6a5f8dc8ae52b2cf79b9eef1e3a47901b109a62a6d6f3289f7cb9eb26047",
+    "bytes": 1715,
+    "mtime_ns": 1791463384983933252
+  },
+  "fold_01/chumachenko_ia/wandb/offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/logs/debug.log": {
+    "sha256": "f28367739675894d20195975468e3692a2dc6303d8a9f926a234ac1ff9698b82",
+    "bytes": 14642,
+    "mtime_ns": 1791463384976101781
+  },
+  "fold_01/chumachenko_ia/wandb/offline-run-20261008_200959-b7a5f118b1b24b72a59e3ec0b9c6c423/run-b7a5f118b1b24b72a59e3ec0b9c6c423.wandb": {
+    "sha256": "81425e4ce12b3809e983e8ebb1fe735648ca2546a5bc43b1537d313698a22f9c",
+    "bytes": 840071,
+    "mtime_ns": 1791463384983933252
+  },
+  "fold_01/gated/best.pt": {
+    "sha256": "5b0aa3f24e00b004f06e897f50fa78dc86cf87e552f79a27c81907771206dcec",
+    "bytes": 426659821,
+    "mtime_ns": 1791460851069452737
+  },
+  "fold_01/gated/config.json": {
+    "sha256": "ac5cf38987301994a4595870edea66072507c9d4319cb37c5dc88c9bf1468902",
+    "bytes": 15360,
+    "mtime_ns": 1791459677271157277
+  },
+  "fold_01/gated/confusion_matrix.json": {
+    "sha256": "a98da094b40a4b5599334ebdb353ad9af638a9da5e3f64b93492af25885bd1fc",
+    "bytes": 961,
+    "mtime_ns": 1791461391414667237
+  },
+  "fold_01/gated/history.csv": {
+    "sha256": "eac6f68dfe9a779fe118d0d009c6f0ff602addfc178def3e378a7305acb7397d",
+    "bytes": 6418,
+    "mtime_ns": 1791461376621417154
+  },
+  "fold_01/gated/metrics.json": {
+    "sha256": "963f4f3f2aefe41bec6f564ef9ab2e9d212b2d60c943401332188d39edc3fdc7",
+    "bytes": 16850,
+    "mtime_ns": 1791461391418667236
+  },
+  "fold_01/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791459677473189554
+  },
+  "fold_01/gated/test_predictions.csv": {
+    "sha256": "36544d7ddb48335a9830998f31609a9b773b6f3c54354d6844b84c8e675efb00",
+    "bytes": 6034,
+    "mtime_ns": 1791461391398667237
+  },
+  "fold_01/gated/tracking.json": {
+    "sha256": "f5734e62cd11c2875bf830255b03559f4605d83d4751c88090d2f22394005056",
+    "bytes": 17045,
+    "mtime_ns": 1791461391554667228
+  },
+  "fold_01/gated/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/logs/debug-internal.log",
+    "mtime_ns": 1791459677271157277
+  },
+  "fold_01/gated/wandb/debug.log": {
+    "symlink": "offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/logs/debug.log",
+    "mtime_ns": 1791459677271157277
+  },
+  "fold_01/gated/wandb/latest-run": {
+    "symlink": "offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5",
+    "mtime_ns": 1791459677271157277
+  },
+  "fold_01/gated/wandb/offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791459677426566721
+  },
+  "fold_01/gated/wandb/offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261008_185534.log",
+    "mtime_ns": 1791459677275042513
+  },
+  "fold_01/gated/wandb/offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/logs/debug-internal.log": {
+    "sha256": "58428dfb96a6c8c1bfd3613560851dac29b11f0a60e026b30792ed4529374610",
+    "bytes": 1715,
+    "mtime_ns": 1791461391554667228
+  },
+  "fold_01/gated/wandb/offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/logs/debug.log": {
+    "sha256": "70ff78a6f192e9e41a2d500c0fe9080f78e347b32fba7504ef410cea1a9f1370",
+    "bytes": 14233,
+    "mtime_ns": 1791461391538667230
+  },
+  "fold_01/gated/wandb/offline-run-20261008_194117-a5881de84d0540e39c3a5215242757d5/run-a5881de84d0540e39c3a5215242757d5.wandb": {
+    "sha256": "da025d94f7ebd25bb740a90403ee279aa03c4305914c77760b0e41d056dac213",
+    "bytes": 695992,
+    "mtime_ns": 1791461391554667228
+  },
+  "fold_01/split.json": {
+    "sha256": "149d834411ae620d132924babedf380cfb5e97c26267bf95736106f015a1632b",
+    "bytes": 11241,
+    "mtime_ns": 1791456933248338670
+  },
+  "fold_01/video/best.pt": {
+    "sha256": "7985744c54552af4652b5488ea52465ad4ae63b8e6985206d2913e57b01b3178",
+    "bytes": 44801803,
+    "mtime_ns": 1791459093616342759
+  },
+  "fold_01/video/config.json": {
+    "sha256": "2377c24577c693a59861e6f9f5ab26107ffcc3cab4eabc04b7987e2780d6d30e",
+    "bytes": 15144,
+    "mtime_ns": 1791458368306992671
+  },
+  "fold_01/video/confusion_matrix.json": {
+    "sha256": "10b214cde7096002b597b5a6d0f866341601a1904a49ab01748b71603f1e674b",
+    "bytes": 960,
+    "mtime_ns": 1791459677152352135
+  },
+  "fold_01/video/history.csv": {
+    "sha256": "af095a5a09fa0875d4e9caf0efe06d7ae6ee218dd445cd714d4dc2fd6b6d32d4",
+    "bytes": 4148,
+    "mtime_ns": 1791459664483276406
+  },
+  "fold_01/video/metrics.json": {
+    "sha256": "f478b97a34ee3536e35517713b152ba2b12cb0bb5c23645eb33568d37004159e",
+    "bytes": 16638,
+    "mtime_ns": 1791459677155952137
+  },
+  "fold_01/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791458368720361340
+  },
+  "fold_01/video/test_predictions.csv": {
+    "sha256": "df5d8b7c8e19adfbb614dd54ee2302bed3c8349eaa9d3fbf6e3cb737559564ce",
+    "bytes": 6034,
+    "mtime_ns": 1791459677141552136
+  },
+  "fold_01/video/tracking.json": {
+    "sha256": "574a3866519fe3bad3d5691b9cb1f57b8995d9f40d4df106ec9856c9214bc8ed",
+    "bytes": 16829,
+    "mtime_ns": 1791459677259501569
+  },
+  "fold_01/video/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/logs/debug-internal.log",
+    "mtime_ns": 1791458368310820159
+  },
+  "fold_01/video/wandb/debug.log": {
+    "symlink": "offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/logs/debug.log",
+    "mtime_ns": 1791458368310820159
+  },
+  "fold_01/video/wandb/latest-run": {
+    "symlink": "offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d",
+    "mtime_ns": 1791458368310820159
+  },
+  "fold_01/video/wandb/offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791458368548124393
+  },
+  "fold_01/video/wandb/offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261008_185534.log",
+    "mtime_ns": 1791458368345267548
+  },
+  "fold_01/video/wandb/offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/logs/debug-internal.log": {
+    "sha256": "ee315aacc4feedd597231c9b5ae2bf92303ac6a7562b8344ca7f006d4700770f",
+    "bytes": 1714,
+    "mtime_ns": 1791459677259501569
+  },
+  "fold_01/video/wandb/offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/logs/debug.log": {
+    "sha256": "63a443c7a0a1c621bf99b076f8762a551174b195761cd639b924108504d76af4",
+    "bytes": 14017,
+    "mtime_ns": 1791459677255616333
+  },
+  "fold_01/video/wandb/offline-run-20261008_191928-036a841b0c81436ea46c48ef5533c18d/run-036a841b0c81436ea46c48ef5533c18d.wandb": {
+    "sha256": "ea3d6e537a2757935554cd3a949cf218663fb533c82df60f331781e33cfe862a",
+    "bytes": 270707,
+    "mtime_ns": 1791459677259501569
+  },
+  "fold_01/xattn/best.pt": {
+    "sha256": "873699630eb0908d3b8bc726d679e8c24fdc72b69a901b33c4685e7359ecc5ae",
+    "bytes": 426608541,
+    "mtime_ns": 1791465508605056591
+  },
+  "fold_01/xattn/config.json": {
+    "sha256": "ab0e5ba9213561a31051550827dde103f496bf0d3e54b5178c7363062d83c84d",
+    "bytes": 15360,
+    "mtime_ns": 1791463393036912795
+  },
+  "fold_01/xattn/confusion_matrix.json": {
+    "sha256": "31442a09b0a1801664e41643a3ba72563c6f3b07ef58b6076bdb99ea3fc5b77d",
+    "bytes": 961,
+    "mtime_ns": 1791465723262371201
+  },
+  "fold_01/xattn/history.csv": {
+    "sha256": "e3a00698cab474401cf116fbec200a3dd4cd9adfc08b7cf5c0f21ef0a64868f6",
+    "bytes": 8514,
+    "mtime_ns": 1791465708873340634
+  },
+  "fold_01/xattn/metrics.json": {
+    "sha256": "d11b0de425751bc624d1c0d77bf70e07986a2723d5d0475823e978029b95387a",
+    "bytes": 16854,
+    "mtime_ns": 1791465723262371201
+  },
+  "fold_01/xattn/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791463394216899463
+  },
+  "fold_01/xattn/test_predictions.csv": {
+    "sha256": "717f9da6262f853c5c64f9ce8b1f7e778e7adeed5680ad0ff16c9d01613c1992",
+    "bytes": 6034,
+    "mtime_ns": 1791465723254598631
+  },
+  "fold_01/xattn/tracking.json": {
+    "sha256": "a4edd99e52c6c7a0d1d790a3a3e64053d5acdde306f6e077f76c441a9a14025e",
+    "bytes": 17045,
+    "mtime_ns": 1791465723406163770
+  },
+  "fold_01/xattn/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/logs/debug-internal.log",
+    "mtime_ns": 1791463393576906694
+  },
+  "fold_01/xattn/wandb/debug.log": {
+    "symlink": "offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/logs/debug.log",
+    "mtime_ns": 1791463393576906694
+  },
+  "fold_01/xattn/wandb/latest-run": {
+    "symlink": "offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd",
+    "mtime_ns": 1791463393576906694
+  },
+  "fold_01/xattn/wandb/offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791463394176899915
+  },
+  "fold_01/xattn/wandb/offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261008_204313.log",
+    "mtime_ns": 1791463393816903982
+  },
+  "fold_01/xattn/wandb/offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/logs/debug-internal.log": {
+    "sha256": "80fbd162a1b1cdeff84173a8965b05f61be7e38e6774ff9c0de7f51346a097eb",
+    "bytes": 1714,
+    "mtime_ns": 1791465723398391200
+  },
+  "fold_01/xattn/wandb/offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/logs/debug.log": {
+    "sha256": "d09ace14c41a7822fb8c19e66052425d4ec9ae914be0b614a268a8e4271730e5",
+    "bytes": 14570,
+    "mtime_ns": 1791465723394504914
+  },
+  "fold_01/xattn/wandb/offline-run-20261008_204313-c724cd30296a45878f4dd8a59e96e0bd/run-c724cd30296a45878f4dd8a59e96e0bd.wandb": {
+    "sha256": "2f295b600cdfe4d5bc9efeaebdc2638924e07dde9b9fb29289dbead0769e8425",
+    "bytes": 953703,
+    "mtime_ns": 1791465723398391200
+  },
+  "fold_02/audio/best.pt": {
+    "sha256": "67e647d09319fa15a8835f11e37f6ca81e7e75c9f04097a861274e69b9d508a8",
+    "bytes": 380005889,
+    "mtime_ns": 1791488903030387458
+  },
+  "fold_02/audio/config.json": {
+    "sha256": "6d0bfc909f816683b751fed16233ae97bb0cd1ed12fb67ab93c9591902533287",
+    "bytes": 15144,
+    "mtime_ns": 1791487740774840078
+  },
+  "fold_02/audio/confusion_matrix.json": {
+    "sha256": "54b7d0b75905c3a40fb5d8da06fa55089c3710ca741190b3299c99ce2155efb5",
+    "bytes": 961,
+    "mtime_ns": 1791489046926320880
+  },
+  "fold_02/audio/history.csv": {
+    "sha256": "7cf417eaba15629685b76f6551f244944c7eda615f0ae5663a2f1f840175eb1a",
+    "bytes": 4618,
+    "mtime_ns": 1791489030925815164
+  },
+  "fold_02/audio/metrics.json": {
+    "sha256": "78fdd11c951a18fbbc819ad0c195a1dc6944afc618f3896f4c0b2aeb5fc650ab",
+    "bytes": 16638,
+    "mtime_ns": 1791489046930095243
+  },
+  "fold_02/audio/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791487743737305904
+  },
+  "fold_02/audio/test_predictions.csv": {
+    "sha256": "291b3431114ae159a5f4d068b7108a622e5b716917f78392b559b080e6c45617",
+    "bytes": 6034,
+    "mtime_ns": 1791489046922546517
+  },
+  "fold_02/audio/tracking.json": {
+    "sha256": "ffb175eda537d6e7b986683da7c73c3aeea0c1746aab9d86faf00c1e5bcad148",
+    "bytes": 16829,
+    "mtime_ns": 1791489047054649222
+  },
+  "fold_02/audio/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/logs/debug-internal.log",
+    "mtime_ns": 1791487741281490530
+  },
+  "fold_02/audio/wandb/debug.log": {
+    "symlink": "offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/logs/debug.log",
+    "mtime_ns": 1791487741281490530
+  },
+  "fold_02/audio/wandb/latest-run": {
+    "symlink": "offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90",
+    "mtime_ns": 1791487741281490530
+  },
+  "fold_02/audio/wandb/offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791487743703021287
+  },
+  "fold_02/audio/wandb/offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_032901.log",
+    "mtime_ns": 1791487743040185357
+  },
+  "fold_02/audio/wandb/offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/logs/debug-internal.log": {
+    "sha256": "0388560a08f9f7de51b774403c03184a5d33bf0d12e4bd42b066ecfa94a52112",
+    "bytes": 1715,
+    "mtime_ns": 1791489047054649222
+  },
+  "fold_02/audio/wandb/offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/logs/debug.log": {
+    "sha256": "59fd0e2336a14383a29931f81f78a2708b8519014bddb677619a5e97d7b60618",
+    "bytes": 14354,
+    "mtime_ns": 1791489047024454318
+  },
+  "fold_02/audio/wandb/offline-run-20261009_032901-563735f7a65d4149abb0024d1ccc8a90/run-563735f7a65d4149abb0024d1ccc8a90.wandb": {
+    "sha256": "21e7b830040e8762503102e0e5b0251ef04e0011fb833f3a04bfa38098fcb4c2",
+    "bytes": 430920,
+    "mtime_ns": 1791489047054649222
+  },
+  "fold_02/chumachenko_ia/best.pt": {
+    "sha256": "aad04691c0020537d1d32570734f93168321547a9b7a96b1727a86140b97d415",
+    "bytes": 425739117,
+    "mtime_ns": 1791542783637024216
+  },
+  "fold_02/chumachenko_ia/config.json": {
+    "sha256": "12d6bdba81642b65e7b954b99ddf55cc7eb9424d5a539c5e783c077f9d226cf7",
+    "bytes": 15396,
+    "mtime_ns": 1791542038324263162
+  },
+  "fold_02/chumachenko_ia/confusion_matrix.json": {
+    "sha256": "4a7bb0c2430f7351d0de3c797e264184a0d4e38d06f699a47225a305cddc41b1",
+    "bytes": 961,
+    "mtime_ns": 1791543286592037029
+  },
+  "fold_02/chumachenko_ia/history.csv": {
+    "sha256": "e9e8c38af86fa83fa08ae3e152979e861c5797152f131bd9068b5433b5ab1505",
+    "bytes": 4933,
+    "mtime_ns": 1791543274338037350
+  },
+  "fold_02/chumachenko_ia/metrics.json": {
+    "sha256": "bf1f45847d77705abd339a4530c7af6bbfb3bfae8cff777c81afece4407ba39f",
+    "bytes": 16897,
+    "mtime_ns": 1791543286595703695
+  },
+  "fold_02/chumachenko_ia/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791542039215263137
+  },
+  "fold_02/chumachenko_ia/test_predictions.csv": {
+    "sha256": "ee5ec4fdeaa40cec56507b8b03bce930aad74d3aa23b49e4538aa1256e56bfcf",
+    "bytes": 6034,
+    "mtime_ns": 1791543286588370362
+  },
+  "fold_02/chumachenko_ia/tracking.json": {
+    "sha256": "febafa79c6848985f8a41a3c62974164c0e28a029b36ca893d72bd617c88039d",
+    "bytes": 17108,
+    "mtime_ns": 1791543286724037026
+  },
+  "fold_02/chumachenko_ia/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/logs/debug-internal.log",
+    "mtime_ns": 1791542038793596483
+  },
+  "fold_02/chumachenko_ia/wandb/debug.log": {
+    "symlink": "offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/logs/debug.log",
+    "mtime_ns": 1791542038793596483
+  },
+  "fold_02/chumachenko_ia/wandb/latest-run": {
+    "symlink": "offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe",
+    "mtime_ns": 1791542038789929816
+  },
+  "fold_02/chumachenko_ia/wandb/offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791542039182263138
+  },
+  "fold_02/chumachenko_ia/wandb/offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_183358.log",
+    "mtime_ns": 1791542039035596475
+  },
+  "fold_02/chumachenko_ia/wandb/offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/logs/debug-internal.log": {
+    "sha256": "6d5172ad2c1cae9d4f5dc83413885df56886c19edd07b0583ce9503cd9f4d427",
+    "bytes": 1715,
+    "mtime_ns": 1791543286724037026
+  },
+  "fold_02/chumachenko_ia/wandb/offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/logs/debug.log": {
+    "sha256": "5ca1db55d0c3dfb8a35e40e17b3a351e40a74e0344e3b970052a3d60b13e3cf5",
+    "bytes": 14665,
+    "mtime_ns": 1791543286713037025
+  },
+  "fold_02/chumachenko_ia/wandb/offline-run-20261009_183358-58700a94d5e747409a6e8a19eb5484fe/run-58700a94d5e747409a6e8a19eb5484fe.wandb": {
+    "sha256": "12e45b65d347b399e60839fec583ef697d3ddd255149b120b5e4b9be57965701",
+    "bytes": 579230,
+    "mtime_ns": 1791543286724037026
+  },
+  "fold_02/gated/best.pt": {
+    "sha256": "37a196eca8ad9f0c299e3685ad608c3f6d4f545c8fa30233ea7f8ef50794bc47",
+    "bytes": 426659821,
+    "mtime_ns": 1791522753562237464
+  },
+  "fold_02/gated/config.json": {
+    "sha256": "89626c4ea5a5f13d10580cfc783f76600e0611c17b716500923bc68abc0806d8",
+    "bytes": 15360,
+    "mtime_ns": 1791521329533763609
+  },
+  "fold_02/gated/confusion_matrix.json": {
+    "sha256": "e3645a8d17ec07d8de5091bf43c7b6b247c6300d2629062dd7a1197f473b90f3",
+    "bytes": 962,
+    "mtime_ns": 1791523284664565524
+  },
+  "fold_02/gated/history.csv": {
+    "sha256": "c87d0de1cafa45215fe57042d9c229e167f228ef5317555ec2dc5d9354e6e836",
+    "bytes": 7394,
+    "mtime_ns": 1791523269310903342
+  },
+  "fold_02/gated/metrics.json": {
+    "sha256": "1aa272386093563245c28173d751265ff104b9e9097479f06f3b1cea2e895bcc",
+    "bytes": 16831,
+    "mtime_ns": 1791523284672119205
+  },
+  "fold_02/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791521330907079207
+  },
+  "fold_02/gated/test_predictions.csv": {
+    "sha256": "82222ddde4738b8f8971acb751fecc8878c2dfb72906bcb8248c2b6cb3e00742",
+    "bytes": 6034,
+    "mtime_ns": 1791523284657011842
+  },
+  "fold_02/gated/tracking.json": {
+    "sha256": "39526c1af8dc7a52c5e6c29579fef17764a904eae327de0df2d220bae8d1abc2",
+    "bytes": 17045,
+    "mtime_ns": 1791523284834523358
+  },
+  "fold_02/gated/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/logs/debug-internal.log",
+    "mtime_ns": 1791521330064016020
+  },
+  "fold_02/gated/wandb/debug.log": {
+    "symlink": "offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/logs/debug.log",
+    "mtime_ns": 1791521330064016020
+  },
+  "fold_02/gated/wandb/latest-run": {
+    "symlink": "offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7",
+    "mtime_ns": 1791521330064016020
+  },
+  "fold_02/gated/wandb/offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791521330868931551
+  },
+  "fold_02/gated/wandb/offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791521330315790546
+  },
+  "fold_02/gated/wandb/offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/logs/debug-internal.log": {
+    "sha256": "7701fe3fa2f0c404f0b7f7147df11a07a423fcb97b78a9cdb7883b93a7c2a019",
+    "bytes": 1716,
+    "mtime_ns": 1791523284834523358
+  },
+  "fold_02/gated/wandb/offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/logs/debug.log": {
+    "sha256": "e17b1b51f4dc01a29908e9d24fd6dd80ec9175d7192f8e5b69a3fa8d547cfa6d",
+    "bytes": 14570,
+    "mtime_ns": 1791523284800531791
+  },
+  "fold_02/gated/wandb/offline-run-20261009_124850-c1ce961c4f644c4bb7c65fb090de57b7/run-c1ce961c4f644c4bb7c65fb090de57b7.wandb": {
+    "sha256": "0abb918e083969b148874443538cb4b5d5f547bd2555fde0d72fd38fc949c817",
+    "bytes": 801506,
+    "mtime_ns": 1791523284830746517
+  },
+  "fold_02/split.json": {
+    "sha256": "b01ab5a1cafe6cbe314196836daf0cc73a452468163652e92e4fe1cfb3834845",
+    "bytes": 11241,
+    "mtime_ns": 1791487740767221274
+  },
+  "fold_02/video/best.pt": {
+    "sha256": "d65b7b31e2894ed7467c102f3dc56ecd34bc4ab0342ed3ab06182e0ec45963c0",
+    "bytes": 44801803,
+    "mtime_ns": 1791490183701395240
+  },
+  "fold_02/video/config.json": {
+    "sha256": "3f3b2031c37fda286a195566a7bf382e9b467b0f66fe2cf479f55240ef3c9fe6",
+    "bytes": 15144,
+    "mtime_ns": 1791489047062197948
+  },
+  "fold_02/video/confusion_matrix.json": {
+    "sha256": "f207992294f324d00cd57474c22abd55435a1184b67e61e93b0b8ccbe8645256",
+    "bytes": 960,
+    "mtime_ns": 1791490325068116766
+  },
+  "fold_02/video/history.csv": {
+    "sha256": "f440bb66b2e1b0410a6efebbea2097dc6b182c2ec480e26d4bd5ebc2fa58e44a",
+    "bytes": 4151,
+    "mtime_ns": 1791490310191538343
+  },
+  "fold_02/video/metrics.json": {
+    "sha256": "8a03a746aefc5181a40ae090ec7d8191ecfe67814cf25182644d9214eb900b91",
+    "bytes": 16639,
+    "mtime_ns": 1791490325072085871
+  },
+  "fold_02/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791489047462280428
+  },
+  "fold_02/video/test_predictions.csv": {
+    "sha256": "0906feb0dba0edcefc1ad511a8b8b9e37bf5f205fe1c93c71f0b4704483bd036",
+    "bytes": 6034,
+    "mtime_ns": 1791490325052240345
+  },
+  "fold_02/video/tracking.json": {
+    "sha256": "8770b4cab3c44a11cec7c290e7400c8b6396d2f5e495066dcaf92584292a3e3c",
+    "bytes": 16829,
+    "mtime_ns": 1791490325187189934
+  },
+  "fold_02/video/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/logs/debug-internal.log",
+    "mtime_ns": 1791489047065972311
+  },
+  "fold_02/video/wandb/debug.log": {
+    "symlink": "offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/logs/debug.log",
+    "mtime_ns": 1791489047065972311
+  },
+  "fold_02/video/wandb/latest-run": {
+    "symlink": "offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff",
+    "mtime_ns": 1791489047065972311
+  },
+  "fold_02/video/wandb/offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791489047269787914
+  },
+  "fold_02/video/wandb/offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_032901.log",
+    "mtime_ns": 1791489047103715941
+  },
+  "fold_02/video/wandb/offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/logs/debug-internal.log": {
+    "sha256": "18381f68103d1508f341b2ae79ae0027c051bcf641c8f47b1e3dc28e1493a470",
+    "bytes": 1716,
+    "mtime_ns": 1791490325187189934
+  },
+  "fold_02/video/wandb/offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/logs/debug.log": {
+    "sha256": "7edb82cb4797a5f02c7153e86df42454abd07392db56973b94e061795e52e39c",
+    "bytes": 14017,
+    "mtime_ns": 1791490325183220828
+  },
+  "fold_02/video/wandb/offline-run-20261009_035047-4e6f6321e2564281859bb39b14901fff/run-4e6f6321e2564281859bb39b14901fff.wandb": {
+    "sha256": "006a88e1a288f3ba27282f641ed7e5448aea7fe8ed45b9c3630a724c51ebbbf4",
+    "bytes": 249032,
+    "mtime_ns": 1791490325187189934
+  },
+  "fold_02/xattn/best.pt": {
+    "sha256": "e73182fd0c6be06325d6da7f7d466d626d04ecf06fab9ad5c9da0dd65291aaef",
+    "bytes": 426608541,
+    "mtime_ns": 1791548569031936380
+  },
+  "fold_02/xattn/config.json": {
+    "sha256": "eb9b9b35aa7dbab113f55e05a9c993b20fd4f1a64f90dca260613a57e9156976",
+    "bytes": 15360,
+    "mtime_ns": 1791547864136149475
+  },
+  "fold_02/xattn/confusion_matrix.json": {
+    "sha256": "c292fad0154c2865f9f02587e000e14a9952a970ddeb6d065782e41661e742a8",
+    "bytes": 961,
+    "mtime_ns": 1791549196626421403
+  },
+  "fold_02/xattn/history.csv": {
+    "sha256": "72e0ddbf2d928a961a26bfe233e13cf4c1a95b0888f6cf129448a88a7d3a1ecd",
+    "bytes": 5111,
+    "mtime_ns": 1791549182708254235
+  },
+  "fold_02/xattn/metrics.json": {
+    "sha256": "fee777fcb925d05b9193636a04020fe3b8363dd7c60aa7fcca385ec92e75bfa7",
+    "bytes": 16855,
+    "mtime_ns": 1791549196630088069
+  },
+  "fold_02/xattn/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791547865237749494
+  },
+  "fold_02/xattn/test_predictions.csv": {
+    "sha256": "76f0e626cc90d816031cab445e3bb402221ac1fbe34f63e5060087aa7f2a4fa9",
+    "bytes": 6034,
+    "mtime_ns": 1791549196619088069
+  },
+  "fold_02/xattn/tracking.json": {
+    "sha256": "23453ab108c49c5eebcc165be25f79b9cac2a781335898ffec98e5e7313f7316",
+    "bytes": 17045,
+    "mtime_ns": 1791549196795088050
+  },
+  "fold_02/xattn/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/logs/debug-internal.log",
+    "mtime_ns": 1791547864784149487
+  },
+  "fold_02/xattn/wandb/debug.log": {
+    "symlink": "offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/logs/debug.log",
+    "mtime_ns": 1791547864784149487
+  },
+  "fold_02/xattn/wandb/latest-run": {
+    "symlink": "offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5",
+    "mtime_ns": 1791547864784149487
+  },
+  "fold_02/xattn/wandb/offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791547865198149493
+  },
+  "fold_02/xattn/wandb/offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_201104.log",
+    "mtime_ns": 1791547865039749491
+  },
+  "fold_02/xattn/wandb/offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/logs/debug-internal.log": {
+    "sha256": "127c98128a0d61405613dbf1d16ff93b3b5a154f391f74c8d3466a5c0b59bfca",
+    "bytes": 1714,
+    "mtime_ns": 1791549196795088050
+  },
+  "fold_02/xattn/wandb/offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/logs/debug.log": {
+    "sha256": "d36da16e45c9838026728c38744a6cdb3b3946508658569e42264edf2900f9dc",
+    "bytes": 14616,
+    "mtime_ns": 1791549196765754719
+  },
+  "fold_02/xattn/wandb/offline-run-20261009_201104-f17e8c0e094f4738af5ff8f991b19ea5/run-f17e8c0e094f4738af5ff8f991b19ea5.wandb": {
+    "sha256": "020aefb7312ebda9d0abddf1cb058d5db1717001e186648e381911cbacd30017",
+    "bytes": 571669,
+    "mtime_ns": 1791549196795088050
+  },
+  "fold_03/audio/best.pt": {
+    "sha256": "92ae5e89a8018de52dd56360f729b02b20802506243510d113d19338465a4962",
+    "bytes": 380005889,
+    "mtime_ns": 1791523999566840130
+  },
+  "fold_03/audio/config.json": {
+    "sha256": "b3fcd752cd4f6aedb378ec3705ac23f05be05ea47d96f543f160fbacbc5b24a9",
+    "bytes": 15144,
+    "mtime_ns": 1791523284838300199
+  },
+  "fold_03/audio/confusion_matrix.json": {
+    "sha256": "9c08f3897ed38170338286a5159682996b5a19a4ac23635a725f3efd227c96f7",
+    "bytes": 962,
+    "mtime_ns": 1791524593154326144
+  },
+  "fold_03/audio/history.csv": {
+    "sha256": "8ca8e4fd05d229338c76a4d6395f7eba09a2e94cff89d7baa7dc43e70c3980c6",
+    "bytes": 4669,
+    "mtime_ns": 1791524579057810353
+  },
+  "fold_03/audio/metrics.json": {
+    "sha256": "8dbdd985157113225978bd4abcd0f500c58c0e25f70aafb0349dcc8e450a1771",
+    "bytes": 16627,
+    "mtime_ns": 1791524593158121758
+  },
+  "fold_03/audio/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791523285306628452
+  },
+  "fold_03/audio/test_predictions.csv": {
+    "sha256": "f894d9587d000f7defe4baad1e794eb13752b1f75b1e80dadd5350b13196e8a0",
+    "bytes": 6214,
+    "mtime_ns": 1791524593139143693
+  },
+  "fold_03/audio/tracking.json": {
+    "sha256": "23152a353aab54657fb5c03f289634d5abab51d44e10f4de53d296a62f66d002",
+    "bytes": 16829,
+    "mtime_ns": 1791524593268194537
+  },
+  "fold_03/audio/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/logs/debug-internal.log",
+    "mtime_ns": 1791523284845853881
+  },
+  "fold_03/audio/wandb/debug.log": {
+    "symlink": "offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/logs/debug.log",
+    "mtime_ns": 1791523284845853881
+  },
+  "fold_03/audio/wandb/latest-run": {
+    "symlink": "offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d",
+    "mtime_ns": 1791523284845853881
+  },
+  "fold_03/audio/wandb/offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791523285102679052
+  },
+  "fold_03/audio/wandb/offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791523284872291765
+  },
+  "fold_03/audio/wandb/offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/logs/debug-internal.log": {
+    "sha256": "6d186ac6de82a0d7c0035444174b379416f18ae9fcaf09ac8b2a5a9678fec43c",
+    "bytes": 1716,
+    "mtime_ns": 1791524593268194537
+  },
+  "fold_03/audio/wandb/offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/logs/debug.log": {
+    "sha256": "53be5bfa04bf95f11baa5463c93ea908afc7032a597a71f120b7e32239944270",
+    "bytes": 14017,
+    "mtime_ns": 1791524593264398923
+  },
+  "fold_03/audio/wandb/offline-run-20261009_132124-821060c4488649f59cc82b3e85bfd21d/run-821060c4488649f59cc82b3e85bfd21d.wandb": {
+    "sha256": "9ce5279f2853ae31f40586c011530f29beee0a0528e1e45e8ad68f7e1036d609",
+    "bytes": 431099,
+    "mtime_ns": 1791524593268194537
+  },
+  "fold_03/chumachenko_ia/best.pt": {
+    "sha256": "ed347b7818945da2ff3d3dd87b4bdfd26f27e5a4568b62dc1f4896f769b295d5",
+    "bytes": 425739117,
+    "mtime_ns": 1791543906158578313
+  },
+  "fold_03/chumachenko_ia/config.json": {
+    "sha256": "5a1e6bf2c58364de8d37eb5c771d085942d77ff33efed5f7181a204d511b1ee8",
+    "bytes": 15396,
+    "mtime_ns": 1791543286727703691
+  },
+  "fold_03/chumachenko_ia/confusion_matrix.json": {
+    "sha256": "23c1dc0da798027bf2d6ca8857637903ecf1e9054b1cb78364814f195aebe832",
+    "bytes": 961,
+    "mtime_ns": 1791544410216480773
+  },
+  "fold_03/chumachenko_ia/history.csv": {
+    "sha256": "baa825d7e63965c85bf8a247ebee309aef93e2ce92867bd3859939e1ae3b8544",
+    "bytes": 4395,
+    "mtime_ns": 1791544398193481086
+  },
+  "fold_03/chumachenko_ia/metrics.json": {
+    "sha256": "67c37bb448944700fe9a4caa48d825a7f2f8f915b71977ce0c8fc783a4f44f09",
+    "bytes": 16893,
+    "mtime_ns": 1791544410223814106
+  },
+  "fold_03/chumachenko_ia/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791543290020425596
+  },
+  "fold_03/chumachenko_ia/test_predictions.csv": {
+    "sha256": "fef349c27c0dbc6baf84d48d0cbefe79a2e7eaf8013431c6833333e819e73c34",
+    "bytes": 6214,
+    "mtime_ns": 1791544410201814107
+  },
+  "fold_03/chumachenko_ia/tracking.json": {
+    "sha256": "baea54dcf5058534e8528523f38925a639769eaeabf072de44434211f1b52d57",
+    "bytes": 17108,
+    "mtime_ns": 1791544410363147435
+  },
+  "fold_03/chumachenko_ia/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/logs/debug-internal.log",
+    "mtime_ns": 1791543286731370358
+  },
+  "fold_03/chumachenko_ia/wandb/debug.log": {
+    "symlink": "offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/logs/debug.log",
+    "mtime_ns": 1791543286731370358
+  },
+  "fold_03/chumachenko_ia/wandb/latest-run": {
+    "symlink": "offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82",
+    "mtime_ns": 1791543286731370358
+  },
+  "fold_03/chumachenko_ia/wandb/offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791543286892703686
+  },
+  "fold_03/chumachenko_ia/wandb/offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_183358.log",
+    "mtime_ns": 1791543286738703691
+  },
+  "fold_03/chumachenko_ia/wandb/offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/logs/debug-internal.log": {
+    "sha256": "d82d10bc6abc810ebe8b98a0583e77eaa3a0e0d16fcf8dd3b5b32021b855ad08",
+    "bytes": 1715,
+    "mtime_ns": 1791544410363147435
+  },
+  "fold_03/chumachenko_ia/wandb/offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/logs/debug.log": {
+    "sha256": "43af1894f44821494db641c0b9ca0d850c259aeb0654be2a76bcfd1fc88ec4bf",
+    "bytes": 14324,
+    "mtime_ns": 1791544410359480769
+  },
+  "fold_03/chumachenko_ia/wandb/offline-run-20261009_185446-9416ff1f42a4452b90d897fe963bbc82/run-9416ff1f42a4452b90d897fe963bbc82.wandb": {
+    "sha256": "1e2b35bbe2808539b609e99c41de2f0fad0ca20e50c45f24146b49d06b55df91",
+    "bytes": 512305,
+    "mtime_ns": 1791544410363147435
+  },
+  "fold_03/gated/best.pt": {
+    "sha256": "a67e9e70fa078551cf1e4c017e83e90f4826836eb917cb641b7e16c1ee63d880",
+    "bytes": 426659821,
+    "mtime_ns": 1791527483516294168
+  },
+  "fold_03/gated/config.json": {
+    "sha256": "38f49b127e472876167562f6d395ca1f2d1e555657fc0ba20829fb358c3d51ba",
+    "bytes": 15360,
+    "mtime_ns": 1791525839735820644
+  },
+  "fold_03/gated/confusion_matrix.json": {
+    "sha256": "0112b35d2d0a6b33fcb2bad657d357cd3a88d8d9966ca1317ff528d7f3fe643a",
+    "bytes": 961,
+    "mtime_ns": 1791527828757712892
+  },
+  "fold_03/gated/history.csv": {
+    "sha256": "6176d4e7ac0fe31a3d001aa3e44050ac2654b7650ee8a6ce0e93b89c66ac6774",
+    "bytes": 7437,
+    "mtime_ns": 1791527814873949395
+  },
+  "fold_03/gated/metrics.json": {
+    "sha256": "18c40bc39d182b686fe7b89b5e1f270c5a9c6796520e4b7714318bf55000b49b",
+    "bytes": 16853,
+    "mtime_ns": 1791527828761468107
+  },
+  "fold_03/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791525839930751684
+  },
+  "fold_03/gated/test_predictions.csv": {
+    "sha256": "dc4e3db90fd4e3af7bcb9952bfdfbf9af86db6483f59b991402ea82788f27528",
+    "bytes": 6214,
+    "mtime_ns": 1791527828742692034
+  },
+  "fold_03/gated/tracking.json": {
+    "sha256": "a70378edf8a4826e63f167c0aa3e2433676f96ed861ab3712b59ed72fb6ddc44",
+    "bytes": 17045,
+    "mtime_ns": 1791527828881634970
+  },
+  "fold_03/gated/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/logs/debug-internal.log",
+    "mtime_ns": 1791525839739569317
+  },
+  "fold_03/gated/wandb/debug.log": {
+    "symlink": "offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/logs/debug.log",
+    "mtime_ns": 1791525839739569317
+  },
+  "fold_03/gated/wandb/latest-run": {
+    "symlink": "offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef",
+    "mtime_ns": 1791525839739569317
+  },
+  "fold_03/gated/wandb/offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791525839893264946
+  },
+  "fold_03/gated/wandb/offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791525839739569317
+  },
+  "fold_03/gated/wandb/offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/logs/debug-internal.log": {
+    "sha256": "1ac555bcb6612898fdafd9a18a19a5221527a60187afc72c1b04cb0909b50b62",
+    "bytes": 1716,
+    "mtime_ns": 1791527828881634970
+  },
+  "fold_03/gated/wandb/offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/logs/debug.log": {
+    "sha256": "c11b67c89802075a23a862c6a03644915fb7d2803884d98b918aae7242bf1c22",
+    "bytes": 14233,
+    "mtime_ns": 1791527828877879755
+  },
+  "fold_03/gated/wandb/offline-run-20261009_140359-a8dde97a07574e218e43fa63a6a25bef/run-a8dde97a07574e218e43fa63a6a25bef.wandb": {
+    "sha256": "9782ab25ea4d0c2991a4a923453937d6580c12ab11f7a63e5ac652fce7793afa",
+    "bytes": 784598,
+    "mtime_ns": 1791527828881634970
+  },
+  "fold_03/split.json": {
+    "sha256": "5819e98c35b19d967c28766060a90783163b52ad2c17583085e4c5d51d1bf8b7",
+    "bytes": 11241,
+    "mtime_ns": 1791523284834523358
+  },
+  "fold_03/video/best.pt": {
+    "sha256": "bf28bf39dbc1bba2906ab60aa0fc814c2901ca26cc1bb3bee0da672440a4619f",
+    "bytes": 44801803,
+    "mtime_ns": 1791525272563756911
+  },
+  "fold_03/video/config.json": {
+    "sha256": "fc766ade75a9046e77dac322eece8b0a2cfb142801424c424e55d90623165ac5",
+    "bytes": 15144,
+    "mtime_ns": 1791524593279581376
+  },
+  "fold_03/video/confusion_matrix.json": {
+    "sha256": "4533c71f36af68819b99c649cbf66b4f28695df31d7effad632d61ac2f22da6a",
+    "bytes": 960,
+    "mtime_ns": 1791525839604617058
+  },
+  "fold_03/video/history.csv": {
+    "sha256": "4cb58bbf203f2bb54a3ce0d80fa4a71a2f8921d6ab313454949a0648573e40f4",
+    "bytes": 4198,
+    "mtime_ns": 1791525824398172091
+  },
+  "fold_03/video/metrics.json": {
+    "sha256": "deee1074286a91723cc0807cf0d8028eb1c962315a84322d4e8621a49f099e24",
+    "bytes": 16639,
+    "mtime_ns": 1791525839608365732
+  },
+  "fold_03/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791524593492135709
+  },
+  "fold_03/video/test_predictions.csv": {
+    "sha256": "d62a5cc0f246e7c26d0168cded64091e643ba2958f431e59bde8cf1e4ac49f53",
+    "bytes": 6214,
+    "mtime_ns": 1791525839585873688
+  },
+  "fold_03/video/tracking.json": {
+    "sha256": "159942cdaee9a8c9fd62467dcb43d460b8ad7588b2e1850ff29326c65f99b9f7",
+    "bytes": 16829,
+    "mtime_ns": 1791525839724574622
+  },
+  "fold_03/video/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/logs/debug-internal.log",
+    "mtime_ns": 1791524593283376989
+  },
+  "fold_03/video/wandb/debug.log": {
+    "symlink": "offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/logs/debug.log",
+    "mtime_ns": 1791524593283376989
+  },
+  "fold_03/video/wandb/latest-run": {
+    "symlink": "offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492",
+    "mtime_ns": 1791524593283376989
+  },
+  "fold_03/video/wandb/offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791524593450383965
+  },
+  "fold_03/video/wandb/offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791524593290968214
+  },
+  "fold_03/video/wandb/offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/logs/debug-internal.log": {
+    "sha256": "de15e71567ce793d53caa492c824eda0f97cb1e464dd68f717d746c8bf6cfe64",
+    "bytes": 1716,
+    "mtime_ns": 1791525839724574622
+  },
+  "fold_03/video/wandb/offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/logs/debug.log": {
+    "sha256": "e1c7e0330aa0d8405c402269350fccca4880bc02bb42c396a10948d6c69fb815",
+    "bytes": 14017,
+    "mtime_ns": 1791525839720825948
+  },
+  "fold_03/video/wandb/offline-run-20261009_134313-76fb5760ccdc48ff81699b8f5f7c4492/run-76fb5760ccdc48ff81699b8f5f7c4492.wandb": {
+    "sha256": "bc50dd4de04c31fc2e1058b8ed2a30993b5d78cf92b5405872b158fb82fad105",
+    "bytes": 275903,
+    "mtime_ns": 1791525839724574622
+  },
+  "fold_03/xattn/best.pt": {
+    "sha256": "9154cffadf46a77bac0ee4b2a5069b4994d71bf7a0028b5ad8854ec79193abab",
+    "bytes": 426608541,
+    "mtime_ns": 1791550055690770157
+  },
+  "fold_03/xattn/config.json": {
+    "sha256": "210a98612a121c1db4c91232b73c06a0d05e5229fd9341a6d01bedcbd7113c1c",
+    "bytes": 15360,
+    "mtime_ns": 1791549196802421382
+  },
+  "fold_03/xattn/confusion_matrix.json": {
+    "sha256": "8c24da83d5bf34fc0ab7c40483b45280c01cb0a693c6be135a35ec36f1f7676f",
+    "bytes": 961,
+    "mtime_ns": 1791550683044454270
+  },
+  "fold_03/xattn/history.csv": {
+    "sha256": "0091ababaff0c2b21388b610519c93ef370c77bcaec94c91d86d421a7a498497",
+    "bytes": 5839,
+    "mtime_ns": 1791550671028788811
+  },
+  "fold_03/xattn/metrics.json": {
+    "sha256": "8a871e4b7f93403d9555b55d78f0dfa4f5568d3062ce793421bb3673c0c03504",
+    "bytes": 16848,
+    "mtime_ns": 1791550683051787602
+  },
+  "fold_03/xattn/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791549197007754693
+  },
+  "fold_03/xattn/test_predictions.csv": {
+    "sha256": "32a83f9dc865137d79c5dc2bd68c105afdd4701cdd611494fc91503624f0e21a",
+    "bytes": 6214,
+    "mtime_ns": 1791550683033454270
+  },
+  "fold_03/xattn/tracking.json": {
+    "sha256": "a1268c02c5ed77ddadb8e30c2cad6052ac526d25c58e5f50c3abc9699e7efd82",
+    "bytes": 17045,
+    "mtime_ns": 1791550683209454254
+  },
+  "fold_03/xattn/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/logs/debug-internal.log",
+    "mtime_ns": 1791549196806088049
+  },
+  "fold_03/xattn/wandb/debug.log": {
+    "symlink": "offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/logs/debug.log",
+    "mtime_ns": 1791549196806088049
+  },
+  "fold_03/xattn/wandb/latest-run": {
+    "symlink": "offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0",
+    "mtime_ns": 1791549196806088049
+  },
+  "fold_03/xattn/wandb/offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791549196971088031
+  },
+  "fold_03/xattn/wandb/offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_201104.log",
+    "mtime_ns": 1791549196820754714
+  },
+  "fold_03/xattn/wandb/offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/logs/debug-internal.log": {
+    "sha256": "7a97fb627b9e5057d8ebe6c20d1f64d33250ecb6dda4e5ede7b4eb73e0330109",
+    "bytes": 1715,
+    "mtime_ns": 1791550683209454254
+  },
+  "fold_03/xattn/wandb/offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/logs/debug.log": {
+    "sha256": "30b73109b55398cefe6384a098e429d80bea2f4d8e0d466e3e1dbbbc972abcb3",
+    "bytes": 14271,
+    "mtime_ns": 1791550683205787587
+  },
+  "fold_03/xattn/wandb/offline-run-20261009_203316-a2f4f78357bd42d3af232cf52dff5da0/run-a2f4f78357bd42d3af232cf52dff5da0.wandb": {
+    "sha256": "d1b7bd08a3e554424746bd7f6127c5b7513c43c21725524e908d8eb1f9edde70",
+    "bytes": 650212,
+    "mtime_ns": 1791550683209454254
+  },
+  "fold_04/audio/best.pt": {
+    "sha256": "a5b152c69735a1d8ea9619d4fdd907df1356b3571574f608a5993e8ab66e20b7",
+    "bytes": 380005889,
+    "mtime_ns": 1791528506163041529
+  },
+  "fold_04/audio/config.json": {
+    "sha256": "d95072c02cb4d8504004dacf23bac04cad399c950e8408bd3167acf203ec1882",
+    "bytes": 15144,
+    "mtime_ns": 1791527828889145398
+  },
+  "fold_04/audio/confusion_matrix.json": {
+    "sha256": "9b7a90e150cba00ed89eaf4eb04dd56d9e5308f0235d12d6e77e517023769fdc",
+    "bytes": 962,
+    "mtime_ns": 1791529189231337297
+  },
+  "fold_04/audio/history.csv": {
+    "sha256": "a22930a9f82cb2a5cdd034287b470f1dc229836d6e3853fc938c0370e171597d",
+    "bytes": 4623,
+    "mtime_ns": 1791529173506561945
+  },
+  "fold_04/audio/metrics.json": {
+    "sha256": "e5b61ed32e31d78d28942ac1e9a501e86834e754ed830e06e38f3b3730caa951",
+    "bytes": 16634,
+    "mtime_ns": 1791529189235019883
+  },
+  "fold_04/audio/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791527829107133723
+  },
+  "fold_04/audio/test_predictions.csv": {
+    "sha256": "23d8ef0cf3e41168fefe29517fbdd740b08dac41c417339966d138474e225074",
+    "bytes": 6274,
+    "mtime_ns": 1791529189216606953
+  },
+  "fold_04/audio/tracking.json": {
+    "sha256": "7e43bb2889b9d6e46847068a2b96a2e77906ef1220cbf0d4fa42eac98e71cfe4",
+    "bytes": 16829,
+    "mtime_ns": 1791529189352862635
+  },
+  "fold_04/audio/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/logs/debug-internal.log",
+    "mtime_ns": 1791527828892900613
+  },
+  "fold_04/audio/wandb/debug.log": {
+    "symlink": "offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/logs/debug.log",
+    "mtime_ns": 1791527828892900613
+  },
+  "fold_04/audio/wandb/latest-run": {
+    "symlink": "offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf",
+    "mtime_ns": 1791527828892900613
+  },
+  "fold_04/audio/wandb/offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791527829061885264
+  },
+  "fold_04/audio/wandb/offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791527828896655827
+  },
+  "fold_04/audio/wandb/offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/logs/debug-internal.log": {
+    "sha256": "19c485371d256f643ae15a5ab19e2c34c8b9795669c3b96289a1bb91739da227",
+    "bytes": 1715,
+    "mtime_ns": 1791529189349180049
+  },
+  "fold_04/audio/wandb/offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/logs/debug.log": {
+    "sha256": "99f1ca4436566fd1634728cfea1955a3adc665f30c8b8d3d2e9cdddda4aa4607",
+    "bytes": 14017,
+    "mtime_ns": 1791529189349180049
+  },
+  "fold_04/audio/wandb/offline-run-20261009_143708-da6f3d4e4e57406e993814f5abe2c8cf/run-da6f3d4e4e57406e993814f5abe2c8cf.wandb": {
+    "sha256": "082a272ce744e0ae2560bb0e4dc9b6d1f5129cf21d2f4698679ea2eea53c76f0",
+    "bytes": 433888,
+    "mtime_ns": 1791529189349180049
+  },
+  "fold_04/chumachenko_ia/best.pt": {
+    "sha256": "fd1257f933e96fc02529a51d54e628d4128ed97645a55025a5347c43780ed1cd",
+    "bytes": 425739117,
+    "mtime_ns": 1791544538589217698
+  },
+  "fold_04/chumachenko_ia/config.json": {
+    "sha256": "6eaa96e5f6d19c7cf5a9d62b1a41eab29b98b1ab835a4940d9e3d631e8808a8e",
+    "bytes": 15396,
+    "mtime_ns": 1791544410366814102
+  },
+  "fold_04/chumachenko_ia/confusion_matrix.json": {
+    "sha256": "3292b137f1ef2150af2ba7fe796fcd1b597d96ae87d670bfca25fcd13a08b9d0",
+    "bytes": 962,
+    "mtime_ns": 1791545041321300073
+  },
+  "fold_04/chumachenko_ia/history.csv": {
+    "sha256": "d8aa4abcb4f96c919a62213b13a08920cb8e404d07e95712bd2c6dd69a813587",
+    "bytes": 2418,
+    "mtime_ns": 1791545026448088390
+  },
+  "fold_04/chumachenko_ia/metrics.json": {
+    "sha256": "4569d7a71ea0cc00e11e0d57811b908948f29da22cfc0790e3999bace5522468",
+    "bytes": 16892,
+    "mtime_ns": 1791545041324966739
+  },
+  "fold_04/chumachenko_ia/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791544410568480763
+  },
+  "fold_04/chumachenko_ia/test_predictions.csv": {
+    "sha256": "6c2db599acedcf6833a00d0160a21aaf29bae7c49513f5984a40e5f812636d54",
+    "bytes": 6274,
+    "mtime_ns": 1791545041310300074
+  },
+  "fold_04/chumachenko_ia/tracking.json": {
+    "sha256": "79491c2b6a21a8685f7c29ca851291dc9d9d88d163288b8ecb812e7a16816b0d",
+    "bytes": 17108,
+    "mtime_ns": 1791545041464300060
+  },
+  "fold_04/chumachenko_ia/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/logs/debug-internal.log",
+    "mtime_ns": 1791544410370480769
+  },
+  "fold_04/chumachenko_ia/wandb/debug.log": {
+    "symlink": "offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/logs/debug.log",
+    "mtime_ns": 1791544410370480769
+  },
+  "fold_04/chumachenko_ia/wandb/latest-run": {
+    "symlink": "offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f",
+    "mtime_ns": 1791544410370480769
+  },
+  "fold_04/chumachenko_ia/wandb/offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791544410531814097
+  },
+  "fold_04/chumachenko_ia/wandb/offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_183358.log",
+    "mtime_ns": 1791544410374147435
+  },
+  "fold_04/chumachenko_ia/wandb/offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/logs/debug-internal.log": {
+    "sha256": "692bf05aac67b99bc29ac46b214345e04b04417f93320b737e53eb8767e84e03",
+    "bytes": 1716,
+    "mtime_ns": 1791545041464300060
+  },
+  "fold_04/chumachenko_ia/wandb/offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/logs/debug.log": {
+    "sha256": "59ea8ac7ae1f62397d9566ae31448f1f1f73a322f95c7e53a702c447a743162a",
+    "bytes": 14324,
+    "mtime_ns": 1791545041460633394
+  },
+  "fold_04/chumachenko_ia/wandb/offline-run-20261009_191330-bab767d3a55a4ca6ac52d9f02dc2199f/run-bab767d3a55a4ca6ac52d9f02dc2199f.wandb": {
+    "sha256": "c3ca35bd6eb5a2ee14e542db294db199478320ee571a8779f68c3cb93a6c44c0",
+    "bytes": 329984,
+    "mtime_ns": 1791545041464300060
+  },
+  "fold_04/gated/best.pt": {
+    "sha256": "61611bd5e0cda97f0d2e7bc972fdcc0689f21e0cc4736ce11f45811826b9cfa3",
+    "bytes": 426659821,
+    "mtime_ns": 1791531675330816578
+  },
+  "fold_04/gated/config.json": {
+    "sha256": "162732d7b5f3dbc3d969e2cfac3bdfaa3d5be41de27bd2f55cd9777485801602",
+    "bytes": 15360,
+    "mtime_ns": 1791530448365699920
+  },
+  "fold_04/gated/confusion_matrix.json": {
+    "sha256": "d797d2077f8d90ea00ee948f5b2c72652184489df182dfd58171601bb8b02f32",
+    "bytes": 962,
+    "mtime_ns": 1791532216992137374
+  },
+  "fold_04/gated/history.csv": {
+    "sha256": "4b4f4c91c670442a0c2cf46b5d9513febcab3cb2bf622902ea39095dcd42e9e7",
+    "bytes": 6672,
+    "mtime_ns": 1791532204135587623
+  },
+  "fold_04/gated/metrics.json": {
+    "sha256": "d81a990dbe664fd708e83fbb8070743591c38c9885a4fabc5d3b7a5de7917fdf",
+    "bytes": 16847,
+    "mtime_ns": 1791532216995904713
+  },
+  "fold_04/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791530448569314263
+  },
+  "fold_04/gated/test_predictions.csv": {
+    "sha256": "4c662120e0a7e89a2bb0940924b873d50ef5de40551bc0f64c7ce1c5ad005717",
+    "bytes": 6274,
+    "mtime_ns": 1791532216973300679
+  },
+  "fold_04/gated/tracking.json": {
+    "sha256": "ebcfc0e22ff621de5e49fdceb9a5980ffd7f05539b3390fc78618ba201a7a161",
+    "bytes": 17045,
+    "mtime_ns": 1791532217135296254
+  },
+  "fold_04/gated/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/logs/debug-internal.log",
+    "mtime_ns": 1791530448369470555
+  },
+  "fold_04/gated/wandb/debug.log": {
+    "symlink": "offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/logs/debug.log",
+    "mtime_ns": 1791530448369470555
+  },
+  "fold_04/gated/wandb/latest-run": {
+    "symlink": "offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78",
+    "mtime_ns": 1791530448369470555
+  },
+  "fold_04/gated/wandb/offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791530448531607903
+  },
+  "fold_04/gated/wandb/offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791530448373241192
+  },
+  "fold_04/gated/wandb/offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/logs/debug-internal.log": {
+    "sha256": "616b5ed78df198af375580335c1475850d55b83ec4d2641bcd8592b48233e1c8",
+    "bytes": 1715,
+    "mtime_ns": 1791532217131528915
+  },
+  "fold_04/gated/wandb/offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/logs/debug.log": {
+    "sha256": "9850f8391d78c6b18a86e19cae7c2ccaa7a390b2431be972a2186053ee651aba",
+    "bytes": 14233,
+    "mtime_ns": 1791532217127761576
+  },
+  "fold_04/gated/wandb/offline-run-20261009_152048-cae59952d4304a619588193cd9de1f78/run-cae59952d4304a619588193cd9de1f78.wandb": {
+    "sha256": "cb3468aa022920cff50fb729805c5824f2fb672d72fb35b8d058c401f398d717",
+    "bytes": 723564,
+    "mtime_ns": 1791532217131528915
+  },
+  "fold_04/split.json": {
+    "sha256": "12e5e751210d26b3e9bd542048e629d2e5021880f8f1199266865cfd7ad5e014",
+    "bytes": 11241,
+    "mtime_ns": 1791527828881634970
+  },
+  "fold_04/video/best.pt": {
+    "sha256": "08ab1c4b83fc3e280a6fb2a71c1386e235af353eb9ea92f0ff08ead0bffeda3e",
+    "bytes": 44801803,
+    "mtime_ns": 1791529815928800329
+  },
+  "fold_04/video/config.json": {
+    "sha256": "6228be9ac74c41c8e021ccd9cac03a29c123202b06738d0e97d7c886c1651ccb",
+    "bytes": 15144,
+    "mtime_ns": 1791529189356545221
+  },
+  "fold_04/video/confusion_matrix.json": {
+    "sha256": "0db85bf56d50322212156aebaf5e31d80f108d50a6147080548e01fdeef23012",
+    "bytes": 960,
+    "mtime_ns": 1791530448237498297
+  },
+  "fold_04/video/history.csv": {
+    "sha256": "28a1d74c736896f5396e8b3e81948c68f3f69196eae5d33f9e5e335e65382b8c",
+    "bytes": 4094,
+    "mtime_ns": 1791530433003225259
+  },
+  "fold_04/video/metrics.json": {
+    "sha256": "089b01fa943d19825ee0685e326701dd78ce666f5e944c18581e6d5971d24b0c",
+    "bytes": 16638,
+    "mtime_ns": 1791530448241268932
+  },
+  "fold_04/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791529189570135210
+  },
+  "fold_04/video/test_predictions.csv": {
+    "sha256": "8a75af1783428985868846c5a6fbb14ec0d5a4bc86f15ff9853ca34b0039c347",
+    "bytes": 6274,
+    "mtime_ns": 1791530448226186389
+  },
+  "fold_04/video/tracking.json": {
+    "sha256": "b259b2c0d60e1845a4acc2177214ef4201284b4b00a7fa047f0300b52d3ddead",
+    "bytes": 16829,
+    "mtime_ns": 1791530448358158648
+  },
+  "fold_04/video/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/logs/debug-internal.log",
+    "mtime_ns": 1791529189360227808
+  },
+  "fold_04/video/wandb/debug.log": {
+    "symlink": "offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/logs/debug.log",
+    "mtime_ns": 1791529189360227808
+  },
+  "fold_04/video/wandb/latest-run": {
+    "symlink": "offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7",
+    "mtime_ns": 1791529189360227808
+  },
+  "fold_04/video/wandb/offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791529189529626765
+  },
+  "fold_04/video/wandb/offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791529189363910393
+  },
+  "fold_04/video/wandb/offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/logs/debug-internal.log": {
+    "sha256": "9186edc58565a593c47792d71f35cf53f878689f7e90e45c1549b0b5630e907f",
+    "bytes": 1716,
+    "mtime_ns": 1791530448358158648
+  },
+  "fold_04/video/wandb/offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/logs/debug.log": {
+    "sha256": "4fad188b1e0949b82b2ab0e0cfcb5feaea19e92c96fee5a1ce978a7706df4045",
+    "bytes": 14017,
+    "mtime_ns": 1791530448354388012
+  },
+  "fold_04/video/wandb/offline-run-20261009_145949-cdf20bf6231d45e7a8c28710283c93b7/run-cdf20bf6231d45e7a8c28710283c93b7.wandb": {
+    "sha256": "a42b403b21a0514c80669c09fa9e63f5119d57a08c7f1b3dcc2aa157c0753159",
+    "bytes": 236062,
+    "mtime_ns": 1791530448358158648
+  },
+  "fold_04/xattn/best.pt": {
+    "sha256": "e6f163bb94d79fb8288acb5f9c8864c324bbb81dc99ec621acd800bd82588725",
+    "bytes": 426608541,
+    "mtime_ns": 1791552594446264190
+  },
+  "fold_04/xattn/config.json": {
+    "sha256": "6744da7dc3e4c716461429f73e8ad44762743189d1f3c0d67c9b0f1b7dec88f8",
+    "bytes": 15360,
+    "mtime_ns": 1791550683216787587
+  },
+  "fold_04/xattn/confusion_matrix.json": {
+    "sha256": "14b59985a9a95fbab0e260074a470c844140a3addeb0a262fbc6a6d41a3a4ec1",
+    "bytes": 963,
+    "mtime_ns": 1791552854931394839
+  },
+  "fold_04/xattn/history.csv": {
+    "sha256": "4c70e27a926d668a7d46c6e84bc32e98134ed0e903dcaddbe74d1fb9ace5c0d8",
+    "bytes": 8589,
+    "mtime_ns": 1791552843080729082
+  },
+  "fold_04/xattn/metrics.json": {
+    "sha256": "92d1d542c2c61891fac3dec89fb1986ff01a4bada4303b180b2fae901dae20c1",
+    "bytes": 16853,
+    "mtime_ns": 1791552854938728172
+  },
+  "fold_04/xattn/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791550683436787566
+  },
+  "fold_04/xattn/test_predictions.csv": {
+    "sha256": "932b8232d2cd083d3e80375fcb253a736070ba7f9cb96aa539cada2f30ac52c5",
+    "bytes": 6274,
+    "mtime_ns": 1791552854916728174
+  },
+  "fold_04/xattn/tracking.json": {
+    "sha256": "322d9a5eacd19259fad670850164aa198db6894c07912d8450c2d969976eafb2",
+    "bytes": 17045,
+    "mtime_ns": 1791552855103728159
+  },
+  "fold_04/xattn/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/logs/debug-internal.log",
+    "mtime_ns": 1791550683220454254
+  },
+  "fold_04/xattn/wandb/debug.log": {
+    "symlink": "offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/logs/debug.log",
+    "mtime_ns": 1791550683220454254
+  },
+  "fold_04/xattn/wandb/latest-run": {
+    "symlink": "offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9",
+    "mtime_ns": 1791550683220454254
+  },
+  "fold_04/xattn/wandb/offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791550683392787571
+  },
+  "fold_04/xattn/wandb/offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_201104.log",
+    "mtime_ns": 1791550683220454254
+  },
+  "fold_04/xattn/wandb/offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/logs/debug-internal.log": {
+    "sha256": "9380a3a8d0a231432c57c92bdfc2f9c7f43e70d395ac6e0663de75003b019227",
+    "bytes": 1714,
+    "mtime_ns": 1791552855103728159
+  },
+  "fold_04/xattn/wandb/offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/logs/debug.log": {
+    "sha256": "03c3d10001da24adf91f45114c86aa4657a821d23b6542f683f890c665681d40",
+    "bytes": 14271,
+    "mtime_ns": 1791552855100061492
+  },
+  "fold_04/xattn/wandb/offline-run-20261009_205803-ac0ef2467d6c40a2981f8529051d94d9/run-ac0ef2467d6c40a2981f8529051d94d9.wandb": {
+    "sha256": "4b606786f5e3092b8b129798ae458d3c99d7bc3236aa4d7ec1fc55161a83b5d7",
+    "bytes": 893085,
+    "mtime_ns": 1791552855103728159
+  },
+  "fold_05/audio/best.pt": {
+    "sha256": "93f2a43890a3ea8e46cf13ace791e887770286b68da91dceb9bae9a27a954742",
+    "bytes": 380005889,
+    "mtime_ns": 1791532878467565032
+  },
+  "fold_05/audio/config.json": {
+    "sha256": "411dcebfbc8f2d14ad0cec366cce47de1a670a39788ca73a4f15e5634ff36601",
+    "bytes": 15144,
+    "mtime_ns": 1791532217142830932
+  },
+  "fold_05/audio/confusion_matrix.json": {
+    "sha256": "1104265894ce2da527f55a31ca8a7aeea2747ddfd21e15c57199a43e43cc489c",
+    "bytes": 961,
+    "mtime_ns": 1791533547816230692
+  },
+  "fold_05/audio/history.csv": {
+    "sha256": "91a5b569d891833ac45f8e6682c4a3267798530a283f7bf3448818a08868103f",
+    "bytes": 4613,
+    "mtime_ns": 1791533532667986099
+  },
+  "fold_05/audio/metrics.json": {
+    "sha256": "e4b1ed88ecb43feb36c7a0428814c2c6657c0cf1e3ead8e917cf68ccc47bd218",
+    "bytes": 16637,
+    "mtime_ns": 1791533547819978782
+  },
+  "fold_05/audio/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791532217353801913
+  },
+  "fold_05/audio/test_predictions.csv": {
+    "sha256": "5d63dd00414abce3a47a2a508fc03a9ab98732a684a5cc2833480ff43f5a910d",
+    "bytes": 6274,
+    "mtime_ns": 1791533547812482603
+  },
+  "fold_05/audio/tracking.json": {
+    "sha256": "9e599030c2ea5794bfafcb21199bef2cb670adbb173f40ec488474ddd10306b8",
+    "bytes": 16829,
+    "mtime_ns": 1791533547954910011
+  },
+  "fold_05/audio/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/logs/debug-internal.log",
+    "mtime_ns": 1791532217146598270
+  },
+  "fold_05/audio/wandb/debug.log": {
+    "symlink": "offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/logs/debug.log",
+    "mtime_ns": 1791532217146598270
+  },
+  "fold_05/audio/wandb/latest-run": {
+    "symlink": "offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802",
+    "mtime_ns": 1791532217146598270
+  },
+  "fold_05/audio/wandb/offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791532217316128523
+  },
+  "fold_05/audio/wandb/offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791532217150365609
+  },
+  "fold_05/audio/wandb/offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/logs/debug-internal.log": {
+    "sha256": "a9195d652c04c6aa3c10ae73a7f94e46babe89453a38712b8e513a563472cbf9",
+    "bytes": 1714,
+    "mtime_ns": 1791533547954910011
+  },
+  "fold_05/audio/wandb/offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/logs/debug.log": {
+    "sha256": "b2ab7ff65fc9958a114bf6e293f9d21aaf01588e8834ccf00b1c1939790cf0e2",
+    "bytes": 14017,
+    "mtime_ns": 1791533547951161920
+  },
+  "fold_05/audio/wandb/offline-run-20261009_155017-ca02f42457a144d6a2dd95f895dcd802/run-ca02f42457a144d6a2dd95f895dcd802.wandb": {
+    "sha256": "dc05ea44ef50efc7f4061dd75e4f83720b7041d6ed277d9e74dd04dd70b07a50",
+    "bytes": 432310,
+    "mtime_ns": 1791533547954910011
+  },
+  "fold_05/chumachenko_ia/best.pt": {
+    "sha256": "07b79ea54d3395096159ac80f5ef47790ffb7eeb85a288f012acd142fcbf4ce4",
+    "bytes": 425739117,
+    "mtime_ns": 1791545958652135233
+  },
+  "fold_05/chumachenko_ia/config.json": {
+    "sha256": "8a003524a1a3a5b45846f2c6ab3af04dbc4071911d574344a8416286f7060592",
+    "bytes": 15396,
+    "mtime_ns": 1791545041471633392
+  },
+  "fold_05/chumachenko_ia/confusion_matrix.json": {
+    "sha256": "77352bd03c74c8be907fcf8fcb31e2c873269f878d9e9e76a1cc317c2a0974a1",
+    "bytes": 960,
+    "mtime_ns": 1791546463736331776
+  },
+  "fold_05/chumachenko_ia/history.csv": {
+    "sha256": "f9071ff45b010876b592635979c0292d483eb5d099ba1e075fcf98b451a1f3ab",
+    "bytes": 5722,
+    "mtime_ns": 1791546447183568303
+  },
+  "fold_05/chumachenko_ia/metrics.json": {
+    "sha256": "b023088bbd2bfdceaae5b9e418b939674ae1680dd0d1ed6657063163673ddfb0",
+    "bytes": 16897,
+    "mtime_ns": 1791546463743531777
+  },
+  "fold_05/chumachenko_ia/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791545041669633374
+  },
+  "fold_05/chumachenko_ia/test_predictions.csv": {
+    "sha256": "12c93398528699649a7c3dfb0f844055c23eced16890e4c6fa2daaa00338fba1",
+    "bytes": 6274,
+    "mtime_ns": 1791546463725531776
+  },
+  "fold_05/chumachenko_ia/tracking.json": {
+    "sha256": "6eec2dd29a9d47becc7a066de68163b343c0c6476e672e9b91b8236718d3c728",
+    "bytes": 17108,
+    "mtime_ns": 1791546463880331776
+  },
+  "fold_05/chumachenko_ia/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/logs/debug-internal.log",
+    "mtime_ns": 1791545041475300060
+  },
+  "fold_05/chumachenko_ia/wandb/debug.log": {
+    "symlink": "offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/logs/debug.log",
+    "mtime_ns": 1791545041475300060
+  },
+  "fold_05/chumachenko_ia/wandb/latest-run": {
+    "symlink": "offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be",
+    "mtime_ns": 1791545041475300060
+  },
+  "fold_05/chumachenko_ia/wandb/offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791545041632966710
+  },
+  "fold_05/chumachenko_ia/wandb/offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_183358.log",
+    "mtime_ns": 1791545041482633392
+  },
+  "fold_05/chumachenko_ia/wandb/offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/logs/debug-internal.log": {
+    "sha256": "81c3ce8474900c9ccf9a4c44bbd7fb225b239472aca368431ebc6733bcf2991e",
+    "bytes": 1716,
+    "mtime_ns": 1791546463880331776
+  },
+  "fold_05/chumachenko_ia/wandb/offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/logs/debug.log": {
+    "sha256": "af3cd5a16b756e879bce093f8031e259adb6ea354662d3ddbd47ce0d8cb5b07c",
+    "bytes": 14324,
+    "mtime_ns": 1791546463876731775
+  },
+  "fold_05/chumachenko_ia/wandb/offline-run-20261009_192401-97f76a84b1d14ae98c8e02cd91fe22be/run-97f76a84b1d14ae98c8e02cd91fe22be.wandb": {
+    "sha256": "e129577b0adde907b55c93a8d093f05a8ca6fbb563302f95ac75645a1821ca66",
+    "bytes": 610882,
+    "mtime_ns": 1791546463880331776
+  },
+  "fold_05/gated/best.pt": {
+    "sha256": "0538149a742d5fdbf057709c87c3da167ad3fdf9f93a034df635cb006bc1e535",
+    "bytes": 426659821,
+    "mtime_ns": 1791536299572927079
+  },
+  "fold_05/gated/config.json": {
+    "sha256": "ecf72b01b3029c7c446ada29063edf46ceb636923315f7912fae0e24ba1543cf",
+    "bytes": 15360,
+    "mtime_ns": 1791534845636890952
+  },
+  "fold_05/gated/confusion_matrix.json": {
+    "sha256": "746831c9c8236266ffd4cb03612cfdba25741d48ee7419177ca616eaf2296ea3",
+    "bytes": 960,
+    "mtime_ns": 1791536824944632488
+  },
+  "fold_05/gated/history.csv": {
+    "sha256": "6c14b0f8b6a384ffeda7261b233bd08aa6812ba344713d41cdd24c0a7d509a88",
+    "bytes": 7395,
+    "mtime_ns": 1791536810863691580
+  },
+  "fold_05/gated/metrics.json": {
+    "sha256": "887c9baaa3b6a1f2bf2673223f7eebbd9f4ba0c8834a34df9bb1f51f5856926c",
+    "bytes": 16855,
+    "mtime_ns": 1791536824948262411
+  },
+  "fold_05/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791534845870890956
+  },
+  "fold_05/gated/test_predictions.csv": {
+    "sha256": "4bb7cf256ffa79b657bff72c04a3d78f12191cd1856446b318a591addeaff619",
+    "bytes": 6274,
+    "mtime_ns": 1791536824937372642
+  },
+  "fold_05/gated/tracking.json": {
+    "sha256": "178b7270dab4b5c1f81515938085c19ad3d24adcc316a67ec1a65465d4db7b97",
+    "bytes": 17045,
+    "mtime_ns": 1791536825068049866
+  },
+  "fold_05/gated/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/logs/debug-internal.log",
+    "mtime_ns": 1791534845636890952
+  },
+  "fold_05/gated/wandb/debug.log": {
+    "symlink": "offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/logs/debug.log",
+    "mtime_ns": 1791534845636890952
+  },
+  "fold_05/gated/wandb/latest-run": {
+    "symlink": "offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745",
+    "mtime_ns": 1791534845636890952
+  },
+  "fold_05/gated/wandb/offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791534845831290956
+  },
+  "fold_05/gated/wandb/offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791534845647690953
+  },
+  "fold_05/gated/wandb/offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/logs/debug-internal.log": {
+    "sha256": "bd7dcc4a35f106c8f95c625ffb23b829e16f62b7ce1bd587144d7d79217c2b35",
+    "bytes": 1715,
+    "mtime_ns": 1791536825068049866
+  },
+  "fold_05/gated/wandb/offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/logs/debug.log": {
+    "sha256": "844a6646cd798e91c41ba441160423d174fdc85f4ea9d29ed2fc7015dcc465f9",
+    "bytes": 14233,
+    "mtime_ns": 1791536825064419943
+  },
+  "fold_05/gated/wandb/offline-run-20261009_163405-02647767464e4532bdb2e216c0cca745/run-02647767464e4532bdb2e216c0cca745.wandb": {
+    "sha256": "b472fe28a823872221cdeecd4a0f56a4141b036e31669781d951f8488bc49fb8",
+    "bytes": 776124,
+    "mtime_ns": 1791536825068049866
+  },
+  "fold_05/split.json": {
+    "sha256": "78fd9e42146ca4c35150c97800888a862b349ba9e35c40daea3c3a9f60e94cac",
+    "bytes": 11241,
+    "mtime_ns": 1791532217135296254
+  },
+  "fold_05/video/best.pt": {
+    "sha256": "b69a7c43470639fbf0f421f2a64de073859a665e7a410b815a9b00ab7fb2b445",
+    "bytes": 44801803,
+    "mtime_ns": 1791534263222948784
+  },
+  "fold_05/video/config.json": {
+    "sha256": "50b823aff343e7636aee97aa1ebd4c067d25e61e9ac9347ba83b0b8323c3369f",
+    "bytes": 15144,
+    "mtime_ns": 1791533547969902370
+  },
+  "fold_05/video/confusion_matrix.json": {
+    "sha256": "127283c4a6b8531b11403c741d5205e02217df624e20ffd2110d921ee3a442f1",
+    "bytes": 962,
+    "mtime_ns": 1791534845471290949
+  },
+  "fold_05/video/history.csv": {
+    "sha256": "6f762875564dd4aec10aaecd89f63d4c67aa04c0f4316bb7aef6c033917b08f6",
+    "bytes": 4207,
+    "mtime_ns": 1791534829070183605
+  },
+  "fold_05/video/metrics.json": {
+    "sha256": "00faf20825c9473c4cbfd5455ce668f673a23bab2597502d6f128d9d65bf7dff",
+    "bytes": 16636,
+    "mtime_ns": 1791534845474890948
+  },
+  "fold_05/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791533548179795392
+  },
+  "fold_05/video/test_predictions.csv": {
+    "sha256": "8f10c1d5137b86a68d36d93971247534c7610fe257273f601759f43303f0cbab",
+    "bytes": 6274,
+    "mtime_ns": 1791534845453290947
+  },
+  "fold_05/video/tracking.json": {
+    "sha256": "a885704f2e030d0868ab2b1f68b19a5df6329f05a7ca67550e5362a48ff21440",
+    "bytes": 16829,
+    "mtime_ns": 1791534845626090951
+  },
+  "fold_05/video/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_161227-0eede92595444a499670096760fa7c12/logs/debug-internal.log",
+    "mtime_ns": 1791533547973650459
+  },
+  "fold_05/video/wandb/debug.log": {
+    "symlink": "offline-run-20261009_161227-0eede92595444a499670096760fa7c12/logs/debug.log",
+    "mtime_ns": 1791533547969902370
+  },
+  "fold_05/video/wandb/latest-run": {
+    "symlink": "offline-run-20261009_161227-0eede92595444a499670096760fa7c12",
+    "mtime_ns": 1791533547969902370
+  },
+  "fold_05/video/wandb/offline-run-20261009_161227-0eede92595444a499670096760fa7c12/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791533548138566405
+  },
+  "fold_05/video/wandb/offline-run-20261009_161227-0eede92595444a499670096760fa7c12/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791533547977398549
+  },
+  "fold_05/video/wandb/offline-run-20261009_161227-0eede92595444a499670096760fa7c12/logs/debug-internal.log": {
+    "sha256": "02ab746f92b8720cee630e5ae87ad7ec16c0c704ae4f1416376aca5b1127064e",
+    "bytes": 1713,
+    "mtime_ns": 1791534845622490952
+  },
+  "fold_05/video/wandb/offline-run-20261009_161227-0eede92595444a499670096760fa7c12/logs/debug.log": {
+    "sha256": "067659dbe4f5546b82304a5d7ddcb787746c3f5e0568099b477ff6a6db94b940",
+    "bytes": 14017,
+    "mtime_ns": 1791534845618890952
+  },
+  "fold_05/video/wandb/offline-run-20261009_161227-0eede92595444a499670096760fa7c12/run-0eede92595444a499670096760fa7c12.wandb": {
+    "sha256": "8176e4e91a8ce4d3b61c74934607e9dca0dcbe0cef90cbaed317214e3a036d6a",
+    "bytes": 274454,
+    "mtime_ns": 1791534845622490952
+  },
+  "fold_05/xattn/best.pt": {
+    "sha256": "2e49e91aeca2c8c38639e64d87529148003d8dc55981c8e2cae12498dd9c0e3f",
+    "bytes": 426608541,
+    "mtime_ns": 1791554744097781423
+  },
+  "fold_05/xattn/config.json": {
+    "sha256": "1bc27ba53e679720848ce785fe1398f3dc8e4ba0a9ab40c108c235af8736f88c",
+    "bytes": 15360,
+    "mtime_ns": 1791552855114728158
+  },
+  "fold_05/xattn/confusion_matrix.json": {
+    "sha256": "7c35b66ea8ef2a68c7df09b5b998002c3c60b5bd0ce802dd52fb4135a37eb97e",
+    "bytes": 960,
+    "mtime_ns": 1791555007680940436
+  },
+  "fold_05/xattn/history.csv": {
+    "sha256": "e9ebe2a26b92a17f8c06853f6bf0c2309083356b282c7a3e7778b1dad939a425",
+    "bytes": 8543,
+    "mtime_ns": 1791554993681607703
+  },
+  "fold_05/xattn/metrics.json": {
+    "sha256": "217b261177fbfa49322e036ba0c4a2f27d70a91136ab0e918f7160ae1514fe86",
+    "bytes": 16850,
+    "mtime_ns": 1791555007691940435
+  },
+  "fold_05/xattn/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791552855323728143
+  },
+  "fold_05/xattn/test_predictions.csv": {
+    "sha256": "a6ad54a66d8fb035b3ea4ef0c0f8b0dc7d1a42f9e0ea81a89bc9ae54a16baa58",
+    "bytes": 6274,
+    "mtime_ns": 1791555007669940436
+  },
+  "fold_05/xattn/tracking.json": {
+    "sha256": "598c293ac881eda9f9ed6b55d88ec222872454dbb7b2ed226aff84dc5450c3d2",
+    "bytes": 17045,
+    "mtime_ns": 1791555007834940428
+  },
+  "fold_05/xattn/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/logs/debug-internal.log",
+    "mtime_ns": 1791552855118394824
+  },
+  "fold_05/xattn/wandb/debug.log": {
+    "symlink": "offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/logs/debug.log",
+    "mtime_ns": 1791552855118394824
+  },
+  "fold_05/xattn/wandb/latest-run": {
+    "symlink": "offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d",
+    "mtime_ns": 1791552855118394824
+  },
+  "fold_05/xattn/wandb/offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791552855276061480
+  },
+  "fold_05/xattn/wandb/offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_201104.log",
+    "mtime_ns": 1791552855122061491
+  },
+  "fold_05/xattn/wandb/offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/logs/debug-internal.log": {
+    "sha256": "8ea7ad6f9e3aabcd1d128b6728221de1f14b9221dba057cbd358a5a79dcdf1e5",
+    "bytes": 1716,
+    "mtime_ns": 1791555007834940428
+  },
+  "fold_05/xattn/wandb/offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/logs/debug.log": {
+    "sha256": "e3878831791f76aad88622c17665ed96c9f7f1360dded2c94643fcb45221e994",
+    "bytes": 14271,
+    "mtime_ns": 1791555007831273761
+  },
+  "fold_05/xattn/wandb/offline-run-20261009_213415-727a09b8afca46d89beea9348ecae49d/run-727a09b8afca46d89beea9348ecae49d.wandb": {
+    "sha256": "acc9829065cf33fb9cfde7766f0edef7426017221a5f2a9f95ad4e2394ea153a",
+    "bytes": 918364,
+    "mtime_ns": 1791555007834940428
+  },
+  "fold_06/audio/best.pt": {
+    "sha256": "b8211017e5fc9199ed80d8ce3b68899a5e18ef2c331010ca2a24903c2629a586",
+    "bytes": 380005889,
+    "mtime_ns": 1791537793044356629
+  },
+  "fold_06/audio/config.json": {
+    "sha256": "dc45eb6dce399eccf07cc0e7355dd8b18ba3d749e217daf204369653f08e6ac4",
+    "bytes": 15144,
+    "mtime_ns": 1791536825078939635
+  },
+  "fold_06/audio/confusion_matrix.json": {
+    "sha256": "0fa9644664f9c0c208d04794e5d4c24b1885397d9ea5c1eadd5eb21a072ea718",
+    "bytes": 962,
+    "mtime_ns": 1791538126214246450
+  },
+  "fold_06/audio/history.csv": {
+    "sha256": "a1ddcb3d1f9d5a115ea5a5af35866221fde6b5bedcb2b33cf684a1e44249d3fb",
+    "bytes": 4636,
+    "mtime_ns": 1791538113729293041
+  },
+  "fold_06/audio/metrics.json": {
+    "sha256": "5cad7a6cc7928c41de5af967d0c5d417dd64e1a446a9295cf6fd59c6d426e393",
+    "bytes": 16635,
+    "mtime_ns": 1791538126217913114
+  },
+  "fold_06/audio/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791536825271325548
+  },
+  "fold_06/audio/test_predictions.csv": {
+    "sha256": "c471c37db019c7713179938b82bf46d8b74d03b06ee1d730b7de3dfe581c0cac",
+    "bytes": 6274,
+    "mtime_ns": 1791538126203246451
+  },
+  "fold_06/audio/tracking.json": {
+    "sha256": "0c45096afe46979990ebfe7fdcf3e9cb373b81e87f816d22b29ead44ec28c069",
+    "bytes": 16829,
+    "mtime_ns": 1791538126335246424
+  },
+  "fold_06/audio/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/logs/debug-internal.log",
+    "mtime_ns": 1791536825082569557
+  },
+  "fold_06/audio/wandb/debug.log": {
+    "symlink": "offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/logs/debug.log",
+    "mtime_ns": 1791536825082569557
+  },
+  "fold_06/audio/wandb/latest-run": {
+    "symlink": "offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d",
+    "mtime_ns": 1791536825082569557
+  },
+  "fold_06/audio/wandb/offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791536825235026319
+  },
+  "fold_06/audio/wandb/offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_124850.log",
+    "mtime_ns": 1791536825089829403
+  },
+  "fold_06/audio/wandb/offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/logs/debug-internal.log": {
+    "sha256": "069189e02cbbb64257da88685331b852ec4abd3ffe76cc98e17249b4f64f5da1",
+    "bytes": 1715,
+    "mtime_ns": 1791538126331579759
+  },
+  "fold_06/audio/wandb/offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/logs/debug.log": {
+    "sha256": "b738ad476a2508a9f1218408dada4bbb93d9185504e3a938ed09a32b974be433",
+    "bytes": 14017,
+    "mtime_ns": 1791538126327913092
+  },
+  "fold_06/audio/wandb/offline-run-20261009_170705-b424508c99b3460fbee8cae5f3eb325d/run-b424508c99b3460fbee8cae5f3eb325d.wandb": {
+    "sha256": "a3ec43783c7d3c563b4e7d1ee081eacdd816cd16f3ca4a598b504f72128761b9",
+    "bytes": 431890,
+    "mtime_ns": 1791538126331579759
+  },
+  "fold_06/chumachenko_ia/best.pt": {
+    "sha256": "a1e3135885d3d2e229f312ac2fe32b25502eac6a6fef753afda6927cf7974096",
+    "bytes": 425739117,
+    "mtime_ns": 1791547287389489161
+  },
+  "fold_06/chumachenko_ia/config.json": {
+    "sha256": "ee5b83145391c6929fecd498b2e39a047c908abdfce39d809b602d1d576c198e",
+    "bytes": 15396,
+    "mtime_ns": 1791546463891131775
+  },
+  "fold_06/chumachenko_ia/confusion_matrix.json": {
+    "sha256": "d7c96aa342d33c29d06f54890421802a735601ba41291917b126e24188ffc799",
+    "bytes": 963,
+    "mtime_ns": 1791547841590832864
+  },
+  "fold_06/chumachenko_ia/history.csv": {
+    "sha256": "df6dd5c07df5e27b200d226a1476f280c30c1c6fddfad112615fb1c9b84d1403",
+    "bytes": 4929,
+    "mtime_ns": 1791547827867632926
+  },
+  "fold_06/chumachenko_ia/metrics.json": {
+    "sha256": "83ac95fbc165a8b4d1dc33ded676a63759459056c98e098a139609f35547e137",
+    "bytes": 16898,
+    "mtime_ns": 1791547841594432864
+  },
+  "fold_06/chumachenko_ia/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791546464089131775
+  },
+  "fold_06/chumachenko_ia/test_predictions.csv": {
+    "sha256": "48909b148925992ac6396481f7c8ec6d85ccee2877d8a030d05c15fc7aff0f67",
+    "bytes": 6274,
+    "mtime_ns": 1791547841580032865
+  },
+  "fold_06/chumachenko_ia/tracking.json": {
+    "sha256": "2eb769c19b72ebe3824ebe1e509eabef4b08736fbdba5fc0c98918e423132287",
+    "bytes": 17108,
+    "mtime_ns": 1791547841742032864
+  },
+  "fold_06/chumachenko_ia/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/logs/debug-internal.log",
+    "mtime_ns": 1791546463894731775
+  },
+  "fold_06/chumachenko_ia/wandb/debug.log": {
+    "symlink": "offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/logs/debug.log",
+    "mtime_ns": 1791546463894731775
+  },
+  "fold_06/chumachenko_ia/wandb/latest-run": {
+    "symlink": "offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19",
+    "mtime_ns": 1791546463894731775
+  },
+  "fold_06/chumachenko_ia/wandb/offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791546464053131775
+  },
+  "fold_06/chumachenko_ia/wandb/offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_183358.log",
+    "mtime_ns": 1791546463898331775
+  },
+  "fold_06/chumachenko_ia/wandb/offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/logs/debug-internal.log": {
+    "sha256": "a0994d9532d857859a7a8b924cec13fe40fb12017b747390b11aa6fc64a288ed",
+    "bytes": 1714,
+    "mtime_ns": 1791547841742032864
+  },
+  "fold_06/chumachenko_ia/wandb/offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/logs/debug.log": {
+    "sha256": "96025d3a0030a69ac62c1dfbe9824c1c6e681ef15f837a039d8a31be5e041a9e",
+    "bytes": 14324,
+    "mtime_ns": 1791547841734832864
+  },
+  "fold_06/chumachenko_ia/wandb/offline-run-20261009_194743-6287ae5276fb4c938180d51ae33b2f19/run-6287ae5276fb4c938180d51ae33b2f19.wandb": {
+    "sha256": "fa311f8df67488e27c48d982c6886c83e267c695cce7c6c82ce80288d3dc62b6",
+    "bytes": 575440,
+    "mtime_ns": 1791547841742032864
+  },
+  "fold_06/gated/best.pt": {
+    "sha256": "c1f3dbbc71557f140450b470506b12b5d333ca576bb3a12456af2b610000b5fc",
+    "bytes": 426659821,
+    "mtime_ns": 1791541511134350694
+  },
+  "fold_06/gated/config.json": {
+    "sha256": "e9342b1748b6d3547d25955f52648532c104712d7e31077723f6d72c7061947e",
+    "bytes": 15360,
+    "mtime_ns": 1791540797836724439
+  },
+  "fold_06/gated/confusion_matrix.json": {
+    "sha256": "e80e81a8c502cf7cc5558676ddd677fcbafc5347eaa3355afa781fdbf2f72a8e",
+    "bytes": 963,
+    "mtime_ns": 1791542021134930281
+  },
+  "fold_06/gated/history.csv": {
+    "sha256": "1d2eee829046d89d3fcadfd3e3bf0d4df50f044142793fba650a14c37c5cb110",
+    "bytes": 4658,
+    "mtime_ns": 1791542006664321534
+  },
+  "fold_06/gated/metrics.json": {
+    "sha256": "9bc997398bef242752e8e20ea5d9fc73c012ef7c4441d03b4c71162b5a548119",
+    "bytes": 16853,
+    "mtime_ns": 1791542021138596948
+  },
+  "fold_06/gated/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791540798056724432
+  },
+  "fold_06/gated/test_predictions.csv": {
+    "sha256": "8d2b75fc2e7af17aded23249a649e285a4309c53a978f5c77a6e47bb06aff8ff",
+    "bytes": 6274,
+    "mtime_ns": 1791542021127596949
+  },
+  "fold_06/gated/tracking.json": {
+    "sha256": "7a345295c1e341800172cbbd95341a2d9c2db09cdb041b899d193d27b914c915",
+    "bytes": 17045,
+    "mtime_ns": 1791542021237596946
+  },
+  "fold_06/gated/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/logs/debug-internal.log",
+    "mtime_ns": 1791540797840391105
+  },
+  "fold_06/gated/wandb/debug.log": {
+    "symlink": "offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/logs/debug.log",
+    "mtime_ns": 1791540797840391105
+  },
+  "fold_06/gated/wandb/latest-run": {
+    "symlink": "offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994",
+    "mtime_ns": 1791540797840391105
+  },
+  "fold_06/gated/wandb/offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791540798012724434
+  },
+  "fold_06/gated/wandb/offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_175230.log",
+    "mtime_ns": 1791540797858724438
+  },
+  "fold_06/gated/wandb/offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/logs/debug-internal.log": {
+    "sha256": "4b78a0d78ac8ed5d6faf438879e5a26a999ae3322c90ec97ede764aa77a7c990",
+    "bytes": 1714,
+    "mtime_ns": 1791542021237596946
+  },
+  "fold_06/gated/wandb/offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/logs/debug.log": {
+    "sha256": "c12ddf3bf881b72f831fe87df81438c4408695be8da93b618a68f1f6f7577105",
+    "bytes": 14214,
+    "mtime_ns": 1791542021233930279
+  },
+  "fold_06/gated/wandb/offline-run-20261009_181317-1db7dadce9744963b23ebbc495360994/run-1db7dadce9744963b23ebbc495360994.wandb": {
+    "sha256": "46a999474dcce60bff5a38ac07da0272f182c0adb764527638aaf59d372f1fb3",
+    "bytes": 514622,
+    "mtime_ns": 1791542021237596946
+  },
+  "fold_06/split.json": {
+    "sha256": "bbcb5023eb0f86e14fa8387eef2e334e0cfac9995c285a26eba504a2b678241d",
+    "bytes": 11241,
+    "mtime_ns": 1791536825068049866
+  },
+  "fold_06/video/best.pt": {
+    "sha256": "69113f5d731d6d925620c977ebfa797e0ee70f489cef68b5c5711ad064c77e5f",
+    "bytes": 44801803,
+    "mtime_ns": 1791540721982096255
+  },
+  "fold_06/video/config.json": {
+    "sha256": "78e686a8424e7ce74c3a270db3638afc1398af21c18d595dfc93c57f72e3eeb7",
+    "bytes": 15144,
+    "mtime_ns": 1791539549408390575
+  },
+  "fold_06/video/confusion_matrix.json": {
+    "sha256": "0602e1ece9df7a53dcd4dea28a9a0de9dc747af6eddded9345b51b98e8ce7753",
+    "bytes": 962,
+    "mtime_ns": 1791540797712057774
+  },
+  "fold_06/video/history.csv": {
+    "sha256": "f1b0911218ac78b70bdae18d1c8680926f21b2a46a18132687b656f4e1e18e86",
+    "bytes": 4142,
+    "mtime_ns": 1791540785282058101
+  },
+  "fold_06/video/metrics.json": {
+    "sha256": "5bd42cd5e3c756baf88027af561a4ef993c60531b9a796844975fb4360de647a",
+    "bytes": 16639,
+    "mtime_ns": 1791540797715724441
+  },
+  "fold_06/video/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791539550339723883
+  },
+  "fold_06/video/test_predictions.csv": {
+    "sha256": "4cbafb039cb99219fb96ec70aed5ced97cc6d30fdfdf78e844e27fecec8dc75a",
+    "bytes": 6274,
+    "mtime_ns": 1791540797708391109
+  },
+  "fold_06/video/tracking.json": {
+    "sha256": "3815a6e632a2e2d1b1a3f47b170a10ec62d5625d35c7282a11c6b8e829270cbd",
+    "bytes": 16829,
+    "mtime_ns": 1791540797829391105
+  },
+  "fold_06/video/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/logs/debug-internal.log",
+    "mtime_ns": 1791539549910723895
+  },
+  "fold_06/video/wandb/debug.log": {
+    "symlink": "offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/logs/debug.log",
+    "mtime_ns": 1791539549910723895
+  },
+  "fold_06/video/wandb/latest-run": {
+    "symlink": "offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a",
+    "mtime_ns": 1791539549910723895
+  },
+  "fold_06/video/wandb/offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791539550310390550
+  },
+  "fold_06/video/wandb/offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_175230.log",
+    "mtime_ns": 1791539550160057222
+  },
+  "fold_06/video/wandb/offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/logs/debug-internal.log": {
+    "sha256": "baa027c8ef4285dd5f9e202ddad4891480757bc27923fbccea2ca63744de964e",
+    "bytes": 1714,
+    "mtime_ns": 1791540797829391105
+  },
+  "fold_06/video/wandb/offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/logs/debug.log": {
+    "sha256": "e9cb1cb7473d1d6043253e33bb6238fcd20ac9b4902a5957d7ec529735f332bc",
+    "bytes": 14331,
+    "mtime_ns": 1791540797814724440
+  },
+  "fold_06/video/wandb/offline-run-20261009_175229-4c82b6f1094f414db2323250ccccf22a/run-4c82b6f1094f414db2323250ccccf22a.wandb": {
+    "sha256": "840bc803596a5c4eac37ee544fde5a1faee6f8d7ba00dd611f2acfafadb609e1",
+    "bytes": 242081,
+    "mtime_ns": 1791540797829391105
+  },
+  "fold_06/xattn/best.pt": {
+    "sha256": "f112b91532f2488a925beae202c777f5240f982f48fd5518fc022cd20b9ead77",
+    "bytes": 426608541,
+    "mtime_ns": 1791555080349665381
+  },
+  "fold_06/xattn/config.json": {
+    "sha256": "0f0ea425be7ab24a43a09baf6cb03d589007073eb5d5fbfc4d0b9ffc37eeebc9",
+    "bytes": 15360,
+    "mtime_ns": 1791555007845940428
+  },
+  "fold_06/xattn/confusion_matrix.json": {
+    "sha256": "c18fe5c32c0b3f49477c3b721141b080dcc9eb23d0884458daae85d4274af18f",
+    "bytes": 962,
+    "mtime_ns": 1791555760071009702
+  },
+  "fold_06/xattn/history.csv": {
+    "sha256": "9f9d824221a7585c4972ee8c2db99a4acff122115067130d98094afa6537ea19",
+    "bytes": 2610,
+    "mtime_ns": 1791555747219343588
+  },
+  "fold_06/xattn/metrics.json": {
+    "sha256": "44d92bdf77084110c37c8d7f4f0d669bd7501365d82b236461bc9a749ed68aa7",
+    "bytes": 16852,
+    "mtime_ns": 1791555760078343036
+  },
+  "fold_06/xattn/pairs.csv": {
+    "sha256": "29dcc25590550d98632de529e86a83fd05e6ee7e13ed01f936c111d51e35122f",
+    "bytes": 273128,
+    "mtime_ns": 1791555008054940419
+  },
+  "fold_06/xattn/test_predictions.csv": {
+    "sha256": "a275fa189c2239984d93c90efe97b30839c629ad30985583f42cc109c52309a9",
+    "bytes": 6274,
+    "mtime_ns": 1791555760056343037
+  },
+  "fold_06/xattn/tracking.json": {
+    "sha256": "6743d4e1cc8dc0554aac3f7b49a194760d119e90970fc35bf2319b5cd7920840",
+    "bytes": 17045,
+    "mtime_ns": 1791555760250676361
+  },
+  "fold_06/xattn/wandb/debug-internal.log": {
+    "symlink": "offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/logs/debug-internal.log",
+    "mtime_ns": 1791555007845940428
+  },
+  "fold_06/xattn/wandb/debug.log": {
+    "symlink": "offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/logs/debug.log",
+    "mtime_ns": 1791555007845940428
+  },
+  "fold_06/xattn/wandb/latest-run": {
+    "symlink": "offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6",
+    "mtime_ns": 1791555007845940428
+  },
+  "fold_06/xattn/wandb/offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/files/requirements.txt": {
+    "sha256": "2f37b28cdd6285691938a1096c6f38607ae7e31686be42af049e5b452460c992",
+    "bytes": 2102,
+    "mtime_ns": 1791555008014607087
+  },
+  "fold_06/xattn/wandb/offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/logs/debug-core.log": {
+    "symlink": "/home/louis/.cache/wandb/logs/core-debug-20261009_201104.log",
+    "mtime_ns": 1791555007853273761
+  },
+  "fold_06/xattn/wandb/offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/logs/debug-internal.log": {
+    "sha256": "3c0a6696aa1abccb1ba6df525af46f21c788d43c8e255e1abdb173d836c44f7e",
+    "bytes": 1716,
+    "mtime_ns": 1791555760250676361
+  },
+  "fold_06/xattn/wandb/offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/logs/debug.log": {
+    "sha256": "435573cdef587da7034b31bb9d2611e7d5769ef6738ffe18764d451cd2430553",
+    "bytes": 14271,
+    "mtime_ns": 1791555760243343029
+  },
+  "fold_06/xattn/wandb/offline-run-20261009_221007-d43c41fc459141ca902511d037cbc1e6/run-d43c41fc459141ca902511d037cbc1e6.wandb": {
+    "sha256": "3c041d9da5b416ac9252f2f29dd7abe58c49b41236aafee8033d295550c062f3",
+    "bytes": 368330,
+    "mtime_ns": 1791555760250676361
+  },
+  "mean_std_table.csv": {
+    "sha256": "4e4a8ddaf3674eae23c884ae46890f8103bf9ddadf491a7ebb8facfe95c778df",
+    "bytes": 467,
+    "mtime_ns": 1791555787455098407
+  },
+  "mode.json": {
+    "sha256": "13670dc8a176ebbdaa264f098a7c6817af240631911acf0006e154809b201ec2",
+    "bytes": 57,
+    "mtime_ns": 1791456933164061776
+  },
+  "per_fold_metrics.csv": {
+    "sha256": "d93a1f751aff6747f3a36ff97187ff1bf1b1f09edb165b9e0082b7aa866c276e",
+    "bytes": 7713,
+    "mtime_ns": 1791555787455098407
+  },
+  "six_fold_report.json": {
+    "sha256": "380bb1394a1a90c4311ebb37ff341a4bb9ab554f9f6cedb51309e2ce011e62fc",
+    "bytes": 27929,
+    "mtime_ns": 1791555787455098407
+  }
+}

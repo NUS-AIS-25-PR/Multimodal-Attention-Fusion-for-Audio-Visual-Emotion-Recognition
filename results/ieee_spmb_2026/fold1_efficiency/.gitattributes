@@ -1,0 +1,3 @@
+# Keep these measured captures byte-identical to the local originals.
+final/** -text -whitespace linguist-generated
+diagnostic/** -text -whitespace linguist-generated
