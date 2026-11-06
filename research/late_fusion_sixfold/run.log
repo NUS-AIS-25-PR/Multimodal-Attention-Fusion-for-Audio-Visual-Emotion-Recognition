@@ -1,0 +1,154 @@
+[{'method': 'fixed', 'alpha': 0.5, 'accuracy': 0.7958333492279053, 'precision': 0.8116104320699874, 'recall': 0.77734375, 'macro_f1': 0.7844662296897345}, {'method': 'calibrated', 'alpha': 0.7, 'accuracy': 0.824999988079071, 'precision': 0.8313372866057824, 'recall': 0.828125, 'macro_f1': 0.8228740822713034}, {'method': 'audio_historical', 'alpha': '', 'accuracy': 0.7708333134651184, 'precision': 0.7744850137997823, 'recall': 0.77734375, 'macro_f1': 0.7650878312756904}, {'method': 'video_historical', 'alpha': '', 'accuracy': 0.5583333373069763, 'precision': 0.5196994603056895, 'recall': 0.5234375, 'macro_f1': 0.5092491119723059}, {'method': 'gated_historical', 'alpha': '', 'accuracy': 0.6625000238418579, 'precision': 0.7624684770276227, 'recall': 0.625, 'macro_f1': 0.6139226172191363}, {'method': 'xattn_historical', 'alpha': '', 'accuracy': 0.7124999761581421, 'precision': 0.799179947516641, 'recall': 0.67578125, 'macro_f1': 0.6696260573971436}]
+[{'method': 'fixed', 'alpha': 0.5, 'accuracy': 0.7958333492279053, 'precision': 0.8116104320699874, 'recall': 0.77734375, 'macro_f1': 0.7844662296897345}, {'method': 'calibrated', 'alpha': 0.7, 'accuracy': 0.824999988079071, 'precision': 0.8313372866057824, 'recall': 0.828125, 'macro_f1': 0.8228740822713034}, {'method': 'audio_historical', 'alpha': '', 'accuracy': 0.7708333134651184, 'precision': 0.7744850137997823, 'recall': 0.77734375, 'macro_f1': 0.7650878312756904}, {'method': 'video_historical', 'alpha': '', 'accuracy': 0.5583333373069763, 'precision': 0.5196994603056895, 'recall': 0.5234375, 'macro_f1': 0.5092491119723059}, {'method': 'gated_historical', 'alpha': '', 'accuracy': 0.6625000238418579, 'precision': 0.7624684770276227, 'recall': 0.625, 'macro_f1': 0.6139226172191363}, {'method': 'xattn_historical', 'alpha': '', 'accuracy': 0.7124999761581421, 'precision': 0.799179947516641, 'recall': 0.67578125, 'macro_f1': 0.6696260573971436}]
+fold 1 val validated 240
+fold 1 test validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946865.488221   11555 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946865.488252   11551 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946865.551866   11781 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793946865.551891   11782 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.Created TensorFlow Lite XNNPACK delegate for CPU.
+
+W0000 00:00:1793946865.597085   11672 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793946865.597816   11677 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 2 val validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946892.352991   15619 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946892.353115   15615 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946892.368562   15845 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793946892.368678   15846 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.Created TensorFlow Lite XNNPACK delegate for CPU.
+
+W0000 00:00:1793946892.386566   15735 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793946892.386649   15741 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 2 test validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946917.640191   19676 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946917.640207   19680 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946917.660479   19906 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793946917.660503   19907 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793946917.684024   19785 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793946917.684674   19804 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 3 val validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946942.696449   23752 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946942.696518   23756 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946942.716483   23982 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793946942.716483   23983 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793946942.748750   23880 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793946942.748877   23876 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 3 test validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946966.197515   27829 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946966.197831   27825 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946966.216635   28055 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793946966.216745   28056 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793946966.237436   27945 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793946966.237779   27953 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 4 val validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793946992.197328   31893 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946992.197337   31897 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793946992.215219   32124 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793946992.215301   32123 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793946992.232931   32007 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793946992.235267   32022 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 4 test validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947016.372369   35964 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947016.372455   35968 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793947016.394915   36195 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793947016.394848   36194 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793947016.416373   36086 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793947016.419935   36089 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 5 val validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947038.279299   40035 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947038.279309   40031 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793947038.299357   40261 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793947038.300526   40262 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793947038.320511   40158 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793947038.324308   40150 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 5 test validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947064.082824   44095 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947064.084066   44099 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793947064.101274   44325 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+I0000 00:00:1793947064.106495   44326 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793947064.125626   44223 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793947064.126303   44195 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 6 val validated 240
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+libEGL warning: DRI3 error: Could not get DRI3 device
+libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947087.266501   48164 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793947087.266804   48160 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1793947087.285044   48390 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1793947087.291117   48391 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2), renderer: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1793947087.307505   48282 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1793947087.312657   48290 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fold 6 test validated 240

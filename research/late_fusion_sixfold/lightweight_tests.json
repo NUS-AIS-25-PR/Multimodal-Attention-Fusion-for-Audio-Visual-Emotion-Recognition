@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "original summary handles extra metrics fields",
+    "four metric schema",
+    "repeat produces identical six rows, no append",
+    "fixed tie rules"
+  ],
+  "gpu_inference": false
+}
