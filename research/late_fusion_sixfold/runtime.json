@@ -1,0 +1,44 @@
+[
+  {
+    "fold": 1,
+    "cache_reused": true,
+    "seconds": 0.39303226199990604,
+    "peak_allocated_bytes": 0,
+    "peak_reserved_bytes": 0
+  },
+  {
+    "fold": 2,
+    "cache_reused": false,
+    "seconds": 51.42629775600017,
+    "peak_allocated_bytes": 1067800064,
+    "peak_reserved_bytes": 1432354816
+  },
+  {
+    "fold": 3,
+    "cache_reused": false,
+    "seconds": 47.556477319999885,
+    "peak_allocated_bytes": 1086546944,
+    "peak_reserved_bytes": 1117782016
+  },
+  {
+    "fold": 4,
+    "cache_reused": false,
+    "seconds": 49.13805480000019,
+    "peak_allocated_bytes": 1105424896,
+    "peak_reserved_bytes": 1138753536
+  },
+  {
+    "fold": 5,
+    "cache_reused": false,
+    "seconds": 45.75784607200012,
+    "peak_allocated_bytes": 1124302848,
+    "peak_reserved_bytes": 1159725056
+  },
+  {
+    "fold": 6,
+    "cache_reused": false,
+    "seconds": 43.22711073399978,
+    "peak_allocated_bytes": 1143180800,
+    "peak_reserved_bytes": 1180696576
+  }
+]

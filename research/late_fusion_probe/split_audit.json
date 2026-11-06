@@ -1,0 +1,296 @@
+[
+  {
+    "split": {
+      "fold": 1,
+      "train_actors": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "val_actors": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "test_actors": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "counts": {
+      "train": {
+        "count": 960,
+        "unique": 960
+      },
+      "val": {
+        "count": 240,
+        "unique": 240
+      },
+      "test": {
+        "count": 240,
+        "unique": 240
+      }
+    }
+  },
+  {
+    "split": {
+      "fold": 2,
+      "train_actors": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "val_actors": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "test_actors": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "counts": {
+      "train": {
+        "count": 960,
+        "unique": 960
+      },
+      "val": {
+        "count": 240,
+        "unique": 240
+      },
+      "test": {
+        "count": 240,
+        "unique": 240
+      }
+    }
+  },
+  {
+    "split": {
+      "fold": 3,
+      "train_actors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "val_actors": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "test_actors": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "counts": {
+      "train": {
+        "count": 960,
+        "unique": 960
+      },
+      "val": {
+        "count": 240,
+        "unique": 240
+      },
+      "test": {
+        "count": 240,
+        "unique": 240
+      }
+    }
+  },
+  {
+    "split": {
+      "fold": 4,
+      "train_actors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        21,
+        22,
+        23,
+        24
+      ],
+      "val_actors": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "test_actors": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "counts": {
+      "train": {
+        "count": 960,
+        "unique": 960
+      },
+      "val": {
+        "count": 240,
+        "unique": 240
+      },
+      "test": {
+        "count": 240,
+        "unique": 240
+      }
+    }
+  },
+  {
+    "split": {
+      "fold": 5,
+      "train_actors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "val_actors": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "test_actors": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "counts": {
+      "train": {
+        "count": 960,
+        "unique": 960
+      },
+      "val": {
+        "count": 240,
+        "unique": 240
+      },
+      "test": {
+        "count": 240,
+        "unique": 240
+      }
+    }
+  },
+  {
+    "split": {
+      "fold": 6,
+      "train_actors": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "val_actors": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "test_actors": [
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "counts": {
+      "train": {
+        "count": 960,
+        "unique": 960
+      },
+      "val": {
+        "count": 240,
+        "unique": 240
+      },
+      "test": {
+        "count": 240,
+        "unique": 240
+      }
+    }
+  }
+]
