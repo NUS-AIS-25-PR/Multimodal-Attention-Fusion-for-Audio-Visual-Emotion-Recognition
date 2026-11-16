@@ -1,0 +1,17 @@
+{
+  "python": "3.10.19",
+  "versions": {
+    "torch": "2.10.0+cu130",
+    "torchvision": "0.25.0+cu130",
+    "transformers": "5.1.0",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.7.2",
+    "mediapipe": "0.10.21",
+    "opencv-python": "4.11.0.86",
+    "librosa": "0.11.0"
+  },
+  "cuda": "13.0",
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "source_fingerprint": "e0ac3ba8452d283be16cda83add02069020b5e917f0e760eb79e134c07da9f6b",
+  "all_source_fingerprints_match": true
+}
