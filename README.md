@@ -1,5 +1,5 @@
-# Multimodal Attention Fusion for Audio-Visual Emotion Recognition
+# Feature-Level versus Decision-Level Fusion for Audio-Visual Emotion Recognition
 
-Implementation of the paper "Multimodal Attention Fusion for Audio-Visual Emotion Recognition" (IEEE SPMB 2026).
+Implementation of the paper "Feature-Level versus Decision-Level Fusion for Audio-Visual Emotion Recognition" (manuscript prepared for IEEE SCEECS 2027).
 
-This repository provides the full training pipeline, evaluation scripts, inference server, and pre-trained model benchmarks for audio-visual emotion recognition on the RAVDESS dataset.
+This repository provides utilities for data preparation, model training, actor-independent evaluation, and inference, supporting unimodal models, learned feature fusion, and probability-based combinations on the RAVDESS dataset.
